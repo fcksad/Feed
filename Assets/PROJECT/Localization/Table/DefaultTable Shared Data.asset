@@ -1,0 +1,128 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: DefaultTable Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: DefaultTable
+  m_TableCollectionNameGuidString: 55446f8592aeeac46acb7a278848b34a
+  m_Entries:
+  - m_Id: 518558416896
+    m_Key: menu.back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 483833774080
+    m_Key: menu.exit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 373070594048
+    m_Key: menu.menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 460635078656
+    m_Key: menu.newgame
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12318507008
+    m_Key: menu.play
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1704313323520
+    m_Key: settings.vsynce
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1497316032512
+    m_Key: settings.controls
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1604430168064
+    m_Key: settings.fpscontrol
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1394022907904
+    m_Key: settings.game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1408489062400
+    m_Key: settings.hud
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1654686318592
+    m_Key: settings.quality
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1681022353408
+    m_Key: settings.screenmode
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1025066762240
+    m_Key: settings.settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1462125821952
+    m_Key: settings.video
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9258426793984
+    m_Key: settings.audio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9258430988288
+    m_Key: settings.sound
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9258430988289
+    m_Key: settings.music
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9258430988290
+    m_Key: settings.SFX
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9258430988291
+    m_Key: settings.ambient
+    m_Metadata:
+      m_Items: []
+  - m_Id: 166117146198016
+    m_Key: settings.resolution
+    m_Metadata:
+      m_Items: []
+  - m_Id: 336218449346560
+    m_Key: settings.language
+    m_Metadata:
+      m_Items: []
+  - m_Id: 336218487095296
+    m_Key: settings.keyboard
+    m_Metadata:
+      m_Items: []
+  - m_Id: 336218487095297
+    m_Key: settings.controller
+    m_Metadata:
+      m_Items: []
+  - m_Id: 726718545231872
+    m_Key: settings.resetbindingconfirmation
+    m_Metadata:
+      m_Items: []
+  - m_Id: 726718578786304
+    m_Key: settings.rebindconfirmation
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 6202032330940088590
+  references:
+    version: 2
+    RefIds:
+    - rid: 6202032330940088590
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1745702035120
