@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: MoveLeft
   m_EditorClassIdentifier: 
   <Action>k__BackingField: 7
-  <InputReference>k__BackingField: {fileID: -4518726503186726828, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  <InputReference>k__BackingField: {fileID: -4518726503186726828, guid: 5b024b29fbe262345b83301245abf7e2, type: 3}
