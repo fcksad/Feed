@@ -1,0 +1,81 @@
+using UnityEngine;
+
+public class CharacterController : IControllable
+{
+    [Header("Move")]
+    private const float WALK_SPEED = 3f;
+    private const float RUN_SPEED = 6f;
+
+    private float _lastStepTime;
+    private float _stepCooldown = 0.5f;
+    private int _currentFootstepIndex;
+
+
+    [Header("Look")]
+    private const float _mouseSensitivity = 0.4f;
+    private const float _maxLookAngle = 85f;
+    private float _verticalVelocity;
+    private float _cameraPitch = 0f;
+
+    private readonly ICommandController _commandController;
+    private readonly Character _character;
+
+    private IAudioService _audioService;
+
+
+    public CharacterController(ICommandController commandController, IAudioService audioService , Character character)
+    {
+        _commandController = commandController;
+        _audioService = audioService;
+        _character = character;
+    }
+
+    public void Move(Vector2 input, bool isRunning)
+    {
+        var speed = isRunning ? RUN_SPEED : WALK_SPEED;
+        var command = new MoveCommand(_character.CharacterController, _character.CameraRoot, input, speed);
+        _commandController.SetCommand(command);
+
+        if (input.sqrMagnitude > 0.01f)
+        {
+            if (Time.time - _lastStepTime >= _stepCooldown)
+            {
+                var positions = _character.FootstepPositions;
+                if (positions != null && positions.Count > 0)
+                {
+                    var pos = positions[_currentFootstepIndex];
+                    _audioService.Play(_character.FootstepSound, position: pos.position);
+
+                    _currentFootstepIndex = (_currentFootstepIndex + 1) % positions.Count;
+                }
+
+                _lastStepTime = Time.time;
+            }
+        }
+    }
+
+    public void Attack()
+    {
+        var command = new AttackCommand(_character);
+        _commandController.SetCommand(command);
+    }
+
+    public void Look(Vector2 delta)
+    {
+        delta *= _mouseSensitivity;
+
+        _cameraPitch -= delta.y;
+        _cameraPitch = Mathf.Clamp(_cameraPitch, -_maxLookAngle, _maxLookAngle);
+        _character.CameraRoot.localEulerAngles = new Vector3(_cameraPitch, 0f, 0f);
+
+        _character.transform.Rotate(Vector3.up * delta.x);
+    }
+
+    public void ApplyGravity()
+    {
+        if (_character.CharacterController.isGrounded && _verticalVelocity < 0)
+            _verticalVelocity = -2f;
+        else
+            _verticalVelocity += -9.81f * Time.deltaTime;
+    }
+}

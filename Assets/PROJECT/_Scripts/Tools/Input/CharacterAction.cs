@@ -9,4 +9,5 @@ public enum CharacterAction
     MoveDown,
     MoveLeft,
     MoveRight,  
+    Run,
 }
