@@ -6,14 +6,16 @@ public class MoveCommand : ICommand
     private readonly Transform _cameraTransform;
     private readonly Vector2 _input;
     private readonly float _speed;
+    private readonly float _verticalVelocity;
     private bool _executed;
 
-    public MoveCommand(UnityEngine.CharacterController controller, Transform cameraTransform, Vector2 input, float speed)
+    public MoveCommand(UnityEngine.CharacterController controller, Transform cameraTransform, Vector2 input, float speed, float verticalVelocity)
     {
         _controller = controller;
         _cameraTransform = cameraTransform;
         _input = input;
         _speed = speed;
+        _verticalVelocity = verticalVelocity;
     }
 
     public void Execute()
@@ -27,6 +29,7 @@ public class MoveCommand : ICommand
         right.Normalize();
 
         Vector3 direction = right * _input.x + forward * _input.y;
+        direction.y = _verticalVelocity;
         _controller.Move(direction * _speed * Time.deltaTime);
         _executed = true;
     }

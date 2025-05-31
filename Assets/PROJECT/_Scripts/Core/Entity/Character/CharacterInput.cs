@@ -37,8 +37,6 @@ public class CharacterInput : IInitializable, IDisposable, ITickable
 
     public void Tick()
     {
-        _controller.ApplyGravity();
-
         if (_isLocked) return;
 
         _controller.Look(Mouse.current.delta.ReadValue());
@@ -51,11 +49,8 @@ public class CharacterInput : IInitializable, IDisposable, ITickable
 
         input = input.normalized;
 
-        if (input != Vector2.zero)
-        {
-            bool run = _inputService.IsPressed(CharacterAction.Run) ? true : false;
-            _controller.Move(input, run);
-        }
+        bool run = _inputService.IsPressed(CharacterAction.Run) ? true : false;
+        _controller.Move(input, run);
     }
 
     private void Attack()

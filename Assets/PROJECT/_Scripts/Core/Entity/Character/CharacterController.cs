@@ -7,8 +7,10 @@ public class CharacterController : IControllable
     private const float RUN_SPEED = 6f;
 
     private float _lastStepTime;
-    private float _stepCooldown = 0.5f;
+    private const float WALK_STEP_COOLDOWN = 0.5f;
+    private const float RUN_STEP_COOLDOWN = 0.3f;
     private int _currentFootstepIndex;
+
 
 
     [Header("Look")]
@@ -32,13 +34,17 @@ public class CharacterController : IControllable
 
     public void Move(Vector2 input, bool isRunning)
     {
+        ApplyGravity();
+
         var speed = isRunning ? RUN_SPEED : WALK_SPEED;
-        var command = new MoveCommand(_character.CharacterController, _character.CameraRoot, input, speed);
+        var command = new MoveCommand(_character.CharacterController, _character.CameraRoot, input, speed, _verticalVelocity);
         _commandController.SetCommand(command);
+
+        float currentStepCooldown = isRunning ? RUN_STEP_COOLDOWN : WALK_STEP_COOLDOWN;
 
         if (input.sqrMagnitude > 0.01f)
         {
-            if (Time.time - _lastStepTime >= _stepCooldown)
+            if (Time.time - _lastStepTime >= currentStepCooldown)
             {
                 var positions = _character.FootstepPositions;
                 if (positions != null && positions.Count > 0)
@@ -51,6 +57,18 @@ public class CharacterController : IControllable
 
                 _lastStepTime = Time.time;
             }
+        }
+    }
+
+    private void ApplyGravity()
+    {
+        if (_character.CharacterController.isGrounded && _verticalVelocity < 0)
+        {
+            _verticalVelocity = -2f;
+        }
+        else
+        {
+            _verticalVelocity += Physics.gravity.y * Time.deltaTime;
         }
     }
 
@@ -71,11 +89,4 @@ public class CharacterController : IControllable
         _character.transform.Rotate(Vector3.up * delta.x);
     }
 
-    public void ApplyGravity()
-    {
-        if (_character.CharacterController.isGrounded && _verticalVelocity < 0)
-            _verticalVelocity = -2f;
-        else
-            _verticalVelocity += -9.81f * Time.deltaTime;
-    }
 }

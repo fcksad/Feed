@@ -6,5 +6,4 @@ public interface IControllable
     void Attack();
     void Look(Vector2 delta);
 
-    void ApplyGravity();
 }
