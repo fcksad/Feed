@@ -11,6 +11,8 @@ public class CharacterController : IControllable
     private const float RUN_STEP_COOLDOWN = 0.3f;
     private int _currentFootstepIndex;
 
+    [Header("Jump")]
+    private float _jumpHeight = 0.5f;
 
 
     [Header("Look")]
@@ -42,7 +44,7 @@ public class CharacterController : IControllable
 
         float currentStepCooldown = isRunning ? RUN_STEP_COOLDOWN : WALK_STEP_COOLDOWN;
 
-        if (input.sqrMagnitude > 0.01f)
+        if (input.sqrMagnitude > 0.01f && _character.CharacterController.isGrounded)
         {
             if (Time.time - _lastStepTime >= currentStepCooldown)
             {
@@ -69,6 +71,14 @@ public class CharacterController : IControllable
         else
         {
             _verticalVelocity += Physics.gravity.y * Time.deltaTime;
+        }
+    }
+
+    public void Jump()
+    {
+        if (_character.CharacterController.isGrounded)
+        {
+            _verticalVelocity = Mathf.Sqrt(2f * 9.81f * _jumpHeight); 
         }
     }
 

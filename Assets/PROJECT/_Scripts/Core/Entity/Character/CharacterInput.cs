@@ -23,11 +23,13 @@ public class CharacterInput : IInitializable, IDisposable, ITickable
     public void Initialize()
     {
         _inputService.AddActionListener(CharacterAction.Attack, onStarted: Attack);
+        _inputService.AddActionListener(CharacterAction.Jump, onStarted: Jump);
     }
 
     public void Dispose()
     {
         _inputService.RemoveActionListener(CharacterAction.Attack, onStarted: Attack);
+        _inputService.RemoveActionListener(CharacterAction.Jump, onStarted: Jump);
     }
 
     public void Lock(bool value)
@@ -57,5 +59,11 @@ public class CharacterInput : IInitializable, IDisposable, ITickable
     {
         if (_isLocked) return;
         _controller.Attack();
+    }
+
+    private void Jump()
+    {
+        if (_isLocked) return;
+        _controller.Jump();
     }
 }
