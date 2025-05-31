@@ -7,4 +7,5 @@ public class Character : MonoBehaviour
     [field: SerializeField] public Transform CameraRoot { get; private set; }
     [field: SerializeField] public AudioConfig FootstepSound { get; private set; }
     [field: SerializeField] public List<Transform> FootstepPositions { get; private set; }
+    [field: SerializeField] public InteractController InteractController { get; private set; }
 }

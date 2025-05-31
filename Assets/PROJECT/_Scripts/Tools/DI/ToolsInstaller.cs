@@ -1,4 +1,4 @@
-using UnityEngine;
+using Service;
 using UnityEngine.InputSystem;
 using Zenject;
 
@@ -15,6 +15,7 @@ public class ToolsInstaller : MonoInstaller
         Container.BindInterfacesAndSelfTo<PlayerInput>().FromComponentInHierarchy().AsSingle();
         Container.BindInterfacesAndSelfTo<TooltipeView>().FromComponentInHierarchy().AsSingle();
         Container.BindInterfacesAndSelfTo<PopupView>().FromComponentInHierarchy().AsSingle();
+        Container.BindInterfacesAndSelfTo<HintView>().FromComponentInHierarchy().AsSingle();
 
         Container.DeclareSignal<ToggleMiniGameWindowSignal>();
     }

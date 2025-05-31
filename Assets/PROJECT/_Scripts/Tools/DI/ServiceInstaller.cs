@@ -18,5 +18,6 @@ public class ServiceInstaller : MonoInstaller
         Container.BindInterfacesAndSelfTo<InstantiateFactoryService>().AsSingle();
         Container.BindInterfacesAndSelfTo<ParticlService>().AsSingle();
         Container.BindInterfacesAndSelfTo<PoolService>().AsSingle();
+        Container.BindInterfacesAndSelfTo<HintService>().AsSingle();
     }
 }

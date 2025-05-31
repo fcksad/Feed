@@ -876,6 +876,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: fd98ebbb3abbd5f4dac15630382cc3ef, type: 2}
     - target: {fileID: 4093652874346925405, guid: 7432bcee279e61746a7906988505f6fc, type: 3}
+      propertyPath: <InteractController>k__BackingField
+      value: 
+      objectReference: {fileID: 1707710468}
+    - target: {fileID: 4093652874346925405, guid: 7432bcee279e61746a7906988505f6fc, type: 3}
       propertyPath: <FootstepPositions>k__BackingField.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -899,14 +903,17 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 757934048621317030, guid: 7432bcee279e61746a7906988505f6fc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5015886414586670333}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 107572117673618173, guid: 7432bcee279e61746a7906988505f6fc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1707710468}
   m_SourcePrefab: {fileID: 100100000, guid: 7432bcee279e61746a7906988505f6fc, type: 3}
 --- !u!114 &1187146963 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2887627203232410175, guid: 7432bcee279e61746a7906988505f6fc, type: 3}
   m_PrefabInstance: {fileID: 1187146962}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1707710465}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f226a0f8d1c6004d8578b3365220227, type: 3}
@@ -1054,41 +1061,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1644021353}
   m_CullTransparentMesh: 1
---- !u!1 &1709527033 stripped
+--- !u!1 &1707710465 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 3939066490752179060, guid: ce40909550e4823408ad76f4fe2e87c9, type: 3}
-  m_PrefabInstance: {fileID: 5409078111388545179}
+  m_CorrespondingSourceObject: {fileID: 107572117673618173, guid: 7432bcee279e61746a7906988505f6fc, type: 3}
+  m_PrefabInstance: {fileID: 1187146962}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1709527039
+--- !u!114 &1707710468
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1709527033}
+  m_GameObject: {fileID: 1707710465}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Script: {fileID: 11500000, guid: c26222a49e5d64a4fa13ca609956106e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _outlineMode: 0
-  _outlineColor: {r: 1, g: 1, b: 1, a: 1}
-  _outlineWidth: 2
-  _precomputeOutline: 0
-  _bakeKeys: []
-  _bakeValues: []
---- !u!114 &1709527040
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1709527033}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7c4eb96ed078b440a49cfc4c3d053b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  _interactDistance: 3
+  _interactableMask:
+    serializedVersion: 2
+    m_Bits: 64
+  _select: {fileID: 11400000, guid: ecf2ba85ff5288243a3111972814e84f, type: 2}
+  _denyselect: {fileID: 11400000, guid: 9c0a9dfd1a07cc54188ae87ed4f29b35, type: 2}
 --- !u!1 &1848607088
 GameObject:
   m_ObjectHideFlags: 0
@@ -1670,13 +1665,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3939066490752179060, guid: ce40909550e4823408ad76f4fe2e87c9, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1709527040}
-    - targetCorrespondingSourceObject: {fileID: 3939066490752179060, guid: ce40909550e4823408ad76f4fe2e87c9, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1709527039}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce40909550e4823408ad76f4fe2e87c9, type: 3}
 --- !u!114 &5674637482851343584
 MonoBehaviour:

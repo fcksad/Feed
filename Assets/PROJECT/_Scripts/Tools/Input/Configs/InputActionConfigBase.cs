@@ -47,4 +47,13 @@ public class InputActionConfigBase : ScriptableObject, IInputAction
     {
         return InputReference.action.IsPressed();
     }
+    public string GetKeyName()
+    {
+        if (InputReference != null && InputReference.action != null)
+        {
+            return InputReference.action.GetBindingDisplayString();
+        }
+
+        return "";
+    }
 }

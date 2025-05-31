@@ -56,6 +56,11 @@ namespace Service
             }
         }
 
+        public string GetActionKey(CharacterAction action)
+        {
+            return _actionDictionary.TryGetValue(action, out var config) ? config.GetKeyName() : "";
+        }
+
         public bool IsPressed(CharacterAction action)
         {
             return _actionDictionary.TryGetValue(action, out var config) && config.IsPressed();
