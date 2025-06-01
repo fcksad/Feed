@@ -56,14 +56,25 @@ namespace Service
             }
         }
 
-        public string GetActionKey(CharacterAction action)
+        public Vector2 GetVector2(CharacterAction action)
         {
-            return _actionDictionary.TryGetValue(action, out var config) ? config.GetKeyName() : "";
+            if (_actionDictionary.TryGetValue(action, out var config))
+            {
+                return config.InputReference.action.ReadValue<Vector2>();
+            }
+
+            return Vector2.zero;
         }
 
         public bool IsPressed(CharacterAction action)
         {
             return _actionDictionary.TryGetValue(action, out var config) && config.IsPressed();
+        }
+
+
+        public string GetActionKey(CharacterAction action)
+        {
+            return _actionDictionary.TryGetValue(action, out var config) ? config.GetKeyName() : "";
         }
 
         public void ChangeInputMap(InputMapType type)

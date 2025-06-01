@@ -13,6 +13,7 @@ public class CharacterController : IControllable
 
     [Header("Jump")]
     private float _jumpHeight = 0.5f;
+    private const float FALL_MULTIPLIER = 2.5f;
 
 
     [Header("Look")]
@@ -34,9 +35,12 @@ public class CharacterController : IControllable
         _character = character;
     }
 
-    public void Move(Vector2 input, bool isRunning)
+    public void Move(Vector2 input, bool isRunning, bool jumpRequested)
     {
         ApplyGravity();
+
+        if (jumpRequested && _character.CharacterController.isGrounded)
+            Jump();
 
         var speed = isRunning ? RUN_SPEED : WALK_SPEED;
         var command = new MoveCommand(_character.CharacterController, _character.CameraRoot, input, speed, _verticalVelocity);
@@ -64,28 +68,25 @@ public class CharacterController : IControllable
 
     private void ApplyGravity()
     {
-        if (_character.CharacterController.isGrounded && _verticalVelocity < 0)
+        if (_character.CharacterController.isGrounded)
         {
-            _verticalVelocity = -2f;
+            if (_verticalVelocity < 0)
+                _verticalVelocity = -1f;
         }
         else
         {
-            _verticalVelocity += Physics.gravity.y * Time.deltaTime;
+            bool falling = _verticalVelocity < 0;
+            float gravityScale = falling ? FALL_MULTIPLIER : 1f;
+            _verticalVelocity += Physics.gravity.y * gravityScale * Time.deltaTime;
         }
     }
 
-    public void Jump()
+    private void Jump()
     {
         if (_character.CharacterController.isGrounded)
         {
             _verticalVelocity = Mathf.Sqrt(2f * 9.81f * _jumpHeight); 
         }
-    }
-
-    public void Attack()
-    {
-        var command = new AttackCommand(_character);
-        _commandController.SetCommand(command);
     }
 
     public void Look(Vector2 delta)

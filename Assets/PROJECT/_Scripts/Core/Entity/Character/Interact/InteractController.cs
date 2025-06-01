@@ -1,8 +1,9 @@
 using Service;
+using System;
 using UnityEngine;
 using Zenject;
 
-public class InteractController : MonoBehaviour
+public class InteractController : MonoBehaviour, IInitializable, IDisposable
 {
     private Camera _camera;
     [SerializeField] private float _interactDistance = 3f;
@@ -12,6 +13,7 @@ public class InteractController : MonoBehaviour
 
     private IInteractable _currentInteractable;
 
+    [SerializeField] private GrabController _grabController;
     private IInputService _inputService;
     private IHintService _hintService;
     private IAudioService _audioService;
@@ -24,14 +26,20 @@ public class InteractController : MonoBehaviour
         _audioService = audioService;
     }
 
-    private void Awake()
+    public void Initialize()
     {
         _camera = Camera.main;
+        _inputService.AddActionListener(CharacterAction.Interact, onPerformed: OnInteract);
     }
 
-    private void Start()
+    public void Dispose()
     {
-        _inputService.AddActionListener(CharacterAction.Interact, onPerformed: OnInteract);
+        _inputService.RemoveActionListener(CharacterAction.Interact, onPerformed: OnInteract);
+    }
+
+    public IInteractable GetInteractableObject()
+    {
+        return _currentInteractable;
     }
 
     private void Update()
@@ -78,20 +86,12 @@ public class InteractController : MonoBehaviour
     {
         if (_currentInteractable != null)
         {
-            _currentInteractable.Interact();
-
-            if (_select != null)
-                _audioService.Play(_select);
+            _grabController.TryGrabOrInteract(_currentInteractable);
+            _audioService.Play(_select);
         }
         else
         {
-            if (_denyselect != null)
-                _audioService.Play(_denyselect);
+            _audioService.Play(_denyselect);
         }
-    }
-
-    private void OnDestroy()
-    {
-        _inputService.RemoveActionListener(CharacterAction.Interact, onPerformed: OnInteract);
     }
 }

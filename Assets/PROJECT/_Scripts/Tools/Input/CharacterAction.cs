@@ -10,4 +10,11 @@ public enum CharacterAction
     MoveLeft,
     MoveRight,  
     Run,
+    Look,
+    RotateLeft,
+    RotateRight,
+    RotateForward,
+    RotateBackward,
+    Move
+
 }

@@ -28,9 +28,11 @@ public class MoveCommand : ICommand
         right.y = 0;
         right.Normalize();
 
-        Vector3 direction = right * _input.x + forward * _input.y;
-        direction.y = _verticalVelocity;
-        _controller.Move(direction * _speed * Time.deltaTime);
+        Vector3 horizontal = (right * _input.x + forward * _input.y) * _speed;
+        Vector3 move = horizontal;
+        move.y = _verticalVelocity;
+
+        _controller.Move(move * Time.deltaTime);
         _executed = true;
     }
 

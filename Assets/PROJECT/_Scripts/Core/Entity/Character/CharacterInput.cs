@@ -1,12 +1,12 @@
 using Service;
 using System;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using Zenject;
 
 public class CharacterInput : IInitializable, IDisposable, ITickable
 {
     private bool _isLocked = false;
+    private bool _isJumpHeld = false;
 
     private IInputService _inputService;
     private IControllable _controller;
@@ -22,14 +22,12 @@ public class CharacterInput : IInitializable, IDisposable, ITickable
 
     public void Initialize()
     {
-        _inputService.AddActionListener(CharacterAction.Attack, onStarted: Attack);
-        _inputService.AddActionListener(CharacterAction.Jump, onStarted: Jump);
+        _inputService.AddActionListener(CharacterAction.Jump,onStarted: () => _isJumpHeld = true, onCanceled: () => _isJumpHeld = false);
     }
 
     public void Dispose()
     {
-        _inputService.RemoveActionListener(CharacterAction.Attack, onStarted: Attack);
-        _inputService.RemoveActionListener(CharacterAction.Jump, onStarted: Jump);
+        _inputService.AddActionListener(CharacterAction.Jump, onStarted: () => _isJumpHeld = true, onCanceled: () => _isJumpHeld = false);
     }
 
     public void Lock(bool value)
@@ -41,29 +39,12 @@ public class CharacterInput : IInitializable, IDisposable, ITickable
     {
         if (_isLocked) return;
 
-        _controller.Look(Mouse.current.delta.ReadValue());
+        _controller.Look(_inputService.GetVector2(CharacterAction.Look));
 
-        Vector2 input = Vector2.zero;
-        if (_inputService.IsPressed(CharacterAction.MoveUp)) input.y += 1;
-        if (_inputService.IsPressed(CharacterAction.MoveDown)) input.y -= 1;
-        if (_inputService.IsPressed(CharacterAction.MoveRight)) input.x += 1;
-        if (_inputService.IsPressed(CharacterAction.MoveLeft)) input.x -= 1;
-
+        Vector2 input = _inputService.GetVector2(CharacterAction.Move);
         input = input.normalized;
 
         bool run = _inputService.IsPressed(CharacterAction.Run) ? true : false;
-        _controller.Move(input, run);
-    }
-
-    private void Attack()
-    {
-        if (_isLocked) return;
-        _controller.Attack();
-    }
-
-    private void Jump()
-    {
-        if (_isLocked) return;
-        _controller.Jump();
+        _controller.Move(input, run, _isJumpHeld);
     }
 }
