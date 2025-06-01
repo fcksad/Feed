@@ -28,7 +28,7 @@ public enum ControlDeviceType
     Keyboard,
     Mouse,
     Gamepad,
-    Touchscreen
+    Touchscreen,
 }
 
 [Serializable]

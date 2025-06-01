@@ -1,5 +1,6 @@
 using Service;
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
 
@@ -9,7 +10,15 @@ public class GrabController : MonoBehaviour, IInitializable, IDisposable
     [SerializeField] private float _throwForce = 5f;
     [SerializeField] private float _rotateSpeed = 100f;
 
+    private readonly List<CharacterAction> _grabHints = new()
+{
+    CharacterAction.Attack, CharacterAction.Attack1,
+    CharacterAction.RotateLeft, CharacterAction.RotateRight,
+    CharacterAction.RotateForward, CharacterAction.RotateBackward
+};
+
     private IInputService _inputService;
+    private IHintService _hintService;
 
     private IGrabbable _holdObject;
     private Coroutine _rotateRoutine;
@@ -20,9 +29,10 @@ public class GrabController : MonoBehaviour, IInitializable, IDisposable
     private Action _onRotateBackward;
 
     [Inject]
-    public void Construct(IInputService inputService)
+    public void Construct(IInputService inputService, IHintService hintService)
     {
         _inputService = inputService;
+        _hintService = hintService;
     }
 
     public void Initialize()
@@ -69,25 +79,23 @@ public class GrabController : MonoBehaviour, IInitializable, IDisposable
         _holdObject = grabbable;
         var obj = _holdObject.Transform;
 
-            obj.SetParent(_holdPoint);
+        obj.SetParent(_holdPoint);
+
         if (_holdObject.SetDefaultPos == true)
         {
             obj.localPosition = Vector3.zero;
-            obj.localRotation = Quaternion.identity;
+            obj.localRotation = _holdObject.Rotate;
+
             _holdObject.Rigidbody.linearVelocity = Vector3.zero;
             _holdObject.Rigidbody.angularVelocity = Vector3.zero;
         }
 
-        if (_holdObject.ToggleCollider == true)
-        {
-            foreach (var collider in _holdObject.GetColliders())
-            {
-                collider.enabled = false;
-                _holdObject.Rigidbody.isKinematic = true;
-                _holdObject.Rigidbody.interpolation = RigidbodyInterpolation.None;
-                _holdObject.Rigidbody.collisionDetectionMode = CollisionDetectionMode.Continuous;
-            }
-        }
+        if (_holdObject.ToggleCollider)
+            SetHeldObjectPhysics(false);
+
+        _holdObject.OnGrab();
+        _hintService.ShowHint(_grabHints);
+
     }
 
     private void Throw()
@@ -108,17 +116,11 @@ public class GrabController : MonoBehaviour, IInitializable, IDisposable
         var obj = _holdObject.Transform;
         obj.SetParent(null);
 
-        if (_holdObject.ToggleCollider == true)
-        {
-            foreach (var collider in _holdObject.GetColliders())
-            {
-                collider.enabled = true;
-                _holdObject.Rigidbody.isKinematic = false;
-                _holdObject.Rigidbody.interpolation = RigidbodyInterpolation.Interpolate;
-                _holdObject.Rigidbody.collisionDetectionMode = CollisionDetectionMode.Discrete;
-            }
-        }
+        if (_holdObject.ToggleCollider)
+            SetHeldObjectPhysics(true);
 
+        _holdObject.OnDrop();
+        _hintService.HideHint(_grabHints);
         _holdObject = null;
     }
 
@@ -146,5 +148,15 @@ public class GrabController : MonoBehaviour, IInitializable, IDisposable
             yield return new WaitForFixedUpdate();
             _holdObject.Transform.Rotate(axis * _rotateSpeed * Time.fixedDeltaTime);
         }
+    }
+
+    private void SetHeldObjectPhysics(bool enable)
+    {
+        foreach (var col in _holdObject.GetColliders())
+            col.enabled = enable;
+
+        _holdObject.Rigidbody.isKinematic = !enable;
+        _holdObject.Rigidbody.interpolation = enable ? RigidbodyInterpolation.Interpolate : RigidbodyInterpolation.None;
+        _holdObject.Rigidbody.collisionDetectionMode = enable ? CollisionDetectionMode.Discrete : CollisionDetectionMode.Continuous;
     }
 }

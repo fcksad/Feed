@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System;
 using UnityEngine;
+using static InputHintConfig.InputHintEntry;
 
 [CreateAssetMenu(fileName = "InputHintConfig", menuName = "Configs/Input/Input Hint Config")]
 public class InputHintConfig : ScriptableObject
@@ -14,17 +15,18 @@ public class InputHintConfig : ScriptableObject
         [Serializable]
         public class HintInputView
         {
+            [field: SerializeField] public string ControlName { get; set; }
             [field: SerializeField] public string ControlButton { get; set; } 
             [field: SerializeField] public Sprite Icon { get; set; }
         }
     }
 
     [SerializeField] private List<InputHintEntry> _hintEntries = new();
-    private Dictionary<(ControlDeviceType, string), Sprite> _hintDictionary;
+    private Dictionary<(ControlDeviceType, string), HintInputView> _hintDictionary;
 
     public void Initialize()
     {
-        _hintDictionary = new Dictionary<(ControlDeviceType, string), Sprite>();
+        _hintDictionary = new();
 
         foreach (var entry in _hintEntries)
         {
@@ -33,19 +35,19 @@ public class InputHintConfig : ScriptableObject
                 var key = (entry.ControlDeviceType, hint.ControlButton);
                 if (!_hintDictionary.ContainsKey(key))
                 {
-                    _hintDictionary.Add(key, hint.Icon);
+                    _hintDictionary.Add(key, hint);
                 }
             }
         }
     }
 
-    public Sprite GetIcon(ControlDeviceType deviceType, string controlButton)
+    public HintInputView GetHint(ControlDeviceType deviceType, string controlButton)
     {
         if (_hintDictionary == null)
             Initialize();
 
-        var key = (deviceType, controlButton);
-        return _hintDictionary.TryGetValue(key, out var icon) ? icon : null;
+        var key = (deviceType, controlButton.ToLower());
+        return _hintDictionary[key];
     }
 
 
@@ -65,7 +67,8 @@ public class InputHintConfig : ScriptableObject
             "leftShift", "rightShift", "leftCtrl", "rightCtrl",
             "leftAlt", "rightAlt",
             "upArrow", "downArrow", "leftArrow", "rightArrow",
-            "f1", "f2", "f3", "f4", "f5", "f6", "f7", "f8", "f9", "f10", "f11", "f12"
+            "f1", "f2", "f3", "f4", "f5", "f6", "f7", "f8", "f9", "f10", "f11", "f12",
+            "leftButton", "rightButton", "middleButton"
         });
 
         AutoFillDevice(ControlDeviceType.Gamepad, new[]
@@ -73,7 +76,7 @@ public class InputHintConfig : ScriptableObject
             "buttonSouth", "buttonEast", "buttonNorth", "buttonWest",
             "leftShoulder", "rightShoulder",
             "leftTrigger", "rightTrigger",
-            "dpad/up", "dpad/down", "dpad/left", "dpad/right",
+            "up", "down", "left", "right",
             "start", "select",
             "leftStickPress", "rightStickPress"
         });
@@ -86,9 +89,12 @@ public class InputHintConfig : ScriptableObject
         var entry = new InputHintEntry { ControlDeviceType = type };
         foreach (var button in buttons)
         {
+            string formattedName = char.ToUpper(button[0]) + button.Substring(1);
+
             entry.HintInputViews.Add(new InputHintEntry.HintInputView
             {
-                ControlButton = button,
+                ControlButton = button.ToLower(),
+                ControlName = formattedName,
                 Icon = null
             });
         }

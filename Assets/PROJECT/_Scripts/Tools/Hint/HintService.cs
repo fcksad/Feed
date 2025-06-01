@@ -1,4 +1,5 @@
 
+using System.Collections.Generic;
 using UnityEngine.InputSystem;
 using Zenject;
 
@@ -20,22 +21,39 @@ namespace Service
 
         public void Initialize() { }
 
-        public void ShowHint(CharacterAction action)
+        public void ShowHint(List<CharacterAction> actions)
         {
-            string key = _inputService.GetActionKey(action);
-            ControlDeviceType deviceType = _playerInput.currentControlScheme == "Gamepad" ? ControlDeviceType.Gamepad : ControlDeviceType.Keyboard;
+            var deviceType = GetDeviceType(_playerInput.currentControlScheme);
 
-            _hintView.Show(action, key.ToLowerInvariant(), deviceType);
+            foreach (var action in actions)
+            {
+                string key = _inputService.GetActionKey(action, _playerInput.currentControlScheme);
+                _hintView.Show(action, key, deviceType);
+            }
         }
 
-        public void HideHint(CharacterAction action)
+        public void HideHint(List<CharacterAction> actions)
         {
-            _hintView.Hide(action);
+            foreach (var action in actions)
+            {
+                _hintView.Hide(action);
+            }
         }
 
         public void HideAll()
         {
             _hintView.HideAll();
+        }
+
+
+        private ControlDeviceType GetDeviceType(string controlScheme)
+        {
+            return controlScheme switch
+            {
+                "Keyboard&Mouse" => ControlDeviceType.Keyboard,
+                "Gamepad" => ControlDeviceType.Gamepad,
+                _ => ControlDeviceType.Keyboard
+            };
         }
     }
 }

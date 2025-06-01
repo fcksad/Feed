@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -47,13 +48,29 @@ public class InputActionConfigBase : ScriptableObject, IInputAction
     {
         return InputReference.action.IsPressed();
     }
-    public string GetKeyName()
+
+    public string GetKeyName(string controlScheme)
     {
-        if (InputReference != null && InputReference.action != null)
+        if (InputReference == null || InputReference.action == null)
+            return "";
+
+        var binding = InputReference.action.bindings
+            .FirstOrDefault(b => b.groups.Contains(controlScheme) && !b.isPartOfComposite);
+
+        if (string.IsNullOrEmpty(binding.effectivePath))
         {
-            return InputReference.action.GetBindingDisplayString();
+            binding = InputReference.action.bindings.FirstOrDefault(b => !b.isPartOfComposite);
         }
 
-        return "";
+        if (string.IsNullOrEmpty(binding.effectivePath))
+            return "";
+
+        int slashIndex = binding.effectivePath.LastIndexOf('/');
+        if (slashIndex >= 0 && slashIndex < binding.effectivePath.Length - 1)
+        {
+            return binding.effectivePath.Substring(slashIndex + 1).ToLowerInvariant();
+        }
+
+        return binding.effectivePath.ToLowerInvariant();
     }
 }

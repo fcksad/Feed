@@ -1,5 +1,6 @@
 using Service;
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
 
@@ -10,6 +11,8 @@ public class InteractController : MonoBehaviour, IInitializable, IDisposable
     [SerializeField] private LayerMask _interactableMask;
     [SerializeField] private AudioConfig _select;
     [SerializeField] private AudioConfig _denyselect;
+
+    private readonly List<CharacterAction> _interaction = new List<CharacterAction> { CharacterAction.Interact };
 
     private IInteractable _currentInteractable;
 
@@ -60,8 +63,8 @@ public class InteractController : MonoBehaviour, IInitializable, IDisposable
                     if (_currentInteractable.Outline != null)
                         _currentInteractable.Outline.OutlineMode = Outline.Mode.Enabled;
 
-       
-                    _hintService.ShowHint(CharacterAction.Interact);
+
+                    _hintService.ShowHint(_interaction);
                 }
 
                 return;
@@ -69,7 +72,7 @@ public class InteractController : MonoBehaviour, IInitializable, IDisposable
         }
 
         ClearCurrent();
-        _hintService.HideHint(CharacterAction.Interact);
+        _hintService.HideHint(_interaction);
     }
 
     private void ClearCurrent()

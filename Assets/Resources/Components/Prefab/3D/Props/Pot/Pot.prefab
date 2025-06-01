@@ -10,11 +10,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 1f25a5fc00b089347b5219dd69d8b792, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.841
+      value: -0.017
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1f25a5fc00b089347b5219dd69d8b792, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.7168894
+      value: 0.76
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1f25a5fc00b089347b5219dd69d8b792, type: 3}
       propertyPath: m_LocalPosition.z
@@ -144,7 +144,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _outline: {fileID: 7920982430352418498}
-  _rb: {fileID: 3889778561570216918}
+  _rigidbody: {fileID: 3889778561570216918}
+  _rotate: {x: 0, y: 0, z: 0, w: 0}
   _setDefaultPos: 1
   _toggleCollider: 1
   _colliders:

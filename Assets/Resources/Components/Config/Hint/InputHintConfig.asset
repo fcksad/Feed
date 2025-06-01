@@ -15,163 +15,251 @@ MonoBehaviour:
   _hintEntries:
   - <ControlDeviceType>k__BackingField: 0
     <HintInputViews>k__BackingField:
-    - <ControlButton>k__BackingField: q
+    - <ControlName>k__BackingField: Q
+      <ControlButton>k__BackingField: q
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: w
+    - <ControlName>k__BackingField: W
+      <ControlButton>k__BackingField: w
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: e
+    - <ControlName>k__BackingField: E
+      <ControlButton>k__BackingField: e
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: r
+    - <ControlName>k__BackingField: R
+      <ControlButton>k__BackingField: r
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: t
+    - <ControlName>k__BackingField: T
+      <ControlButton>k__BackingField: t
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: y
+    - <ControlName>k__BackingField: Y
+      <ControlButton>k__BackingField: y
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: u
+    - <ControlName>k__BackingField: U
+      <ControlButton>k__BackingField: u
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: i
+    - <ControlName>k__BackingField: I
+      <ControlButton>k__BackingField: i
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: o
+    - <ControlName>k__BackingField: O
+      <ControlButton>k__BackingField: o
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: p
+    - <ControlName>k__BackingField: P
+      <ControlButton>k__BackingField: p
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: a
+    - <ControlName>k__BackingField: A
+      <ControlButton>k__BackingField: a
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: s
+    - <ControlName>k__BackingField: S
+      <ControlButton>k__BackingField: s
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: d
+    - <ControlName>k__BackingField: D
+      <ControlButton>k__BackingField: d
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: f
+    - <ControlName>k__BackingField: F
+      <ControlButton>k__BackingField: f
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: g
+    - <ControlName>k__BackingField: G
+      <ControlButton>k__BackingField: g
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: h
+    - <ControlName>k__BackingField: H
+      <ControlButton>k__BackingField: h
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: j
+    - <ControlName>k__BackingField: J
+      <ControlButton>k__BackingField: j
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: k
+    - <ControlName>k__BackingField: K
+      <ControlButton>k__BackingField: k
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: l
+    - <ControlName>k__BackingField: L
+      <ControlButton>k__BackingField: l
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: z
+    - <ControlName>k__BackingField: Z
+      <ControlButton>k__BackingField: z
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: x
+    - <ControlName>k__BackingField: X
+      <ControlButton>k__BackingField: x
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: c
+    - <ControlName>k__BackingField: C
+      <ControlButton>k__BackingField: c
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: v
+    - <ControlName>k__BackingField: V
+      <ControlButton>k__BackingField: v
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: b
+    - <ControlName>k__BackingField: B
+      <ControlButton>k__BackingField: b
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: n
+    - <ControlName>k__BackingField: N
+      <ControlButton>k__BackingField: n
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: m
+    - <ControlName>k__BackingField: M
+      <ControlButton>k__BackingField: m
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: 1
+    - <ControlName>k__BackingField: 1
+      <ControlButton>k__BackingField: 1
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: 2
+    - <ControlName>k__BackingField: 2
+      <ControlButton>k__BackingField: 2
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: 3
+    - <ControlName>k__BackingField: 3
+      <ControlButton>k__BackingField: 3
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: 4
+    - <ControlName>k__BackingField: 4
+      <ControlButton>k__BackingField: 4
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: 5
+    - <ControlName>k__BackingField: 5
+      <ControlButton>k__BackingField: 5
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: 6
+    - <ControlName>k__BackingField: 6
+      <ControlButton>k__BackingField: 6
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: 7
+    - <ControlName>k__BackingField: 7
+      <ControlButton>k__BackingField: 7
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: 8
+    - <ControlName>k__BackingField: 8
+      <ControlButton>k__BackingField: 8
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: 9
+    - <ControlName>k__BackingField: 9
+      <ControlButton>k__BackingField: 9
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: 0
+    - <ControlName>k__BackingField: 0
+      <ControlButton>k__BackingField: 0
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: space
+    - <ControlName>k__BackingField: Space
+      <ControlButton>k__BackingField: space
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: enter
+    - <ControlName>k__BackingField: Enter
+      <ControlButton>k__BackingField: enter
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: tab
+    - <ControlName>k__BackingField: Tab
+      <ControlButton>k__BackingField: tab
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: escape
+    - <ControlName>k__BackingField: Escape
+      <ControlButton>k__BackingField: escape
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: backspace
+    - <ControlName>k__BackingField: Backspace
+      <ControlButton>k__BackingField: backspace
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: leftShift
+    - <ControlName>k__BackingField: LeftShift
+      <ControlButton>k__BackingField: leftshift
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: rightShift
+    - <ControlName>k__BackingField: RightShift
+      <ControlButton>k__BackingField: rightshift
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: leftCtrl
+    - <ControlName>k__BackingField: LeftCtrl
+      <ControlButton>k__BackingField: leftctrl
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: rightCtrl
+    - <ControlName>k__BackingField: RightCtrl
+      <ControlButton>k__BackingField: rightctrl
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: leftAlt
+    - <ControlName>k__BackingField: LeftAlt
+      <ControlButton>k__BackingField: leftalt
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: rightAlt
+    - <ControlName>k__BackingField: RightAlt
+      <ControlButton>k__BackingField: rightalt
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: upArrow
+    - <ControlName>k__BackingField: UpArrow
+      <ControlButton>k__BackingField: uparrow
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: downArrow
+    - <ControlName>k__BackingField: DownArrow
+      <ControlButton>k__BackingField: downarrow
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: leftArrow
+    - <ControlName>k__BackingField: LeftArrow
+      <ControlButton>k__BackingField: leftarrow
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: rightArrow
+    - <ControlName>k__BackingField: RightArrow
+      <ControlButton>k__BackingField: rightarrow
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: f1
+    - <ControlName>k__BackingField: F1
+      <ControlButton>k__BackingField: f1
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: f2
+    - <ControlName>k__BackingField: F2
+      <ControlButton>k__BackingField: f2
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: f3
+    - <ControlName>k__BackingField: F3
+      <ControlButton>k__BackingField: f3
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: f4
+    - <ControlName>k__BackingField: F4
+      <ControlButton>k__BackingField: f4
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: f5
+    - <ControlName>k__BackingField: F5
+      <ControlButton>k__BackingField: f5
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: f6
+    - <ControlName>k__BackingField: F6
+      <ControlButton>k__BackingField: f6
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: f7
+    - <ControlName>k__BackingField: F7
+      <ControlButton>k__BackingField: f7
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: f8
+    - <ControlName>k__BackingField: F8
+      <ControlButton>k__BackingField: f8
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: f9
+    - <ControlName>k__BackingField: F9
+      <ControlButton>k__BackingField: f9
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: f10
+    - <ControlName>k__BackingField: F10
+      <ControlButton>k__BackingField: f10
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: f11
+    - <ControlName>k__BackingField: F11
+      <ControlButton>k__BackingField: f11
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: f12
+    - <ControlName>k__BackingField: F12
+      <ControlButton>k__BackingField: f12
+      <Icon>k__BackingField: {fileID: 0}
+    - <ControlName>k__BackingField: LeftButton
+      <ControlButton>k__BackingField: leftbutton
+      <Icon>k__BackingField: {fileID: 0}
+    - <ControlName>k__BackingField: RightButton
+      <ControlButton>k__BackingField: rightbutton
+      <Icon>k__BackingField: {fileID: 0}
+    - <ControlName>k__BackingField: MiddleButton
+      <ControlButton>k__BackingField: middlebutton
       <Icon>k__BackingField: {fileID: 0}
   - <ControlDeviceType>k__BackingField: 2
     <HintInputViews>k__BackingField:
-    - <ControlButton>k__BackingField: buttonSouth
+    - <ControlName>k__BackingField: ButtonSouth
+      <ControlButton>k__BackingField: buttonsouth
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: buttonEast
+    - <ControlName>k__BackingField: ButtonEast
+      <ControlButton>k__BackingField: buttoneast
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: buttonNorth
+    - <ControlName>k__BackingField: ButtonNorth
+      <ControlButton>k__BackingField: buttonnorth
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: buttonWest
+    - <ControlName>k__BackingField: ButtonWest
+      <ControlButton>k__BackingField: buttonwest
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: leftShoulder
+    - <ControlName>k__BackingField: LeftShoulder
+      <ControlButton>k__BackingField: leftshoulder
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: rightShoulder
+    - <ControlName>k__BackingField: RightShoulder
+      <ControlButton>k__BackingField: rightshoulder
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: leftTrigger
+    - <ControlName>k__BackingField: LeftTrigger
+      <ControlButton>k__BackingField: lefttrigger
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: rightTrigger
+    - <ControlName>k__BackingField: RightTrigger
+      <ControlButton>k__BackingField: righttrigger
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: dpad/up
+    - <ControlName>k__BackingField: Up
+      <ControlButton>k__BackingField: up
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: dpad/down
+    - <ControlName>k__BackingField: Down
+      <ControlButton>k__BackingField: down
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: dpad/left
+    - <ControlName>k__BackingField: Left
+      <ControlButton>k__BackingField: left
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: dpad/right
+    - <ControlName>k__BackingField: Right
+      <ControlButton>k__BackingField: right
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: start
+    - <ControlName>k__BackingField: Start
+      <ControlButton>k__BackingField: start
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: select
+    - <ControlName>k__BackingField: Select
+      <ControlButton>k__BackingField: select
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: leftStickPress
+    - <ControlName>k__BackingField: LeftStickPress
+      <ControlButton>k__BackingField: leftstickpress
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlButton>k__BackingField: rightStickPress
+    - <ControlName>k__BackingField: RightStickPress
+      <ControlButton>k__BackingField: rightstickpress
       <Icon>k__BackingField: {fileID: 0}

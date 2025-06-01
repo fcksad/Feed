@@ -24,9 +24,9 @@ namespace Service
         {
             if (_hints.ContainsKey(action) == false)
             {
-                var icon = _inputHintConfig.GetIcon(deviceType, controlButton);
+                var hint = _inputHintConfig.GetHint(deviceType, controlButton);
                 var newHint = _instantiateFactoryService.Create(_hintImage, parent: _hintHolder, customName: action.ToString());
-                newHint.Set(controlButton, icon);
+                newHint.Set(hint.ControlName, hint.Icon);
                 _hints[action] = newHint;
             }
             else

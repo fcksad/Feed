@@ -72,9 +72,9 @@ namespace Service
         }
 
 
-        public string GetActionKey(CharacterAction action)
+        public string GetActionKey(CharacterAction action, string controlScheme)
         {
-            return _actionDictionary.TryGetValue(action, out var config) ? config.GetKeyName() : "";
+            return _actionDictionary.TryGetValue(action, out var config) ? config.GetKeyName(controlScheme) : "";
         }
 
         public void ChangeInputMap(InputMapType type)

@@ -1,9 +1,11 @@
+using System.Collections.Generic;
+
 namespace Service
 {
     public interface IHintService 
     {
-        public void ShowHint(CharacterAction action);
-        void HideHint(CharacterAction action);
+        public void ShowHint(List<CharacterAction> actions);
+        void HideHint(List<CharacterAction> actions);
         void HideAll();
     }
 }

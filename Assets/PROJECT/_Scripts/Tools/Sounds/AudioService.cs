@@ -70,11 +70,8 @@ public class AudioService : IAudioService, IInitializable
 
         var key = (audio.Type, audio.AudioName);
 
-        if (audio.Type != AudioType.SFX)
-        {
-            if (!_namedSources.ContainsKey(key)) _namedSources[key] = new List<AudioSource>();
-            _namedSources[key].Add(src);
-        }
+        if (!_namedSources.ContainsKey(key)) _namedSources[key] = new List<AudioSource>();
+        _namedSources[key].Add(src);
 
         var playTime = src.clip.length + 0.5f;
 
@@ -107,7 +104,7 @@ public class AudioService : IAudioService, IInitializable
     {
         foreach (var kv in _namedSources)
         {
-            if (kv.Key.Item1 == audio.Type && (audio.name == null || kv.Key.Item2 == audio.name))
+            if (kv.Key.Item1 == audio.Type && (audio.AudioName == null || kv.Key.Item2 == audio.AudioName))
                 kv.Value.ForEach(s => s?.Pause());
         }
     }
@@ -116,7 +113,7 @@ public class AudioService : IAudioService, IInitializable
     {
         foreach (var kv in _namedSources)
         {
-            if (kv.Key.Item1 == audio.Type && (audio.name == null || kv.Key.Item2 == audio.name))
+            if (kv.Key.Item1 == audio.Type && (audio.AudioName == null || kv.Key.Item2 == audio.AudioName))
                 kv.Value.ForEach(s => s?.UnPause());
         }
     }
@@ -149,11 +146,7 @@ public class AudioService : IAudioService, IInitializable
         src.playOnAwake = false;
         src.spatialBlend = audio.SpatialBlend;
         src.pitch = UnityEngine.Random.Range(audio.MinPitch, audio.MaxPitch);
-
-        if (clipIndex >= 0) { src.clip = audio.AudioClips[clipIndex]; }
-        else { src.clip = GetRandomClip(audio.AudioClips); }
-
-        src.clip = GetRandomClip(audio.AudioClips);
+        src.clip = clipIndex >= 0 ? audio.AudioClips[clipIndex] : GetRandomClip(audio.AudioClips);
         src.volume = _volumes[audio.Type];
     }
 

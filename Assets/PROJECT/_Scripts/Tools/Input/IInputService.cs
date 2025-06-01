@@ -10,7 +10,7 @@ namespace Service
         bool IsPressed(CharacterAction action);
         public Vector2 GetVector2(CharacterAction action);
         void ChangeInputMap(InputMapType type);
-        string GetActionKey(CharacterAction action);
+        public string GetActionKey(CharacterAction action, string controlScheme);
     }
 
 }
