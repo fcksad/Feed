@@ -10,13 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 346a38e715474eb4ea0cf8ce58569643, type: 3}
-  m_Name: DoorClose
+  m_Name: DoorOpen
   m_EditorClassIdentifier: 
-  <AudioName>k__BackingField: DoorClose
-  <Type>k__BackingField: 0
-  <OneShoot>k__BackingField: 1
-  <SpatialBlend>k__BackingField: 0
+  <AudioName>k__BackingField: DoorOpen_1
+  <Type>k__BackingField: 2
+  <OneShoot>k__BackingField: 0
+  <SpatialBlend>k__BackingField: 1
   <AudioClips>k__BackingField:
-  - {fileID: 8300000, guid: 54336bdd5b025154bb24109f31c86d78, type: 3}
+  - {fileID: 8300000, guid: e3c3909b3c424bf468d0725b49720429, type: 3}
+  - {fileID: 8300000, guid: 65a79cb5b9d41284ab81dad5078e8204, type: 3}
+  - {fileID: 8300000, guid: 7e54dda2f32aef6469fdeba6341666f3, type: 3}
   MinPitch: 1
   MaxPitch: 1

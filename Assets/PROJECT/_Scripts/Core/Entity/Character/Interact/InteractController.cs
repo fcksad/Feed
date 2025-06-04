@@ -6,7 +6,7 @@ using Zenject;
 
 public class InteractController : MonoBehaviour, IInitializable, IDisposable
 {
-    private Camera _camera;
+    [SerializeField] private Camera _camera;
     [SerializeField] private float _interactDistance = 3f;
     [SerializeField] private LayerMask _interactableMask;
     [SerializeField] private AudioConfig _select;
@@ -31,7 +31,6 @@ public class InteractController : MonoBehaviour, IInitializable, IDisposable
 
     public void Initialize()
     {
-        _camera = Camera.main;
         _inputService.AddActionListener(CharacterAction.Interact, onPerformed: OnInteract);
     }
 
@@ -45,7 +44,7 @@ public class InteractController : MonoBehaviour, IInitializable, IDisposable
         return _currentInteractable;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         Ray ray = new Ray(_camera.transform.position, _camera.transform.forward);
 
@@ -90,6 +89,7 @@ public class InteractController : MonoBehaviour, IInitializable, IDisposable
         if (_currentInteractable != null)
         {
             _grabController.TryGrabOrInteract(_currentInteractable);
+            _currentInteractable.ReceiveInteractionFrom(_grabController.GetGrab());
             _audioService.Play(_select);
         }
         else

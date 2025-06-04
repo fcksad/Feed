@@ -11,11 +11,11 @@ public class GrabController : MonoBehaviour, IInitializable, IDisposable
     [SerializeField] private float _rotateSpeed = 100f;
 
     private readonly List<CharacterAction> _grabHints = new()
-{
-    CharacterAction.Attack, CharacterAction.Attack1,
-    CharacterAction.RotateLeft, CharacterAction.RotateRight,
-    CharacterAction.RotateForward, CharacterAction.RotateBackward
-};
+    {
+         CharacterAction.Attack, CharacterAction.Attack1,
+         CharacterAction.RotateLeft, CharacterAction.RotateRight,
+         CharacterAction.RotateForward, CharacterAction.RotateBackward
+    };
 
     private IInputService _inputService;
     private IHintService _hintService;
@@ -53,6 +53,12 @@ public class GrabController : MonoBehaviour, IInitializable, IDisposable
         _inputService.RemoveActionListener(CharacterAction.RotateRight, onStarted: _onRotateRight, onCanceled: StopRotate);
         _inputService.RemoveActionListener(CharacterAction.RotateForward, onStarted: _onRotateForward, onCanceled: StopRotate);
         _inputService.RemoveActionListener(CharacterAction.RotateBackward, onStarted: _onRotateBackward, onCanceled: StopRotate);
+    }
+
+
+    public IGrabbable GetGrab()
+    {
+        return _holdObject;
     }
 
     public void TryGrabOrInteract(IInteractable target)
