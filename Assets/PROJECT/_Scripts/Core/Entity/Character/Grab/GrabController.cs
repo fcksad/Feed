@@ -6,6 +6,7 @@ using Zenject;
 
 public class GrabController : MonoBehaviour, IInitializable, IDisposable
 {
+    [SerializeField] private Camera _camera;
     [SerializeField] private Transform _holdPoint;
     [SerializeField] private float _throwForce = 5f;
     [SerializeField] private float _rotateSpeed = 100f;
@@ -111,7 +112,7 @@ public class GrabController : MonoBehaviour, IInitializable, IDisposable
 
         var obj = _holdObject;
         Drop();
-        obj.Rigidbody.linearVelocity = Camera.main.transform.forward * _throwForce;
+        obj.Rigidbody.linearVelocity = _camera.transform.forward * _throwForce;
     }
 
     private void Drop()
