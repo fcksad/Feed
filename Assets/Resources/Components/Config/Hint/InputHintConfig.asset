@@ -204,39 +204,39 @@ MonoBehaviour:
     - <ControlName>k__BackingField: F12
       <ControlButton>k__BackingField: f12
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlName>k__BackingField: LeftButton
+    - <ControlName>k__BackingField: LC
       <ControlButton>k__BackingField: leftbutton
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlName>k__BackingField: RightButton
+    - <ControlName>k__BackingField: RC
       <ControlButton>k__BackingField: rightbutton
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlName>k__BackingField: MiddleButton
+    - <ControlName>k__BackingField: MC
       <ControlButton>k__BackingField: middlebutton
       <Icon>k__BackingField: {fileID: 0}
   - <ControlDeviceType>k__BackingField: 2
     <HintInputViews>k__BackingField:
-    - <ControlName>k__BackingField: ButtonSouth
+    - <ControlName>k__BackingField: A
       <ControlButton>k__BackingField: buttonsouth
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlName>k__BackingField: ButtonEast
+    - <ControlName>k__BackingField: B
       <ControlButton>k__BackingField: buttoneast
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlName>k__BackingField: ButtonNorth
+    - <ControlName>k__BackingField: Y
       <ControlButton>k__BackingField: buttonnorth
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlName>k__BackingField: ButtonWest
+    - <ControlName>k__BackingField: X
       <ControlButton>k__BackingField: buttonwest
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlName>k__BackingField: LeftShoulder
+    - <ControlName>k__BackingField: LB
       <ControlButton>k__BackingField: leftshoulder
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlName>k__BackingField: RightShoulder
+    - <ControlName>k__BackingField: RB
       <ControlButton>k__BackingField: rightshoulder
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlName>k__BackingField: LeftTrigger
+    - <ControlName>k__BackingField: LT
       <ControlButton>k__BackingField: lefttrigger
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlName>k__BackingField: RightTrigger
+    - <ControlName>k__BackingField: RT
       <ControlButton>k__BackingField: righttrigger
       <Icon>k__BackingField: {fileID: 0}
     - <ControlName>k__BackingField: Up
@@ -257,9 +257,9 @@ MonoBehaviour:
     - <ControlName>k__BackingField: Select
       <ControlButton>k__BackingField: select
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlName>k__BackingField: LeftStickPress
+    - <ControlName>k__BackingField: L3
       <ControlButton>k__BackingField: leftstickpress
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlName>k__BackingField: RightStickPress
+    - <ControlName>k__BackingField: R3
       <ControlButton>k__BackingField: rightstickpress
       <Icon>k__BackingField: {fileID: 0}
