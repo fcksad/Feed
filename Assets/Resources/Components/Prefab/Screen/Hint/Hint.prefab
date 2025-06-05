@@ -130,6 +130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _inputHintConfig: {fileID: 11400000, guid: 43982276907918a499ca8bb523a986ff, type: 2}
+  _hintGroup: {fileID: 6887019727102451969, guid: 3089f64fd9d381e44aacfd5c9d9c3e72, type: 3}
   _hintImage: {fileID: -1519067190595879253, guid: 89ec3693f586e794192b3bed932ae855, type: 3}
   _hintHolder: {fileID: 2717772643850336029}
 --- !u!1 &4039699971816511177
@@ -163,10 +164,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 6216655616840477031}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 50}
-  m_SizeDelta: {x: 0, y: 100}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -40}
+  m_SizeDelta: {x: 0, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4583590881219368891
 MonoBehaviour:
@@ -186,7 +187,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 4
-  m_Spacing: 15
+  m_Spacing: 10
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0

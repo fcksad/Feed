@@ -7,10 +7,11 @@ namespace Service
     public class HintView : MonoBehaviour
     {
         [SerializeField] private InputHintConfig _inputHintConfig;
+        [SerializeField] private HintGroup _hintGroup;
         [SerializeField] private HintImage _hintImage;
         [SerializeField] private Transform _hintHolder;
 
-        private Dictionary<CharacterAction , HintImage > _hints = new();
+        private Dictionary<string, HintGroup> _hints = new();
 
         private InstantiateFactoryService _instantiateFactoryService;
 
@@ -20,24 +21,33 @@ namespace Service
             _instantiateFactoryService = instantiateFactoryService;
         }
 
-        public void Show(CharacterAction action, string controlButton, ControlDeviceType deviceType)
+        public void Show(string localizationAction, List<CharacterAction> actions, List<string> controlButton, ControlDeviceType deviceType)
         {
-            if (_hints.ContainsKey(action) == false)
+            if (_hints.ContainsKey(localizationAction) == false)
             {
-                var hint = _inputHintConfig.GetHint(deviceType, controlButton);
-                var newHint = _instantiateFactoryService.Create(_hintImage, parent: _hintHolder, customName: action.ToString());
-                newHint.Set(hint.ControlName, hint.Icon);
-                _hints[action] = newHint;
+                var newHintGroup = _instantiateFactoryService.Create(_hintGroup, parent: _hintHolder, customName: localizationAction.ToString());
+                List<HintImage> hints = new List<HintImage>();
+
+                for (int i = 0; i < actions.Count; i++)
+                {
+                    var hint = _inputHintConfig.GetHint(deviceType, controlButton[i]);
+                    var newHint = _instantiateFactoryService.Create(_hintImage, parent: _hintHolder, customName: actions[i].ToString());
+                    newHint.Set(hint.ControlName, hint.Icon);
+                    hints.Add(newHint);
+                }
+
+                newHintGroup.Setup(localizationAction, hints);
+                _hints[localizationAction] = newHintGroup;
             }
             else
             {
-                _hints[action].gameObject.SetActive(true);
+                _hints[localizationAction].gameObject.SetActive(true);
             }
         }
 
-        public void Hide(CharacterAction action)
+        public void Hide(string localizationAction)
         {
-            if (_hints.TryGetValue(action, out var hint))
+            if (_hints.TryGetValue(localizationAction, out var hint))
             {
                 hint.gameObject.SetActive(false);
             }
@@ -56,6 +66,13 @@ namespace Service
         {
             foreach (var hint in _hints.Values)
             {
+                var hints = hint.GetHints();
+
+                foreach (var item in hints)
+                {
+                    _instantiateFactoryService.Release(item);
+                }
+
                 _instantiateFactoryService.Release(hint);
             }
             _hints.Clear();

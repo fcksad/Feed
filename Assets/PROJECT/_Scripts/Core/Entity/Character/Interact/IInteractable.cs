@@ -1,10 +1,6 @@
-using UnityEngine;
-
 public interface IInteractable 
 {
-
-    public Outline Outline { get;}
-
+    public string Name { get;}
     void Interact();
     void ReceiveInteractionFrom(IGrabbable item);
 

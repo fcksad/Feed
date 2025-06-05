@@ -4,8 +4,8 @@ namespace Service
 {
     public interface IHintService 
     {
-        public void ShowHint(List<CharacterAction> actions);
-        void HideHint(List<CharacterAction> actions);
+        public void ShowHint(string localizationAction, List<CharacterAction> actions);
+        void HideHint(string localizationAction);
         void HideAll();
     }
 }

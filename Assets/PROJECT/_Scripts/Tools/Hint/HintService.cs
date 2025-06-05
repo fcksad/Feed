@@ -1,4 +1,3 @@
-
 using System.Collections.Generic;
 using UnityEngine.InputSystem;
 using Zenject;
@@ -8,8 +7,8 @@ namespace Service
     public class HintService : IHintService
     {
         private HintView _hintView;
-        private IInputService _inputService;
         private PlayerInput _playerInput;
+        private IInputService _inputService;
 
         [Inject]
         public void Construct(HintView hintView, IInputService inputService, PlayerInput playerInput)
@@ -21,23 +20,21 @@ namespace Service
 
         public void Initialize() { }
 
-        public void ShowHint(List<CharacterAction> actions)
+        public void ShowHint(string localizationAction, List<CharacterAction> actions)
         {
             var deviceType = GetDeviceType(_playerInput.currentControlScheme);
 
+            List<string> keys = new List<string>();
             foreach (var action in actions)
             {
-                string key = _inputService.GetActionKey(action, _playerInput.currentControlScheme);
-                _hintView.Show(action, key, deviceType);
+                keys.Add(_inputService.GetActionKey(action, _playerInput.currentControlScheme));
             }
+            _hintView.Show(localizationAction, actions, keys, deviceType);
         }
 
-        public void HideHint(List<CharacterAction> actions)
+        public void HideHint(string localizationAction)
         {
-            foreach (var action in actions)
-            {
-                _hintView.Hide(action);
-            }
+            _hintView.Hide(localizationAction);
         }
 
         public void HideAll()

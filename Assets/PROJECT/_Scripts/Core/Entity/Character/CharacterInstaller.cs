@@ -10,5 +10,6 @@ public class CharacterInstaller : MonoInstaller
         Container.BindInterfacesAndSelfTo<InteractController>().FromComponentInHierarchy().AsSingle();
         Container.BindInterfacesAndSelfTo<GrabController>().FromComponentInHierarchy().AsSingle();
         Container.BindInterfacesAndSelfTo<Character>().FromComponentInHierarchy().AsSingle();
+        Container.BindInterfacesAndSelfTo<ScreenPointIndicator>().FromComponentInHierarchy().AsSingle();
     }
 }

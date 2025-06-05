@@ -269,7 +269,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4c5bd3ce55ba224394d5b917fb90a12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _outline: {fileID: 0}
+  _localizedString:
+    m_TableReference:
+      m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
+    m_TableEntryReference:
+      m_KeyId: 14483218207965188
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   _rigidbody: {fileID: 5428205366981923419}
   _rotate: {x: 0, y: 0, z: 0, w: 0}
   _setDefaultPos: 0
@@ -280,3 +288,6 @@ MonoBehaviour:
   - {fileID: 2690090212449374178}
   - {fileID: 2913618398982307119}
   - {fileID: 3393727565184911952}
+  references:
+    version: 2
+    RefIds: []

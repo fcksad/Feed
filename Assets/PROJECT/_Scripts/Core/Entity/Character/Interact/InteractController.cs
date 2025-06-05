@@ -1,6 +1,5 @@
 using Service;
 using System;
-using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
 
@@ -12,8 +11,7 @@ public class InteractController : MonoBehaviour, IInitializable, IDisposable
     [SerializeField] private AudioConfig _select;
     [SerializeField] private AudioConfig _denyselect;
 
-    private readonly List<CharacterAction> _interaction = new List<CharacterAction> { CharacterAction.Interact };
-
+    private ScreenPointIndicator _screenPointIndicator;
     private IInteractable _currentInteractable;
 
     [SerializeField] private GrabController _grabController;
@@ -22,11 +20,12 @@ public class InteractController : MonoBehaviour, IInitializable, IDisposable
     private IAudioService _audioService;
 
     [Inject]
-    public void Construct(IInputService inputService, IHintService hintService, IAudioService audioService)
+    public void Construct(IInputService inputService, IHintService hintService, IAudioService audioService, ScreenPointIndicator screenPointIndicator)
     {
         _inputService = inputService;
         _hintService = hintService;
         _audioService = audioService;
+        _screenPointIndicator = screenPointIndicator;
     }
 
     public void Initialize()
@@ -59,11 +58,9 @@ public class InteractController : MonoBehaviour, IInitializable, IDisposable
                     ClearCurrent();
 
                     _currentInteractable = interactable;
-                    if (_currentInteractable.Outline != null)
-                        _currentInteractable.Outline.OutlineMode = Outline.Mode.Enabled;
 
 
-                    _hintService.ShowHint(_interaction);
+                    _screenPointIndicator.SetTargeted(_currentInteractable.Name);
                 }
 
                 return;
@@ -71,16 +68,11 @@ public class InteractController : MonoBehaviour, IInitializable, IDisposable
         }
 
         ClearCurrent();
-        _hintService.HideHint(_interaction);
+        _screenPointIndicator.SetDefault();
     }
 
     private void ClearCurrent()
     {
-        if (_currentInteractable != null && _currentInteractable.Outline != null)
-        {
-            _currentInteractable.Outline.OutlineMode = Outline.Mode.Hidden;
-        }
-
         _currentInteractable = null;
     }
 

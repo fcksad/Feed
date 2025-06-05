@@ -1,13 +1,18 @@
 using UnityEngine;
+using UnityEngine.Localization;
 using Zenject;
 
 public class Door : MonoBehaviour, IInteractable
 {
+
+    [SerializeField] protected LocalizedString _localizedString;
     [SerializeField] private float _openAngle = 90f;      
     [SerializeField] private float _openSpeed = 2f;        
     [SerializeField] private bool _startsOpen = false;
     [SerializeField] private Transform _pivot;
-    public Outline Outline => null;
+
+    protected string _name;
+    public string Name => _name.ToString();
 
     private bool _isOpen;
     private Quaternion _closedRotation;
@@ -37,6 +42,16 @@ public class Door : MonoBehaviour, IInteractable
             _pivot.localRotation = _openedRotation;
             _isOpen = true;
         }
+    }
+
+    protected virtual void Start()
+    {
+        _localizedString.StringChanged += name =>
+        {
+            _name = name;
+        };
+
+        _localizedString.RefreshString();
     }
 
     public void Interact()

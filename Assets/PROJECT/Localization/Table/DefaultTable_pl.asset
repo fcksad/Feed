@@ -95,7 +95,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 166117146198016
-    m_Localized: Rezolucja
+    m_Localized: Resolution
     m_Metadata:
       m_Items: []
   - m_Id: 336218449346560
@@ -116,6 +116,34 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 726718578786304
     m_Localized: "Czy na pewno chcesz ponownie powi\u0105za\u0107 ten klucz?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14483218166022144
+    m_Localized: Tak
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14483218207965184
+    m_Localized: NIE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14483218207965185
+    m_Localized: "Obraca\u0107"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14483218207965186
+    m_Localized: Drzwi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14483218207965187
+    m_Localized: Konewka
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14483218207965188
+    m_Localized: Tabela
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14483218207965189
+    m_Localized: Garnek
     m_Metadata:
       m_Items: []
   references:

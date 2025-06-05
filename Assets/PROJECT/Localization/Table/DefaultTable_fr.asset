@@ -55,7 +55,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1408489062400
-    m_Localized: ATH
+    m_Localized: HUD
     m_Metadata:
       m_Items: []
   - m_Id: 1654686318592
@@ -95,7 +95,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 166117146198016
-    m_Localized: "R\xE9solution"
+    m_Localized: Resolution
     m_Metadata:
       m_Items: []
   - m_Id: 336218449346560
@@ -116,6 +116,34 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 726718578786304
     m_Localized: "\xCAtes-vous s\xFBr de vouloir associer \xE0 nouveau cette cl\xE9\_?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14483218166022144
+    m_Localized: Oui
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14483218207965184
+    m_Localized: Non
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14483218207965185
+    m_Localized: Tourner
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14483218207965186
+    m_Localized: Porte
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14483218207965187
+    m_Localized: Arrosoir
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14483218207965188
+    m_Localized: Tableau
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14483218207965189
+    m_Localized: Pot
     m_Metadata:
       m_Items: []
   references:

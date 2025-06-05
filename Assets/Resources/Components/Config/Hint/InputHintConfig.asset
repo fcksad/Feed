@@ -204,13 +204,13 @@ MonoBehaviour:
     - <ControlName>k__BackingField: F12
       <ControlButton>k__BackingField: f12
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlName>k__BackingField: LC
+    - <ControlName>k__BackingField: LMB
       <ControlButton>k__BackingField: leftbutton
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlName>k__BackingField: RC
+    - <ControlName>k__BackingField: RMB
       <ControlButton>k__BackingField: rightbutton
       <Icon>k__BackingField: {fileID: 0}
-    - <ControlName>k__BackingField: MC
+    - <ControlName>k__BackingField: MMB
       <ControlButton>k__BackingField: middlebutton
       <Icon>k__BackingField: {fileID: 0}
   - <ControlDeviceType>k__BackingField: 2

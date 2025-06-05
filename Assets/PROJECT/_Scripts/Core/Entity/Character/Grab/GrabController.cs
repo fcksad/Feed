@@ -2,6 +2,7 @@ using Service;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Localization;
 using Zenject;
 
 public class GrabController : MonoBehaviour, IInitializable, IDisposable
@@ -11,6 +12,8 @@ public class GrabController : MonoBehaviour, IInitializable, IDisposable
     [SerializeField] private float _throwForce = 5f;
     [SerializeField] private float _rotateSpeed = 100f;
 
+    [SerializeField] private LocalizedString _localizedString;
+    private string _actionName;
     private readonly List<CharacterAction> _grabHints = new()
     {
          CharacterAction.Attack, CharacterAction.Attack1,
@@ -44,6 +47,18 @@ public class GrabController : MonoBehaviour, IInitializable, IDisposable
         _inputService.AddActionListener(CharacterAction.RotateRight, onStarted: _onRotateRight = () => StartRotate(Vector3.left), onCanceled: StopRotate);
         _inputService.AddActionListener(CharacterAction.RotateForward, onStarted: _onRotateForward = () => StartRotate(Vector3.forward), onCanceled: StopRotate);
         _inputService.AddActionListener(CharacterAction.RotateBackward, onStarted: _onRotateBackward = () => StartRotate(Vector3.back), onCanceled: StopRotate);
+
+        UpdateLocal();
+    }
+
+    private void UpdateLocal()
+    {
+        _localizedString.StringChanged += name =>
+        {
+            _actionName = name;
+        };
+
+        _localizedString.RefreshString();
     }
 
     public void Dispose()
@@ -101,7 +116,7 @@ public class GrabController : MonoBehaviour, IInitializable, IDisposable
             SetHeldObjectPhysics(false);
 
         _holdObject.OnGrab();
-        _hintService.ShowHint(_grabHints);
+        _hintService.ShowHint(_actionName, _grabHints);
 
     }
 
@@ -127,7 +142,7 @@ public class GrabController : MonoBehaviour, IInitializable, IDisposable
             SetHeldObjectPhysics(true);
 
         _holdObject.OnDrop();
-        _hintService.HideHint(_grabHints);
+        _hintService.HideHint(_actionName);
         _holdObject = null;
     }
 

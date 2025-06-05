@@ -95,7 +95,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 166117146198016
-    m_Localized: Risoluzione
+    m_Localized: Resolution
     m_Metadata:
       m_Items: []
   - m_Id: 336218449346560
@@ -116,6 +116,34 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 726718578786304
     m_Localized: Sei sicuro di voler riassociare questa chiave?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14483218166022144
+    m_Localized: "S\xCC"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14483218207965184
+    m_Localized: NO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14483218207965185
+    m_Localized: Ruotare
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14483218207965186
+    m_Localized: Porta
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14483218207965187
+    m_Localized: Annaffiatoio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14483218207965188
+    m_Localized: Tavolo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14483218207965189
+    m_Localized: Pentola
     m_Metadata:
       m_Items: []
   references:

@@ -118,6 +118,34 @@ MonoBehaviour:
     m_Localized: Are you sure you want to rebind this key?
     m_Metadata:
       m_Items: []
+  - m_Id: 14483218166022144
+    m_Localized: Yes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14483218207965184
+    m_Localized: No
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14483218207965185
+    m_Localized: Rotate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14483218207965186
+    m_Localized: Door
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14483218207965187
+    m_Localized: WateringCan
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14483218207965188
+    m_Localized: Table
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14483218207965189
+    m_Localized: Pot
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
