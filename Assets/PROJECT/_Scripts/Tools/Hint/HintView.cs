@@ -9,6 +9,7 @@ namespace Service
         [SerializeField] private InputHintConfig _inputHintConfig;
         [SerializeField] private HintGroup _hintGroup;
         [SerializeField] private HintImage _hintImage;
+        [SerializeField] private HintImage _hintText;
         [SerializeField] private Transform _hintHolder;
 
         private Dictionary<string, HintGroup> _hints = new();
@@ -31,8 +32,19 @@ namespace Service
                 for (int i = 0; i < actions.Count; i++)
                 {
                     var hint = _inputHintConfig.GetHint(deviceType, controlButton[i]);
-                    var newHint = _instantiateFactoryService.Create(_hintImage, parent: _hintHolder, customName: actions[i].ToString());
-                    newHint.Set(hint.ControlName, hint.Icon);
+                    HintImage newHint;
+
+                    if (hint.Icon != null)
+                    {
+                        newHint = _instantiateFactoryService.Create(_hintImage, parent: _hintHolder, customName: actions[i].ToString());
+                        newHint.SetImage(hint.Icon);
+                    }
+                    else
+                    {
+                        newHint = _instantiateFactoryService.Create(_hintText, parent: _hintHolder, customName: actions[i].ToString());
+                        newHint.SetText(hint.ControlName);
+                    }
+
                     hints.Add(newHint);
                 }
 

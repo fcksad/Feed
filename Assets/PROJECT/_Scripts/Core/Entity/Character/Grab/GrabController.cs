@@ -12,13 +12,20 @@ public class GrabController : MonoBehaviour, IInitializable, IDisposable
     [SerializeField] private float _throwForce = 5f;
     [SerializeField] private float _rotateSpeed = 100f;
 
-    [SerializeField] private LocalizedString _localizedString;
-    private string _actionName;
-    private readonly List<CharacterAction> _grabHints = new()
+
+    [SerializeField] private LocalizedString _localizedRotateAction;
+    private string _rotateAction;
+    private readonly List<CharacterAction> _rotateHints = new()
     {
-         CharacterAction.Attack, CharacterAction.Attack1,
          CharacterAction.RotateLeft, CharacterAction.RotateRight,
          CharacterAction.RotateForward, CharacterAction.RotateBackward
+    };
+
+    [SerializeField] private LocalizedString _localizedDropAction;
+    private string _dropAction;
+    private readonly List<CharacterAction> _dropHints = new()
+    {
+         CharacterAction.Attack, CharacterAction.Attack1,
     };
 
     private IInputService _inputService;
@@ -53,12 +60,19 @@ public class GrabController : MonoBehaviour, IInitializable, IDisposable
 
     private void UpdateLocal()
     {
-        _localizedString.StringChanged += name =>
+        _localizedRotateAction.StringChanged += name =>
         {
-            _actionName = name;
+            _rotateAction = name;
         };
 
-        _localizedString.RefreshString();
+        _localizedRotateAction.RefreshString();
+
+        _localizedDropAction.StringChanged += name =>
+        {
+            _dropAction = name;
+        };
+
+        _localizedDropAction.RefreshString();
     }
 
     public void Dispose()
@@ -116,7 +130,8 @@ public class GrabController : MonoBehaviour, IInitializable, IDisposable
             SetHeldObjectPhysics(false);
 
         _holdObject.OnGrab();
-        _hintService.ShowHint(_actionName, _grabHints);
+        _hintService.ShowHint(_rotateAction, _rotateHints);
+        _hintService.ShowHint(_dropAction, _dropHints);
 
     }
 
@@ -135,6 +150,8 @@ public class GrabController : MonoBehaviour, IInitializable, IDisposable
         if (_holdObject == null)
             return;
 
+        StopRotate();
+
         var obj = _holdObject.Transform;
         obj.SetParent(null);
 
@@ -142,7 +159,8 @@ public class GrabController : MonoBehaviour, IInitializable, IDisposable
             SetHeldObjectPhysics(true);
 
         _holdObject.OnDrop();
-        _hintService.HideHint(_actionName);
+        _hintService.HideHint(_rotateAction);
+        _hintService.HideHint(_dropAction);
         _holdObject = null;
     }
 
@@ -165,11 +183,13 @@ public class GrabController : MonoBehaviour, IInitializable, IDisposable
 
     private System.Collections.IEnumerator RotateRoutine(Vector3 axis)
     {
-        while (_holdObject != null)
+        while (_holdObject != null && _holdObject.Transform != null)
         {
             yield return new WaitForFixedUpdate();
             _holdObject.Transform.Rotate(axis * _rotateSpeed * Time.fixedDeltaTime);
         }
+
+        _rotateRoutine = null;
     }
 
     private void SetHeldObjectPhysics(bool enable)

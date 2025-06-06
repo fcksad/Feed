@@ -11,7 +11,7 @@ public class Flashlight : MonoBehaviour
     private IInputService _inputService;
     private IAudioService _audioService;
 
-    private bool _isOn = false;
+    private bool _isOn = true;
 
     [Inject]
     private void Constrcut(IInputService inputService, IAudioService audioService)

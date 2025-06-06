@@ -802,8 +802,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 18
+  m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3234,11 +3234,20 @@ MonoBehaviour:
   _holdPoint: {fileID: 462751111189372897}
   _throwForce: 5
   _rotateSpeed: 100
-  _localizedString:
+  _localizedRotateAction:
     m_TableReference:
       m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
     m_TableEntryReference:
       m_KeyId: 14483218207965185
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  _localizedDropAction:
+    m_TableReference:
+      m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
+    m_TableEntryReference:
+      m_KeyId: 14659057197350912
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -4125,6 +4134,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2138527735}
     m_Modifications:
+    - target: {fileID: 1946413830699299361, guid: 248d4be0f9dbd7a46b2f67713c93525c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1946413830699299361, guid: 248d4be0f9dbd7a46b2f67713c93525c, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3663645421584539040, guid: 248d4be0f9dbd7a46b2f67713c93525c, type: 3}
       propertyPath: m_Name
       value: ScreenPointIndicator - Canvas
@@ -5074,9 +5091,9 @@ SceneRoots:
   m_Roots:
   - {fileID: 1015622896}
   - {fileID: 2138527735}
+  - {fileID: 831055632}
   - {fileID: 1528326706}
   - {fileID: 1298571148}
-  - {fileID: 831055632}
   - {fileID: 5409078111388545179}
   - {fileID: 1571559503}
   - {fileID: 550175681845455074}

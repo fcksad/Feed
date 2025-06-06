@@ -7,19 +7,13 @@ public class HintImage : MonoBehaviour
     [SerializeField] private Image _image;
     [SerializeField] private TextMeshProUGUI _text;
 
-    public void Set(string controlButton, Sprite icon)
+    public void SetImage(Sprite icon)
     {
-        if (icon == null)
-        {
-            _text.SetText(controlButton.ToUpperInvariant());
-            _text.enabled = true;
-            _image.enabled = false;
-        }
-        else
-        {
-            _image.sprite = icon;
-            _image.enabled = true;
-            _text.enabled = false;
-        }
+        _image.sprite = icon;
+    }
+
+    public void SetText(string controlButton)
+    {
+        _text.SetText(controlButton.ToUpperInvariant());
     }
 }

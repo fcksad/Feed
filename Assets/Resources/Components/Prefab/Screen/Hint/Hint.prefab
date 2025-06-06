@@ -131,7 +131,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _inputHintConfig: {fileID: 11400000, guid: 43982276907918a499ca8bb523a986ff, type: 2}
   _hintGroup: {fileID: 6887019727102451969, guid: 3089f64fd9d381e44aacfd5c9d9c3e72, type: 3}
-  _hintImage: {fileID: -1519067190595879253, guid: 89ec3693f586e794192b3bed932ae855, type: 3}
+  _hintImage: {fileID: -1519067190595879253, guid: cc3d21715415dc342b683d281fd70340, type: 3}
+  _hintText: {fileID: -1519067190595879253, guid: 89ec3693f586e794192b3bed932ae855, type: 3}
   _hintHolder: {fileID: 2717772643850336029}
 --- !u!1 &4039699971816511177
 GameObject:

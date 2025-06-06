@@ -146,6 +146,10 @@ MonoBehaviour:
     m_Localized: Pot
     m_Metadata:
       m_Items: []
+  - m_Id: 14659057197350912
+    m_Localized: Werfen
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

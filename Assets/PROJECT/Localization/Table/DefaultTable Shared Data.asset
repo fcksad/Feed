@@ -143,6 +143,10 @@ MonoBehaviour:
     m_Key: props.Pot
     m_Metadata:
       m_Items: []
+  - m_Id: 14659057197350912
+    m_Key: action.Drop
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

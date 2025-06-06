@@ -56,10 +56,10 @@ public class Door : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        if (_rotationCoroutine != null)
-            StopCoroutine(_rotationCoroutine);
-
-        _rotationCoroutine = StartCoroutine(RotateDoor(!_isOpen));
+        if(_rotationCoroutine == null)
+        {
+            _rotationCoroutine = StartCoroutine(RotateDoor(!_isOpen));
+        }
     }
 
     public void ReceiveInteractionFrom(IGrabbable item)

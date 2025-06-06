@@ -146,6 +146,10 @@ MonoBehaviour:
     m_Localized: Garnek
     m_Metadata:
       m_Items: []
+  - m_Id: 14659057197350912
+    m_Localized: "Rzuci\u0107"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
