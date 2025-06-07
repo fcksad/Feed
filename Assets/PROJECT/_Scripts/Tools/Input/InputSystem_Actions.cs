@@ -82,6 +82,15 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
+                    ""name"": ""Crouch"",
+                    ""type"": ""Button"",
+                    ""id"": ""57341d23-236a-40b8-ac82-959966f76d63"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
                     ""name"": ""Menu"",
                     ""type"": ""Button"",
                     ""id"": ""f97f6e13-dd5d-428d-9c18-f9b4182288c1"",
@@ -377,6 +386,28 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
                     ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3abef869-ae77-4155-b3f1-9bb5ba1300a5"",
+                    ""path"": ""<Keyboard>/leftCtrl"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Crouch"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7d833c6c-765a-4a88-ae00-3e683e135203"",
+                    ""path"": ""<Gamepad>/leftStickPress"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Crouch"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -1278,6 +1309,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         m_Player_Attack1 = m_Player.FindAction("Attack1", throwIfNotFound: true);
         m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
         m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
+        m_Player_Crouch = m_Player.FindAction("Crouch", throwIfNotFound: true);
         m_Player_Menu = m_Player.FindAction("Menu", throwIfNotFound: true);
         m_Player_Flashlight = m_Player.FindAction("Flashlight", throwIfNotFound: true);
         m_Player_MoveUp = m_Player.FindAction("MoveUp", throwIfNotFound: true);
@@ -1374,6 +1406,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Attack1;
     private readonly InputAction m_Player_Interact;
     private readonly InputAction m_Player_Jump;
+    private readonly InputAction m_Player_Crouch;
     private readonly InputAction m_Player_Menu;
     private readonly InputAction m_Player_Flashlight;
     private readonly InputAction m_Player_MoveUp;
@@ -1395,6 +1428,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         public InputAction @Attack1 => m_Wrapper.m_Player_Attack1;
         public InputAction @Interact => m_Wrapper.m_Player_Interact;
         public InputAction @Jump => m_Wrapper.m_Player_Jump;
+        public InputAction @Crouch => m_Wrapper.m_Player_Crouch;
         public InputAction @Menu => m_Wrapper.m_Player_Menu;
         public InputAction @Flashlight => m_Wrapper.m_Player_Flashlight;
         public InputAction @MoveUp => m_Wrapper.m_Player_MoveUp;
@@ -1433,6 +1467,9 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @Jump.started += instance.OnJump;
             @Jump.performed += instance.OnJump;
             @Jump.canceled += instance.OnJump;
+            @Crouch.started += instance.OnCrouch;
+            @Crouch.performed += instance.OnCrouch;
+            @Crouch.canceled += instance.OnCrouch;
             @Menu.started += instance.OnMenu;
             @Menu.performed += instance.OnMenu;
             @Menu.canceled += instance.OnMenu;
@@ -1488,6 +1525,9 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @Jump.started -= instance.OnJump;
             @Jump.performed -= instance.OnJump;
             @Jump.canceled -= instance.OnJump;
+            @Crouch.started -= instance.OnCrouch;
+            @Crouch.performed -= instance.OnCrouch;
+            @Crouch.canceled -= instance.OnCrouch;
             @Menu.started -= instance.OnMenu;
             @Menu.performed -= instance.OnMenu;
             @Menu.canceled -= instance.OnMenu;
@@ -1709,6 +1749,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         void OnAttack1(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
+        void OnCrouch(InputAction.CallbackContext context);
         void OnMenu(InputAction.CallbackContext context);
         void OnFlashlight(InputAction.CallbackContext context);
         void OnMoveUp(InputAction.CallbackContext context);
