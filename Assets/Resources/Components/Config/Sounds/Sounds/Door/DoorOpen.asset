@@ -20,5 +20,5 @@ MonoBehaviour:
   - {fileID: 8300000, guid: e3c3909b3c424bf468d0725b49720429, type: 3}
   - {fileID: 8300000, guid: 65a79cb5b9d41284ab81dad5078e8204, type: 3}
   - {fileID: 8300000, guid: 7e54dda2f32aef6469fdeba6341666f3, type: 3}
-  MinPitch: 1
-  MaxPitch: 1
+  MinPitch: 0.9
+  MaxPitch: 1.1

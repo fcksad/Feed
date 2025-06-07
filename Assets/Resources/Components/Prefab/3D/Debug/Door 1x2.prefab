@@ -163,7 +163,7 @@ MonoBehaviour:
     m_WaitForCompletion: 0
     m_LocalVariables: []
   _openAngle: 90
-  _openSpeed: 2
+  _openSpeed: 1.5
   _startsOpen: 0
   _pivot: {fileID: 7355055428462433735}
   _open: {fileID: 11400000, guid: 6f6db002ee016e54381dec95fff9a1d8, type: 2}

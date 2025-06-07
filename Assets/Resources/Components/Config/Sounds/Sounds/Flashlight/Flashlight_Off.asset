@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 346a38e715474eb4ea0cf8ce58569643, type: 3}
   m_Name: Flashlight_Off
   m_EditorClassIdentifier: 
-  <AudioName>k__BackingField: Flashlight_Off
+  <AudioName>k__BackingField: flashlight_off
   <Type>k__BackingField: 0
   <OneShoot>k__BackingField: 1
   <SpatialBlend>k__BackingField: 0
   <AudioClips>k__BackingField:
-  - {fileID: 8300000, guid: 46f84e3c8359eab4ca352c54153de83e, type: 3}
+  - {fileID: 8300000, guid: 7ae5ba737364c50449b323d841208198, type: 3}
   MinPitch: 0.95
   MaxPitch: 1.05

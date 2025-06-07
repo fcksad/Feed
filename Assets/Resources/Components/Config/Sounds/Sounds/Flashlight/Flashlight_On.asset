@@ -18,5 +18,6 @@ MonoBehaviour:
   <SpatialBlend>k__BackingField: 0
   <AudioClips>k__BackingField:
   - {fileID: 8300000, guid: d82f2400d363a3647a08bf7b5c8f78a2, type: 3}
+  - {fileID: 8300000, guid: 944116bf28499eb4babba8bae335df25, type: 3}
   MinPitch: 0.95
   MaxPitch: 1.05

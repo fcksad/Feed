@@ -38,7 +38,7 @@ namespace Service
             }
 
             var resolution = _saveService.SettingsData.GraphicsData.Resolution;
-            Screen.SetResolution(resolution.Width, resolution.Height,Screen.fullScreenMode, new RefreshRate {  numerator = (uint)Mathf.Max(1, resolution.RefreshRate), denominator = 1 });
+            Screen.SetResolution(resolution.Width, resolution.Height, Screen.fullScreenMode, new RefreshRate { numerator = (uint)Mathf.Max(1, resolution.RefreshRate), denominator = 1 });
         }
 
         public void Set(GraphicType type, int value)

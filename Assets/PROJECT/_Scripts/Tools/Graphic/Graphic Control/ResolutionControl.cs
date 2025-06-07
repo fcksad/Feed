@@ -3,6 +3,8 @@ using UnityEngine;
 using TMPro;
 using Zenject;
 using Service;
+using Unity.VisualScripting;
+using System.Linq;
 
 namespace Settings
 {
@@ -35,7 +37,13 @@ namespace Settings
                 {
                     _filteredResolutions.Add(res);
                 }
+
             }
+
+            _filteredResolutions = _filteredResolutions
+                .DistinctBy(r => (r.width, r.height, Mathf.RoundToInt((float)r.refreshRateRatio.numerator / r.refreshRateRatio.denominator)))
+                .OrderBy(r => r.width * r.height)
+                .ToList();
 
             if (_filteredResolutions.Count == 0)
             {
@@ -53,6 +61,13 @@ namespace Settings
             _resolutionDropdown.AddOptions(options);
 
             var savedResolution = _graphicsService.GetResolution();
+            if (savedResolution.Width <= 0 || savedResolution.Height <= 0 || savedResolution.RefreshRate <= 0)
+            {
+                var current = Screen.currentResolution;
+                int refresh = Mathf.RoundToInt((float)current.refreshRateRatio.numerator / current.refreshRateRatio.denominator);
+                savedResolution = new ResolutionData(current.width, current.height, refresh);
+            }
+
             int currentIndex = _filteredResolutions.FindIndex(r =>
             {
                 int refresh = Mathf.RoundToInt((float)r.refreshRateRatio.numerator / r.refreshRateRatio.denominator);
