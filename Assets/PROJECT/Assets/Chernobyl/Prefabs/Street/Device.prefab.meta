@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 9087ef3b02996484a864e273a4713bf7
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Street/Device.prefab
+  uploadId: 700004

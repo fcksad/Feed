@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: fa2a5dac721a756438a5c30bd6dbb9ff
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Decals/Road_Markings_01.prefab
+  uploadId: 700004

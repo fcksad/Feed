@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: bea69d2d24f60c64880457c9dd174c1d
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Scenes/CR_Demo.unity
+  uploadId: 700004

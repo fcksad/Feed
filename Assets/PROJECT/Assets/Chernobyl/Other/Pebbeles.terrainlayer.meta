@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 92e4161669b540e47a18bb9b5706d85c
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 8574412962073106934
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Other/Pebbeles.terrainlayer
+  uploadId: 700004

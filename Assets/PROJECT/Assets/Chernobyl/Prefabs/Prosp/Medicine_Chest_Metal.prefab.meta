@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 6753bbc274ed73446aaa35e0a1d8c4dc
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Prosp/Medicine_Chest_Metal.prefab
+  uploadId: 700004

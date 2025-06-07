@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b7bd87bf61be0764281df183a89951a9
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Street/Kerbstone_Angle_02.prefab
+  uploadId: 700004

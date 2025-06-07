@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: cbe93a7725e621540ba29e1c9625e2ac
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Materials/Environment/Pillow.mat
+  uploadId: 700004

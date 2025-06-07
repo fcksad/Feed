@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 8e669662f083f79418bccde4a95baf87
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Environment/Furniture/Pharmacy_Counter_Entrance.prefab
+  uploadId: 700004

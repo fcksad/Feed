@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c4c4008a685a72740acb0dbd2306a512
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Decals/Inscription_Decal_01.prefab
+  uploadId: 700004

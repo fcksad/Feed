@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b25fcc2de16848841930c3fac0ab389b
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Materials/Street/Sidewalk.mat
+  uploadId: 700004

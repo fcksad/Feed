@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: fadfcc620aa10e54a9ae47b795e98206
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Environment/Sandbox.prefab
+  uploadId: 700004

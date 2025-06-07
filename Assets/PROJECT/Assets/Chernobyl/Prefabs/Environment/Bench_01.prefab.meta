@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 7f87a058bcf0a54499e9ddcf6ecaa12f
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Environment/Bench_01.prefab
+  uploadId: 700004

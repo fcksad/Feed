@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: d85dc4e733c908047a5cd64855588545
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Environment/Dropper_01.prefab
+  uploadId: 700004

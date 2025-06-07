@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 998f2f1759da05245b98e7b1b9b79ea0
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Environment/Ferris_Wheel.prefab
+  uploadId: 700004

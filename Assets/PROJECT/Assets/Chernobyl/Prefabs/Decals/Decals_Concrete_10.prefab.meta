@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: f5278d80574bdf547a65b240541e635f
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Decals/Decals_Concrete_10.prefab
+  uploadId: 700004

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: ef4719ae320b322469125fedda6ff853
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Environment/Ceiling_Lamp_01.prefab
+  uploadId: 700004

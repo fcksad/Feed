@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 142f5350cdcd9af45a567c5089f8e8bd
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Environment/Counter_Glass_Column.prefab
+  uploadId: 700004

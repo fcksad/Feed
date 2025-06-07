@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 6f559ce2143a30046b21e7728f6673b9
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Environment/Signboard_People_Party.prefab
+  uploadId: 700004

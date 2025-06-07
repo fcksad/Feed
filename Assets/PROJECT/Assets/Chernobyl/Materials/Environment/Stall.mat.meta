@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 4fc5d30f4e5298142b64bc6d6b0a01e3
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Materials/Environment/Stall.mat
+  uploadId: 700004

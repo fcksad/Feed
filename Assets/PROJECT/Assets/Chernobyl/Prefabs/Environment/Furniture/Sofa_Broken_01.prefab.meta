@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: bed7f886250292844be5fece5adf668d
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Environment/Furniture/Sofa_Broken_01.prefab
+  uploadId: 700004

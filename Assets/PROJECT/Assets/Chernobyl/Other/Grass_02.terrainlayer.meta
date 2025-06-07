@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: fc08f81a4dadf594a88c5649ccad614b
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 8574412962073106934
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Other/Grass_02.terrainlayer
+  uploadId: 700004

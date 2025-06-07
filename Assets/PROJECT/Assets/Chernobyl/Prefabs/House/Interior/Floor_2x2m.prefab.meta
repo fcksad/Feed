@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 3e832fe071fb69f44b64fb12e41f4f42
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/House/Interior/Floor_2x2m.prefab
+  uploadId: 700004

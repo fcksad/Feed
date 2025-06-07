@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 3b7ccb772f9c4fc4db0f8241c3612c88
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Environment/Counter_Glass_2m_02.prefab
+  uploadId: 700004

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: d9aaebdb8c1fac142ba45cb93bc21c6d
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/House/Interior/Interior_Door_03.prefab
+  uploadId: 700004

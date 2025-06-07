@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: ef928a4876b6ccd4eb7f02a86d8f7ed6
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/House/Not_Interior/Ventilation_Pipe_02.prefab
+  uploadId: 700004

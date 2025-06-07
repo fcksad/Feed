@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: ba838c6d5d36e014e8a68dc9d29bc271
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Environment/Swing.prefab
+  uploadId: 700004

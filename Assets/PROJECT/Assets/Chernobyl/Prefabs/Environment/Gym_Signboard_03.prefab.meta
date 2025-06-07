@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 7abd001963cdc364eb69be226e6d8add
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Environment/Gym_Signboard_03.prefab
+  uploadId: 700004

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 98c3ce8d0113bca4ab3f799f21a0e64b
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Prosp/Canned_Liver.prefab
+  uploadId: 700004

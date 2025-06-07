@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c78c87f4ce049dc49b6e9734a9d1a19b
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Environment/Stall.prefab
+  uploadId: 700004

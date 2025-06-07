@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 250502cebd1f0354e86e34fcfa1b14ba
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Prosp/Cap.prefab
+  uploadId: 700004

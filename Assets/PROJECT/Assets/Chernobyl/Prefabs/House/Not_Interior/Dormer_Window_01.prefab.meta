@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 703df365864e0a742b4858ffd5922edc
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/House/Not_Interior/Dormer_Window_01.prefab
+  uploadId: 700004

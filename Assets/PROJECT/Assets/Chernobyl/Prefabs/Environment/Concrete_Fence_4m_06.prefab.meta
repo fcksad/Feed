@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b57c7207b5eec744089398bb1f158186
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Environment/Concrete_Fence_4m_06.prefab
+  uploadId: 700004

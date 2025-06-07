@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: ab4edf01583ef3b4a9de4f18c2c3a693
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Street/Sidewalk_2m_01.prefab
+  uploadId: 700004

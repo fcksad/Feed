@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 801b71b4896cd90458f423bf85d3caf8
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Environment/Furniture/Kitchen_Cabinet_03.prefab
+  uploadId: 700004

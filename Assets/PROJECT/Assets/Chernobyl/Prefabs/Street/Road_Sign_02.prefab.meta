@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 25f2ed4ff49f04440b7ef1a3160247e4
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Street/Road_Sign_02.prefab
+  uploadId: 700004

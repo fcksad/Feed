@@ -49,6 +49,6 @@ public class FlashlightController : MonoBehaviour
         var config = _isOn ? _on : _off;
         _flashlightLight.gameObject.SetActive(_isOn);
         _audioService.Play(config);
-
+            
     }
 }

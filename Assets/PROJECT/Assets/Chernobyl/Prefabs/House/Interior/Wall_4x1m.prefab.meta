@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 95f18a7b3b13a794485a6289dfc3c332
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/House/Interior/Wall_4x1m.prefab
+  uploadId: 700004

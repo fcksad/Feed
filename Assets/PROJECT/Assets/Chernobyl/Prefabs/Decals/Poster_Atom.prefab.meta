@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 3004fb235ca420e47b8124c691dfc4f5
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Decals/Poster_Atom.prefab
+  uploadId: 700004

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 7be8a8acac8b4004c87d962292f597b4
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Environment/Furniture/Hanger_01.prefab
+  uploadId: 700004

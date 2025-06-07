@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c4366e53587ef1045a5d56681bc978bc
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/House/Not_Interior/Attic_01.prefab
+  uploadId: 700004

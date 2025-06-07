@@ -150,6 +150,10 @@ MonoBehaviour:
     m_Localized: Lancer
     m_Metadata:
       m_Items: []
+  - m_Id: 15105242613776384
+    m_Localized: Cloche
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

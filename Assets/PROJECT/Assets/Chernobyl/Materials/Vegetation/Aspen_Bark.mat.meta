@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 121a8f6a497e89d4fb2ec65bda8fef65
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Materials/Vegetation/Aspen_Bark.mat
+  uploadId: 700004

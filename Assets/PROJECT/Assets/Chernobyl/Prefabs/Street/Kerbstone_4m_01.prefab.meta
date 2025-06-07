@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: ff78d0e57a3e04a46a6d9f7fa63e25b5
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Street/Kerbstone_4m_01.prefab
+  uploadId: 700004

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 9c02ec9c1f4606446880bd517202be7c
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Environment/Bus_Stop.prefab
+  uploadId: 700004

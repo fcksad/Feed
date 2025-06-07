@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 4fe1e4ff5bb48be46bf9caee0d78cec8
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Environment/Furniture/Refrigerator_Showcase_01.prefab
+  uploadId: 700004

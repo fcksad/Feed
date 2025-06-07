@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 7eb7ed1551045a24283f1536ed480559
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/House/Interior/Interstory_Platform_4x3m.prefab
+  uploadId: 700004

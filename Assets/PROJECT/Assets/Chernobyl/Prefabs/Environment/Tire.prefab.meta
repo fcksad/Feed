@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 3cf40d1f4123e4647be0f2bcccada1ca
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Environment/Tire.prefab
+  uploadId: 700004

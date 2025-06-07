@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 7b712d1c7eac8c64ba201841e6f47499
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Environment/Furniture/Cornice.prefab
+  uploadId: 700004

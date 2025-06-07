@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 65dc13c1d81dc954bb88f40a76f4a9c6
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Environment/Concrete_Hatch.prefab
+  uploadId: 700004

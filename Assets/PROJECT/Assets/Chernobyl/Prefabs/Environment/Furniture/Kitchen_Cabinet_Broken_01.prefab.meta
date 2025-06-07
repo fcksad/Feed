@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 7b355411caefe3b41a7b1a76839e6dae
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Environment/Furniture/Kitchen_Cabinet_Broken_01.prefab
+  uploadId: 700004

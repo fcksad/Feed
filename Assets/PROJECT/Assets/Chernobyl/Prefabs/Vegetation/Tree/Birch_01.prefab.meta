@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 7c10f9881bfc5ab43a0e8f7cc7e81825
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Vegetation/Tree/Birch_01.prefab
+  uploadId: 700004

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 26669eb42a5104b428246bc434419a0f
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Environment/Furniture/Sofa.prefab
+  uploadId: 700004

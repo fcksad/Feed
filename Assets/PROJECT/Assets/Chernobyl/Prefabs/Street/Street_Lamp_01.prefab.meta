@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: dab54269acd8ba646ad28012497c5cf8
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Street/Street_Lamp_01.prefab
+  uploadId: 700004

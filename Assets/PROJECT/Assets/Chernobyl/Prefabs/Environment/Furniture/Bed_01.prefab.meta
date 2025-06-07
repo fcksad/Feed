@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: e459715176adeaa47ab8dcd6379dd3d6
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Environment/Furniture/Bed_01.prefab
+  uploadId: 700004

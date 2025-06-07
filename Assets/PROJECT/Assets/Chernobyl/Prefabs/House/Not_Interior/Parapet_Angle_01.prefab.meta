@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: cc3ef50b64ad15a4cb09c0bf7f305c40
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/House/Not_Interior/Parapet_Angle_01.prefab
+  uploadId: 700004

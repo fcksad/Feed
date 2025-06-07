@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b21d7287f5b8c7a4d9cd503c2a99c4db
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Materials/House/Metal_Roof.mat
+  uploadId: 700004

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 0561844130f6e5c43a65dee78632e528
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Vegetation/Stump.prefab
+  uploadId: 700004

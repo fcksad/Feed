@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: e3abe1d9b02ba534daeaeef038057e2b
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Environment/Furniture/Sink.prefab
+  uploadId: 700004

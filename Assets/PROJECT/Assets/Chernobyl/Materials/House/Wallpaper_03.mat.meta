@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 5d0fd90039f495541b723794fad4f4d3
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Materials/House/Wallpaper_03.mat
+  uploadId: 700004

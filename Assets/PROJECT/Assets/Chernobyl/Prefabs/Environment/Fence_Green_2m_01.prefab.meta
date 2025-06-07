@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 1e122daf4ff91164186309ebcb392490
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Environment/Fence_Green_2m_01.prefab
+  uploadId: 700004

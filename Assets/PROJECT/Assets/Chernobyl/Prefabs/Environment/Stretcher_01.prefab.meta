@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 652433eb2e68b454798545221f6cc7e9
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Environment/Stretcher_01.prefab
+  uploadId: 700004

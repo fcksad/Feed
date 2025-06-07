@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 0906c9cc80c02774393b8af9080ca7da
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Street/Electric_Column_02.prefab
+  uploadId: 700004

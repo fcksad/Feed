@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 6350ed90b24acfb4a90cdb4deb474eec
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/House/Interior/Floor_0.5x0.5m.prefab
+  uploadId: 700004

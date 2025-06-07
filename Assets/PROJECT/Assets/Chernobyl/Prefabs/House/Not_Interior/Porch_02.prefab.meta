@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b19bb2651e5a6bb4fad429a51e2b16b1
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/House/Not_Interior/Porch_02.prefab
+  uploadId: 700004

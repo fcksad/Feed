@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 55a656389ffab8d41b22a10eadef930b
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Prosp/Bandages_01.prefab
+  uploadId: 700004

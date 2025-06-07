@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 35708b2357534fe4cba851096d1a3be3
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Environment/Fence_Red_2m_02.prefab
+  uploadId: 700004

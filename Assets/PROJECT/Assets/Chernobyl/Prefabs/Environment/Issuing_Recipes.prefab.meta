@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a74b186cc586f354597401e955aa14a4
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Environment/Issuing_Recipes.prefab
+  uploadId: 700004

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 98d5b7a2216fa25499348d1afe390778
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Vegetation/Bushes_01.prefab
+  uploadId: 700004

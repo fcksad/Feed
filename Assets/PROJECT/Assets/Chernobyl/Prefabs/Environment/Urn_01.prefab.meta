@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: f55a660a926e8f04fa430526ad0a6592
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Environment/Urn_01.prefab
+  uploadId: 700004

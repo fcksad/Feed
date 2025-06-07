@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 5a8a02f1f813b964e8c767ededaf98c3
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Environment/Barrel_02.prefab
+  uploadId: 700004

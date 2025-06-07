@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c84742e042872594791b60d69977f89d
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/House/Apartment_Building_01.prefab
+  uploadId: 700004

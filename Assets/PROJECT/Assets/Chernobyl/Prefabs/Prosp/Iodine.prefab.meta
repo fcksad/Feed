@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 964dd1e3f7c7fd545aadd43d3b9be3da
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Prosp/Iodine.prefab
+  uploadId: 700004

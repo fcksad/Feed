@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: f91969ada9bf9944d8cfec02e8eaa815
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Street/Road_4x4m.prefab
+  uploadId: 700004

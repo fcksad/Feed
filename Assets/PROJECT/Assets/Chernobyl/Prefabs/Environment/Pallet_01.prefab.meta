@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 91dc16d8efe2f8c45929a9b4a9f89137
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Environment/Pallet_01.prefab
+  uploadId: 700004

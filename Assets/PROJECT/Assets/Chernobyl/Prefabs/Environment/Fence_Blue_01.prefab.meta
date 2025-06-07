@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 7feee6f68f06a97468fe961f823218f0
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Environment/Fence_Blue_01.prefab
+  uploadId: 700004

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 7d8ed04d8eb825642b857d2792fef635
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 8574412962073106934
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Other/Broken_Asphalt.terrainlayer
+  uploadId: 700004

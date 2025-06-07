@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 7c79248bb19de1f4fa9a3fbc1512c2cc
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Materials/Base.mat
+  uploadId: 700004

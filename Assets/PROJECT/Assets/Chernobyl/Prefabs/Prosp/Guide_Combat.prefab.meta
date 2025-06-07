@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 485a660d84f00cd4f9e4058874506f2a
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Prosp/Guide_Combat.prefab
+  uploadId: 700004

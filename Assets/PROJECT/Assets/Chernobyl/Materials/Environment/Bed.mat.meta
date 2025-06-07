@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8a05c160f9a5e7544a2cc8b3bf999cd1
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Materials/Environment/Bed.mat
+  uploadId: 700004

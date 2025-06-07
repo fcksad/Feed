@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: dad76f705ea053c4c8a2eb4d2b5c6379
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Environment/Ladder_Metal.prefab
+  uploadId: 700004

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c77dd8fbbb3b70d44a5b42e3b6524e40
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/House/Not_Interior/Foundation_2m_01.prefab
+  uploadId: 700004

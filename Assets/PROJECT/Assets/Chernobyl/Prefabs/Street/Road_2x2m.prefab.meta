@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 651244e3ae5b0294a81d22d02c6ad1cc
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Street/Road_2x2m.prefab
+  uploadId: 700004

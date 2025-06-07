@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 499630329646b044b91cefa69d79d78c
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Vegetation/Tree/Maple_01.prefab
+  uploadId: 700004

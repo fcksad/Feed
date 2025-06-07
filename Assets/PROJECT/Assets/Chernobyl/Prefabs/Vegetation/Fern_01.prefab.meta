@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: fd94b27c38ac6f14cb0e280639633d5f
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Vegetation/Fern_01.prefab
+  uploadId: 700004

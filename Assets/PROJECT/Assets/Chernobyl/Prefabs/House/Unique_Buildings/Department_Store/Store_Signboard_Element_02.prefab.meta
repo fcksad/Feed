@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: ac04ed75e96ca8140b3f4bd4952a43d0
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/House/Unique_Buildings/Department_Store/Store_Signboard_Element_02.prefab
+  uploadId: 700004

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: fdfd8718e10f99c4f8ef6674caab8c32
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/House/Not_Interior/Roof_2x2m.prefab
+  uploadId: 700004

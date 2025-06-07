@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: cb5cbbfadb89ffa4089db57a1f05b026
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Vegetation/Tree/Aspen_04.prefab
+  uploadId: 700004

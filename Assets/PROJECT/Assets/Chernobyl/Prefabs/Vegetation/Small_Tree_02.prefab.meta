@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 1f597776336ca8c44ac58c5552d6a52f
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Vegetation/Small_Tree_02.prefab
+  uploadId: 700004

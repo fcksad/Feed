@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 06837d518def2d24891bb0ba2b4e4706
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/House/Interior/Floor_4x4m.prefab
+  uploadId: 700004

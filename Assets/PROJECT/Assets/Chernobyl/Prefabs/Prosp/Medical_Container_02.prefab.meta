@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 41325069af729094890826f7ec714577
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Prosp/Medical_Container_02.prefab
+  uploadId: 700004

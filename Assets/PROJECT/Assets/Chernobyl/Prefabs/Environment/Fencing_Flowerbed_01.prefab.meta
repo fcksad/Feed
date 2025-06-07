@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: f6150f52c83140e489ffec0bc685e992
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Environment/Fencing_Flowerbed_01.prefab
+  uploadId: 700004

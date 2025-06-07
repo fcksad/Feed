@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: aa9c2f3b59cd2324bbbc5acb5f9becb3
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Materials/Vegetation/Grass_01.mat
+  uploadId: 700004

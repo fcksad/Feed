@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 74a23dfc9056b244687da1fa834c6506
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Materials/Vegetation/Billboard/Billboard_Aspen_01.mat
+  uploadId: 700004

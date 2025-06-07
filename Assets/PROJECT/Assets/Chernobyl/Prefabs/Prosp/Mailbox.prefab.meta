@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b43b66f7dbca7784188b1444b973c73c
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Prosp/Mailbox.prefab
+  uploadId: 700004

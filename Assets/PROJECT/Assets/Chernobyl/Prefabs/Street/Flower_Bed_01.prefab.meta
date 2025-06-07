@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 72fd642e1658b6f4b92ae496170d9043
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Street/Flower_Bed_01.prefab
+  uploadId: 700004

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: e4ee65f4da6eb2043b653f3cb54662fa
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Environment/Furniture/Curtain_Rod.prefab
+  uploadId: 700004

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 4c44ae4a34a95e9479fd00be66d55415
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Environment/Pipe_02.prefab
+  uploadId: 700004

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c10283f428aef824fa6eb10a17ed9fda
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Prosp/Canned_Fish.prefab
+  uploadId: 700004

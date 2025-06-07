@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 558534bc755683b489a2b218febe9bef
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Prosp/Gas_Cylinder_01.prefab
+  uploadId: 700004

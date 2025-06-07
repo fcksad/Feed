@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b1bb73abd3fea9e45963b57a3cebff51
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Prosp/Medical_Bowl_01.prefab
+  uploadId: 700004

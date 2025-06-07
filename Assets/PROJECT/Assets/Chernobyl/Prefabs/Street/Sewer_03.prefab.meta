@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: dc312aff035ae394ead7f83b254d1dc9
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Street/Sewer_03.prefab
+  uploadId: 700004

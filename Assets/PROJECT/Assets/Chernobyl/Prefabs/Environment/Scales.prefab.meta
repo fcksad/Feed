@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 3f919293924d2574392a2d7d82a9704a
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Environment/Scales.prefab
+  uploadId: 700004

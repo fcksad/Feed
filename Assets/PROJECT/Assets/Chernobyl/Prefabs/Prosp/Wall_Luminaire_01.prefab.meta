@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: df1a17c29db68ae40a8d31b40e66f623
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Prosp/Wall_Luminaire_01.prefab
+  uploadId: 700004

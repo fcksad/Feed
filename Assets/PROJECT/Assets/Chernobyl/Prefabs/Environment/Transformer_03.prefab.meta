@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 78ea0453c3c5be84fb4de71a996de9cc
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Environment/Transformer_03.prefab
+  uploadId: 700004

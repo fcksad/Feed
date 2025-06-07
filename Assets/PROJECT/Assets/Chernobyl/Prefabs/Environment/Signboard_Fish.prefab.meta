@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 7987606e1df3e1f49a18b5691f6f9e87
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Environment/Signboard_Fish.prefab
+  uploadId: 700004

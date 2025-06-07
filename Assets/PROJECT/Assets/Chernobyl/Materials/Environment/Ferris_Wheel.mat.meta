@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c3d6b46fd0262fc4fb450bea54fc4774
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Materials/Environment/Ferris_Wheel.mat
+  uploadId: 700004

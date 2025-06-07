@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: d6e09398276bcad4b95483fd6e8664df
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Environment/Furniture/Medical_Bedside_Table_01.prefab
+  uploadId: 700004

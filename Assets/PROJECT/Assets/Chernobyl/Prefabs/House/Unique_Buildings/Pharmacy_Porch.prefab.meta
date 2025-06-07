@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 4f22f35eae4b9134f9429d1cbe8521c2
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/House/Unique_Buildings/Pharmacy_Porch.prefab
+  uploadId: 700004

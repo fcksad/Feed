@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c05792881eb7bc843a970d7c84771e38
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/House/Interior/Ladder_02.prefab
+  uploadId: 700004

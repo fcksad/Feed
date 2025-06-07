@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 8a682bc4c0a4a214d8253ba85a744bd7
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Vegetation/Tree/Pine_04.prefab
+  uploadId: 700004

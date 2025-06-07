@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 65bf859d5c6ed0241811a4e90e453515
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Environment/Furniture/Wardrobe_04.prefab
+  uploadId: 700004

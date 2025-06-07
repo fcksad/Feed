@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 89a204a0fecf7b2488746f0e9a715967
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Prosp/Medication_03.prefab
+  uploadId: 700004

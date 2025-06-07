@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a4fbdec6e6f607e4e8010b832fd3abea
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Environment/Furniture/Chair_02.prefab
+  uploadId: 700004

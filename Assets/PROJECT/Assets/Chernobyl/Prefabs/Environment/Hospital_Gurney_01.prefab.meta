@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 3e687850e4ad70643b0f7c48989614fc
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Environment/Hospital_Gurney_01.prefab
+  uploadId: 700004

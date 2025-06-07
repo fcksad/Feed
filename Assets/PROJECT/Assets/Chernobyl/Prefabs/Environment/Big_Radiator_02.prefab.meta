@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: dd9ffa195dd35994fbd1079ce554c7a3
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Environment/Big_Radiator_02.prefab
+  uploadId: 700004

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: ab51fabb25044174e9f49b04ef15a644
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/House/Interior/Front_Door_05.prefab
+  uploadId: 700004

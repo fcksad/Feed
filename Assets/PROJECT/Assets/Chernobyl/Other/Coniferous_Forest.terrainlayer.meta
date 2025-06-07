@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 2849be866864a684a9cc7c08e75da3d1
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 8574412962073106934
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Other/Coniferous_Forest.terrainlayer
+  uploadId: 700004

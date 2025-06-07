@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 354e4f4e67bb48c4a82f39ef708778b8
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/House/Not_Interior/Wall_2x1.5m_01.prefab
+  uploadId: 700004

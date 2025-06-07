@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 1e50589fe9d02724c987b0f83c6160f9
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Materials/Props/Gas_Cylinder.mat
+  uploadId: 700004

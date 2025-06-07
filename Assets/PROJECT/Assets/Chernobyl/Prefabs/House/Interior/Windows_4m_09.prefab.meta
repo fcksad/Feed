@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: cdef91e935e573040aee1f9214f840fd
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/House/Interior/Windows_4m_09.prefab
+  uploadId: 700004

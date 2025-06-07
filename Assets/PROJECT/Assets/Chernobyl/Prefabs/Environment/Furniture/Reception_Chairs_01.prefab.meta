@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 7c7a6f6a6d8f153468de8c63a401ef1b
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Environment/Furniture/Reception_Chairs_01.prefab
+  uploadId: 700004

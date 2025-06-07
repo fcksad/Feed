@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 8bf2b23b24925de4cb4d4ce5b5d0039c
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Environment/Furniture/Trading_Counter_02.prefab
+  uploadId: 700004

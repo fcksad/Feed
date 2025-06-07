@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 9ae5ab4ba11dfff4cb3ec86d938d21f5
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Environment/Ferris_Wheel_Cabin.prefab
+  uploadId: 700004

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 39bcc6cda524c2446a8ef76168f526c0
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Materials/House/Wall_Concrete_01.mat
+  uploadId: 700004

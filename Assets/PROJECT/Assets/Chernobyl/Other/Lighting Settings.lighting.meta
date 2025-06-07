@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6de0fc6f9e86ee342a2c49b69e6267e0
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 4890085278179872738
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Other/Lighting Settings.lighting
+  uploadId: 700004

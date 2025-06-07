@@ -147,6 +147,10 @@ MonoBehaviour:
     m_Key: action.Drop
     m_Metadata:
       m_Items: []
+  - m_Id: 15105242613776384
+    m_Key: props.Doorbell
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

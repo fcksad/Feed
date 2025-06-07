@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: bbcc77e76088d064bb31ea7d01a16eea
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Environment/Switchyard_02.prefab
+  uploadId: 700004

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 4ab1bdd3be93c71419fc22c9bbbcf8ea
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Decals/Hopscotch.prefab
+  uploadId: 700004

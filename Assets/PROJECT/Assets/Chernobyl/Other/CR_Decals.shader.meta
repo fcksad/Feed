@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 16bf124e148a2db46a7524c1cadea3c0
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  preprocessorOverride: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Other/CR_Decals.shader
+  uploadId: 700004

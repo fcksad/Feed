@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: eac80a23b4d38f74bac910fefb641cfc
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Environment/Post_01.prefab
+  uploadId: 700004

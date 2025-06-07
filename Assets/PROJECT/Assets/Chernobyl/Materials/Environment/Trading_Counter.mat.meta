@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 86be7fbbd16a9e74899b19773c1da45e
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Materials/Environment/Trading_Counter.mat
+  uploadId: 700004

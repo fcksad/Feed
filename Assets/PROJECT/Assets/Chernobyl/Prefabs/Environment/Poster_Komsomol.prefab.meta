@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b5383779664715d48b05a88d628f66e8
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Environment/Poster_Komsomol.prefab
+  uploadId: 700004

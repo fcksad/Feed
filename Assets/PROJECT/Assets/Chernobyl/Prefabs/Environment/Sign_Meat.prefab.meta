@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 3d52cf6d0f585d34d9549aedac97b79c
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Environment/Sign_Meat.prefab
+  uploadId: 700004

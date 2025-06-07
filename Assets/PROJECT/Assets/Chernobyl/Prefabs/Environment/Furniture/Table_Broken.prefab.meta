@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 11b2b2917ded7fc4e883f16f695cafa9
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Environment/Furniture/Table_Broken.prefab
+  uploadId: 700004

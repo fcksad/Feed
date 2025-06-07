@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 7f699863150416c499f8b1fee7971623
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Street/Star_01.prefab
+  uploadId: 700004

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: e10729368ca863242837dccf2f80ee2b
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/Chernobyl/Prefabs/Environment/Outdoor_Table.prefab
+  uploadId: 700004
