@@ -184,9 +184,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _localizedString:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 14483218207965186
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0

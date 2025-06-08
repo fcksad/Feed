@@ -15,5 +15,5 @@ MonoBehaviour:
   <Levels>k__BackingField:
   - <Key>k__BackingField: '[Community] - Level 1 Type A'
     <Prefab>k__BackingField: {fileID: -7691488726236741125, guid: a284bd584533e1a4db75130a73a19955, type: 3}
-    <Size>k__BackingField: {x: 20, y: 3, z: 20}
-    <Offset>k__BackingField: {x: 0, y: 0, z: -40}
+    <Offset>k__BackingField: {x: 0, y: 0, z: 0}
+    <Height>k__BackingField: 3

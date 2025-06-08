@@ -11,33 +11,9 @@ public class LevelChunk : MonoBehaviour
     [field: SerializeField] public List<GameObject> Doors { get; private set; }
     [field: SerializeField] public Dictionary<string, bool> OpenedDoors { get; private set; }
 
-    public void Initialize(Vector3Int coord, LevelChunkData savedData)
+    public void Initialize(LevelInfo info)
     {
-        if (savedData != null)
-        {
-            Data = savedData;
-            ChunkType = savedData.ChunkType;
-            // восстановить двери
-            foreach (var door in Doors)
-            {
-                if (Data.OpenedDoors.TryGetValue(door.name, out bool open))
-                    door.SetActive(!open); // к примеру
-            }
-
-            // восстановить предметы
-            foreach (var item in ItemPositions)
-            {
-                if (Data.ItemPositions.TryGetValue(item.Key, out Vector3 pos))
-                    transform.Find(item.Key).position = pos;
-            }
-        }
-        else
-        {
-            Data = new LevelChunkData
-            {
-                ChunkType = ChunkType
-            };
-        }
+        Data.Info = info;
     }
 
     public LevelChunkData GetSaveData()

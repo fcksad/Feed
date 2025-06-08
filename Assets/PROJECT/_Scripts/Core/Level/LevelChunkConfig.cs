@@ -1,28 +1,27 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
+
+[Serializable]
+public class LevelInfo
+{
+    [field: SerializeField] public string Key { get; private set; }
+    [field: SerializeField] public LevelChunk Prefab { get; private set; }
+    [field: SerializeField] public Vector3 Offset { get; private set; }
+    [field: SerializeField] public float Height { get; private set; } = 3f;
+
+    public void OnValidate()
+    {
+        if (Key != Prefab?.ChunkType && Prefab.ChunkType != "")
+        {
+            Key = Prefab.ChunkType;
+        }
+    }
+}
 
 [CreateAssetMenu(fileName = "LevelChunk", menuName = "Configs/Levels/LevelChunk")]
 public class LevelChunkConfig : ScriptableObject
 {
-    [Serializable]
-    public class LevelInfo 
-    {
-        [field: SerializeField] public string Key { get; private set; }
-        [field: SerializeField] public LevelChunk Prefab { get; private set; }
-        [field: SerializeField] public Vector3Int Size { get; private set; } // (X, Y, Z)
-        [field: SerializeField] public Vector3 Offset { get; private set; }
-
-        public void OnValidate()
-        {
-            if (Key != Prefab?.ChunkType && Prefab.ChunkType != "")
-            {
-                Key = Prefab.ChunkType;
-            }
-        }
-    }
-
     [field: SerializeField] public List<LevelInfo> Levels { get; private set; } = new List<LevelInfo>();
 
     public LevelInfo GetLevelInfoByType(string type)
@@ -35,7 +34,6 @@ public class LevelChunkConfig : ScriptableObject
         return null;
     }
 
-
 #if UNITY_EDITOR
     private void OnValidate()
     {
@@ -44,7 +42,5 @@ public class LevelChunkConfig : ScriptableObject
             level.OnValidate();
         }
     }
-
 #endif
-
 }
