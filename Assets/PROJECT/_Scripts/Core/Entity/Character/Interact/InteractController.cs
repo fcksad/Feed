@@ -7,6 +7,7 @@ public class InteractController : MonoBehaviour, IInitializable, IDisposable
 {
     [SerializeField] private Camera _camera;
     [SerializeField] private float _interactDistance = 3f;
+    [SerializeField] private LayerMask _includeLayerMask;
     [SerializeField] private AudioConfig _select;
     [SerializeField] private AudioConfig _denyselect;
 
@@ -46,7 +47,7 @@ public class InteractController : MonoBehaviour, IInitializable, IDisposable
     {
         Ray ray = new Ray(_camera.transform.position, _camera.transform.forward);
 
-        if (Physics.Raycast(ray, out RaycastHit hit, _interactDistance))
+        if (Physics.Raycast(ray, out RaycastHit hit, _interactDistance, _includeLayerMask, QueryTriggerInteraction.Ignore))
         {
             var interactable = hit.collider.GetComponent<IInteractable>();
 

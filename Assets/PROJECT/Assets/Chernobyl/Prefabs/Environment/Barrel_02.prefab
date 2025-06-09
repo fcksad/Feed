@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 6058043799331570104}
   - component: {fileID: 5258756893400295219}
   - component: {fileID: 7022653140872923386}
+  - component: {fileID: 3274992728873444521}
   m_Layer: 0
   m_Name: Barrel_02_LOD0
   m_TagString: Untagged
@@ -200,3 +201,24 @@ MonoBehaviour:
   references:
     version: 2
     RefIds: []
+--- !u!65 &3274992728873444521
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3199628247079278118}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.62115103, y: 0.9011634, z: 0.621151}
+  m_Center: {x: 0, y: 0.4505817, z: 0}

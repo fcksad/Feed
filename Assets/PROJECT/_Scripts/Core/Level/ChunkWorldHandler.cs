@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 using Zenject;
 
@@ -14,25 +13,19 @@ public class ChunkWorldHandler : MonoBehaviour
     private float _maxY = 0f;
     private float _threshold;
 
+    private IInstantiateFactoryService _instantiateFactoryService;
 
-    /* private void Start()
-     {
-         var initialChunk = GetRandomConfig();
-         var chunk = Instantiate(initialChunk.Prefab, Vector3.zero + initialChunk.Offset, Quaternion.identity);
-         chunk.Initialize(initialChunk);
-         _loadedChunks[0f] = chunk;
+    [Inject]
+    public void Construct(IInstantiateFactoryService instantiateFactoryService)
+    {
+        _instantiateFactoryService = instantiateFactoryService;
+    }
 
-         _minY = 0f;
-         _maxY = initialChunk.Height;
-
-         _threshold = initialChunk.Height;
-     }*/
 
     private void Start()
     {
-        // 🟢 Центральный чанк на позиции 0
         var initialInfo = GetRandomConfig();
-        var chunk = Instantiate(initialInfo.Prefab, Vector3.zero + initialInfo.Offset, Quaternion.identity, transform);
+        var chunk = _instantiateFactoryService.Create(initialInfo.Prefab, transform, Vector3.zero + initialInfo.Offset, Quaternion.identity);
         chunk.Initialize(initialInfo);
 
         _loadedChunks[0f] = chunk;
@@ -40,26 +33,24 @@ public class ChunkWorldHandler : MonoBehaviour
         _maxY = initialInfo.Height;
         _threshold = initialInfo.Height;
 
-        // 🔽 Генерация вниз
         float currentY = 0f;
         for (int i = 0; i < _loadRange; i++)
         {
             var info = GetRandomConfig();
             currentY -= info.Height;
             var pos = new Vector3(0, currentY, 0) + info.Offset;
-            var ch = Instantiate(info.Prefab, pos, Quaternion.identity, transform);
+            var ch = _instantiateFactoryService.Create(info.Prefab, transform, pos, Quaternion.identity);
             ch.Initialize(info);
             _loadedChunks[currentY] = ch;
             _minY = currentY;
         }
 
-        // 🔼 Генерация вверх
         currentY = initialInfo.Height;
         for (int i = 0; i < _loadRange; i++)
         {
             var info = GetRandomConfig();
             var pos = new Vector3(0, currentY, 0) + info.Offset;
-            var ch = Instantiate(info.Prefab, pos, Quaternion.identity, transform);
+            var ch = _instantiateFactoryService.Create(info.Prefab, transform, pos, Quaternion.identity);
             ch.Initialize(info);
             _loadedChunks[currentY] = ch;
             currentY += info.Height;
@@ -83,7 +74,7 @@ public class ChunkWorldHandler : MonoBehaviour
         var info = GetRandomConfig();
         var position = new Vector3(0, _maxY, 0) + info.Offset;
 
-        var chunk = Instantiate(info.Prefab, position, Quaternion.identity, transform);
+        var chunk = _instantiateFactoryService.Create(info.Prefab, transform, position, Quaternion.identity);
         chunk.Initialize(info);
         _loadedChunks[_maxY] = chunk;
 
@@ -99,7 +90,7 @@ public class ChunkWorldHandler : MonoBehaviour
         float newMinY = _minY - info.Height;
         var position = new Vector3(0, newMinY, 0) + info.Offset;
 
-        var chunk = Instantiate(info.Prefab, position, Quaternion.identity, transform);
+        var chunk = _instantiateFactoryService.Create(info.Prefab, transform, position, Quaternion.identity);
         chunk.Initialize(info);
         _loadedChunks[newMinY] = chunk;
 
