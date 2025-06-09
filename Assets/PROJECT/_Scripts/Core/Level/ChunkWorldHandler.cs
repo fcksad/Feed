@@ -91,11 +91,6 @@ public class ChunkWorldHandler : MonoBehaviour
                 ChunkType = info.Key,
                 Info = info,
                 Index = index,
-                Position = new Position
-                {
-                    Bottom = index * _chunkHeight,
-                    Top = (index + 1) * _chunkHeight
-                }
             };
         }
 

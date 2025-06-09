@@ -7,8 +7,8 @@ public class FlashlightController : MonoBehaviour
     [SerializeField] private AudioConfig _on;
     [SerializeField] private AudioConfig _off;
 
-    [SerializeField] private GameObject _cameraObject;
-    [SerializeField] private GameObject _flashlightLight;
+    [SerializeField] private Transform _cameraObject;
+    [SerializeField] private Transform _flashlightLight;
     private Vector3 _offset;
 
     [SerializeField] private float _speed = 3f;
@@ -25,11 +25,14 @@ public class FlashlightController : MonoBehaviour
         _audioService = audioService;
     }
 
+    private void Awake()
+    {
+        _offset = _flashlightLight.transform.position - _cameraObject.transform.position;
+    }
+
     private void Start()
     {
         _inputService.AddActionListener(CharacterAction.Flashlight, onStarted: ToggleFlashlight);
-
-        _offset = transform.position - _cameraObject.transform.position;
     }
 
     private void OnDestroy()
@@ -39,8 +42,8 @@ public class FlashlightController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        _flashlightLight.transform.position = _cameraObject.transform.position + _offset;
-        _flashlightLight.transform.rotation = Quaternion.Slerp(_flashlightLight.transform.rotation, _cameraObject.transform.rotation, _speed * Time.fixedDeltaTime);
+        _flashlightLight.transform.position = _cameraObject.position + _offset;
+        _flashlightLight.transform.rotation = Quaternion.Slerp(_flashlightLight.transform.rotation, _cameraObject.rotation, _speed * Time.fixedDeltaTime);
     }
 
     private void ToggleFlashlight()

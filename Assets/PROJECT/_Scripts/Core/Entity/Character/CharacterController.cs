@@ -19,9 +19,9 @@ public class CharacterController : IControllable
     [Header("Crouch")]
     private Coroutine _crouchCamCoroutine;
     private float _camPos = 0.7f;
-    private float _crouchCamPos = -0.10f;
+    private float _crouchCamPos = 0.1f;
     private float _standHeight = 1.65f;
-    private float _crouchHeight = 1.0f;
+    private float _crouchHeight = 1f;
 
     [Header("Look")]
     private const float _mouseSensitivity = 0.4f;
@@ -32,7 +32,7 @@ public class CharacterController : IControllable
     [Header("Head Bobbing")]
     private Coroutine _headBobCoroutine;
     private float _bobAmount = 0.05f;
-    private float _bobDuration = 0.1f;
+    private float _bobDuration = 0.2f;
 
 
     private readonly ICommandController _commandController;
@@ -80,7 +80,7 @@ public class CharacterController : IControllable
                 {
                     var pos = positions[_currentFootstepIndex];
                     _audioService.Play(_character.FootstepSound, position: pos.position);
-                    //ApplyHeadBob();
+                   // ApplyHeadBob();
                     _currentFootstepIndex = (_currentFootstepIndex + 1) % positions.Count;
                 }
 
@@ -121,7 +121,7 @@ public class CharacterController : IControllable
         _cameraPitch = Mathf.Clamp(_cameraPitch, -_maxLookAngle, _maxLookAngle);
         _character.HeadRoot.localEulerAngles = new Vector3(_cameraPitch, 0f, 0f);
 
-        _character.transform.Rotate(Vector3.up * delta.x);
+        _character.CharacterModel.transform.Rotate(Vector3.up * delta.x);
     }
 
     public bool Crouch(bool isCrouching)
@@ -182,7 +182,7 @@ public class CharacterController : IControllable
 
     private IEnumerator HeadBobRoutine()
     {
-        Transform cam = _character.HeadRoot;
+        Transform cam = _character.CameraRoot;
         Vector3 originalPos = cam.localPosition;
         Vector3 downPos = new Vector3(originalPos.x, originalPos.y - _bobAmount, originalPos.z);
 
