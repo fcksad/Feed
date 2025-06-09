@@ -4,14 +4,19 @@ using Zenject;
 
 public class ChunkWorldHandler : MonoBehaviour
 {
+    private enum Direction { Up, Down }
+
     [SerializeField] private LevelChunkConfig _chunkConfig;
     [SerializeField] private Transform _player;
-    [SerializeField] private int _loadRange = 2;
+    [SerializeField] private int _loadRange = 3;
 
-    private SortedDictionary<float, LevelChunk> _loadedChunks = new();
-    private float _minY = 0f;
-    private float _maxY = 0f;
-    private float _threshold;
+    private SortedDictionary<int, LevelChunk> _activeChunks = new();
+    private Dictionary<int, LevelChunkData> _chunks = new();
+
+    private float _chunkHeight;
+    private int _currentChunkIndex;
+
+    private float PlayerBottomY => _player.position.y - (1.65f / 2);
 
     private IInstantiateFactoryService _instantiateFactoryService;
 
@@ -20,130 +25,106 @@ public class ChunkWorldHandler : MonoBehaviour
     {
         _instantiateFactoryService = instantiateFactoryService;
     }
-
-
-    private void Start()
+    private void Awake()
     {
-        var initialInfo = GetRandomConfig();
-        var chunk = _instantiateFactoryService.Create(initialInfo.Prefab, transform, Vector3.zero + initialInfo.Offset, Quaternion.identity);
-        chunk.Initialize(initialInfo);
+        //load
 
-        _loadedChunks[0f] = chunk;
-        _minY = 0f;
-        _maxY = initialInfo.Height;
-        _threshold = initialInfo.Height;
-
-        float currentY = 0f;
-        for (int i = 0; i < _loadRange; i++)
-        {
-            var info = GetRandomConfig();
-            currentY -= info.Height;
-            var pos = new Vector3(0, currentY, 0) + info.Offset;
-            var ch = _instantiateFactoryService.Create(info.Prefab, transform, pos, Quaternion.identity);
-            ch.Initialize(info);
-            _loadedChunks[currentY] = ch;
-            _minY = currentY;
-        }
-
-        currentY = initialInfo.Height;
-        for (int i = 0; i < _loadRange; i++)
-        {
-            var info = GetRandomConfig();
-            var pos = new Vector3(0, currentY, 0) + info.Offset;
-            var ch = _instantiateFactoryService.Create(info.Prefab, transform, pos, Quaternion.identity);
-            ch.Initialize(info);
-            _loadedChunks[currentY] = ch;
-            currentY += info.Height;
-            _maxY = currentY;
-        }
+        //if save null
+        InitializeGeneration();
     }
 
     private void Update()
     {
-        float playerY = _player.position.y;
+        int playerLevel = Mathf.FloorToInt(PlayerBottomY / _chunkHeight);
 
-        if (playerY > _maxY - _threshold)
-            CreateChunkUp();
-
-        if (playerY < _minY + _threshold)
-            CreateChunkDown();
-    }
-
-    private void CreateChunkUp()
-    {
-        var info = GetRandomConfig();
-        var position = new Vector3(0, _maxY, 0) + info.Offset;
-
-        var chunk = _instantiateFactoryService.Create(info.Prefab, transform, position, Quaternion.identity);
-        chunk.Initialize(info);
-        _loadedChunks[_maxY] = chunk;
-
-        _minY = GetBottomMostY(); 
-        _maxY += info.Height;
-
-        TryUnloadLowest();
-    }
-
-    private void CreateChunkDown()
-    {
-        var info = GetRandomConfig();
-        float newMinY = _minY - info.Height;
-        var position = new Vector3(0, newMinY, 0) + info.Offset;
-
-        var chunk = _instantiateFactoryService.Create(info.Prefab, transform, position, Quaternion.identity);
-        chunk.Initialize(info);
-        _loadedChunks[newMinY] = chunk;
-
-        _minY = newMinY;
-
-        TryUnloadHighest();
-    }
-
-
-    private void TryUnloadLowest()
-    {
-        if (_loadedChunks.Count < 3) return;
-
-        var bottomKey = GetBottomMostY();
-        if (_player.position.y - bottomKey > _threshold * 2)
+        if (playerLevel != _currentChunkIndex)
         {
-            Destroy(_loadedChunks[bottomKey].gameObject);
-            _loadedChunks.Remove(bottomKey);
-            _minY = GetBottomMostY();
+            _currentChunkIndex = playerLevel;
+            CreateChunks(Direction.Up, _loadRange);
+            CreateChunks(Direction.Down, _loadRange);
+            UnloadDistantChunks();
         }
     }
 
-    private void TryUnloadHighest()
+    private void InitializeGeneration()
     {
-        if (_loadedChunks.Count < 3) return;
+        int centerIndex = Mathf.FloorToInt(PlayerBottomY / _chunkHeight);
+        _currentChunkIndex = centerIndex;
 
-        var topKey = GetTopMostY();
-        if (topKey - _player.position.y > _threshold * 2)
+        var info = GetRandomConfig();
+        _chunkHeight = info.Height;
+
+        for (int i = -_loadRange; i <= _loadRange; i++)
         {
-            Destroy(_loadedChunks[topKey].gameObject);
-            _loadedChunks.Remove(topKey);
-            _maxY = GetTopMostY() + _loadedChunks[_maxY - _chunkConfig.Levels[0].Height].Data.Height;
+            int index = centerIndex + i;
+            SpawnOrLoadChunk(index);
         }
     }
 
-    private float GetBottomMostY()
+    private void CreateChunks(Direction direction, int count)
     {
-        foreach (var key in _loadedChunks.Keys)
-            return key; 
-        return 0f;
+        for (int i = 1; i <= count; i++)
+        {
+            int index = direction == Direction.Up
+                ? _currentChunkIndex + i
+                : _currentChunkIndex - i;
+
+            if (!_activeChunks.ContainsKey(index))
+                SpawnOrLoadChunk(index);
+        }
     }
 
-    private float GetTopMostY()
+
+    private void SpawnOrLoadChunk(int index)
     {
-        float lastKey = 0f;
-        foreach (var key in _loadedChunks.Keys)
-            lastKey = key;
-        return lastKey;
+        LevelInfo info;
+
+        if (_chunks.TryGetValue(index, out var data))
+        {
+            info = data.Info;
+        }
+        else
+        {
+            info = GetRandomConfig();
+            _chunks[index] = new LevelChunkData
+            {
+                ChunkType = info.Key,
+                Info = info,
+                Index = index,
+                Position = new Position
+                {
+                    Bottom = index * _chunkHeight,
+                    Top = (index + 1) * _chunkHeight
+                }
+            };
+        }
+
+        Vector3 pos = new Vector3(0, index * _chunkHeight, 0) + info.Offset;
+        var chunk = _instantiateFactoryService.Create(info.Prefab, transform, pos, Quaternion.identity, customName: index.ToString(), key: info.Key);
+        chunk.Initialize(info);
+
+        _activeChunks[index] = chunk;
+    }
+    private void UnloadDistantChunks()
+    {
+        List<int> toRemove = new();
+
+        foreach (var kvp in _activeChunks)
+        {
+            int delta = kvp.Key - _currentChunkIndex;
+            if (delta > _loadRange || delta < -_loadRange)
+            {
+                Destroy(kvp.Value.gameObject);
+                toRemove.Add(kvp.Key);
+            }
+        }
+
+        foreach (int index in toRemove)
+            _activeChunks.Remove(index);
     }
 
     private LevelInfo GetRandomConfig()
     {
-        int index = Random.Range(0, _chunkConfig.Levels.Count);
-        return _chunkConfig.Levels[index];
+        return _chunkConfig.Levels[Random.Range(0, _chunkConfig.Levels.Count)];
     }
 }

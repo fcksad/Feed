@@ -2,13 +2,12 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public struct ChunkCoord
+[Serializable]
+public class Position
 {
-    public int X;
-    public int Y;
-    public int Z;
+    public float Bottom;
+    public float Top;
 
-    public override int GetHashCode() => (X, Y, Z).GetHashCode();
 }
 
 [Serializable]
@@ -18,5 +17,8 @@ public class LevelChunkData
     public Dictionary<string, Vector3> ItemPositions = new();
     public Dictionary<string, bool> OpenedDoors = new();
     public LevelInfo Info;
+    public int Index;
+    public Position Position;
+
     public float Height => Info.Height;
 }

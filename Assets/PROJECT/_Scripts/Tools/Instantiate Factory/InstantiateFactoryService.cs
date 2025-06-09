@@ -22,11 +22,11 @@ public class InstantiateFactoryService : IInstantiateFactoryService
     /// <param name="position">Мировая позиция (по умолчанию Vector3.zero)</param>
     /// <param name="rotation">Поворот (по умолчанию Quaternion.identity)</param>
     /// <param name="customName">Установить имя GameObject (опционально)</param>
-    public T Create<T>( T prefab, Transform parent = null,Vector3? position = null,Quaternion? rotation = null, string customName = null) where T : MonoBehaviour
+    public T Create<T>( T prefab, Transform parent = null,Vector3? position = null,Quaternion? rotation = null, string customName = null, string key = null) where T : MonoBehaviour
     {
         T instance;
 
-        instance = _poolService.GetFromPool(prefab);
+        instance = _poolService.GetFromPool(prefab, key);
 
         var obj = instance.gameObject;
 
@@ -40,8 +40,8 @@ public class InstantiateFactoryService : IInstantiateFactoryService
         return instance;
     }
 
-    public void Release<T>(T instance) where T : MonoBehaviour
+    public void Release<T>(T instance, string key = null) where T : MonoBehaviour
     {
-        _poolService.ReturnToPool(instance);
+        _poolService.ReturnToPool(instance, key);
     }
 }

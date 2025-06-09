@@ -23,9 +23,12 @@ public class PoolService : IPoolService, IInitializable
         _root = go.transform;
     }
 
-    public T GetFromPool<T>(T prefab) where T : Component
+    public T GetFromPool<T>(T prefab, string key = null) where T : Component
     {
-        string key = typeof(T).Name;
+        if (key == null)
+        {
+            key = typeof(T).Name;
+        }
 
         if (!_pool.ContainsKey(key))
             _pool[key] = new Queue<GameObject>();
@@ -52,11 +55,14 @@ public class PoolService : IPoolService, IInitializable
         return obj.GetComponent<T>();
     }
 
-    public void ReturnToPool<T>(T instance) where T : Component
+    public void ReturnToPool<T>(T instance, string key = null) where T : Component
     {
         if (!instance.gameObject.activeInHierarchy) return;
 
-        string key = typeof(T).Name;
+        if (key == null)
+        {
+            key = typeof(T).Name;
+        }
 
         if (!_pool.ContainsKey(key))
             _pool[key] = new Queue<GameObject>();
