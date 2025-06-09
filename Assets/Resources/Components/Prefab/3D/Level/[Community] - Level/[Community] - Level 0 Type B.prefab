@@ -2328,7 +2328,7 @@ GameObject:
   - component: {fileID: 4709869973708019059}
   - component: {fileID: -7691488726236741125}
   m_Layer: 0
-  m_Name: '[Community] - Level 0 Type A'
+  m_Name: '[Community] - Level 0 Type B'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2374,14 +2374,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Data>k__BackingField:
-    ChunkType: '[Community] - Leve 0 Type A'
+    ChunkType: '[Community] - Leve 0 Type B'
     Info:
       <Key>k__BackingField: 
       <Prefab>k__BackingField: {fileID: 0}
       <Offset>k__BackingField: {x: 0, y: 0, z: 0}
       <Height>k__BackingField: 3
     Index: 0
-  <ChunkType>k__BackingField: '[Community] - Leve 0 Type A'
+  <ChunkType>k__BackingField: '[Community] - Leve 0 Type B'
   <Doors>k__BackingField: []
 --- !u!1 &8670102803136132004
 GameObject:

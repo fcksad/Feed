@@ -1,31 +1,26 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class ChunkVisibilityChecker : MonoBehaviour
 {
-    [SerializeField] private Camera _camera;
-
-    [SerializeField] private Renderer _renderer;
+    private Camera _camera;
     [SerializeField] private Plane[] _plane;
     [SerializeField] private Collider _collider;
+    [SerializeField] private List<GameObject> _object;
 
     private void Awake()
     {
         _camera = Camera.main;
-        _renderer = GetComponent<Renderer>();
-        _collider = GetComponent<Collider>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         var bounds = _collider.bounds;
         _plane = GeometryUtility.CalculateFrustumPlanes(_camera);
-        if (GeometryUtility.TestPlanesAABB(_plane, bounds))
+        var toggle = GeometryUtility.TestPlanesAABB(_plane, bounds);
+        foreach (var obj in _object)
         {
-            _renderer.enabled = true;
-        }
-        else
-        {
-            _renderer.enabled = false;
+            obj.SetActive(toggle);
         }
     }
 }
