@@ -29,17 +29,10 @@ public class CharacterController : IControllable
     private float _verticalVelocity;
     private float _cameraPitch = 0f;
 
-    [Header("Head Bobbing")]
-    private Coroutine _headBobCoroutine;
-    private float _bobAmount = 0.05f;
-    private float _bobDuration = 0.2f;
-
-
     private readonly ICommandController _commandController;
     private readonly Character _character;
 
     private IAudioService _audioService;
-
 
     public CharacterController(ICommandController commandController, IAudioService audioService , Character character)
     {
@@ -80,7 +73,6 @@ public class CharacterController : IControllable
                 {
                     var pos = positions[_currentFootstepIndex];
                     _audioService.Play(_character.FootstepSound, position: pos.position);
-                   // ApplyHeadBob();
                     _currentFootstepIndex = (_currentFootstepIndex + 1) % positions.Count;
                 }
 
@@ -88,7 +80,6 @@ public class CharacterController : IControllable
             }
         }
     }
-
 
     private void ApplyGravity()
     {
@@ -128,9 +119,7 @@ public class CharacterController : IControllable
     {
         if (!isCrouching)
         {
-            float radius = _character.CharacterController.radius * 0.9f;
-
-            if (Physics.SphereCast(_character.HeadRoot.position, radius, Vector3.up, out RaycastHit hit, 1, ~0, QueryTriggerInteraction.Ignore))
+            if (Physics.SphereCast(_character.HeadRoot.position, _character.CharacterController.radius, Vector3.up, out RaycastHit hit,_standHeight - _crouchHeight, ~0, QueryTriggerInteraction.Ignore))
             {
                 return false;
             }
@@ -152,7 +141,6 @@ public class CharacterController : IControllable
         return true;
     }
 
-
     private IEnumerator LerpCameraY(float targetY)
     {
         Transform cam = _character.HeadRoot;
@@ -171,39 +159,4 @@ public class CharacterController : IControllable
 
         cam.localPosition = targetPos;
     }
-
-    private void ApplyHeadBob()
-    {
-        if (_headBobCoroutine != null)
-            _character.StopCoroutine(_headBobCoroutine);
-
-        _headBobCoroutine = _character.StartCoroutine(HeadBobRoutine());
-    }
-
-    private IEnumerator HeadBobRoutine()
-    {
-        Transform cam = _character.CameraRoot;
-        Vector3 originalPos = cam.localPosition;
-        Vector3 downPos = new Vector3(originalPos.x, originalPos.y - _bobAmount, originalPos.z);
-
-        float t = 0f;
-
-        while (t < _bobDuration)
-        {
-            t += Time.deltaTime;
-            cam.localPosition = Vector3.Lerp(originalPos, downPos, t / _bobDuration);
-            yield return null;
-        }
-
-        t = 0f;
-        while (t < _bobDuration)
-        {
-            t += Time.deltaTime;
-            cam.localPosition = Vector3.Lerp(downPos, originalPos, t / _bobDuration);
-            yield return null;
-        }
-
-        cam.localPosition = originalPos;
-    }
-
 }

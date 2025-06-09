@@ -1,7 +1,14 @@
 fileFormatVersion: 2
-guid: c24f290bad01d774eb5f2730d944af23
+guid: e618ac4605c15f34c8d319d24b439a79
 PrefabImporter:
   externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 221608
+  packageName: Chernobyl
+  packageVersion: 1.0
+  assetPath: Assets/PROJECT/Assets/Chernobyl/Prefabs/House/Interior/Apartment_Door_02.prefab
+  uploadId: 700004

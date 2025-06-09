@@ -12,12 +12,13 @@ GameObject:
   - component: {fileID: 827072798560014469}
   - component: {fileID: 3215197527873561679}
   - component: {fileID: 5658090343220232211}
+  - component: {fileID: 2596461086121296387}
   m_Layer: 0
   m_Name: Interior_Wall_1m_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &4383552479577628448
 Transform:
@@ -53,7 +54,7 @@ MeshRenderer:
   m_CastShadows: 2
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -109,3 +110,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.09999999, y: 3, z: 1}
   m_Center: {x: -0.049999993, y: 1.5, z: -0.5}
+--- !u!205 &2596461086121296387
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4007730250576397722}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: -0.049999993, y: 1.5, z: -0.5}
+  m_Size: 3
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.08
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 3215197527873561679}
+  m_Enabled: 1

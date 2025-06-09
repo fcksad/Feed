@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5080438493325692028}
   - component: {fileID: 1444517327163850806}
-  - component: {fileID: 4253395336278891362}
   m_Layer: 0
   m_Name: Porch_05_Collider
   m_TagString: Untagged
@@ -28,7 +27,6 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3452530467611409184}
   m_RootOrder: 1
@@ -47,19 +45,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 8746291529371319564, guid: 754ac52c9028c73489c82c5f5d403d76, type: 3}
---- !u!65 &4253395336278891362
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1545092266198826975}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.4094315, y: 2.4834101, z: 0.18057296}
-  m_Center: {x: 0.8390064, y: 1.5936817, z: -0.4097135}
 --- !u!1 &2639683909087961498
 GameObject:
   m_ObjectHideFlags: 0
@@ -87,7 +72,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5820209328760720100}
   - {fileID: 5080438493325692028}
@@ -141,7 +125,6 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3452530467611409184}
   m_RootOrder: 0
@@ -165,7 +148,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
