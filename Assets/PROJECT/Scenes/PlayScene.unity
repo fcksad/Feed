@@ -15,7 +15,7 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 10
   m_Fog: 1
-  m_FogColor: {r: 0.105882354, g: 0.101960786, b: 0.101960786, a: 1}
+  m_FogColor: {r: 0, g: 0, b: 0, a: 1}
   m_FogMode: 1
   m_FogDensity: 0.01
   m_LinearFogStart: 0
@@ -954,6 +954,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1419445304942772004, guid: 7432bcee279e61746a7906988505f6fc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433440626774301536, guid: 7432bcee279e61746a7906988505f6fc, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433440626774301536, guid: 7432bcee279e61746a7906988505f6fc, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433440626774301536, guid: 7432bcee279e61746a7906988505f6fc, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2078514736312180541, guid: 7432bcee279e61746a7906988505f6fc, type: 3}
       propertyPath: m_Name
       value: Hands
@@ -980,7 +996,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7095571755274010272, guid: 7432bcee279e61746a7906988505f6fc, type: 3}
       propertyPath: m_SpotAngle
-      value: 60
+      value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 7095571755274010272, guid: 7432bcee279e61746a7906988505f6fc, type: 3}
       propertyPath: m_InnerSpotAngle
@@ -1018,9 +1034,29 @@ PrefabInstance:
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7859376795691545812, guid: 7432bcee279e61746a7906988505f6fc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8382470382923290276, guid: 7432bcee279e61746a7906988505f6fc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 9137729978438883033, guid: 7432bcee279e61746a7906988505f6fc, type: 3}
+      propertyPath: m_TargetTexture
+      value: 
+      objectReference: {fileID: 8400000, guid: 767a26db04103984eacfb21c5453d7cc, type: 2}
+    - target: {fileID: 9137729978438883033, guid: 7432bcee279e61746a7906988505f6fc, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9137729978438883033, guid: 7432bcee279e61746a7906988505f6fc, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9137729978438883033, guid: 7432bcee279e61746a7906988505f6fc, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
