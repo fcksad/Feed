@@ -1,4 +1,6 @@
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class CharacterController : IControllable
@@ -29,7 +31,12 @@ public class CharacterController : IControllable
     private float _verticalVelocity;
     private float _cameraPitch = 0f;
 
+    [Header("Footstep")]
+    private FootstepPlayer _footstepPlayer;
+    
+
     private readonly ICommandController _commandController;
+    private readonly IAttackController _attackController;
     private readonly Character _character;
 
     private IAudioService _audioService;
@@ -39,6 +46,8 @@ public class CharacterController : IControllable
         _commandController = commandController;
         _audioService = audioService;
         _character = character;
+
+        _footstepPlayer = new FootstepPlayer(audioService, character.Footstep, _character.FootstepMask, _character.transform);
     }
 
     public void Move(Vector2 input, bool isRunning, bool jumpRequested, bool isCrouching)
@@ -68,12 +77,11 @@ public class CharacterController : IControllable
         {
             if (Time.time - _lastStepTime >= currentStepCooldown)
             {
-                var positions = _character.FootstepPositions;
-                if (positions != null && positions.Count > 0)
+                if (_character.FootstepPositions != null && _character.FootstepPositions.Count > 0)
                 {
-                    var pos = positions[_currentFootstepIndex];
-                    _audioService.Play(_character.FootstepSound, position: pos.position);
-                    _currentFootstepIndex = (_currentFootstepIndex + 1) % positions.Count;
+                    var pos = _character.FootstepPositions[_currentFootstepIndex].position;
+                    _footstepPlayer.TryPlayFootstep(pos);
+                    _currentFootstepIndex = (_currentFootstepIndex + 1) % _character.FootstepPositions.Count;
                 }
 
                 _lastStepTime = Time.time;

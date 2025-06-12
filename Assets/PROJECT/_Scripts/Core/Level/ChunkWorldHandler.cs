@@ -10,10 +10,9 @@ public class ChunkWorldHandler : MonoBehaviour
     [SerializeField] private Transform _player;
     [SerializeField] private int _loadRange = 3;
 
-    private SortedDictionary<int, LevelChunk> _activeChunks = new();
-    private Dictionary<int, LevelChunkData> _chunks = new();
+    private Dictionary<int, (float y, LevelChunkData data)> _chunkDataMap = new();
+    private Dictionary<int, (float y, LevelChunk instance)> _activeChunks = new();
 
-    private float _chunkHeight;
     private int _currentChunkIndex;
 
     private float PlayerBottomY => _player.position.y - (1.65f / 2);
@@ -33,33 +32,51 @@ public class ChunkWorldHandler : MonoBehaviour
         InitializeGeneration();
     }
 
+    private void InitializeGeneration()
+    {
+        int centerIndex = Mathf.FloorToInt(PlayerBottomY);
+        _currentChunkIndex = centerIndex;
+
+        Zero();
+
+        for (int i = 1; i <= _loadRange; i++)
+        {
+            SpawnOrLoadChunk(centerIndex + i, Direction.Up);
+            SpawnOrLoadChunk(centerIndex - i, Direction.Down);
+        }
+    }
+
     private void Update()
     {
-        int playerLevel = Mathf.FloorToInt(PlayerBottomY / _chunkHeight);
+        int playerChunk = GetPlayerChunkIndex();
 
-        if (playerLevel != _currentChunkIndex)
+        if (playerChunk != _currentChunkIndex)
         {
-            _currentChunkIndex = playerLevel;
+            _currentChunkIndex = playerChunk;
             CreateChunks(Direction.Up, _loadRange);
             CreateChunks(Direction.Down, _loadRange);
             UnloadDistantChunks();
         }
     }
 
-    private void InitializeGeneration()
+    private int GetPlayerChunkIndex()
     {
-        int centerIndex = Mathf.FloorToInt(PlayerBottomY / _chunkHeight);
-        _currentChunkIndex = centerIndex;
+        float y = PlayerBottomY;
 
-        var info = GetRandomConfig();
-        _chunkHeight = info.Height;
-
-        for (int i = -_loadRange; i <= _loadRange; i++)
+        foreach (var pair in _chunkDataMap)
         {
-            int index = centerIndex + i;
-            SpawnOrLoadChunk(index);
+            float chunkY = pair.Value.y;
+            float chunkHeight = pair.Value.data.Info.Height;
+
+            if (y >= chunkY && y < chunkY + chunkHeight)
+            {
+                return pair.Key;
+            }
         }
+
+        return _currentChunkIndex; // fallback: не найден — останется тот же
     }
+
 
     private void CreateChunks(Direction direction, int count)
     {
@@ -70,47 +87,103 @@ public class ChunkWorldHandler : MonoBehaviour
                 : _currentChunkIndex - i;
 
             if (!_activeChunks.ContainsKey(index))
-                SpawnOrLoadChunk(index);
+                SpawnOrLoadChunk(index, direction);
         }
     }
 
 
-    private void SpawnOrLoadChunk(int index)
+    private void Zero()
     {
         LevelInfo info;
 
-        if (_chunks.TryGetValue(index, out var data))
+        if (_chunkDataMap.TryGetValue(0, out var existingData))
         {
-            info = data.Info;
+            info = existingData.data.Info;
         }
         else
         {
             info = GetRandomConfig();
-            _chunks[index] = new LevelChunkData
-            {
-                ChunkType = info.Key,
-                Info = info,
-                Index = index,
-            };
         }
 
-        Vector3 pos = new Vector3(0, index * _chunkHeight, 0) + info.Offset;
-        var chunk = _instantiateFactoryService.Create(info.Prefab, transform, pos, Quaternion.identity, customName: index.ToString(), key: info.Key);
+        Vector3 pos = new Vector3(0, 0, 0) + info.Offset;
+        var chunk = _instantiateFactoryService.Create(info.Prefab, transform, pos, Quaternion.identity, customName: 0.ToString(), key: info.Type);
+        chunk.Initialize(info);
+        if (!_chunkDataMap.ContainsKey(0))
+        {
+            _chunkDataMap[0] = (0, new LevelChunkData
+            {
+                ChunkType = info.Type,
+                Info = info,
+                Index = 0,
+            });
+        }
+
+        _activeChunks[0] = (0, chunk);
+    }
+
+    private void SpawnOrLoadChunk(int index, Direction direction)
+    {
+        LevelInfo info;
+
+        if (_chunkDataMap.TryGetValue(index, out var existingData))
+        {
+            info = existingData.data.Info;
+        }
+        else
+        {
+            info = GetRandomConfig();
+        }
+
+        float prevY = GetPreviousYPosition(index, direction);
+        float newY = direction == Direction.Up
+            ? prevY
+            : prevY - info.Height;
+
+        Vector3 pos = new Vector3(0, newY, 0) + info.Offset;
+
+        var chunk = _instantiateFactoryService.Create(info.Prefab, transform, pos, Quaternion.identity, customName: index.ToString(), key: info.Type);
         chunk.Initialize(info);
 
-        _activeChunks[index] = chunk;
+        if (!_chunkDataMap.ContainsKey(index))
+        {
+            _chunkDataMap[index] = (newY, new LevelChunkData
+            {
+                ChunkType = info.Type,
+                Info = info,
+                Index = index,
+            });
+        }
+
+        _activeChunks[index] = (newY, chunk);
     }
+
+    private float GetPreviousYPosition(int index, Direction direction)
+    {
+        if (index == 0)
+            return 0f;
+
+        int previousIndex = direction == Direction.Up ? index - 1 : index + 1;
+
+        if (_chunkDataMap.TryGetValue(previousIndex, out var previousData))
+        {
+            return previousData.y += direction == Direction.Up ? previousData.data.Height : 0;
+        }
+
+        return 0;
+    }
+
+
     private void UnloadDistantChunks()
     {
         List<int> toRemove = new();
 
-        foreach (var kvp in _activeChunks)
+        foreach (var chunk in _activeChunks)
         {
-            int delta = kvp.Key - _currentChunkIndex;
+            int delta = chunk.Key - _currentChunkIndex;
             if (delta > _loadRange || delta < -_loadRange)
             {
-                Destroy(kvp.Value.gameObject);
-                toRemove.Add(kvp.Key);
+                _instantiateFactoryService.Release(chunk.Value.instance, chunk.Value.instance.ChunkType);
+                toRemove.Add(chunk.Key);
             }
         }
 

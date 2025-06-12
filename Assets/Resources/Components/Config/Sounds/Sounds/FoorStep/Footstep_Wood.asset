@@ -10,13 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 346a38e715474eb4ea0cf8ce58569643, type: 3}
-  m_Name: Footstep
+  m_Name: Footstep_Wood
   m_EditorClassIdentifier: 
-  <AudioName>k__BackingField: Footstep
+  <AudioName>k__BackingField: WoodFootstep_1
   <Type>k__BackingField: 2
   <OneShoot>k__BackingField: 0
   <SpatialBlend>k__BackingField: 1
   <AudioClips>k__BackingField:
-  - {fileID: 8300000, guid: bb474abe8e896e14ab03618ef5147a32, type: 3}
-  MinPitch: 0.9
-  MaxPitch: 1.11
+  - {fileID: 8300000, guid: d6d10e9f10a2945489ff704ab22f4d4b, type: 3}
+  - {fileID: 8300000, guid: 446a89decd4312f46a3b22d36843e641, type: 3}
+  - {fileID: 8300000, guid: de4e60d38f372b045aa2c549ece9161e, type: 3}
+  - {fileID: 8300000, guid: 9c0fdc766dd1f534f81f0b29738e97be, type: 3}
+  MinPitch: 0.8
+  MaxPitch: 1.2

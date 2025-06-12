@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25b004203544d9e4cadf18437f481a57, type: 3}
+  m_Name: FootstepConfig
+  m_EditorClassIdentifier: 
+  <Surfaces>k__BackingField:
+  - <Type>k__BackingField: 0
+    <Materials>k__BackingField:
+    - {fileID: 2100000, guid: f189dc294b0933d4cb1a0787cf5779b6, type: 2}
+    - {fileID: 2100000, guid: d85d4d62cac11074ba4fefcc61ae9668, type: 2}
+    - {fileID: 2100000, guid: 81814db27671cad46968245ca07acddc, type: 2}
+    - {fileID: 2100000, guid: 9524ebb0bd6d61f43aab15d37a50e0cc, type: 2}
+    - {fileID: 2100000, guid: 819cd4076d9615c429e0ec827b534a56, type: 2}
+    - {fileID: 2100000, guid: 51a707207e21fc342870170b2ab38f3e, type: 2}
+    - {fileID: 2100000, guid: 79b2fe0f1ca86ae4dbd4bc606ddc95e6, type: 2}
+    <Audio>k__BackingField: {fileID: 11400000, guid: fd98ebbb3abbd5f4dac15630382cc3ef, type: 2}
+  - <Type>k__BackingField: 1
+    <Materials>k__BackingField:
+    - {fileID: 2100000, guid: 22aec2f4d2e14ae44b207f9c40898e2d, type: 2}
+    - {fileID: 2100000, guid: 87cd2f3dc43c54c4f8ddec29ed6e2216, type: 2}
+    <Audio>k__BackingField: {fileID: 11400000, guid: 4877eefddaa5afc4c9e3dc872fe3cf9a, type: 2}

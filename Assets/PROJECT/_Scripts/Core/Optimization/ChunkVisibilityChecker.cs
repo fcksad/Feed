@@ -8,7 +8,7 @@ public class ChunkVisibilityChecker : MonoBehaviour
     [SerializeField] private Collider _collider;
     [SerializeField] private List<GameObject> _object;
 
-    private void Awake()
+    private void Start()
     {
         _camera = Camera.main;
     }

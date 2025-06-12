@@ -5,16 +5,16 @@ using UnityEngine;
 [Serializable]
 public class LevelInfo
 {
-    [field: SerializeField] public string Key { get; private set; }
+    [field: SerializeField] public string Type { get; private set; }
     [field: SerializeField] public LevelChunk Prefab { get; private set; }
     [field: SerializeField] public Vector3 Offset { get; private set; }
     [field: SerializeField] public float Height { get; private set; } = 3f;
 
     public void OnValidate()
     {
-        if (Key != Prefab?.ChunkType && Prefab.ChunkType != "")
+        if (Type != Prefab?.ChunkType && Prefab.ChunkType != "")
         {
-            Key = Prefab.ChunkType;
+            Type = Prefab.ChunkType;
         }
     }
 }
@@ -27,7 +27,7 @@ public class LevelChunkConfig : ScriptableObject
     public LevelInfo GetLevelInfoByType(string type)
     {
             foreach (var level in Levels)
-                if (level.Key == type)
+                if (level.Type == type)
                     return level;
 
         Debug.LogError($"Chunk type not found: {type}");
