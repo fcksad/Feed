@@ -3,7 +3,17 @@ guid: f4a5f578e8947294fa681b6503597223
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Arms_MAT
+    second: {fileID: 2100000, guid: 776e142461f54b04db43ddaf621e796a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fireaxe_mat
+    second: {fileID: 2100000, guid: 40eba87d689b6c64fa10eb1246abf1db, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
