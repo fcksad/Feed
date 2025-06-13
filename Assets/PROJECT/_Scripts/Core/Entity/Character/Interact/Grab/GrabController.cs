@@ -91,27 +91,16 @@ public class GrabController : MonoBehaviour, IInitializable, IDisposable
         return _holdObject;
     }
 
-    public void TryGrabOrInteract(IInteractable target)
-    {
-        if (_holdObject != null)
-        {
-            _holdObject.InteractWith(target);
-        }
-        else if (target is IGrabbable grabbable)
-        {
-            Grab(grabbable);
-        }
-        else
-        {
-            target.Interact();
-        }
-    }
-
-    public void Grab(IGrabbable grabbable)
+    public void TryGrabOrInteract(IGrabbable target)
     {
         if (_holdObject != null)
             return;
 
+        Grab(target);
+    }
+
+    public void Grab(IGrabbable grabbable)
+    {
         _holdObject = grabbable;
         var obj = _holdObject.Transform;
 
@@ -120,7 +109,7 @@ public class GrabController : MonoBehaviour, IInitializable, IDisposable
         if (_holdObject.SetDefaultPos == true)
         {
             obj.localPosition = Vector3.zero;
-            obj.localRotation = _holdObject.Rotate;
+            obj.localRotation = _holdObject.LocalRotation;
 
             _holdObject.Rigidbody.linearVelocity = Vector3.zero;
             _holdObject.Rigidbody.angularVelocity = Vector3.zero;

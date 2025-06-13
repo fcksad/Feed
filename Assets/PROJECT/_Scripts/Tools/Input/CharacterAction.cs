@@ -17,6 +17,7 @@ public enum CharacterAction
     RotateBackward,
     Move,
     Flashlight,
-    Crouch
+    Crouch,
+    Drop
 
 }

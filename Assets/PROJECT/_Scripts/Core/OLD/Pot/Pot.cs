@@ -29,16 +29,6 @@ public class Pot : GrabbableObject
 
     public override void Interact() { }
 
-    public override void InteractWith(IInteractable target) { }
-
-    public override void ReceiveInteractionFrom(IGrabbable item)
-    {
-        if (item is WateringCan)
-        {
-            StartWatering();
-        }
-    }
-
     private void StartWatering()
     {
         if (_materialIndex == -1) return;

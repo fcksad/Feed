@@ -6,10 +6,9 @@ public interface IGrabbable
     Transform Transform { get; }
     Rigidbody Rigidbody { get; }
     List<Collider> GetColliders();
-    Quaternion Rotate { get; }
+    Quaternion LocalRotation { get; }
     bool SetDefaultPos {  get; }
     bool ToggleCollider { get ; }
-    void InteractWith(IInteractable target);
     void OnGrab();
     void OnDrop();
 }

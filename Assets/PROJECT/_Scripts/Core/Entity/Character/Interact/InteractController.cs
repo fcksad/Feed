@@ -15,6 +15,7 @@ public class InteractController : MonoBehaviour, IInitializable, IDisposable
     private IInteractable _currentInteractable;
 
     [SerializeField] private GrabController _grabController;
+    [SerializeField] private ItemController _itemController;
     private IInputService _inputService;
     private IHintService _hintService;
     private IAudioService _audioService;
@@ -59,7 +60,6 @@ public class InteractController : MonoBehaviour, IInitializable, IDisposable
 
                     _currentInteractable = interactable;
 
-
                     _screenPointIndicator.SetTargeted(_currentInteractable.Name);
                 }
 
@@ -80,8 +80,19 @@ public class InteractController : MonoBehaviour, IInitializable, IDisposable
     {
         if (_currentInteractable != null)
         {
-            _grabController.TryGrabOrInteract(_currentInteractable);
-            _currentInteractable.ReceiveInteractionFrom(_grabController.GetGrab());
+            if (_currentInteractable is IGrabbable grabbable)
+            {
+                _grabController.TryGrabOrInteract(grabbable);
+            }
+            else if (_currentInteractable is IUsable usable)
+            {
+                _itemController.Equip(usable);
+            }
+            else
+            {
+                _currentInteractable.Interact();
+            }
+
             _audioService.Play(_select);
         }
         else
