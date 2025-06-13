@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
+using UnityEditor.Localization.Plugins.XLIFF.V12;
 using UnityEngine;
 using Zenject;
 
@@ -12,6 +14,9 @@ public class ChunkWorldHandler : MonoBehaviour
 
     private Dictionary<int, (float y, LevelChunkData data)> _chunkDataMap = new();
     private Dictionary<int, (float y, LevelChunk instance)> _activeChunks = new();
+
+    private List<LevelInfo> _chunks;
+    private int _chunkListIndex;
 
     private int _currentChunkIndex;
 
@@ -102,7 +107,7 @@ public class ChunkWorldHandler : MonoBehaviour
         }
         else
         {
-            info = GetRandomConfig();
+            info = GetConfig();
         }
 
         Vector3 pos = new Vector3(0, 0, 0) + info.Offset;
@@ -131,7 +136,7 @@ public class ChunkWorldHandler : MonoBehaviour
         }
         else
         {
-            info = GetRandomConfig();
+            info = GetConfig();
         }
 
         float prevY = GetPreviousYPosition(index, direction);
@@ -191,8 +196,32 @@ public class ChunkWorldHandler : MonoBehaviour
             _activeChunks.Remove(index);
     }
 
-    private LevelInfo GetRandomConfig()
+    private LevelInfo GetConfig()
     {
-        return _chunkConfig.Levels[Random.Range(0, _chunkConfig.Levels.Count)];
+        if (_chunks == null || _chunks.Count == 0)
+        {
+            var weights = new Dictionary<LevelInfo, int>();
+
+            foreach (var level in _chunkConfig.Levels)
+            {
+                if (level != null && level.Prefab != null && level.Weight > 0)
+                {
+                    weights[level] = level.Weight;
+                }
+            }
+            int totalCount = weights.Values.Sum();
+            _chunks = WeightedDropSystem<LevelInfo>.Get(weights, totalCount);
+        }
+
+        if (_currentChunkIndex >= _chunks.Count)
+        {
+            _chunks = WeightedDropSystem<LevelInfo>.Shuffle(_chunks);
+            _currentChunkIndex = 0;
+        }
+
+        var LevelInfo = _chunks[_currentChunkIndex];
+        _currentChunkIndex++;
+
+        return LevelInfo;
     }
 }

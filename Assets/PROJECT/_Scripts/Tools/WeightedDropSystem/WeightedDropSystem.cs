@@ -9,7 +9,7 @@ public static class WeightedDropSystem<T>
     /// <param name="weights">¬еса: в процентах или абсолютные количества</param>
     /// <param name="totalCount">—колько всего предметов нужно</param>
     /// <param name="usePercent">true = веса Ч проценты (0Ц100); false = веса Ч количества</param>
-    public static List<T> Get(Dictionary<T, int> weights, int totalCount, bool usePercent = true)
+    public static List<T> Get(Dictionary<T, int> weights, int totalCount, bool usePercent = false)
     {
         var pool = new List<T>(totalCount);
 
@@ -33,7 +33,7 @@ public static class WeightedDropSystem<T>
     /// </summary>
     /// <param name="list"></param>
     /// <returns></returns>
-    private static List<T> Shuffle(List<T> list)
+    public static List<T> Shuffle(List<T> list)
     {
         for (int i = list.Count - 1; i > 0; i--)
         {
