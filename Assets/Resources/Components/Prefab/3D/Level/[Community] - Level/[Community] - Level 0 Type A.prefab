@@ -2376,10 +2376,11 @@ MonoBehaviour:
   <Data>k__BackingField:
     ChunkType: '[Community] - Leve 0 Type A'
     Info:
-      <Key>k__BackingField: 
+      <Type>k__BackingField: 
       <Prefab>k__BackingField: {fileID: 0}
       <Offset>k__BackingField: {x: 0, y: 0, z: 0}
       <Height>k__BackingField: 3
+      <Weight>k__BackingField: 1
     Index: 0
   <ChunkType>k__BackingField: '[Community] - Leve 0 Type A'
   <Doors>k__BackingField: []
@@ -4558,7 +4559,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6461061920902077201, guid: 1719bfd0f9a09c74284a3699eb80f321, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.975
+      value: 1.954
       objectReference: {fileID: 0}
     - target: {fileID: 6461061920902077201, guid: 1719bfd0f9a09c74284a3699eb80f321, type: 3}
       propertyPath: m_LocalRotation.w
@@ -17119,7 +17120,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1588724038247982422, guid: f78140e4af3b6a14d9ce4f12f3ad7b28, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.969
+      value: 0.94799995
       objectReference: {fileID: 0}
     - target: {fileID: 1588724038247982422, guid: f78140e4af3b6a14d9ce4f12f3ad7b28, type: 3}
       propertyPath: m_LocalRotation.w
