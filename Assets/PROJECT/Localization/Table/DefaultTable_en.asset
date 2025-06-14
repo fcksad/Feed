@@ -154,6 +154,18 @@ MonoBehaviour:
     m_Localized: Bell
     m_Metadata:
       m_Items: []
+  - m_Id: 17607050762485760
+    m_Localized: Resume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17607050817011712
+    m_Localized: Barrel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17607050817011713
+    m_Localized: Axe
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

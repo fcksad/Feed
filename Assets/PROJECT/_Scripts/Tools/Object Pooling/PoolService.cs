@@ -18,10 +18,13 @@ public class PoolService : IPoolService, IInitializable
 
     public void Initialize()
     {
-        var go = new GameObject("[PoolService]");
-        Object.DontDestroyOnLoad(go);
-        _root = go.transform;
+        if (_root == null)
+        {
+            CreatePoolRoot();
+        }
     }
+
+
 
     public T GetFromPool<T>(T prefab, string key = null) where T : Component
     {
@@ -36,6 +39,11 @@ public class PoolService : IPoolService, IInitializable
         if (!_holders.ContainsKey(key))
         {
             var holder = new GameObject($"[Pool] {key}").transform;
+            if (_root == null)
+            {
+                CreatePoolRoot();
+            }
+
             holder.SetParent(_root);
             _holders[key] = holder;
         }
@@ -51,7 +59,6 @@ public class PoolService : IPoolService, IInitializable
             obj = _container.InstantiatePrefab(prefab.gameObject);
         }
 
-        obj.SetActive(true);
         return obj.GetComponent<T>();
     }
 
@@ -78,7 +85,7 @@ public class PoolService : IPoolService, IInitializable
             poolable.OnDespawn();
 
         instance.gameObject.SetActive(false);
-        instance.transform.SetParent(_holders[key], false);
+        instance.transform.SetParent(_holders[key]);
         _pool[key].Enqueue(instance.gameObject);
     }
 
@@ -99,5 +106,12 @@ public class PoolService : IPoolService, IInitializable
             Object.Destroy(holder.gameObject);
 
         _holders.Clear();
+    }
+
+    private void CreatePoolRoot()
+    {
+        var go = new GameObject("[PoolService]");
+        Object.DontDestroyOnLoad(go);
+        _root = go.transform;
     }
 }

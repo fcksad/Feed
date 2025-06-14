@@ -37,6 +37,7 @@ public class InstantiateFactoryService : IInstantiateFactoryService
         if (!string.IsNullOrEmpty(customName))
             obj.name = customName;
 
+        obj.SetActive(true);
         return instance;
     }
 
@@ -44,4 +45,6 @@ public class InstantiateFactoryService : IInstantiateFactoryService
     {
         _poolService.ReturnToPool(instance, key);
     }
+
+    public void ReleaseAll() => _poolService.ReleaseAll();
 }

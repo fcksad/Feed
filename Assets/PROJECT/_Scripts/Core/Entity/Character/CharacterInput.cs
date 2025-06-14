@@ -1,7 +1,6 @@
 using Service;
 using System;
 using UnityEngine;
-using UnityEngine.InputSystem.EnhancedTouch;
 using Zenject;
 
 public class CharacterInput : IInitializable, IDisposable, ITickable
@@ -27,6 +26,8 @@ public class CharacterInput : IInitializable, IDisposable, ITickable
         _inputService.AddActionListener(CharacterAction.Jump,onStarted: () => _isJumpHeld = true, onCanceled: () => _isJumpHeld = false);
         _inputService.AddActionListener(CharacterAction.Crouch, onStarted: Crouch);
 
+        Lock(_isLocked);
+
     }
 
     public void Dispose()
@@ -38,6 +39,8 @@ public class CharacterInput : IInitializable, IDisposable, ITickable
     public void Lock(bool value)
     {
         _isLocked = value;
+        Cursor.lockState = value ? CursorLockMode.None : CursorLockMode.Locked;
+        Cursor.visible = value;
     }
 
     private void Crouch()

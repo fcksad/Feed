@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 757934048621317030}
   - component: {fileID: 1428590512703304901}
-  - component: {fileID: 4093652874346925405}
   - component: {fileID: 2887627203232410175}
+  - component: {fileID: 4093652874346925405}
   - component: {fileID: 5257747025266822254}
   - component: {fileID: 7228361340538729305}
   - component: {fileID: 600991763728211339}
@@ -64,6 +64,18 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2887627203232410175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 107572117673618173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f226a0f8d1c6004d8578b3365220227, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &4093652874346925405
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80,24 +92,14 @@ MonoBehaviour:
   <CharacterModel>k__BackingField: {fileID: 5853288772299049033}
   <HeadRoot>k__BackingField: {fileID: 2795581713138162385}
   <CameraRoot>k__BackingField: {fileID: 6170793562743825274}
-  <FootstepSound>k__BackingField: {fileID: 11400000, guid: fd98ebbb3abbd5f4dac15630382cc3ef, type: 2}
+  <Footstep>k__BackingField: {fileID: 0}
+  <FootstepMask>k__BackingField:
+    serializedVersion: 2
+    m_Bits: 0
+  <Health>k__BackingField: {fileID: 0}
   <FootstepPositions>k__BackingField:
   - {fileID: 1094923130766318779}
   - {fileID: 6589019928094389223}
-  <InteractController>k__BackingField: {fileID: 5257747025266822254}
-  <GrabController>k__BackingField: {fileID: 7228361340538729305}
---- !u!114 &2887627203232410175
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 107572117673618173}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f226a0f8d1c6004d8578b3365220227, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &5257747025266822254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -118,6 +120,7 @@ MonoBehaviour:
   _select: {fileID: 11400000, guid: ecf2ba85ff5288243a3111972814e84f, type: 2}
   _denyselect: {fileID: 11400000, guid: 9c0a9dfd1a07cc54188ae87ed4f29b35, type: 2}
   _grabController: {fileID: 7228361340538729305}
+  _itemController: {fileID: 0}
 --- !u!114 &7228361340538729305
 MonoBehaviour:
   m_ObjectHideFlags: 0

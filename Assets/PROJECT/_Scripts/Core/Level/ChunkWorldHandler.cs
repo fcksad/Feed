@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using UnityEditor.Localization.Plugins.XLIFF.V12;
 using UnityEngine;
 using Zenject;
 
@@ -15,8 +14,8 @@ public class ChunkWorldHandler : MonoBehaviour
     private Dictionary<int, (float y, LevelChunkData data)> _chunkDataMap = new();
     private Dictionary<int, (float y, LevelChunk instance)> _activeChunks = new();
 
-    private List<LevelInfo> _chunks;
-    private int _chunkListIndex;
+    public List<LevelInfo> _chunks;
+    private int _chunkListIndex = 0;
 
     private int _currentChunkIndex;
 
@@ -213,15 +212,16 @@ public class ChunkWorldHandler : MonoBehaviour
             _chunks = WeightedDropSystem<LevelInfo>.Get(weights, totalCount);
         }
 
-        if (_currentChunkIndex >= _chunks.Count)
+        if (_chunkListIndex >= _chunks.Count)
         {
             _chunks = WeightedDropSystem<LevelInfo>.Shuffle(_chunks);
-            _currentChunkIndex = 0;
+            _chunkListIndex = 0;
         }
 
-        var LevelInfo = _chunks[_currentChunkIndex];
-        _currentChunkIndex++;
+        var LevelInfo = _chunks[_chunkListIndex];
+        _chunkListIndex++;
 
         return LevelInfo;
     }
+
 }

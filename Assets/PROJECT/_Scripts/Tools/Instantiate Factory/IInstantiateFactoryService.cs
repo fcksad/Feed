@@ -12,7 +12,7 @@ public interface IInstantiateFactoryService
    /// <param name="customName">Установить имя GameObject (опционально)</param>
     T Create<T>(T prefab, Transform parent = null, Vector3? position = null, Quaternion? rotation = null, string customName = null, string key = null) where T : MonoBehaviour;
 
-    public void Release<T>(T instance, string key = null) where T : MonoBehaviour;
-
+    void Release<T>(T instance, string key = null) where T : MonoBehaviour;
+    void ReleaseAll();
 
 }

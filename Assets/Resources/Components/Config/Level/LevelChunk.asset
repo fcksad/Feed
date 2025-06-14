@@ -17,7 +17,7 @@ MonoBehaviour:
     <Prefab>k__BackingField: {fileID: -7691488726236741125, guid: a284bd584533e1a4db75130a73a19955, type: 3}
     <Offset>k__BackingField: {x: 0, y: 0, z: 0}
     <Height>k__BackingField: 3
-    <Weight>k__BackingField: 90
+    <Weight>k__BackingField: 10
   - <Type>k__BackingField: '[Community] - Leve 0 Type B'
     <Prefab>k__BackingField: {fileID: -7691488726236741125, guid: 6e8461a8d83ed9c438adfb0198ae9973, type: 3}
     <Offset>k__BackingField: {x: 0, y: 0, z: 0}

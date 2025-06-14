@@ -154,6 +154,18 @@ MonoBehaviour:
     m_Localized: Campana
     m_Metadata:
       m_Items: []
+  - m_Id: 17607050762485760
+    m_Localized: Riprendi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17607050817011712
+    m_Localized: Barile
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17607050817011713
+    m_Localized: Ascia
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

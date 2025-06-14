@@ -1,15 +1,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Character : MonoBehaviour
+public class Enemy : MonoBehaviour
 {
     [Header("Model")]
-    [field: SerializeField] public UnityEngine.CharacterController CharacterController {  get; private set; }
+    [field: SerializeField] public UnityEngine.CharacterController CharacterController { get; private set; }
     [field: SerializeField] public Transform CharacterModel { get; private set; }
-    [field: SerializeField] public Transform HeadRoot { get; private set; }
-    [field: SerializeField] public Transform CameraRoot { get; private set; }
+
     [Header("Health")]
     [field: SerializeField] public Health Health { get; private set; }
+
     [Header("Foot")]
     [field: SerializeField] public FootstepConfig Footstep { get; private set; }
     [field: SerializeField] public LayerMask FootstepMask { get; private set; }
@@ -28,7 +28,7 @@ public class Character : MonoBehaviour
 
     private void Died()
     {
-
+        Destroy(gameObject);
         Debug.LogError("Died");
     }
 }

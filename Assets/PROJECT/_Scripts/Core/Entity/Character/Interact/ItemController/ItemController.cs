@@ -9,7 +9,9 @@ public class ItemController : MonoBehaviour
 
     [SerializeField] private LayerMask _defaultMask;
     [SerializeField] private LayerMask _handMask;
+    [SerializeField] private Camera _camera;
 
+    [SerializeField] private HandAnimationController _handAnimator;
 
     private IInputService _inputService;
     private IHintService _hintService;
@@ -38,6 +40,10 @@ public class ItemController : MonoBehaviour
         if (_usable == null)
         {
             _usable = item;
+            if (item is ItemObject obj)
+            {
+                obj.Initialize(_handAnimator, _camera);
+            }
             _usable.Transform.SetParent(_handPoint);
             SetHeldObjectPhysics(false);
             _usable.Transform.localPosition = _usable.LocalPosition;
@@ -60,6 +66,7 @@ public class ItemController : MonoBehaviour
             SetLayerRecursively(_usable.Transform.gameObject, LayerMaskToLayer(_defaultMask));
             SetHeldObjectPhysics(true);
             _usable = null;
+            _handAnimator.ResetToDefault();
         }
     }
 
