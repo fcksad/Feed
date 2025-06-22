@@ -115,15 +115,15 @@ MonoBehaviour:
   - {fileID: 1188203566295663665}
   _position: {x: -0.0262, y: -0.0091, z: 0.1191}
   _rotate: {x: -0.59189737, y: 0.21583912, z: -0.31788847, w: 0.7085322}
-  _camera: {fileID: 0}
   _overrideController: {fileID: 22100000, guid: 4feea43df9f79d84ba9fd43db029a7d3, type: 2}
   _damage: 10
   _attackRange: 2
   _attackRadius: 0.5
-  _attackCooldown: 2
+  _attackDelay: 0.8
+  _attackCooldown: 1.2
   _hitMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1
   references:
     version: 2
     RefIds: []
