@@ -3,9 +3,9 @@ using System;
 using UnityEngine;
 using Zenject;
 
-public class InteractController : MonoBehaviour, IInitializable, IDisposable
+public class InteractController : MonoBehaviour
 {
-    [SerializeField] private Camera _camera;
+     private Camera _camera;
     [SerializeField] private float _interactDistance = 3f;
     [SerializeField] private LayerMask _includeLayerMask;
     [SerializeField] private AudioConfig _select;
@@ -14,8 +14,9 @@ public class InteractController : MonoBehaviour, IInitializable, IDisposable
     private ScreenPointIndicator _screenPointIndicator;
     private IInteractable _currentInteractable;
 
-    [SerializeField] private GrabController _grabController;
-    [SerializeField] private ItemController _itemController;
+    private GrabController _grabController;
+    private ItemController _itemController;
+
     private IInputService _inputService;
     private IHintService _hintService;
     private IAudioService _audioService;
@@ -29,8 +30,13 @@ public class InteractController : MonoBehaviour, IInitializable, IDisposable
         _screenPointIndicator = screenPointIndicator;
     }
 
-    public void Initialize()
+    public void Initialize(GrabController grabController, ItemController itemController, Camera camera)
     {
+        _camera = camera;
+
+        _grabController = grabController;
+        _itemController = itemController;
+
         _inputService.AddActionListener(CharacterAction.Interact, onPerformed: OnInteract);
     }
 

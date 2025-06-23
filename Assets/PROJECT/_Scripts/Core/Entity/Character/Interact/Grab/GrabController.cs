@@ -5,9 +5,9 @@ using UnityEngine;
 using UnityEngine.Localization;
 using Zenject;
 
-public class GrabController : MonoBehaviour, IInitializable, IDisposable
+public class GrabController : MonoBehaviour
 {
-    [SerializeField] private Camera _camera;
+    private Camera _camera;
     [SerializeField] private Transform _holdPoint;
     [SerializeField] private float _throwForce = 5f;
     [SerializeField] private float _rotateSpeed = 100f;
@@ -46,8 +46,10 @@ public class GrabController : MonoBehaviour, IInitializable, IDisposable
         _hintService = hintService;
     }
 
-    public void Initialize()
+    public void Initialize(Camera camera)
     {
+        _camera = camera;
+
         _inputService.AddActionListener(CharacterAction.Attack, onStarted: Throw);
         _inputService.AddActionListener(CharacterAction.Attack1, onStarted: Drop);
         _inputService.AddActionListener(CharacterAction.RotateLeft, onStarted: _onRotateLeft = () => StartRotate(Vector3.right), onCanceled: StopRotate);

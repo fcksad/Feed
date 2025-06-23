@@ -1,7 +1,4 @@
-using Zenject;
-
-
-public class CommandController : ICommandController, ITickable
+public class CommandController : ICommandController
 {
     private ICommand _currentCommand;
     private ICommand _deferredCommand;
@@ -31,6 +28,4 @@ public class CommandController : ICommandController, ITickable
             }
         }
     }
-
-    public bool IsBusy => _currentCommand != null && !_currentCommand.IsFinished;
 }

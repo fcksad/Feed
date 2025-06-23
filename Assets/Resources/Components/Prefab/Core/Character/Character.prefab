@@ -17,7 +17,6 @@ GameObject:
   - component: {fileID: 1315686004554571924}
   - component: {fileID: 600991763728211339}
   - component: {fileID: 437464931875680842}
-  - component: {fileID: 3056386845767568253}
   m_Layer: 6
   m_Name: Character
   m_TagString: Untagged
@@ -91,11 +90,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2486e93c02d4854b8f15ea54c24d32c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <CharacterController>k__BackingField: {fileID: 1428590512703304901}
   <CharacterModel>k__BackingField: {fileID: 5853288772299049033}
-  <HeadRoot>k__BackingField: {fileID: 2795581713138162385}
-  <CameraRoot>k__BackingField: {fileID: 6170793562743825274}
-  <Health>k__BackingField: {fileID: 3056386845767568253}
   <Footstep>k__BackingField: {fileID: 11400000, guid: 0d4dc44ffbdd6ea46a7e93735c528660, type: 2}
   <FootstepMask>k__BackingField:
     serializedVersion: 2
@@ -103,6 +98,9 @@ MonoBehaviour:
   <FootstepPositions>k__BackingField:
   - {fileID: 1094923130766318779}
   - {fileID: 6589019928094389223}
+  <CharacterController>k__BackingField: {fileID: 1428590512703304901}
+  <HeadRoot>k__BackingField: {fileID: 2795581713138162385}
+  <CameraRoot>k__BackingField: {fileID: 6170793562743825274}
 --- !u!114 &5257747025266822254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,20 +211,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _animator: {fileID: 3274863518886369798}
   _defaultController: {fileID: 9100000, guid: 51a2d61c205dac84ca1bf6af44976875, type: 2}
---- !u!114 &3056386845767568253
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 107572117673618173}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13b804e6eee2fc8469adc7ed6f4ca9a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _maxHealth: 100
-  <CurrentHealth>k__BackingField: 0
 --- !u!1 &190815669433448730
 GameObject:
   m_ObjectHideFlags: 0

@@ -106,11 +106,11 @@ public class ChunkWorldHandler : MonoBehaviour
         }
         else
         {
-            info = GetConfig();
+            info = _chunkConfig.Levels.FirstOrDefault();
         }
 
         Vector3 pos = new Vector3(0, 0, 0) + info.Offset;
-        var chunk = _instantiateFactoryService.Create(info.Prefab, transform, pos, Quaternion.identity, customName: 0.ToString(), key: info.Type);
+        var chunk = _instantiateFactoryService.Create(info.Prefab, transform, pos, Quaternion.identity, customName: info.Type.ToString() + " - 0", key: info.Type);
         chunk.Initialize(info);
         if (!_chunkDataMap.ContainsKey(0))
         {
@@ -145,7 +145,7 @@ public class ChunkWorldHandler : MonoBehaviour
 
         Vector3 pos = new Vector3(0, newY, 0) + info.Offset;
 
-        var chunk = _instantiateFactoryService.Create(info.Prefab, transform, pos, Quaternion.identity, customName: index.ToString(), key: info.Type);
+        var chunk = _instantiateFactoryService.Create(info.Prefab, transform, pos, Quaternion.identity, customName: info.Type.ToString() + " - " + index.ToString(), key: info.Type);
         chunk.Initialize(info);
 
         if (!_chunkDataMap.ContainsKey(index))

@@ -1,13 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
-public class CharacterController : IControllable
+public class CharacterController : MonoBehaviour ,IControllable
 {
     [Header("Move")]
     private const float WALK_SPEED = 3f;
     private const float RUN_SPEED = 6f;
+    [SerializeField] private UnityEngine.CharacterController _characterController;
 
     private float _lastStepTime;
     private const float WALK_STEP_COOLDOWN = 0.5f;
@@ -33,28 +33,29 @@ public class CharacterController : IControllable
 
     [Header("Footstep")]
     private FootstepPlayer _footstepPlayer;
-    
+    [SerializeField] private FootstepConfig _footstep;
+    [SerializeField] private LayerMask _footstepMask;
+    [SerializeField] private List<Transform> _footstepPositions;
 
-    private readonly ICommandController _commandController;
-    private readonly IAttackController _attackController;
-    private readonly Character _character;
+    private ICommandController _commandController;
+    private Character _character;
 
     private IAudioService _audioService;
 
-    public CharacterController(ICommandController commandController, IAudioService audioService , Character character)
+    public void Initialize(IAudioService audioService , Character character)
     {
-        _commandController = commandController;
         _audioService = audioService;
         _character = character;
 
-        _footstepPlayer = new FootstepPlayer(audioService, character.Footstep, _character.FootstepMask, _character.transform);
+        _commandController = new CommandController();
+        _footstepPlayer = new FootstepPlayer(audioService, _footstep, _footstepMask, _character.transform);
     }
 
     public void Move(Vector2 input, bool isRunning, bool jumpRequested, bool isCrouching)
     {
         ApplyGravity();
 
-        if (!isCrouching && (jumpRequested && _character.CharacterController.isGrounded))
+        if (!isCrouching && (jumpRequested && _characterController.isGrounded))
             Jump();
 
         float speed;
@@ -63,7 +64,7 @@ public class CharacterController : IControllable
         else
             speed = isRunning ? RUN_SPEED : WALK_SPEED;
 
-        var command = new MoveCommand(_character.CharacterController, _character.HeadRoot, input, speed, _verticalVelocity);
+        var command = new MoveCommand(_characterController, _character.HeadRoot, input, speed, _verticalVelocity);
         _commandController.SetCommand(command);
 
         float currentStepCooldown;
@@ -73,15 +74,15 @@ public class CharacterController : IControllable
         else
             currentStepCooldown = isRunning ? RUN_STEP_COOLDOWN : WALK_STEP_COOLDOWN;
 
-        if (input.sqrMagnitude > 0.01f && _character.CharacterController.isGrounded)
+        if (input.sqrMagnitude > 0.01f && _characterController.isGrounded)
         {
             if (Time.time - _lastStepTime >= currentStepCooldown)
             {
-                if (_character.FootstepPositions != null && _character.FootstepPositions.Count > 0)
+                if (_footstepPositions != null && _footstepPositions.Count > 0)
                 {
-                    var pos = _character.FootstepPositions[_currentFootstepIndex].position;
+                    var pos = _footstepPositions[_currentFootstepIndex].position;
                     _footstepPlayer.TryPlayFootstep(pos);
-                    _currentFootstepIndex = (_currentFootstepIndex + 1) % _character.FootstepPositions.Count;
+                    _currentFootstepIndex = (_currentFootstepIndex + 1) % _footstepPositions.Count;
                 }
 
                 _lastStepTime = Time.time;
@@ -91,7 +92,7 @@ public class CharacterController : IControllable
 
     private void ApplyGravity()
     {
-        if (_character.CharacterController.isGrounded)
+        if (_characterController.isGrounded)
         {
             if (_verticalVelocity < 0)
                 _verticalVelocity = -1f;
@@ -106,7 +107,7 @@ public class CharacterController : IControllable
 
     private void Jump()
     {
-        if (_character.CharacterController.isGrounded)
+        if (_characterController.isGrounded)
         {
             _verticalVelocity = Mathf.Sqrt(2f * 9.81f * _jumpHeight); 
         }
@@ -127,7 +128,7 @@ public class CharacterController : IControllable
     {
         if (!isCrouching)
         {
-            if (Physics.SphereCast(_character.HeadRoot.position, _character.CharacterController.radius, Vector3.up, out RaycastHit hit,_standHeight - _crouchHeight, ~0, QueryTriggerInteraction.Ignore))
+            if (Physics.SphereCast(_character.HeadRoot.position, _characterController.radius, Vector3.up, out RaycastHit hit,_standHeight - _crouchHeight, ~0, QueryTriggerInteraction.Ignore))
             {
                 return false;
             }
@@ -136,8 +137,8 @@ public class CharacterController : IControllable
         float newHeight = isCrouching ? _crouchHeight : _standHeight;
         float heightDiff = _standHeight - newHeight;
 
-        _character.CharacterController.height = newHeight;
-        _character.CharacterController.center = new Vector3(0f, -heightDiff / 2f, 0f);
+        _characterController.height = newHeight;
+        _characterController.center = new Vector3(0f, -heightDiff / 2f, 0f);
 
         float targetY = isCrouching ? _crouchCamPos : _camPos;
 
@@ -166,5 +167,10 @@ public class CharacterController : IControllable
         }
 
         cam.localPosition = targetPos;
+    }
+
+    private void FixedUpdate()
+    {
+        _commandController?.Tick();
     }
 }

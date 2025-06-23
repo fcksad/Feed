@@ -30,12 +30,12 @@ public class FlashlightController : MonoBehaviour
         _offset = _flashlightLight.transform.position - _cameraObject.transform.position;
     }
 
-    private void Start()
+    public void Initialize()
     {
         _inputService.AddActionListener(CharacterAction.Flashlight, onStarted: ToggleFlashlight);
     }
 
-    private void OnDestroy()
+    public void Dispose()
     {
         _inputService.RemoveActionListener(CharacterAction.Flashlight, onStarted: ToggleFlashlight);
     }

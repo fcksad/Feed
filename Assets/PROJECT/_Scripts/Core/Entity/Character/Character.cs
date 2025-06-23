@@ -1,34 +1,54 @@
-using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
 
-public class Character : MonoBehaviour
+public class Character : EntityBase
 {
     [Header("Model")]
-    [field: SerializeField] public UnityEngine.CharacterController CharacterController {  get; private set; }
-    [field: SerializeField] public Transform CharacterModel { get; private set; }
     [field: SerializeField] public Transform HeadRoot { get; private set; }
     [field: SerializeField] public Transform CameraRoot { get; private set; }
-    [Header("Health")]
-    [field: SerializeField] public Health Health { get; private set; }
-    [Header("Foot")]
-    [field: SerializeField] public FootstepConfig Footstep { get; private set; }
-    [field: SerializeField] public LayerMask FootstepMask { get; private set; }
-    [field: SerializeField] public List<Transform> FootstepPositions { get; private set; }
+    [field: SerializeField] public Camera Camera { get; private set; }
 
+    [Header("Move")]
+    public CharacterInput CharacterInput;
+    [field: SerializeField] public CharacterController Controller { get; private set; }
 
-    private void Start()
+    [Header("Interact")]
+    [field: SerializeField] public InteractController InteractController { get; private set; }
+    [field: SerializeField] public GrabController GrabController { get; private set; }
+    [field: SerializeField] public ItemController ItemController { get; private set; }
+    [field: SerializeField] public FlashlightController FlashlightController { get; private set; }
+    [field: SerializeField] public HandAnimationController HandAnimationController { get; private set; }
+
+    [Inject]
+    public void Construct(CharacterInput characterInput, IAudioService audioService)
     {
-        Health.OnDiedEvent += Died;
+        CharacterInput = characterInput;
+        _audioService = audioService;
     }
 
-    private void OnDestroy()
+    protected override void Start()
     {
-        Health.OnDiedEvent -= Died;
+        base.Start();
+
+        InteractController.Initialize(GrabController, ItemController, Camera);
+        GrabController.Initialize(Camera);
+        ItemController.Initialize(Camera, HandAnimationController);
+        FlashlightController.Initialize();
+        CharacterInput.Initialize();
+        Controller.Initialize(_audioService, this);
+
+        CharacterInput.Bind(Controller);
     }
 
-    private void Died()
+    protected override void OnDestroy()
     {
+        base.OnDestroy();
 
-        Debug.LogError("Died");
+        InteractController.Dispose();
+        GrabController.Dispose();
+        ItemController.Dispose();
+        FlashlightController.Dispose();
+        CharacterInput.Dispose();
     }
+
 }

@@ -42,6 +42,12 @@ public class Door : InteractableObject
         }
     }
 
+    public void Open()
+    {
+        if(_isOpen)return;
+        Interact();
+    }
+
     private System.Collections.IEnumerator RotateDoor(bool open)
     {
         var config = open ? _open : _close;

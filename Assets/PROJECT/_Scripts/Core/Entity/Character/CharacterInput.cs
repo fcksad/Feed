@@ -1,11 +1,10 @@
 using Service;
-using System;
 using UnityEngine;
 using Zenject;
 
-public class CharacterInput : IInitializable, IDisposable, ITickable
+public class CharacterInput : ITickable
 {
-    private bool _isLocked = false;
+    private bool _isLocked = true;
     private bool _isJumpHeld = false;
     private bool _isCrouching = false;
 
@@ -15,19 +14,22 @@ public class CharacterInput : IInitializable, IDisposable, ITickable
     private Vector2 _moveInput = Vector2.zero;
 
     [Inject]
-    public void Construct(IInputService inputService, IControllable controller)
+    public void Construct(IInputService inputService)
     {
         _inputService = inputService;
-        _controller = controller;
     }
 
     public void Initialize()
     {
         _inputService.AddActionListener(CharacterAction.Jump,onStarted: () => _isJumpHeld = true, onCanceled: () => _isJumpHeld = false);
         _inputService.AddActionListener(CharacterAction.Crouch, onStarted: Crouch);
+    }
 
-        Lock(_isLocked);
+    public void Bind(IControllable controller)
+    {
+        _controller = controller;
 
+        Lock(false);
     }
 
     public void Dispose()

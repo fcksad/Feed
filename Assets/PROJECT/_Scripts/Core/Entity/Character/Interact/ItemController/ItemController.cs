@@ -9,9 +9,9 @@ public class ItemController : MonoBehaviour
 
     [SerializeField] private LayerMask _defaultMask;
     [SerializeField] private LayerMask _handMask;
-    [SerializeField] private Camera _camera;
 
-    [SerializeField] private HandAnimationController _handAnimator;
+    private Camera _camera;
+    private HandAnimationController _handAnimator;
 
     private IInputService _inputService;
     private IHintService _hintService;
@@ -23,13 +23,16 @@ public class ItemController : MonoBehaviour
         _hintService = hintService;
     }
 
-    private void Start()
+    public void Initialize(Camera camera , HandAnimationController handAnimationController)
     {
+        _camera = camera;
+        _handAnimator = handAnimationController;
+
         _inputService.AddActionListener(CharacterAction.Drop, onStarted: Drop);
         _inputService.AddActionListener(CharacterAction.Attack, onStarted: Use);
     }
 
-    private void OnDestroy()
+    public void Dispose()
     {
         _inputService.RemoveActionListener(CharacterAction.Drop, onStarted: Drop);
         _inputService.RemoveActionListener(CharacterAction.Attack, onStarted: Use);

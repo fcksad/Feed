@@ -2384,6 +2384,7 @@ MonoBehaviour:
     Index: 0
   <ChunkType>k__BackingField: '[Community] - Leve 0 Type A'
   <Doors>k__BackingField: []
+  <NavMeshSurface>k__BackingField: {fileID: 0}
 --- !u!1 &8670102803136132004
 GameObject:
   m_ObjectHideFlags: 0

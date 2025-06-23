@@ -16,7 +16,6 @@ public class ToolsInstaller : MonoInstaller
         Container.BindInterfacesAndSelfTo<TooltipeView>().FromComponentInHierarchy().AsSingle();
         Container.BindInterfacesAndSelfTo<PopupView>().FromComponentInHierarchy().AsSingle();
         Container.BindInterfacesAndSelfTo<HintView>().FromComponentInHierarchy().AsSingle();
-
-        Container.DeclareSignal<ToggleMiniGameWindowSignal>();
+        Container.BindInterfacesAndSelfTo<DialogueView>().FromComponentInHierarchy().AsSingle();
     }
 }

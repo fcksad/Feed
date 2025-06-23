@@ -5,6 +5,6 @@ public class LocalizationData
 
     public LocalizationData()
     {
-        Localization = "null";
+        Localization = "en";
     }
 }

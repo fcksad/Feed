@@ -1,34 +1,24 @@
-using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
 
-public class Enemy : MonoBehaviour
+public class Enemy : EntityBase
 {
-    [Header("Model")]
-    [field: SerializeField] public UnityEngine.CharacterController CharacterController { get; private set; }
-    [field: SerializeField] public Transform CharacterModel { get; private set; }
-
-    [Header("Health")]
-    [field: SerializeField] public Health Health { get; private set; }
-
-    [Header("Foot")]
-    [field: SerializeField] public FootstepConfig Footstep { get; private set; }
-    [field: SerializeField] public LayerMask FootstepMask { get; private set; }
-    [field: SerializeField] public List<Transform> FootstepPositions { get; private set; }
+    [Header("Brain")]
+    [field: SerializeField] public EntityBrain EntityBrain { get; private set; }
+    [field: SerializeField] public EntityMoveController Controller {  get; private set; }
 
 
-    private void Start()
+    [Inject]
+    public void Construct(IAudioService audioService)
     {
-        Health.OnDiedEvent += Died;
+        _audioService = audioService;
     }
 
-    private void OnDestroy()
+    protected override void Start()
     {
-        Health.OnDiedEvent -= Died;
+        base.Start();
+
+        Controller.Initialize(_audioService);
     }
 
-    private void Died()
-    {
-        Destroy(gameObject);
-        Debug.LogError("Died");
-    }
 }
