@@ -2384,7 +2384,6 @@ MonoBehaviour:
     Index: 0
   <ChunkType>k__BackingField: '[Community] - Leve 0 Type A'
   <Doors>k__BackingField: []
-  <NavMeshSurface>k__BackingField: {fileID: 0}
 --- !u!1 &8670102803136132004
 GameObject:
   m_ObjectHideFlags: 0
@@ -4866,13 +4865,21 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 20d95e1b5c589ee46a4b7d81f854a6a0, type: 2}
+    - target: {fileID: 3809174583957832051, guid: 53e49736319dde0419aad0911f4e0a37, type: 3}
+      propertyPath: _isOpen
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3809174583957832051, guid: 53e49736319dde0419aad0911f4e0a37, type: 3}
+      propertyPath: _startsOpen
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6666344585545290423, guid: 53e49736319dde0419aad0911f4e0a37, type: 3}
       propertyPath: m_LODs.Array.data[0].screenRelativeHeight
       value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 8240365733556339285, guid: 53e49736319dde0419aad0911f4e0a37, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.6883546
       objectReference: {fileID: 0}
     - target: {fileID: 8240365733556339285, guid: 53e49736319dde0419aad0911f4e0a37, type: 3}
       propertyPath: m_LocalRotation.x
@@ -4880,7 +4887,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8240365733556339285, guid: 53e49736319dde0419aad0911f4e0a37, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.72537434
       objectReference: {fileID: 0}
     - target: {fileID: 8240365733556339285, guid: 53e49736319dde0419aad0911f4e0a37, type: 3}
       propertyPath: m_LocalRotation.z

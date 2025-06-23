@@ -5,11 +5,10 @@ public class Door : InteractableObject
 {
     [SerializeField] private float _openAngle = 90f;      
     [SerializeField] private float _openSpeed = 2f;        
-    [SerializeField] private bool _startsOpen = false;
+    [SerializeField] private bool _isOpen = false;
+    [SerializeField] private Quaternion _closedRotation;
+    [SerializeField] private Quaternion _openedRotation;
 
-    private bool _isOpen;
-    private Quaternion _closedRotation;
-    private Quaternion _openedRotation;
     private Coroutine _rotationCoroutine;
 
     [SerializeField] private AudioConfig _open;
@@ -20,18 +19,6 @@ public class Door : InteractableObject
     public void Construct(IAudioService audioService)
     {
         _audioService = audioService;
-    }
-
-    private void Awake()
-    {
-        _closedRotation = transform.localRotation;
-        _openedRotation = _closedRotation * Quaternion.Euler(0f, _openAngle, 0f);
-
-        if (_startsOpen)
-        {
-            transform.localRotation = _openedRotation;
-            _isOpen = true;
-        }
     }
 
     public override void Interact()
@@ -67,5 +54,28 @@ public class Door : InteractableObject
         transform.localRotation = targetRotation;
         _isOpen = open;
         _rotationCoroutine = null;
+    }
+
+    private void OnValidate()
+    {
+        SetupRotations();
+#if UNITY_EDITOR
+
+        if (_isOpen)
+        {
+            transform.localRotation = _openedRotation;
+        }
+        else
+        {
+            transform.localRotation = _closedRotation;
+        }
+
+    }
+#endif
+
+    private void SetupRotations()
+    {
+        _closedRotation = Quaternion.identity;
+        _openedRotation = _closedRotation * Quaternion.Euler(0f, _openAngle, 0f);
     }
 }
