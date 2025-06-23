@@ -67,6 +67,13 @@ namespace Service
             _dialogueView.HideView();
             _onComplete?.Invoke();
         }
+
+        public void Stop()
+        {
+            _dialogueView.OnLineFullyShownEvent -= HandleAutoContinue;
+            _inputService.RemoveActionListener(CharacterAction.Attack, HandleSkip);
+            _dialogueView.HideView();
+        }
     }
 
 }

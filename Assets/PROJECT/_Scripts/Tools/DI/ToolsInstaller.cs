@@ -17,5 +17,6 @@ public class ToolsInstaller : MonoInstaller
         Container.BindInterfacesAndSelfTo<PopupView>().FromComponentInHierarchy().AsSingle();
         Container.BindInterfacesAndSelfTo<HintView>().FromComponentInHierarchy().AsSingle();
         Container.BindInterfacesAndSelfTo<DialogueView>().FromComponentInHierarchy().AsSingle();
+        Container.BindInterfacesAndSelfTo<FpsCounter>().FromComponentInHierarchy().AsSingle();
     }
 }

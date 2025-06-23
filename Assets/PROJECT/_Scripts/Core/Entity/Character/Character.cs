@@ -19,11 +19,14 @@ public class Character : EntityBase
     [field: SerializeField] public FlashlightController FlashlightController { get; private set; }
     [field: SerializeField] public HandAnimationController HandAnimationController { get; private set; }
 
+    private ISaveService _saveService;
+
     [Inject]
-    public void Construct(CharacterInput characterInput, IAudioService audioService)
+    public void Construct(CharacterInput characterInput, IAudioService audioService, ISaveService saveService)
     {
         CharacterInput = characterInput;
         _audioService = audioService;
+        _saveService = saveService;
     }
 
     protected override void Start()
@@ -35,7 +38,7 @@ public class Character : EntityBase
         ItemController.Initialize(Camera, HandAnimationController);
         FlashlightController.Initialize();
         CharacterInput.Initialize();
-        Controller.Initialize(_audioService, this);
+        Controller.Initialize(_audioService, this, _saveService.SettingsData.CharacterSettingsData.Sensitivity);
 
         CharacterInput.Bind(Controller);
     }

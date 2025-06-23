@@ -23,7 +23,6 @@ public class QuickMenuController : IInitializable, IDisposable
     {
         _inputService.AddActionListener(CharacterAction.Menu, onStarted: ToggleMenu);
         _quickMenuView.ToggleButton.Button.onClick.AddListener(ToggleMenu);
-
     }
 
     public void Dispose()

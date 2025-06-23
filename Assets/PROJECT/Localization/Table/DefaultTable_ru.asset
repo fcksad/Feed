@@ -171,6 +171,14 @@ MonoBehaviour:
     m_Localized: "\u0422\u043E\u043F\u043E\u0440"
     m_Metadata:
       m_Items: []
+  - m_Id: 21041412942168064
+    m_Localized: "\u041F\u043E\u043A\u0430\u0437\u0430\u0442\u044C FPS"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21041412979916800
+    m_Localized: "\u0427\u0443\u0432\u0441\u0442\u0432\u0438\u0442\u0435\u043B\u044C\u043D\u043E\u0441\u0442\u044C"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -2,7 +2,7 @@ using System;
 using System.Threading.Tasks;
 using UnityEngine;
 using Zenject;
-using static UnityEngine.Rendering.STP;
+
 
 public class DialogueSceneController : MonoBehaviour
 {
@@ -10,6 +10,8 @@ public class DialogueSceneController : MonoBehaviour
 
     private IDialogueService _dialogueService;
     private CharacterInput _characterInput;
+
+    private bool _isShowing = false;
 
     [Inject]
     private void Construct(IDialogueService dialogueService, CharacterInput input)
@@ -25,13 +27,24 @@ public class DialogueSceneController : MonoBehaviour
 
     public async Task StartDialogue()
     {
-        _characterInput.Lock(true);
+        _isShowing = true;
+        _characterInput.Lock(_isShowing);
 
         await _dialogueService.Show(_config, OnDialogueComplete);
     }
 
     private void OnDialogueComplete()
     {
-        _characterInput.Lock(false);
+        _isShowing = false;
+        _characterInput.Lock(_isShowing);
+    }
+
+    private void OnDisable()
+    {
+        if (_isShowing)
+        {
+            _characterInput.Lock(_isShowing);
+            _dialogueService.Stop();
+        }
     }
 }

@@ -1,16 +1,31 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using Zenject;
 
-public class FpsCounter : MonoBehaviour
+public class FpsCounter : MonoBehaviour, IInitializable
 {
     [SerializeField] private TextMeshProUGUI _fpsText;
 
     private float _deltaTime = 0;
 
-    private void Start()
+    private ISaveService _saveService;
+
+    [Inject]
+    public void Construct(ISaveService saveService)
     {
+        _saveService = saveService;
+    }
+
+    public void Initialize()
+    {
+        Toggle(_saveService.SettingsData.FPSData.IsEnable);
         StartCoroutine(UpdateFps());
+    }
+
+    public void Toggle(bool value)
+    {
+        gameObject.SetActive(value);
     }
 
     private void Update()

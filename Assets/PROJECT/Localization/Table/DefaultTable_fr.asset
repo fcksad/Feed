@@ -166,6 +166,14 @@ MonoBehaviour:
     m_Localized: Hache
     m_Metadata:
       m_Items: []
+  - m_Id: 21041412942168064
+    m_Localized: Afficher les FPS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21041412979916800
+    m_Localized: "Sensibilit\xE9"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -26,7 +26,7 @@ public class CharacterController : MonoBehaviour ,IControllable
     private float _crouchHeight = 1f;
 
     [Header("Look")]
-    private const float _mouseSensitivity = 0.4f;
+    private float _mouseSensitivity = 0.4f;
     private const float _maxLookAngle = 85f;
     private float _verticalVelocity;
     private float _cameraPitch = 0f;
@@ -42,10 +42,11 @@ public class CharacterController : MonoBehaviour ,IControllable
 
     private IAudioService _audioService;
 
-    public void Initialize(IAudioService audioService , Character character)
+    public void Initialize(IAudioService audioService , Character character, float mouseSensitivity)
     {
         _audioService = audioService;
         _character = character;
+        _mouseSensitivity = mouseSensitivity;
 
         _commandController = new CommandController();
         _footstepPlayer = new FootstepPlayer(audioService, _footstep, _footstepMask, _character.transform);
