@@ -11,7 +11,10 @@ namespace Service
     {
         [field: SerializeField] public TextMeshProUGUI Text { get; private set; }
         [SerializeField] private float _charDelay = 0.05f;
+
+        [SerializeField] private bool _autoContinue = true;
         [SerializeField] private float _autoContinueDelay = 2f;
+
         [SerializeField] private AudioConfig _keyAudio;
 
         public event Action OnLineFullyShownEvent;
@@ -86,9 +89,12 @@ namespace Service
             _printingCoroutine = null;
             _skipRequested = false;
 
-            yield return new WaitForSeconds(_autoContinueDelay);
+            if (_autoContinue)
+            {
+                yield return new WaitForSeconds(_autoContinueDelay);
 
-            OnLineFullyShownEvent?.Invoke();
+                OnLineFullyShownEvent?.Invoke();
+            }
         }
     }
 

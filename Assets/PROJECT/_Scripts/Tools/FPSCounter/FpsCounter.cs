@@ -8,8 +8,11 @@ public class FpsCounter : MonoBehaviour, IInitializable
     [SerializeField] private TextMeshProUGUI _fpsText;
 
     private float _deltaTime = 0;
+    private Coroutine _coroutine;
 
     private ISaveService _saveService;
+
+
 
     [Inject]
     public void Construct(ISaveService saveService)
@@ -20,12 +23,27 @@ public class FpsCounter : MonoBehaviour, IInitializable
     public void Initialize()
     {
         Toggle(_saveService.SettingsData.FPSData.IsEnable);
-        StartCoroutine(UpdateFps());
+        _coroutine = StartCoroutine(UpdateFps());
     }
 
     public void Toggle(bool value)
     {
         gameObject.SetActive(value);
+        if (value)
+        {
+            if (_coroutine == null)
+            {
+                _coroutine = StartCoroutine(UpdateFps());
+            }
+        }
+        else
+        {
+            if (_coroutine != null)
+            {
+                StopCoroutine(_coroutine);
+                _coroutine = null;
+            }
+        }
     }
 
     private void Update()

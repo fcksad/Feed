@@ -183,7 +183,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Text>k__BackingField: {fileID: 5282909719836884961}
   _charDelay: 0.05
-  _autoContinueDelay: 2
+  _autoContinue: 0
+  _autoContinueDelay: 6
   _keyAudio: {fileID: 11400000, guid: 54167c8cb58812648b57a92b4f0d7b0f, type: 2}
 --- !u!1 &7590719258720399798
 GameObject:
