@@ -69,9 +69,8 @@ public class Door : InteractableObject
         {
             transform.localRotation = _closedRotation;
         }
-
-    }
 #endif
+    }
 
     private void SetupRotations()
     {

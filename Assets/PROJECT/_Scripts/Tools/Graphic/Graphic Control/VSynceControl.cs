@@ -21,8 +21,8 @@ namespace Settings
         private void Awake()
         {
             List<TMP_Dropdown.OptionData> VSyncenOptions = new List<TMP_Dropdown.OptionData>();
-            VSyncenOptions.Add(new TMP_Dropdown.OptionData("Enable"));
             VSyncenOptions.Add(new TMP_Dropdown.OptionData("Disable"));
+            VSyncenOptions.Add(new TMP_Dropdown.OptionData("Enable"));
 
             _vSynceModeDropdown.options = VSyncenOptions;
             _vSynceModeDropdown.value = _graphicsService.Get(GraphicType.VSync);
