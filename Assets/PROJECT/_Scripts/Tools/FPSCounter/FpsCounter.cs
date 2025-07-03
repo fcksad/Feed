@@ -12,8 +12,6 @@ public class FpsCounter : MonoBehaviour, IInitializable
 
     private ISaveService _saveService;
 
-
-
     [Inject]
     public void Construct(ISaveService saveService)
     {

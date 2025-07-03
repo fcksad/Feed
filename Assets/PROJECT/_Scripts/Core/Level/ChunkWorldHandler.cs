@@ -203,9 +203,9 @@ public class ChunkWorldHandler : MonoBehaviour
 
             foreach (var level in _chunkConfig.Levels)
             {
-                if (level != null && level.Prefab != null && level.Weight > 0)
+                if (level != null && level.Prefab != null && level.SpawnWeight > 0)
                 {
-                    weights[level] = level.Weight;
+                    weights[level] = level.SpawnWeight;
                 }
             }
             int totalCount = weights.Values.Sum();

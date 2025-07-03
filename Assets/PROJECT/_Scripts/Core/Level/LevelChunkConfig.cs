@@ -11,7 +11,7 @@ public class LevelInfo
     [field: SerializeField] public float Height { get; private set; } = 3f;
 
     [Header("Spawn chance")]
-    [field: SerializeField] public int Weight { get; private set; } = 1; //spawn chance
+    [field: SerializeField] public int SpawnWeight { get; private set; } = 1; //spawn chance
 
     public void OnValidate()
     {
