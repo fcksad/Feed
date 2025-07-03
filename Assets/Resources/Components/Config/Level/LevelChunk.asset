@@ -17,14 +17,14 @@ MonoBehaviour:
     <Prefab>k__BackingField: {fileID: -7691488726236741125, guid: a284bd584533e1a4db75130a73a19955, type: 3}
     <Offset>k__BackingField: {x: 0, y: 0, z: 0}
     <Height>k__BackingField: 3
-    <Weight>k__BackingField: 10
+    <SpawnWeight>k__BackingField: 1
   - <Type>k__BackingField: '[Community] - Leve 0 Type B'
     <Prefab>k__BackingField: {fileID: -7691488726236741125, guid: 6e8461a8d83ed9c438adfb0198ae9973, type: 3}
     <Offset>k__BackingField: {x: 0, y: 0, z: 0}
     <Height>k__BackingField: 9
-    <Weight>k__BackingField: 10
+    <SpawnWeight>k__BackingField: 1
   - <Type>k__BackingField: '[Factory] - Leve 1 Type A'
     <Prefab>k__BackingField: {fileID: -7691488726236741125, guid: 473f0b11402a1b648899f4db47065fc9, type: 3}
     <Offset>k__BackingField: {x: 0, y: 0, z: 0}
     <Height>k__BackingField: 9
-    <Weight>k__BackingField: 1
+    <SpawnWeight>k__BackingField: 1
