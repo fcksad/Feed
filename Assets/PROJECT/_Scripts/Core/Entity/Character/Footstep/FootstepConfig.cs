@@ -48,6 +48,7 @@ public class FootstepConfig : ScriptableObject
                 return audio;
             }
         }
+
         var defaultSurface = Surfaces.FirstOrDefault(s => s.Type == SurfaceType.Default);
         return defaultSurface?.Audio;
     }

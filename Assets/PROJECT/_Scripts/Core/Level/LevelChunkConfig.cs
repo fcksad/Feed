@@ -9,7 +9,9 @@ public class LevelInfo
     [field: SerializeField] public LevelChunk Prefab { get; private set; }
     [field: SerializeField] public Vector3 Offset { get; private set; }
     [field: SerializeField] public float Height { get; private set; } = 3f;
-    [field: SerializeField] public int Weight { get; private set; } = 1;
+
+    [Header("Spawn chance")]
+    [field: SerializeField] public int Weight { get; private set; } = 1; //spawn chance
 
     public void OnValidate()
     {

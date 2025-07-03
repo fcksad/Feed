@@ -26,6 +26,7 @@ public class FootstepPlayer
             return;
 
         _materialBuffer.Clear();
+
         var renderer = hit.collider.GetComponent<Renderer>();
         if (renderer != null)
             _materialBuffer.AddRange(renderer.sharedMaterials);

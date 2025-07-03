@@ -164,6 +164,10 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
+  _rigidbody: {fileID: 0}
+  _colliders: []
+  _position: {x: 0, y: 0, z: 0}
+  _rotate: {x: 0, y: 0, z: 0, w: 0}
   _soundPoint: {fileID: 8394046648791489824}
   _doorBell: {fileID: 11400000, guid: 5dfd372f9445d3142b782f692fb81887, type: 2}
   references:
@@ -250,17 +254,17 @@ LODGroup:
   m_AnimateCrossFading: 0
   m_LastLODIsBillboard: 0
   m_LODs:
-  - screenRelativeHeight: 0.5
+  - screenRelativeHeight: 0.7
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 6731842592682934270}
     - renderer: {fileID: 6271794147840540511}
-  - screenRelativeHeight: 0.199
+  - screenRelativeHeight: 0.5
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 7282757493266223585}
     - renderer: {fileID: 3922056183384060518}
-  - screenRelativeHeight: 0.16
+  - screenRelativeHeight: 0.34
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 5290960838581794779}
@@ -570,10 +574,15 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
+  _rigidbody: {fileID: 0}
+  _colliders: []
+  _position: {x: 0, y: 0, z: 0}
+  _rotate: {x: 0, y: 0, z: 0, w: 0}
   _openAngle: 93
   _openSpeed: 1.6
-  _startsOpen: 0
-  _pivot: {fileID: 1175831691941382170}
+  _isOpen: 0
+  _closedRotation: {x: 0, y: 0, z: 0, w: 1}
+  _openedRotation: {x: 0, y: 0.72537434, z: 0, w: 0.6883546}
   _open: {fileID: 11400000, guid: 6f6db002ee016e54381dec95fff9a1d8, type: 2}
   _close: {fileID: 11400000, guid: 507b7be832c13ea43b70f03f1e6a4d62, type: 2}
   references:

@@ -201,8 +201,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2838421156006165428}
-  - component: {fileID: 7963131642469526720}
-  - component: {fileID: 6213283014554270803}
   m_Layer: 0
   m_Name: '[Room]'
   m_TagString: Untagged
@@ -229,45 +227,6 @@ Transform:
   - {fileID: 3360588823719056050}
   m_Father: {fileID: 7132514377604187833}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &7963131642469526720
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 314009891202484014}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5, y: 4, z: 9}
-  m_Center: {x: 2, y: 1.5, z: -4}
---- !u!114 &6213283014554270803
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 314009891202484014}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7718d2c094c7c6c4ebbe15920ac3cfd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _collider: {fileID: 7963131642469526720}
-  _object:
-  - {fileID: 22539745107888289}
-  - {fileID: 7834980566998422182}
-  - {fileID: 204508272904286062}
-  - {fileID: 4868105820879345331}
 --- !u!1 &318351101346368678
 GameObject:
   m_ObjectHideFlags: 0
@@ -860,8 +819,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8124423894838536713}
-  - component: {fileID: 105639639959108457}
-  - component: {fileID: 1777325758115644636}
   m_Layer: 0
   m_Name: '[Apartment] - Big_3'
   m_TagString: Untagged
@@ -888,45 +845,6 @@ Transform:
   - {fileID: 980370655025436989}
   m_Father: {fileID: 540751668610639593}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
---- !u!65 &105639639959108457
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 903947055530499695}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 9, y: 4, z: 13}
-  m_Center: {x: -4, y: 1.5, z: 2}
---- !u!114 &1777325758115644636
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 903947055530499695}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7718d2c094c7c6c4ebbe15920ac3cfd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _collider: {fileID: 105639639959108457}
-  _object:
-  - {fileID: 1724814960455919141}
-  - {fileID: 1513575397169897542}
-  - {fileID: 5925402618358947672}
-  - {fileID: 7996266659996134961}
 --- !u!1 &911570084570876518
 GameObject:
   m_ObjectHideFlags: 0
@@ -1100,8 +1018,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3020086912414554929}
-  - component: {fileID: 8691349079534788183}
-  - component: {fileID: 1877849666953545291}
   m_Layer: 0
   m_Name: '[Apartment] - Big'
   m_TagString: Untagged
@@ -1128,45 +1044,6 @@ Transform:
   - {fileID: 385034706038932064}
   m_Father: {fileID: 540751668610639593}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &8691349079534788183
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1093370677128181612}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 9, y: 4, z: 13}
-  m_Center: {x: -4, y: 1.5, z: 2}
---- !u!114 &1877849666953545291
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1093370677128181612}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7718d2c094c7c6c4ebbe15920ac3cfd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _collider: {fileID: 8691349079534788183}
-  _object:
-  - {fileID: 570353325973424888}
-  - {fileID: 419569474765092698}
-  - {fileID: 7952308906888167269}
-  - {fileID: 3764959384822684535}
 --- !u!1 &1174490129758273505
 GameObject:
   m_ObjectHideFlags: 0
@@ -1250,8 +1127,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4990701653570094121}
-  - component: {fileID: 4477251812363449194}
-  - component: {fileID: 2130462909144204573}
   m_Layer: 0
   m_Name: '[Room]'
   m_TagString: Untagged
@@ -1278,45 +1153,6 @@ Transform:
   - {fileID: 3788596205150482124}
   m_Father: {fileID: 540751668610639593}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &4477251812363449194
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1283428861753375284}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 9, y: 4, z: 9}
-  m_Center: {x: -4, y: 1.5, z: -4}
---- !u!114 &2130462909144204573
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1283428861753375284}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7718d2c094c7c6c4ebbe15920ac3cfd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _collider: {fileID: 4477251812363449194}
-  _object:
-  - {fileID: 2674752151479825636}
-  - {fileID: 4890099158537346637}
-  - {fileID: 4382420875991900464}
-  - {fileID: 6563549265124772475}
 --- !u!1 &1387506474970223900
 GameObject:
   m_ObjectHideFlags: 0
@@ -1360,8 +1196,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1052338244399904251}
-  - component: {fileID: 3610361479692478673}
-  - component: {fileID: 5716614968848063594}
   m_Layer: 0
   m_Name: '[Room]'
   m_TagString: Untagged
@@ -1388,45 +1222,6 @@ Transform:
   - {fileID: 4660079208773469280}
   m_Father: {fileID: 540751668610639593}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &3610361479692478673
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1414843780015654501}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 9, y: 4, z: 9}
-  m_Center: {x: -4, y: 1.5, z: -4}
---- !u!114 &5716614968848063594
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1414843780015654501}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7718d2c094c7c6c4ebbe15920ac3cfd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _collider: {fileID: 3610361479692478673}
-  _object:
-  - {fileID: 5647964598241004647}
-  - {fileID: 8338121232097517360}
-  - {fileID: 218871322186424320}
-  - {fileID: 144369142398105496}
 --- !u!1 &1436280496722900606
 GameObject:
   m_ObjectHideFlags: 0
@@ -1436,8 +1231,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7731882956107309876}
-  - component: {fileID: 3830516476935758893}
-  - component: {fileID: 6382414840615901598}
   m_Layer: 0
   m_Name: '[Hall]'
   m_TagString: Untagged
@@ -1462,43 +1255,6 @@ Transform:
   - {fileID: 5997137704796289831}
   m_Father: {fileID: 7757930070023244314}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &3830516476935758893
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1436280496722900606}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 21, y: 4, z: 35}
-  m_Center: {x: 10, y: 1.5, z: 5}
---- !u!114 &6382414840615901598
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1436280496722900606}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7718d2c094c7c6c4ebbe15920ac3cfd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _collider: {fileID: 3830516476935758893}
-  _object:
-  - {fileID: 1737357934031364852}
-  - {fileID: 7501890605464448247}
 --- !u!1 &1440565801023716714
 GameObject:
   m_ObjectHideFlags: 0
@@ -1580,8 +1336,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3860598371506340959}
-  - component: {fileID: 1869829056756474647}
-  - component: {fileID: 7105618821937412971}
   m_Layer: 0
   m_Name: '[Apartment] - Big_2'
   m_TagString: Untagged
@@ -1608,45 +1362,6 @@ Transform:
   - {fileID: 7352144350555558410}
   m_Father: {fileID: 540751668610639593}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1869829056756474647
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1704784577071959018}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 9, y: 4, z: 13}
-  m_Center: {x: -4, y: 1.5, z: 2}
---- !u!114 &7105618821937412971
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1704784577071959018}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7718d2c094c7c6c4ebbe15920ac3cfd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _collider: {fileID: 1869829056756474647}
-  _object:
-  - {fileID: 7604841836640365211}
-  - {fileID: 3676680925247056795}
-  - {fileID: 4309914149937844740}
-  - {fileID: 2699729301519798886}
 --- !u!1 &1724814960455919141
 GameObject:
   m_ObjectHideFlags: 0
@@ -2040,8 +1755,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7225944431863933}
-  - component: {fileID: 5440996480111887929}
-  - component: {fileID: 6881175583362049350}
   m_Layer: 0
   m_Name: '[Apartment] - Big_4'
   m_TagString: Untagged
@@ -2068,45 +1781,6 @@ Transform:
   - {fileID: 8018136393226588120}
   m_Father: {fileID: 540751668610639593}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
---- !u!65 &5440996480111887929
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2354263510800879803}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 8.999999, y: 4, z: 13}
-  m_Center: {x: -3.9999998, y: 1.5, z: 2}
---- !u!114 &6881175583362049350
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2354263510800879803}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7718d2c094c7c6c4ebbe15920ac3cfd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _collider: {fileID: 5440996480111887929}
-  _object:
-  - {fileID: 854059585952728547}
-  - {fileID: 8670102803136132004}
-  - {fileID: 2203440624254296311}
-  - {fileID: 4940431582192119847}
 --- !u!1 &2436830633443122419
 GameObject:
   m_ObjectHideFlags: 0
@@ -2220,8 +1894,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5616653653148568677}
-  - component: {fileID: 6078300673659106534}
-  - component: {fileID: 8376504549604608327}
   m_Layer: 0
   m_Name: '[Apartment] - Big_3'
   m_TagString: Untagged
@@ -2248,45 +1920,6 @@ Transform:
   - {fileID: 2614570607677201606}
   m_Father: {fileID: 7132514377604187833}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
---- !u!65 &6078300673659106534
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2493040855133282917}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 9, y: 4, z: 13}
-  m_Center: {x: -4, y: 1.5, z: 2}
---- !u!114 &8376504549604608327
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2493040855133282917}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7718d2c094c7c6c4ebbe15920ac3cfd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _collider: {fileID: 6078300673659106534}
-  _object:
-  - {fileID: 6723834898694263740}
-  - {fileID: 4328347531299836712}
-  - {fileID: 5827587183967158026}
-  - {fileID: 4064280325218390533}
 --- !u!1 &2674752151479825636
 GameObject:
   m_ObjectHideFlags: 0
@@ -2365,8 +1998,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4255089145163837695}
-  - component: {fileID: 1908511982774382492}
-  - component: {fileID: 964153034447802056}
   m_Layer: 0
   m_Name: '[Apartment] - Big_3'
   m_TagString: Untagged
@@ -2393,45 +2024,6 @@ Transform:
   - {fileID: 8649331828724033933}
   m_Father: {fileID: 7757930070023244314}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
---- !u!65 &1908511982774382492
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2939013602127808060}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 9, y: 4, z: 13}
-  m_Center: {x: -4, y: 1.5, z: 2}
---- !u!114 &964153034447802056
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2939013602127808060}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7718d2c094c7c6c4ebbe15920ac3cfd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _collider: {fileID: 1908511982774382492}
-  _object:
-  - {fileID: 7982948650538207434}
-  - {fileID: 4207543179399014500}
-  - {fileID: 4583779335409083802}
-  - {fileID: 5789651569579093897}
 --- !u!1 &2978868492559245040
 GameObject:
   m_ObjectHideFlags: 0
@@ -2474,8 +2066,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8316822914658681293}
-  - component: {fileID: 5681849530876340483}
-  - component: {fileID: 4795161845215323903}
   m_Layer: 0
   m_Name: '[Apartment] - Big_1'
   m_TagString: Untagged
@@ -2502,45 +2092,6 @@ Transform:
   - {fileID: 2474401590014415047}
   m_Father: {fileID: 7757930070023244314}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &5681849530876340483
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3148219610024764153}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 9, y: 4, z: 13}
-  m_Center: {x: -4, y: 1.5, z: 2}
---- !u!114 &4795161845215323903
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3148219610024764153}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7718d2c094c7c6c4ebbe15920ac3cfd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _collider: {fileID: 5681849530876340483}
-  _object:
-  - {fileID: 6460519503779633349}
-  - {fileID: 4479185854256412285}
-  - {fileID: 1440565801023716714}
-  - {fileID: 7609836150500655773}
 --- !u!1 &3440234201570975407
 GameObject:
   m_ObjectHideFlags: 0
@@ -2681,8 +2232,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5905281455591499289}
-  - component: {fileID: 3351118931367725923}
-  - component: {fileID: 6998695810494804062}
   m_Layer: 0
   m_Name: '[Apartment] - Big_1'
   m_TagString: Untagged
@@ -2709,45 +2258,6 @@ Transform:
   - {fileID: 6910885325340314949}
   m_Father: {fileID: 540751668610639593}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &3351118931367725923
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3573756306318613045}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 9, y: 4, z: 13}
-  m_Center: {x: -4, y: 1.5, z: 2}
---- !u!114 &6998695810494804062
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3573756306318613045}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7718d2c094c7c6c4ebbe15920ac3cfd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _collider: {fileID: 3351118931367725923}
-  _object:
-  - {fileID: 3933214721826872934}
-  - {fileID: 318351101346368678}
-  - {fileID: 4337971062996174190}
-  - {fileID: 2270436949647242251}
 --- !u!1 &3630570668791981974
 GameObject:
   m_ObjectHideFlags: 0
@@ -2757,8 +2267,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4761210277753695636}
-  - component: {fileID: 3114221805380911644}
-  - component: {fileID: 3960352057586940529}
   m_Layer: 0
   m_Name: '[Room]'
   m_TagString: Untagged
@@ -2785,45 +2293,6 @@ Transform:
   - {fileID: 4539441545352384382}
   m_Father: {fileID: 7757930070023244314}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &3114221805380911644
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3630570668791981974}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5, y: 4, z: 9}
-  m_Center: {x: 2, y: 1.5, z: -4}
---- !u!114 &3960352057586940529
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3630570668791981974}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7718d2c094c7c6c4ebbe15920ac3cfd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _collider: {fileID: 3114221805380911644}
-  _object:
-  - {fileID: 4419844727929591112}
-  - {fileID: 4849836311866774362}
-  - {fileID: 7837454419459957572}
-  - {fileID: 8032770825893564393}
 --- !u!1 &3676680925247056795
 GameObject:
   m_ObjectHideFlags: 0
@@ -3041,8 +2510,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 279379271869918151}
-  - component: {fileID: 8329912066139876872}
-  - component: {fileID: 8613498064788824127}
   m_Layer: 0
   m_Name: '[Apartment] - Big'
   m_TagString: Untagged
@@ -3069,45 +2536,6 @@ Transform:
   - {fileID: 8275780390057212540}
   m_Father: {fileID: 7132514377604187833}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &8329912066139876872
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3863777922814241209}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 9, y: 4, z: 13}
-  m_Center: {x: -4, y: 1.5, z: 2}
---- !u!114 &8613498064788824127
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3863777922814241209}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7718d2c094c7c6c4ebbe15920ac3cfd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _collider: {fileID: 8329912066139876872}
-  _object:
-  - {fileID: 3797569290794558486}
-  - {fileID: 6008337796573967434}
-  - {fileID: 5713569541775571710}
-  - {fileID: 102163022502690723}
 --- !u!1 &3891796727277446309
 GameObject:
   m_ObjectHideFlags: 0
@@ -3250,8 +2678,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5938981483009092382}
-  - component: {fileID: 5654141938372489035}
-  - component: {fileID: 6679074882972958315}
   m_Layer: 0
   m_Name: '[Apartment] - Big_1'
   m_TagString: Untagged
@@ -3278,45 +2704,6 @@ Transform:
   - {fileID: 5650543350796090113}
   m_Father: {fileID: 7132514377604187833}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &5654141938372489035
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4167020783640905010}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 9, y: 4, z: 13}
-  m_Center: {x: -4, y: 1.5, z: 2}
---- !u!114 &6679074882972958315
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4167020783640905010}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7718d2c094c7c6c4ebbe15920ac3cfd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _collider: {fileID: 5654141938372489035}
-  _object:
-  - {fileID: 8156780541088854837}
-  - {fileID: 782627889885694814}
-  - {fileID: 3891796727277446309}
-  - {fileID: 6908220158864914864}
 --- !u!1 &4207543179399014500
 GameObject:
   m_ObjectHideFlags: 0
@@ -3434,8 +2821,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5405485945011448878}
-  - component: {fileID: 1124926527298601752}
-  - component: {fileID: 19298863894784844}
   m_Layer: 0
   m_Name: '[Hall]'
   m_TagString: Untagged
@@ -3460,43 +2845,6 @@ Transform:
   - {fileID: 8491619799361111425}
   m_Father: {fileID: 7132514377604187833}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1124926527298601752
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4286388898333484465}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 21, y: 4, z: 35}
-  m_Center: {x: 10, y: 1.5, z: 5}
---- !u!114 &19298863894784844
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4286388898333484465}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7718d2c094c7c6c4ebbe15920ac3cfd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _collider: {fileID: 1124926527298601752}
-  _object:
-  - {fileID: 911570084570876518}
-  - {fileID: 6826596798678924117}
 --- !u!1 &4309914149937844740
 GameObject:
   m_ObjectHideFlags: 0
@@ -3609,8 +2957,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8886764987971421734}
-  - component: {fileID: 5479056952291942290}
-  - component: {fileID: 828061246456783215}
   m_Layer: 0
   m_Name: '[Room]'
   m_TagString: Untagged
@@ -3637,45 +2983,6 @@ Transform:
   - {fileID: 1398328689710284702}
   m_Father: {fileID: 7132514377604187833}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &5479056952291942290
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4339999313853008366}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 9, y: 4, z: 9}
-  m_Center: {x: -4, y: 1.5, z: -4}
---- !u!114 &828061246456783215
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4339999313853008366}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7718d2c094c7c6c4ebbe15920ac3cfd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _collider: {fileID: 5479056952291942290}
-  _object:
-  - {fileID: 9183253489715030615}
-  - {fileID: 2436830633443122419}
-  - {fileID: 1250047760202105932}
-  - {fileID: 5793390769267376273}
 --- !u!1 &4382420875991900464
 GameObject:
   m_ObjectHideFlags: 0
@@ -3853,8 +3160,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 104318388421117306}
-  - component: {fileID: 5735965122853208909}
-  - component: {fileID: 1350301483798389043}
   m_Layer: 0
   m_Name: '[Room]'
   m_TagString: Untagged
@@ -3881,45 +3186,6 @@ Transform:
   - {fileID: 6586663530032259298}
   m_Father: {fileID: 7132514377604187833}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &5735965122853208909
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4611327492490037130}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 9, y: 4, z: 9}
-  m_Center: {x: -4, y: 1.5, z: -4}
---- !u!114 &1350301483798389043
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4611327492490037130}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7718d2c094c7c6c4ebbe15920ac3cfd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _collider: {fileID: 5735965122853208909}
-  _object:
-  - {fileID: 546944199718134030}
-  - {fileID: 3440234201570975407}
-  - {fileID: 2340662315867930047}
-  - {fileID: 5877242505078061539}
 --- !u!1 &4757822579619084071
 GameObject:
   m_ObjectHideFlags: 0
@@ -4316,8 +3582,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5854326186097863181}
-  - component: {fileID: 7368336845981962996}
-  - component: {fileID: 2756774276633325662}
   m_Layer: 0
   m_Name: '[Apartment] - Big_4'
   m_TagString: Untagged
@@ -4344,45 +3608,6 @@ Transform:
   - {fileID: 7851646316624409122}
   m_Father: {fileID: 7757930070023244314}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
---- !u!65 &7368336845981962996
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5482974233514555695}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 8.999999, y: 4, z: 13}
-  m_Center: {x: -3.9999998, y: 1.5, z: 2}
---- !u!114 &2756774276633325662
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5482974233514555695}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7718d2c094c7c6c4ebbe15920ac3cfd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _collider: {fileID: 7368336845981962996}
-  _object:
-  - {fileID: 6212728462384974175}
-  - {fileID: 7892652443279083979}
-  - {fileID: 2051228610800055641}
-  - {fileID: 7992823527465051679}
 --- !u!1 &5622074401626367432
 GameObject:
   m_ObjectHideFlags: 0
@@ -4810,8 +4035,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2438687422146450222}
-  - component: {fileID: 3892654907372344335}
-  - component: {fileID: 14999714183088807}
   m_Layer: 0
   m_Name: '[Room]'
   m_TagString: Untagged
@@ -4838,45 +4061,6 @@ Transform:
   - {fileID: 5544992352192944261}
   m_Father: {fileID: 540751668610639593}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &3892654907372344335
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6116231861502979660}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5, y: 4, z: 9}
-  m_Center: {x: 2, y: 1.5, z: -4}
---- !u!114 &14999714183088807
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6116231861502979660}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7718d2c094c7c6c4ebbe15920ac3cfd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _collider: {fileID: 3892654907372344335}
-  _object:
-  - {fileID: 8520604675990567306}
-  - {fileID: 4248015242410506982}
-  - {fileID: 2303956514333610157}
-  - {fileID: 5897880251221213305}
 --- !u!1 &6139822019653595203
 GameObject:
   m_ObjectHideFlags: 0
@@ -4886,8 +4070,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8514903020735297243}
-  - component: {fileID: 731595788628647825}
-  - component: {fileID: 8249914194966663418}
   m_Layer: 0
   m_Name: '[Room]'
   m_TagString: Untagged
@@ -4914,45 +4096,6 @@ Transform:
   - {fileID: 6828248069821711227}
   m_Father: {fileID: 7132514377604187833}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &731595788628647825
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6139822019653595203}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5, y: 4, z: 9}
-  m_Center: {x: 2, y: 1.5, z: -4}
---- !u!114 &8249914194966663418
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6139822019653595203}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7718d2c094c7c6c4ebbe15920ac3cfd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _collider: {fileID: 731595788628647825}
-  _object:
-  - {fileID: 2978868492559245040}
-  - {fileID: 7562768408398689660}
-  - {fileID: 6675658308269879457}
-  - {fileID: 7843571816887257216}
 --- !u!1 &6170447834340587125
 GameObject:
   m_ObjectHideFlags: 0
@@ -5504,8 +4647,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4526363127798006058}
-  - component: {fileID: 2575083690373441599}
-  - component: {fileID: 1037633317976447595}
   m_Layer: 0
   m_Name: '[Room]'
   m_TagString: Untagged
@@ -5532,45 +4673,6 @@ Transform:
   - {fileID: 9066858757228941444}
   m_Father: {fileID: 540751668610639593}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &2575083690373441599
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7474642370346649823}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 12, y: 4, z: 20}
-  m_Center: {x: -5.5, y: 1.5, z: -9.5}
---- !u!114 &1037633317976447595
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7474642370346649823}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7718d2c094c7c6c4ebbe15920ac3cfd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _collider: {fileID: 2575083690373441599}
-  _object:
-  - {fileID: 5316633780356238807}
-  - {fileID: 8955691608527269690}
-  - {fileID: 6363694652599306654}
-  - {fileID: 252395417867331932}
 --- !u!1 &7487408976552470715
 GameObject:
   m_ObjectHideFlags: 0
@@ -5673,8 +4775,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1565304807715528113}
-  - component: {fileID: 7820682117456933778}
-  - component: {fileID: 4417233231733027215}
   m_Layer: 0
   m_Name: '[Room]'
   m_TagString: Untagged
@@ -5701,45 +4801,6 @@ Transform:
   - {fileID: 7916894680259529532}
   m_Father: {fileID: 540751668610639593}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &7820682117456933778
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7525755606355839459}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5, y: 4, z: 9}
-  m_Center: {x: 2, y: 1.5, z: -4}
---- !u!114 &4417233231733027215
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7525755606355839459}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7718d2c094c7c6c4ebbe15920ac3cfd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _collider: {fileID: 7820682117456933778}
-  _object:
-  - {fileID: 815421845717783745}
-  - {fileID: 5079378311589739451}
-  - {fileID: 4242948340397044493}
-  - {fileID: 7834152645513928142}
 --- !u!1 &7562768408398689660
 GameObject:
   m_ObjectHideFlags: 0
@@ -5857,8 +4918,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6670273173217857505}
-  - component: {fileID: 8592509458898633171}
-  - component: {fileID: 4181363451458086785}
   m_Layer: 0
   m_Name: '[Apartment] - Big_2'
   m_TagString: Untagged
@@ -5885,45 +4944,6 @@ Transform:
   - {fileID: 9080722478216625991}
   m_Father: {fileID: 7757930070023244314}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &8592509458898633171
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7627765402405876724}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 9, y: 4, z: 13}
-  m_Center: {x: -4, y: 1.5, z: 2}
---- !u!114 &4181363451458086785
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7627765402405876724}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7718d2c094c7c6c4ebbe15920ac3cfd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _collider: {fileID: 8592509458898633171}
-  _object:
-  - {fileID: 4757822579619084071}
-  - {fileID: 996793287338123940}
-  - {fileID: 6339208884041380349}
-  - {fileID: 5199859102408165932}
 --- !u!1 &7678707921265996475
 GameObject:
   m_ObjectHideFlags: 0
@@ -5933,8 +4953,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2468780325188643578}
-  - component: {fileID: 5741569609438517255}
-  - component: {fileID: 847141280342072697}
   m_Layer: 0
   m_Name: '[Room]'
   m_TagString: Untagged
@@ -5961,45 +4979,6 @@ Transform:
   - {fileID: 8353434403706443422}
   m_Father: {fileID: 7132514377604187833}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &5741569609438517255
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7678707921265996475}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 12, y: 4, z: 20}
-  m_Center: {x: -5.5, y: 1.5, z: -9.5}
---- !u!114 &847141280342072697
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7678707921265996475}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7718d2c094c7c6c4ebbe15920ac3cfd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _collider: {fileID: 5741569609438517255}
-  _object:
-  - {fileID: 3454937448958234711}
-  - {fileID: 8332143618558018930}
-  - {fileID: 8487849066140181983}
-  - {fileID: 3510491054118324887}
 --- !u!1 &7737593776266495684
 GameObject:
   m_ObjectHideFlags: 0
@@ -6009,8 +4988,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4755018096482405912}
-  - component: {fileID: 2145604667538364425}
-  - component: {fileID: 7881348018645281918}
   m_Layer: 0
   m_Name: '[Apartment] - Big'
   m_TagString: Untagged
@@ -6037,45 +5014,6 @@ Transform:
   - {fileID: 3708439392421822895}
   m_Father: {fileID: 7757930070023244314}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &2145604667538364425
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7737593776266495684}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 9, y: 4, z: 13}
-  m_Center: {x: -4, y: 1.5, z: 2}
---- !u!114 &7881348018645281918
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7737593776266495684}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7718d2c094c7c6c4ebbe15920ac3cfd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _collider: {fileID: 2145604667538364425}
-  _object:
-  - {fileID: 2466436712229651521}
-  - {fileID: 634130142680048405}
-  - {fileID: 4811598142307413762}
-  - {fileID: 1387506474970223900}
 --- !u!1 &7760073216608314721
 GameObject:
   m_ObjectHideFlags: 0
@@ -6085,8 +5023,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1620563736261198191}
-  - component: {fileID: 3053787959911239416}
-  - component: {fileID: 3778209529750141847}
   m_Layer: 0
   m_Name: '[Room]'
   m_TagString: Untagged
@@ -6113,45 +5049,6 @@ Transform:
   - {fileID: 6996139975351391078}
   m_Father: {fileID: 7757930070023244314}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &3053787959911239416
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7760073216608314721}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 9, y: 4, z: 9}
-  m_Center: {x: -4, y: 1.5, z: -4}
---- !u!114 &3778209529750141847
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7760073216608314721}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7718d2c094c7c6c4ebbe15920ac3cfd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _collider: {fileID: 3053787959911239416}
-  _object:
-  - {fileID: 602897325043637265}
-  - {fileID: 3824716983645728690}
-  - {fileID: 3704483812366743366}
-  - {fileID: 2121125841768805275}
 --- !u!1 &7834152645513928142
 GameObject:
   m_ObjectHideFlags: 0
@@ -6364,8 +5261,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 619264292556030465}
-  - component: {fileID: 2567556754953182322}
-  - component: {fileID: 1729165345270796428}
   m_Layer: 0
   m_Name: '[Room]'
   m_TagString: Untagged
@@ -6392,45 +5287,6 @@ Transform:
   - {fileID: 5487665211347407909}
   m_Father: {fileID: 7757930070023244314}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &2567556754953182322
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7976948195820699000}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 9, y: 4, z: 9}
-  m_Center: {x: -4, y: 1.5, z: -4}
---- !u!114 &1729165345270796428
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7976948195820699000}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7718d2c094c7c6c4ebbe15920ac3cfd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _collider: {fileID: 2567556754953182322}
-  _object:
-  - {fileID: 9195842762079822280}
-  - {fileID: 5622074401626367432}
-  - {fileID: 1754636052781510935}
-  - {fileID: 6200984671312800619}
 --- !u!1 &7982948650538207434
 GameObject:
   m_ObjectHideFlags: 0
@@ -6476,8 +5332,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8145848310946381886}
-  - component: {fileID: 4375329963459203834}
-  - component: {fileID: 3377285390415178279}
   m_Layer: 0
   m_Name: '[Hall]'
   m_TagString: Untagged
@@ -6502,43 +5356,6 @@ Transform:
   - {fileID: 2855125145092847923}
   m_Father: {fileID: 540751668610639593}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &4375329963459203834
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7991601797502246014}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 21, y: 4, z: 35}
-  m_Center: {x: 10, y: 1.5, z: 5}
---- !u!114 &3377285390415178279
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7991601797502246014}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7718d2c094c7c6c4ebbe15920ac3cfd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _collider: {fileID: 4375329963459203834}
-  _object:
-  - {fileID: 568410754770155854}
-  - {fileID: 5362321029930574123}
 --- !u!1 &7992823527465051679
 GameObject:
   m_ObjectHideFlags: 0
@@ -6830,8 +5647,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6390519609743841334}
-  - component: {fileID: 564483293571520394}
-  - component: {fileID: 3967293109164844143}
   m_Layer: 0
   m_Name: '[Room]'
   m_TagString: Untagged
@@ -6858,45 +5673,6 @@ Transform:
   - {fileID: 5477371578935797005}
   m_Father: {fileID: 7757930070023244314}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &564483293571520394
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8403426046608161852}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 12, y: 4, z: 20}
-  m_Center: {x: -5.5, y: 1.5, z: -9.5}
---- !u!114 &3967293109164844143
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8403426046608161852}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7718d2c094c7c6c4ebbe15920ac3cfd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _collider: {fileID: 564483293571520394}
-  _object:
-  - {fileID: 526237783574085725}
-  - {fileID: 6792171003668299895}
-  - {fileID: 4099961416041536124}
-  - {fileID: 8306527162209724191}
 --- !u!1 &8412230263431418244
 GameObject:
   m_ObjectHideFlags: 0
@@ -6906,8 +5682,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6121957605192434925}
-  - component: {fileID: 2788492012575936789}
-  - component: {fileID: 7248472266207692556}
   m_Layer: 0
   m_Name: '[Apartment] - Big_2'
   m_TagString: Untagged
@@ -6934,45 +5708,6 @@ Transform:
   - {fileID: 7708762965868146920}
   m_Father: {fileID: 7132514377604187833}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &2788492012575936789
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8412230263431418244}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 9, y: 4, z: 13}
-  m_Center: {x: -4, y: 1.5, z: 2}
---- !u!114 &7248472266207692556
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8412230263431418244}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7718d2c094c7c6c4ebbe15920ac3cfd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _collider: {fileID: 2788492012575936789}
-  _object:
-  - {fileID: 873840500841151270}
-  - {fileID: 639467248919750501}
-  - {fileID: 9142408151846665200}
-  - {fileID: 6712867103401868926}
 --- !u!1 &8487849066140181983
 GameObject:
   m_ObjectHideFlags: 0
@@ -7046,8 +5781,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7979020434823663064}
-  - component: {fileID: 1406981532617082051}
-  - component: {fileID: 7982514330400544752}
   m_Layer: 0
   m_Name: '[Room]'
   m_TagString: Untagged
@@ -7074,45 +5807,6 @@ Transform:
   - {fileID: 3592408255335398248}
   m_Father: {fileID: 7757930070023244314}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1406981532617082051
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8560936889342649825}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5, y: 4, z: 9}
-  m_Center: {x: 2, y: 1.5, z: -4}
---- !u!114 &7982514330400544752
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8560936889342649825}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7718d2c094c7c6c4ebbe15920ac3cfd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _collider: {fileID: 1406981532617082051}
-  _object:
-  - {fileID: 2453742796100034956}
-  - {fileID: 7487408976552470715}
-  - {fileID: 8034580975321633640}
-  - {fileID: 5455083620043382955}
 --- !u!1 &8580210369347745587
 GameObject:
   m_ObjectHideFlags: 0
@@ -7164,7 +5858,7 @@ MonoBehaviour:
     ChunkType: '[Community] - Leve 0 Type B'
     Info:
       <Type>k__BackingField: 
-      <Prefab>k__BackingField: {fileID: 0}
+      <Prefab>k__BackingField: {fileID: -7691488726236741125}
       <Offset>k__BackingField: {x: 0, y: 0, z: 0}
       <Height>k__BackingField: 9
       <Weight>k__BackingField: 1
@@ -7180,8 +5874,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 801478737362133475}
-  - component: {fileID: 7278808586073832074}
-  - component: {fileID: 5797320207591730007}
   m_Layer: 0
   m_Name: '[Apartment] - Big_4'
   m_TagString: Untagged
@@ -7208,45 +5900,6 @@ Transform:
   - {fileID: 2781838163435640669}
   m_Father: {fileID: 7132514377604187833}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
---- !u!65 &7278808586073832074
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8605014580430996409}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 8.999999, y: 4, z: 13}
-  m_Center: {x: -3.9999998, y: 1.5, z: 2}
---- !u!114 &5797320207591730007
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8605014580430996409}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7718d2c094c7c6c4ebbe15920ac3cfd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _collider: {fileID: 7278808586073832074}
-  _object:
-  - {fileID: 2298682013665692736}
-  - {fileID: 7455240466204436630}
-  - {fileID: 4500695697783316132}
-  - {fileID: 3541320088170976933}
 --- !u!1 &8670102803136132004
 GameObject:
   m_ObjectHideFlags: 0

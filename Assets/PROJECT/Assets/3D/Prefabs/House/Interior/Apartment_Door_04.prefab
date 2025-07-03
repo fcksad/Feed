@@ -286,10 +286,15 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
+  _rigidbody: {fileID: 0}
+  _colliders: []
+  _position: {x: 0, y: 0, z: 0}
+  _rotate: {x: 0, y: 0, z: 0, w: 0}
   _openAngle: 93
   _openSpeed: 1.6
-  _startsOpen: 0
-  _pivot: {fileID: 3940637847258068799}
+  _isOpen: 0
+  _closedRotation: {x: 0, y: 0, z: 0, w: 1}
+  _openedRotation: {x: 0, y: 0.72537434, z: 0, w: 0.6883546}
   _open: {fileID: 11400000, guid: 6f6db002ee016e54381dec95fff9a1d8, type: 2}
   _close: {fileID: 11400000, guid: 507b7be832c13ea43b70f03f1e6a4d62, type: 2}
   references:
@@ -430,17 +435,17 @@ LODGroup:
   m_AnimateCrossFading: 0
   m_LastLODIsBillboard: 0
   m_LODs:
-  - screenRelativeHeight: 0.5
+  - screenRelativeHeight: 0.7
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 6886080676348608150}
     - renderer: {fileID: 8721324557877485424}
-  - screenRelativeHeight: 0.199
+  - screenRelativeHeight: 0.5
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 4682608552216571691}
     - renderer: {fileID: 7416189263789780134}
-  - screenRelativeHeight: 0.16
+  - screenRelativeHeight: 0.34
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 1698132342509972221}

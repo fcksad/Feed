@@ -43,7 +43,7 @@ RenderSettings:
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 13
-  m_BakeOnSceneLoad: 0
+  m_BakeOnSceneLoad: 1
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -93,7 +93,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 20201, guid: 0000000000000000f000000000000000, type: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: e5ebedabf047c964e8f5ff05b2102356, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -679,6 +679,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1811274744828715012, guid: 7432bcee279e61746a7906988505f6fc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2418532696280596883, guid: 7432bcee279e61746a7906988505f6fc, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2913886277550451907, guid: 7432bcee279e61746a7906988505f6fc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4093652874346925405, guid: 7432bcee279e61746a7906988505f6fc, type: 3}
       propertyPath: <Camera>k__BackingField
       value: 
@@ -707,6 +719,34 @@ PrefabInstance:
       propertyPath: <HandAnimationController>k__BackingField
       value: 
       objectReference: {fileID: 1187146965}
+    - target: {fileID: 4336006989658444143, guid: 7432bcee279e61746a7906988505f6fc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4527436970208976683, guid: 7432bcee279e61746a7906988505f6fc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4529128429015396437, guid: 7432bcee279e61746a7906988505f6fc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7095571755274010272, guid: 7432bcee279e61746a7906988505f6fc, type: 3}
+      propertyPath: m_Range
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7095571755274010272, guid: 7432bcee279e61746a7906988505f6fc, type: 3}
+      propertyPath: m_Intensity
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 7095571755274010272, guid: 7432bcee279e61746a7906988505f6fc, type: 3}
+      propertyPath: m_SpotAngle
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7095571755274010272, guid: 7432bcee279e61746a7906988505f6fc, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3056386845767568253, guid: 7432bcee279e61746a7906988505f6fc, type: 3}
     m_RemovedGameObjects: []
@@ -808,7 +848,7 @@ MonoBehaviour:
   _footstep: {fileID: 11400000, guid: 0d4dc44ffbdd6ea46a7e93735c528660, type: 2}
   _footstepMask:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 1
   _footstepPositions:
   - {fileID: 417368001}
   - {fileID: 834397477}
@@ -864,7 +904,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1528326706
 Transform:
   m_ObjectHideFlags: 0
@@ -969,7 +1009,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1669863772
 MonoBehaviour:
   m_ObjectHideFlags: 0

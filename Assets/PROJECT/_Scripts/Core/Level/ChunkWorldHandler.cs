@@ -14,7 +14,7 @@ public class ChunkWorldHandler : MonoBehaviour
     private Dictionary<int, (float y, LevelChunkData data)> _chunkDataMap = new();
     private Dictionary<int, (float y, LevelChunk instance)> _activeChunks = new();
 
-    public List<LevelInfo> _chunks;
+    private List<LevelInfo> _chunks;
     private int _chunkListIndex = 0;
 
     private int _currentChunkIndex;
@@ -110,7 +110,7 @@ public class ChunkWorldHandler : MonoBehaviour
         }
 
         Vector3 pos = new Vector3(0, 0, 0) + info.Offset;
-        var chunk = _instantiateFactoryService.Create(info.Prefab, transform, pos, Quaternion.identity, customName: info.Type.ToString() + " - 0", key: info.Type);
+        var chunk = _instantiateFactoryService.Create(info.Prefab, transform, pos, Quaternion.identity, customName: $"{info.Type} - [0]", key: info.Type);
         chunk.Initialize(info);
         if (!_chunkDataMap.ContainsKey(0))
         {
@@ -145,7 +145,7 @@ public class ChunkWorldHandler : MonoBehaviour
 
         Vector3 pos = new Vector3(0, newY, 0) + info.Offset;
 
-        var chunk = _instantiateFactoryService.Create(info.Prefab, transform, pos, Quaternion.identity, customName: info.Type.ToString() + " - " + index.ToString(), key: info.Type);
+        var chunk = _instantiateFactoryService.Create(info.Prefab, transform, pos, Quaternion.identity, customName: $"{info.Type} - [{index}]", key: info.Type);
         chunk.Initialize(info);
 
         if (!_chunkDataMap.ContainsKey(index))

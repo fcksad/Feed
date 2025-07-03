@@ -2,16 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterController : MonoBehaviour ,IControllable
+public class CharacterController : MonoBehaviour , IControllable
 {
     [Header("Move")]
     private const float WALK_SPEED = 3f;
     private const float RUN_SPEED = 6f;
     [SerializeField] private UnityEngine.CharacterController _characterController;
 
-    private float _lastStepTime;
     private const float WALK_STEP_COOLDOWN = 0.5f;
     private const float RUN_STEP_COOLDOWN = 0.3f;
+    private float _lastStepTime;
     private int _currentFootstepIndex;
 
     [Header("Jump")]
@@ -56,8 +56,10 @@ public class CharacterController : MonoBehaviour ,IControllable
     {
         ApplyGravity();
 
-        if (!isCrouching && (jumpRequested && _characterController.isGrounded))
+        if (!isCrouching && jumpRequested && _characterController.isGrounded)
+        {
             Jump();
+        }
 
         float speed;
         if (isCrouching)
@@ -65,9 +67,13 @@ public class CharacterController : MonoBehaviour ,IControllable
         else
             speed = isRunning ? RUN_SPEED : WALK_SPEED;
 
-        var command = new MoveCommand(_characterController, _character.HeadRoot, input, speed, _verticalVelocity);
-        _commandController.SetCommand(command);
+        _commandController.SetCommand(new MoveCommand(_characterController, _character.HeadRoot, input, speed, _verticalVelocity));
 
+        TryFootstep(input, isRunning, isCrouching);
+    }
+
+    private void TryFootstep(Vector2 input, bool isRunning, bool isCrouching)
+    {
         float currentStepCooldown;
 
         if (isCrouching)
@@ -114,6 +120,8 @@ public class CharacterController : MonoBehaviour ,IControllable
         }
     }
 
+
+
     public void Look(Vector2 delta)
     {
         delta *= _mouseSensitivity;
@@ -129,7 +137,7 @@ public class CharacterController : MonoBehaviour ,IControllable
     {
         if (!isCrouching)
         {
-            if (Physics.SphereCast(_character.HeadRoot.position, _characterController.radius, Vector3.up, out RaycastHit hit,_standHeight - _crouchHeight, ~0, QueryTriggerInteraction.Ignore))
+            if (Physics.SphereCast(_character.HeadRoot.position, _characterController.radius, Vector3.up, out RaycastHit hit, _standHeight - _crouchHeight, ~0, QueryTriggerInteraction.Ignore))
             {
                 return false;
             }

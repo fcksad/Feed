@@ -24,8 +24,6 @@ public class PoolService : IPoolService, IInitializable
         }
     }
 
-
-
     public T GetFromPool<T>(T prefab, string key = null) where T : Component
     {
         if (key == null)
