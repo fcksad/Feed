@@ -118,7 +118,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!114 &6824540797449663341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -131,20 +131,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03c097b190e43cb49887d7b5950cbfef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _localizedString:
-    m_TableReference:
-      m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
-    m_TableEntryReference:
-      m_KeyId: 24917243309424651
-      m_Key: 
-    m_FallbackState: 0
-    m_WaitForCompletion: 0
-    m_LocalVariables: []
+  _localizedName:
+    _localizedString:
+      m_TableReference:
+        m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
+      m_TableEntryReference:
+        m_KeyId: 24917243309424651
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
   _rb: {fileID: 7926275865982922599}
   _offset: {x: 0, y: 0, z: 0}
   _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _followSpeed: 10
-  _rotateSpeed: 10
   _handOffset: {x: 0.153, y: -0.177, z: 0.223}
   _handRotation: {x: -0.7744578, y: 0.6260239, z: 0.08387815, w: 0.035686336}
   _overrideController: {fileID: 22100000, guid: 850ded43b390d584c8d44c03b0f83547, type: 2}

@@ -340,6 +340,14 @@ PrefabInstance:
       propertyPath: _localizedString.m_TableReference.m_TableCollectionName
       value: GUID:55446f8592aeeac46acb7a278848b34a
       objectReference: {fileID: 0}
+    - target: {fileID: 3968614890932055884, guid: 708be1315ba5a994f9c2e3195f3dfcb9, type: 3}
+      propertyPath: _localizedName._localizedString.m_TableEntryReference.m_KeyId
+      value: 336218487095297
+      objectReference: {fileID: 0}
+    - target: {fileID: 3968614890932055884, guid: 708be1315ba5a994f9c2e3195f3dfcb9, type: 3}
+      propertyPath: _localizedName._localizedString.m_TableReference.m_TableCollectionName
+      value: GUID:55446f8592aeeac46acb7a278848b34a
+      objectReference: {fileID: 0}
     - target: {fileID: 8318464769670019296, guid: 708be1315ba5a994f9c2e3195f3dfcb9, type: 3}
       propertyPath: m_Name
       value: TEXT - Controller
@@ -843,6 +851,14 @@ PrefabInstance:
       propertyPath: _localizedString.m_TableReference.m_TableCollectionName
       value: GUID:55446f8592aeeac46acb7a278848b34a
       objectReference: {fileID: 0}
+    - target: {fileID: 3968614890932055884, guid: 708be1315ba5a994f9c2e3195f3dfcb9, type: 3}
+      propertyPath: _localizedName._localizedString.m_TableEntryReference.m_KeyId
+      value: 1462125821952
+      objectReference: {fileID: 0}
+    - target: {fileID: 3968614890932055884, guid: 708be1315ba5a994f9c2e3195f3dfcb9, type: 3}
+      propertyPath: _localizedName._localizedString.m_TableReference.m_TableCollectionName
+      value: GUID:55446f8592aeeac46acb7a278848b34a
+      objectReference: {fileID: 0}
     - target: {fileID: 8318464769670019296, guid: 708be1315ba5a994f9c2e3195f3dfcb9, type: 3}
       propertyPath: m_Name
       value: TEXT - Video
@@ -991,6 +1007,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3968614890932055884, guid: 708be1315ba5a994f9c2e3195f3dfcb9, type: 3}
       propertyPath: _localizedString.m_TableReference.m_TableCollectionName
+      value: GUID:55446f8592aeeac46acb7a278848b34a
+      objectReference: {fileID: 0}
+    - target: {fileID: 3968614890932055884, guid: 708be1315ba5a994f9c2e3195f3dfcb9, type: 3}
+      propertyPath: _localizedName._localizedString.m_TableEntryReference.m_KeyId
+      value: 1394022907904
+      objectReference: {fileID: 0}
+    - target: {fileID: 3968614890932055884, guid: 708be1315ba5a994f9c2e3195f3dfcb9, type: 3}
+      propertyPath: _localizedName._localizedString.m_TableReference.m_TableCollectionName
       value: GUID:55446f8592aeeac46acb7a278848b34a
       objectReference: {fileID: 0}
     - target: {fileID: 4152649261244996597, guid: 708be1315ba5a994f9c2e3195f3dfcb9, type: 3}
@@ -1683,15 +1707,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09d436cd3533c2246a092c103c2886de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _localizedString:
-    m_TableReference:
-      m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
-    m_TableEntryReference:
-      m_KeyId: 1654686318592
-      m_Key: 
-    m_FallbackState: 0
-    m_WaitForCompletion: 0
-    m_LocalVariables: []
+  _localizedName:
+    _localizedString:
+      m_TableReference:
+        m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
+      m_TableEntryReference:
+        m_KeyId: 1654686318592
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
   _targetText: {fileID: 7967089022983457873}
   references:
     version: 2
@@ -1770,15 +1795,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09d436cd3533c2246a092c103c2886de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _localizedString:
-    m_TableReference:
-      m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
-    m_TableEntryReference:
-      m_KeyId: 1704313323520
-      m_Key: 
-    m_FallbackState: 0
-    m_WaitForCompletion: 0
-    m_LocalVariables: []
+  _localizedName:
+    _localizedString:
+      m_TableReference:
+        m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
+      m_TableEntryReference:
+        m_KeyId: 1704313323520
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
   _targetText: {fileID: 8778552360848643742}
   references:
     version: 2
@@ -2184,6 +2210,14 @@ PrefabInstance:
       propertyPath: _localizedString.m_TableReference.m_TableCollectionName
       value: GUID:55446f8592aeeac46acb7a278848b34a
       objectReference: {fileID: 0}
+    - target: {fileID: 3968614890932055884, guid: 708be1315ba5a994f9c2e3195f3dfcb9, type: 3}
+      propertyPath: _localizedName._localizedString.m_TableEntryReference.m_KeyId
+      value: 9258426793984
+      objectReference: {fileID: 0}
+    - target: {fileID: 3968614890932055884, guid: 708be1315ba5a994f9c2e3195f3dfcb9, type: 3}
+      propertyPath: _localizedName._localizedString.m_TableReference.m_TableCollectionName
+      value: GUID:55446f8592aeeac46acb7a278848b34a
+      objectReference: {fileID: 0}
     - target: {fileID: 8318464769670019296, guid: 708be1315ba5a994f9c2e3195f3dfcb9, type: 3}
       propertyPath: m_Name
       value: TEXT - Audio
@@ -2242,15 +2276,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09d436cd3533c2246a092c103c2886de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _localizedString:
-    m_TableReference:
-      m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
-    m_TableEntryReference:
-      m_KeyId: 1604430168064
-      m_Key: 
-    m_FallbackState: 0
-    m_WaitForCompletion: 0
-    m_LocalVariables: []
+  _localizedName:
+    _localizedString:
+      m_TableReference:
+        m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
+      m_TableEntryReference:
+        m_KeyId: 1604430168064
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
   _targetText: {fileID: 8778552361945921948}
   references:
     version: 2
@@ -2895,15 +2930,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09d436cd3533c2246a092c103c2886de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _localizedString:
-    m_TableReference:
-      m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
-    m_TableEntryReference:
-      m_KeyId: 21041412979916800
-      m_Key: 
-    m_FallbackState: 0
-    m_WaitForCompletion: 0
-    m_LocalVariables: []
+  _localizedName:
+    _localizedString:
+      m_TableReference:
+        m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
+      m_TableEntryReference:
+        m_KeyId: 21041412979916800
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
   _targetText: {fileID: 935718034}
   references:
     version: 2
@@ -3372,15 +3408,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09d436cd3533c2246a092c103c2886de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _localizedString:
-    m_TableReference:
-      m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
-    m_TableEntryReference:
-      m_KeyId: 166117146198016
-      m_Key: 
-    m_FallbackState: 0
-    m_WaitForCompletion: 0
-    m_LocalVariables: []
+  _localizedName:
+    _localizedString:
+      m_TableReference:
+        m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
+      m_TableEntryReference:
+        m_KeyId: 166117146198016
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
   _targetText: {fileID: 8778552361128319521}
   references:
     version: 2
@@ -3470,7 +3507,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 247402574759307576, guid: 708be1315ba5a994f9c2e3195f3dfcb9, type: 3}
       propertyPath: m_Name
-      value: BUTTON - button (1)
+      value: BUTTON - Keyboard
       objectReference: {fileID: 0}
     - target: {fileID: 1349851227079414570, guid: 708be1315ba5a994f9c2e3195f3dfcb9, type: 3}
       propertyPath: m_Pivot.x
@@ -3562,6 +3599,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3968614890932055884, guid: 708be1315ba5a994f9c2e3195f3dfcb9, type: 3}
       propertyPath: _localizedString.m_TableReference.m_TableCollectionName
+      value: GUID:55446f8592aeeac46acb7a278848b34a
+      objectReference: {fileID: 0}
+    - target: {fileID: 3968614890932055884, guid: 708be1315ba5a994f9c2e3195f3dfcb9, type: 3}
+      propertyPath: _localizedName._localizedString.m_TableEntryReference.m_KeyId
+      value: 336218487095296
+      objectReference: {fileID: 0}
+    - target: {fileID: 3968614890932055884, guid: 708be1315ba5a994f9c2e3195f3dfcb9, type: 3}
+      propertyPath: _localizedName._localizedString.m_TableReference.m_TableCollectionName
       value: GUID:55446f8592aeeac46acb7a278848b34a
       objectReference: {fileID: 0}
     - target: {fileID: 4152649261244996597, guid: 708be1315ba5a994f9c2e3195f3dfcb9, type: 3}
@@ -3817,6 +3862,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3968614890932055884, guid: 708be1315ba5a994f9c2e3195f3dfcb9, type: 3}
       propertyPath: _localizedString.m_TableReference.m_TableCollectionName
+      value: GUID:55446f8592aeeac46acb7a278848b34a
+      objectReference: {fileID: 0}
+    - target: {fileID: 3968614890932055884, guid: 708be1315ba5a994f9c2e3195f3dfcb9, type: 3}
+      propertyPath: _localizedName._localizedString.m_TableEntryReference.m_KeyId
+      value: 1497316032512
+      objectReference: {fileID: 0}
+    - target: {fileID: 3968614890932055884, guid: 708be1315ba5a994f9c2e3195f3dfcb9, type: 3}
+      propertyPath: _localizedName._localizedString.m_TableReference.m_TableCollectionName
       value: GUID:55446f8592aeeac46acb7a278848b34a
       objectReference: {fileID: 0}
     - target: {fileID: 8318464769670019296, guid: 708be1315ba5a994f9c2e3195f3dfcb9, type: 3}
@@ -4104,6 +4157,14 @@ PrefabInstance:
       propertyPath: _localizedString.m_TableReference.m_TableCollectionName
       value: GUID:55446f8592aeeac46acb7a278848b34a
       objectReference: {fileID: 0}
+    - target: {fileID: 3968614890932055884, guid: 708be1315ba5a994f9c2e3195f3dfcb9, type: 3}
+      propertyPath: _localizedName._localizedString.m_TableEntryReference.m_KeyId
+      value: 1408489062400
+      objectReference: {fileID: 0}
+    - target: {fileID: 3968614890932055884, guid: 708be1315ba5a994f9c2e3195f3dfcb9, type: 3}
+      propertyPath: _localizedName._localizedString.m_TableReference.m_TableCollectionName
+      value: GUID:55446f8592aeeac46acb7a278848b34a
+      objectReference: {fileID: 0}
     - target: {fileID: 8318464769670019296, guid: 708be1315ba5a994f9c2e3195f3dfcb9, type: 3}
       propertyPath: m_Name
       value: TEXT - HUD
@@ -4247,15 +4308,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09d436cd3533c2246a092c103c2886de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _localizedString:
-    m_TableReference:
-      m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
-    m_TableEntryReference:
-      m_KeyId: 336218449346560
-      m_Key: 
-    m_FallbackState: 0
-    m_WaitForCompletion: 0
-    m_LocalVariables: []
+  _localizedName:
+    _localizedString:
+      m_TableReference:
+        m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
+      m_TableEntryReference:
+        m_KeyId: 336218449346560
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
   _targetText: {fileID: 8778552361409711226}
   references:
     version: 2
@@ -4369,15 +4431,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09d436cd3533c2246a092c103c2886de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _localizedString:
-    m_TableReference:
-      m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
-    m_TableEntryReference:
-      m_KeyId: 9258430988290
-      m_Key: 
-    m_FallbackState: 0
-    m_WaitForCompletion: 0
-    m_LocalVariables: []
+  _localizedName:
+    _localizedString:
+      m_TableReference:
+        m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
+      m_TableEntryReference:
+        m_KeyId: 9258430988290
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
   _targetText: {fileID: 3876282217851917726}
   references:
     version: 2
@@ -4632,15 +4695,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09d436cd3533c2246a092c103c2886de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _localizedString:
-    m_TableReference:
-      m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
-    m_TableEntryReference:
-      m_KeyId: 21041412942168064
-      m_Key: 
-    m_FallbackState: 0
-    m_WaitForCompletion: 0
-    m_LocalVariables: []
+  _localizedName:
+    _localizedString:
+      m_TableReference:
+        m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
+      m_TableEntryReference:
+        m_KeyId: 21041412942168064
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
   _targetText: {fileID: 1762538820}
   references:
     version: 2
@@ -4853,15 +4917,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09d436cd3533c2246a092c103c2886de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _localizedString:
-    m_TableReference:
-      m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
-    m_TableEntryReference:
-      m_KeyId: 9258430988289
-      m_Key: 
-    m_FallbackState: 0
-    m_WaitForCompletion: 0
-    m_LocalVariables: []
+  _localizedName:
+    _localizedString:
+      m_TableReference:
+        m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
+      m_TableEntryReference:
+        m_KeyId: 9258430988289
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
   _targetText: {fileID: 3876282217015615645}
   references:
     version: 2
@@ -4998,15 +5063,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09d436cd3533c2246a092c103c2886de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _localizedString:
-    m_TableReference:
-      m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
-    m_TableEntryReference:
-      m_KeyId: 1681022353408
-      m_Key: 
-    m_FallbackState: 0
-    m_WaitForCompletion: 0
-    m_LocalVariables: []
+  _localizedName:
+    _localizedString:
+      m_TableReference:
+        m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
+      m_TableEntryReference:
+        m_KeyId: 1681022353408
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
   _targetText: {fileID: 8778552362419070243}
   references:
     version: 2
@@ -5198,15 +5264,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09d436cd3533c2246a092c103c2886de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _localizedString:
-    m_TableReference:
-      m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
-    m_TableEntryReference:
-      m_KeyId: 9258430988291
-      m_Key: 
-    m_FallbackState: 0
-    m_WaitForCompletion: 0
-    m_LocalVariables: []
+  _localizedName:
+    _localizedString:
+      m_TableReference:
+        m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
+      m_TableEntryReference:
+        m_KeyId: 9258430988291
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
   _targetText: {fileID: 3876282218459763940}
   references:
     version: 2
@@ -5298,15 +5365,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09d436cd3533c2246a092c103c2886de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _localizedString:
-    m_TableReference:
-      m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
-    m_TableEntryReference:
-      m_KeyId: 9258430988288
-      m_Key: 
-    m_FallbackState: 0
-    m_WaitForCompletion: 0
-    m_LocalVariables: []
+  _localizedName:
+    _localizedString:
+      m_TableReference:
+        m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
+      m_TableEntryReference:
+        m_KeyId: 9258430988288
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
   _targetText: {fileID: 3876282217632955213}
   references:
     version: 2
@@ -5825,6 +5893,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3968614890932055884, guid: 708be1315ba5a994f9c2e3195f3dfcb9, type: 3}
       propertyPath: _localizedString.m_TableReference.m_TableCollectionName
+      value: GUID:55446f8592aeeac46acb7a278848b34a
+      objectReference: {fileID: 0}
+    - target: {fileID: 3968614890932055884, guid: 708be1315ba5a994f9c2e3195f3dfcb9, type: 3}
+      propertyPath: _localizedName._localizedString.m_TableEntryReference.m_KeyId
+      value: 518558416896
+      objectReference: {fileID: 0}
+    - target: {fileID: 3968614890932055884, guid: 708be1315ba5a994f9c2e3195f3dfcb9, type: 3}
+      propertyPath: _localizedName._localizedString.m_TableReference.m_TableCollectionName
       value: GUID:55446f8592aeeac46acb7a278848b34a
       objectReference: {fileID: 0}
     - target: {fileID: 8318464769670019296, guid: 708be1315ba5a994f9c2e3195f3dfcb9, type: 3}
@@ -7990,15 +8066,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09d436cd3533c2246a092c103c2886de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _localizedString:
-    m_TableReference:
-      m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
-    m_TableEntryReference:
-      m_KeyId: 1025066762240
-      m_Key: 
-    m_FallbackState: 0
-    m_WaitForCompletion: 0
-    m_LocalVariables: []
+  _localizedName:
+    _localizedString:
+      m_TableReference:
+        m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
+      m_TableEntryReference:
+        m_KeyId: 1025066762240
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
   _targetText: {fileID: 2379301994186575568}
   references:
     version: 2
@@ -8015,15 +8092,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09d436cd3533c2246a092c103c2886de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _localizedString:
-    m_TableReference:
-      m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
-    m_TableEntryReference:
-      m_KeyId: 12318507008
-      m_Key: 
-    m_FallbackState: 0
-    m_WaitForCompletion: 0
-    m_LocalVariables: []
+  _localizedName:
+    _localizedString:
+      m_TableReference:
+        m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
+      m_TableEntryReference:
+        m_KeyId: 12318507008
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
   _targetText: {fileID: 2379301994809825035}
   references:
     version: 2
@@ -8040,15 +8118,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09d436cd3533c2246a092c103c2886de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _localizedString:
-    m_TableReference:
-      m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
-    m_TableEntryReference:
-      m_KeyId: 483833774080
-      m_Key: 
-    m_FallbackState: 0
-    m_WaitForCompletion: 0
-    m_LocalVariables: []
+  _localizedName:
+    _localizedString:
+      m_TableReference:
+        m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
+      m_TableEntryReference:
+        m_KeyId: 483833774080
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
   _targetText: {fileID: 2379301995029848144}
   references:
     version: 2

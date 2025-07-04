@@ -1,22 +1,20 @@
-using System.Collections.Generic;
+using Localization;
 using UnityEngine;
-using UnityEngine.Localization;
 
 public class InteractableObject : MonoBehaviour, IInteractable
 {
-    [SerializeField] protected LocalizedString _localizedString;
-    public string Name => _name;
-    protected string _name;
+    [SerializeField] protected LocalizedName _localizedName;
+    public string Name => _localizedName.Name;
 
     protected virtual void Start()
     {
-        _localizedString.StringChanged += name =>
-        {
-            _name = name;
-        };
-
-        _localizedString.RefreshString();
+        _localizedName.Init();
     }
 
     public virtual void Interact() { }
+
+    protected virtual void Destroy()
+    {
+        _localizedName.Dispose();
+    }
 }

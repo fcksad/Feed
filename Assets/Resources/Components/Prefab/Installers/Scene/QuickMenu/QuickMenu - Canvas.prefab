@@ -298,15 +298,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09d436cd3533c2246a092c103c2886de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _localizedString:
-    m_TableReference:
-      m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
-    m_TableEntryReference:
-      m_KeyId: 17607050762485760
-      m_Key: 
-    m_FallbackState: 0
-    m_WaitForCompletion: 0
-    m_LocalVariables: []
+  _localizedName:
+    _localizedString:
+      m_TableReference:
+        m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
+      m_TableEntryReference:
+        m_KeyId: 17607050762485760
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
   _targetText: {fileID: 1410115212331631739}
   references:
     version: 2
@@ -774,15 +775,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09d436cd3533c2246a092c103c2886de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _localizedString:
-    m_TableReference:
-      m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
-    m_TableEntryReference:
-      m_KeyId: 373070594048
-      m_Key: 
-    m_FallbackState: 0
-    m_WaitForCompletion: 0
-    m_LocalVariables: []
+  _localizedName:
+    _localizedString:
+      m_TableReference:
+        m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
+      m_TableEntryReference:
+        m_KeyId: 373070594048
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
   _targetText: {fileID: 4784965004810480628}
   references:
     version: 2

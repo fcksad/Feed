@@ -53,7 +53,9 @@ namespace Service
             }
             else
             {
-                _hints[localizationAction].gameObject.SetActive(true);
+                var group = _hints[localizationAction];
+                if (!group.gameObject.activeSelf)
+                    group.gameObject.SetActive(true);
             }
         }
 

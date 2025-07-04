@@ -31,7 +31,6 @@ public class GrabbableObject : InteractableObject, IGrabbable
             _followRoutine = null;
             _rb.useGravity = true;
             _rb.interpolation = RigidbodyInterpolation.None;
-            _rb.collisionDetectionMode = CollisionDetectionMode.Discrete;
         }
     }
 

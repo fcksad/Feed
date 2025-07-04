@@ -4,9 +4,44 @@ using UnityEngine.Localization.Settings;
 using Zenject;
 using System.Threading.Tasks;
 using System.Collections.Generic;
+using UnityEngine.Localization;
 
 namespace Localization
 {
+    [Serializable]
+    public class LocalizedName
+    {
+        [SerializeField] private LocalizedString _localizedString;
+        public string Name { get; private set; }
+
+        private LocalizedString.ChangeHandler _internalHandler;
+        private Action<string> _externalHandler;
+
+        public void Init(Action<string> onChanged = null)
+        {
+            _externalHandler = onChanged;
+            _internalHandler = new LocalizedString.ChangeHandler(OnLocalizedStringChanged);
+            _localizedString.StringChanged += _internalHandler;
+            _localizedString.RefreshString();
+        }
+
+        public void Dispose()
+        {
+            if (_internalHandler != null)
+            {
+                _localizedString.StringChanged -= _internalHandler;
+                _internalHandler = null;
+                _externalHandler = null;
+            }
+        }
+
+        private void OnLocalizedStringChanged(string value)
+        {
+            Name = value;
+            _externalHandler?.Invoke(value);
+        }
+    }
+
     public class LocalizationService : ILocalizationService, IInitializable, IDisposable
     {
         public event Action OnLanguageChangedEvent;

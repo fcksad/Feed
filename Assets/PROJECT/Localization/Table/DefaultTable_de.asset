@@ -95,7 +95,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 166117146198016
-    m_Localized: Resolution
+    m_Localized: "Bildschirmaufl\xF6sung"
     m_Metadata:
       m_Items: []
   - m_Id: 336218449346560
@@ -201,6 +201,18 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 24917243309424656
     m_Localized: "Viel Spa\xDF beim Testen!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24939148351471616
+    m_Localized: Interagieren
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24939148351471617
+    m_Localized: Greifen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24947319883268096
+    m_Localized: 'Aufheben '
     m_Metadata:
       m_Items: []
   references:

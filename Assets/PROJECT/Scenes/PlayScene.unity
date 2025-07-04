@@ -642,6 +642,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5257747025266822254, guid: 7432bcee279e61746a7906988505f6fc, type: 3}
+      propertyPath: _useLocalized._localizedString.m_TableEntryReference.m_KeyId
+      value: 24947319883268096
+      objectReference: {fileID: 0}
+    - target: {fileID: 5257747025266822254, guid: 7432bcee279e61746a7906988505f6fc, type: 3}
+      propertyPath: _grabLocalized._localizedString.m_TableEntryReference.m_KeyId
+      value: 24939148351471617
+      objectReference: {fileID: 0}
+    - target: {fileID: 5257747025266822254, guid: 7432bcee279e61746a7906988505f6fc, type: 3}
+      propertyPath: _interactLocalized._localizedString.m_TableEntryReference.m_KeyId
+      value: 24939148351471616
+      objectReference: {fileID: 0}
+    - target: {fileID: 5257747025266822254, guid: 7432bcee279e61746a7906988505f6fc, type: 3}
+      propertyPath: _useLocalized._localizedString.m_TableReference.m_TableCollectionName
+      value: GUID:55446f8592aeeac46acb7a278848b34a
+      objectReference: {fileID: 0}
+    - target: {fileID: 5257747025266822254, guid: 7432bcee279e61746a7906988505f6fc, type: 3}
+      propertyPath: _grabLocalized._localizedString.m_TableReference.m_TableCollectionName
+      value: GUID:55446f8592aeeac46acb7a278848b34a
+      objectReference: {fileID: 0}
+    - target: {fileID: 5257747025266822254, guid: 7432bcee279e61746a7906988505f6fc, type: 3}
+      propertyPath: _interactLocalized._localizedString.m_TableReference.m_TableCollectionName
+      value: GUID:55446f8592aeeac46acb7a278848b34a
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

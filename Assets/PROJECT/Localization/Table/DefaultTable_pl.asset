@@ -95,7 +95,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 166117146198016
-    m_Localized: Resolution
+    m_Localized: "Rozdzielczo\u015B\u0107 ekranu"
     m_Metadata:
       m_Items: []
   - m_Id: 336218449346560
@@ -201,6 +201,18 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 24917243309424656
     m_Localized: "Mi\u0142ego testowania!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24939148351471616
+    m_Localized: Antrakt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24939148351471617
+    m_Localized: "Z\u0142apa\u0107"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24947319883268096
+    m_Localized: "Podnie\u015B"
     m_Metadata:
       m_Items: []
   references:

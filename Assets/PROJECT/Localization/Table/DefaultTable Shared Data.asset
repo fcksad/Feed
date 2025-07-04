@@ -143,6 +143,18 @@ MonoBehaviour:
     m_Key: action.drop
     m_Metadata:
       m_Items: []
+  - m_Id: 24939148351471616
+    m_Key: action.interact
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24939148351471617
+    m_Key: action.grab
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24947319883268096
+    m_Key: action.pickUp
+    m_Metadata:
+      m_Items: []
   - m_Id: 24917243309424643
     m_Key: props.door
     m_Metadata:

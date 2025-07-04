@@ -95,7 +95,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 166117146198016
-    m_Localized: Resolution
+    m_Localized: "R\xE9solution de l'\xE9cran"
     m_Metadata:
       m_Items: []
   - m_Id: 336218449346560
@@ -202,6 +202,18 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 24917243309424656
     m_Localized: Bon test !
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24939148351471616
+    m_Localized: Interagir
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24939148351471617
+    m_Localized: Saisir
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24947319883268096
+    m_Localized: Ramasser
     m_Metadata:
       m_Items: []
   references:

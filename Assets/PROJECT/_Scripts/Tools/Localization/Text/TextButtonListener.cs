@@ -1,23 +1,19 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.Localization;
+using Localization;
 
 [RequireComponent(typeof(TMP_Text))]
 public class TextButtonListener : MonoBehaviour
 {
-    [SerializeField] private LocalizedString _localizedString;
+    [SerializeField] protected LocalizedName _localizedName;
     [SerializeField] private TMP_Text _targetText;
 
     private void Awake()
     {
-        if (_localizedString != null)
+        if (_localizedName != null)
         {
-            _localizedString.StringChanged += UpdateText;
-            _localizedString.RefreshString();
-        }
-        else
-        {
-            Debug.LogWarning("LocalizedString is not assigned!", this);
+            _localizedName.Init(UpdateText);
         }
     }
 
@@ -29,8 +25,8 @@ public class TextButtonListener : MonoBehaviour
 
     private void OnDestroy()
     {
-        if (_localizedString != null)
-            _localizedString.StringChanged -= UpdateText;
+        if (_localizedName != null)
+            _localizedName.Dispose();
     }
 
     private void OnValidate()

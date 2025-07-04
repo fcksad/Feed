@@ -10,6 +10,8 @@ namespace Service
         private PlayerInput _playerInput;
         private IInputService _inputService;
 
+        private readonly Dictionary<string, List<string>> _cachedKeys = new();
+
         [Inject]
         public void Construct(HintView hintView, IInputService inputService, PlayerInput playerInput)
         {
@@ -22,13 +24,21 @@ namespace Service
 
         public void ShowHint(string localizationAction, List<CharacterAction> actions)
         {
-            var deviceType = GetDeviceType(_playerInput.currentControlScheme);
+            var controlScheme = _playerInput.currentControlScheme;
+            var deviceType = GetDeviceType(controlScheme);
+            string cacheKey = $"{localizationAction}_{deviceType}";
 
-            List<string> keys = new List<string>();
-            foreach (var action in actions)
+            if (!_cachedKeys.TryGetValue(cacheKey, out var keys))
             {
-                keys.Add(_inputService.GetActionKey(action, _playerInput.currentControlScheme));
+                keys = new List<string>(actions.Count);
+                foreach (var action in actions)
+                {
+                    keys.Add(_inputService.GetActionKey(action, controlScheme));
+                }
+
+                _cachedKeys[cacheKey] = keys;
             }
+
             _hintView.Show(localizationAction, actions, keys, deviceType);
         }
 
