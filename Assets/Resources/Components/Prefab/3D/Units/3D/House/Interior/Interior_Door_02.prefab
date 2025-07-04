@@ -421,7 +421,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7050359357518268120}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.061792612, y: 0.052102327, z: -1.396119}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -520,15 +520,16 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
     m_TableEntryReference:
-      m_KeyId: 14483218207965186
+      m_KeyId: 24917243309424643
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
   _openAngle: 93
   _openSpeed: 1.6
-  _startsOpen: 0
-  _pivot: {fileID: 7260149936732677418}
+  _isOpen: 0
+  _closedRotation: {x: 0, y: 0, z: 0, w: 1}
+  _openedRotation: {x: 0, y: 0.72537434, z: 0, w: 0.6883546}
   _open: {fileID: 11400000, guid: 6f6db002ee016e54381dec95fff9a1d8, type: 2}
   _close: {fileID: 11400000, guid: 507b7be832c13ea43b70f03f1e6a4d62, type: 2}
   references:

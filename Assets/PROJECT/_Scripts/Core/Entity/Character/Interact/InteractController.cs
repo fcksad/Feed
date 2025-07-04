@@ -85,16 +85,14 @@ public class InteractController : MonoBehaviour
         if (_currentInteractable is IUsable usable)
         {
             _itemController.Equip(usable);
+            _audioService.Play(_select);
         }
         else
         {
             _currentInteractable.Interact();
         }
-
-        _audioService.Play(_select);
-
-
     }
+
     private void OnGrabStarted()
     {
         if (_currentInteractable is IGrabbable grabbable)

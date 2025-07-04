@@ -118,52 +118,8 @@ MonoBehaviour:
     m_Localized: "Czy na pewno chcesz ponownie powi\u0105za\u0107 ten klucz?"
     m_Metadata:
       m_Items: []
-  - m_Id: 14483218166022144
-    m_Localized: Tak
-    m_Metadata:
-      m_Items: []
-  - m_Id: 14483218207965184
-    m_Localized: NIE
-    m_Metadata:
-      m_Items: []
-  - m_Id: 14483218207965185
-    m_Localized: "Obraca\u0107"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 14483218207965186
-    m_Localized: Drzwi
-    m_Metadata:
-      m_Items: []
-  - m_Id: 14483218207965187
-    m_Localized: Konewka
-    m_Metadata:
-      m_Items: []
-  - m_Id: 14483218207965188
-    m_Localized: Tabela
-    m_Metadata:
-      m_Items: []
-  - m_Id: 14483218207965189
-    m_Localized: Garnek
-    m_Metadata:
-      m_Items: []
-  - m_Id: 14659057197350912
-    m_Localized: "Rzuci\u0107"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 15105242613776384
-    m_Localized: Dzwonek
-    m_Metadata:
-      m_Items: []
   - m_Id: 17607050762485760
     m_Localized: "Wzn\xF3w"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 17607050817011712
-    m_Localized: Beczka
-    m_Metadata:
-      m_Items: []
-  - m_Id: 17607050817011713
-    m_Localized: "Top\xF3r"
     m_Metadata:
       m_Items: []
   - m_Id: 21041412942168064
@@ -172,6 +128,79 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 21041412979916800
     m_Localized: "Wra\u017Cliwo\u015B\u0107"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243263287296
+    m_Localized: Tak
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243309424640
+    m_Localized: NIE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243309424641
+    m_Localized: "Obraca\u0107"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243309424642
+    m_Localized: "Rzuci\u0107"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243309424643
+    m_Localized: Drzwi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243309424644
+    m_Localized: Konewka
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243309424645
+    m_Localized: Tabela
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243309424646
+    m_Localized: Garnek
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243309424647
+    m_Localized: Skrzynka
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243309424648
+    m_Localized: Dzwonek
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243309424649
+    m_Localized: Beczka
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243309424650
+    m_Localized: "Top\xF3r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243309424651
+    m_Localized: "N\xF3\u017C"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243309424652
+    m_Localized: Pistolet
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243309424653
+    m_Localized: Flinta
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243309424654
+    m_Localized: "To jest test systemu dialogowego, odbi\xF3r-odbi\xF3r, jak s\u0142yszysz?
+      Czy s\u0142yszysz dobrze?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243309424655
+    m_Localized: "Tak czy inaczej test dobiega ko\u0144ca!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243309424656
+    m_Localized: "Mi\u0142ego testowania!"
     m_Metadata:
       m_Items: []
   references:

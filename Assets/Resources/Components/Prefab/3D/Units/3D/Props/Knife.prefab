@@ -135,7 +135,7 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
     m_TableEntryReference:
-      m_KeyId: 17607050817011713
+      m_KeyId: 24917243309424651
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -145,6 +145,8 @@ MonoBehaviour:
   _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _followSpeed: 10
   _rotateSpeed: 10
+  _handOffset: {x: 0.153, y: -0.177, z: 0.223}
+  _handRotation: {x: -0.7744578, y: 0.6260239, z: 0.08387815, w: 0.035686336}
   _overrideController: {fileID: 22100000, guid: 850ded43b390d584c8d44c03b0f83547, type: 2}
   _colliders:
   - {fileID: 1715261356082069135}

@@ -786,57 +786,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 802264621280703501, guid: a1ffaf65d48c8064dada2b90c6f3ba19, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 802264621280703501, guid: a1ffaf65d48c8064dada2b90c6f3ba19, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 802264621280703501, guid: a1ffaf65d48c8064dada2b90c6f3ba19, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 802264621280703501, guid: a1ffaf65d48c8064dada2b90c6f3ba19, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 802264621280703501, guid: a1ffaf65d48c8064dada2b90c6f3ba19, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2100317113861408260, guid: a1ffaf65d48c8064dada2b90c6f3ba19, type: 3}
       propertyPath: m_Name
       value: MessageBoxView
-      objectReference: {fileID: 0}
-    - target: {fileID: 5092029171756413271, guid: a1ffaf65d48c8064dada2b90c6f3ba19, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5092029171756413271, guid: a1ffaf65d48c8064dada2b90c6f3ba19, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5092029171756413271, guid: a1ffaf65d48c8064dada2b90c6f3ba19, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5092029171756413271, guid: a1ffaf65d48c8064dada2b90c6f3ba19, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5092029171756413271, guid: a1ffaf65d48c8064dada2b90c6f3ba19, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8045395839591492251, guid: a1ffaf65d48c8064dada2b90c6f3ba19, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8045395839591492251, guid: a1ffaf65d48c8064dada2b90c6f3ba19, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

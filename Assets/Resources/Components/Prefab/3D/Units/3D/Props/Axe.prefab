@@ -34,15 +34,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a98ea53e43ebba940a906a5d015ad2c1, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a98ea53e43ebba940a906a5d015ad2c1, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a98ea53e43ebba940a906a5d015ad2c1, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a98ea53e43ebba940a906a5d015ad2c1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -147,7 +147,7 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
     m_TableEntryReference:
-      m_KeyId: 17607050817011713
+      m_KeyId: 24917243309424650
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -157,6 +157,8 @@ MonoBehaviour:
   _quaternion: {x: 0, y: 0, z: 0, w: 1}
   _followSpeed: 10
   _rotateSpeed: 10
+  _handOffset: {x: 0.322, y: -0.327, z: 0.567}
+  _handRotation: {x: 0.013063159, y: -0.64745003, z: 0.11046377, w: -0.7539467}
   _overrideController: {fileID: 22100000, guid: 850ded43b390d584c8d44c03b0f83547, type: 2}
   _colliders:
   - {fileID: 6271761667080943087}

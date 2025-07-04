@@ -118,52 +118,8 @@ MonoBehaviour:
     m_Localized: Are you sure you want to rebind this key?
     m_Metadata:
       m_Items: []
-  - m_Id: 14483218166022144
-    m_Localized: Yes
-    m_Metadata:
-      m_Items: []
-  - m_Id: 14483218207965184
-    m_Localized: No
-    m_Metadata:
-      m_Items: []
-  - m_Id: 14483218207965185
-    m_Localized: Rotate
-    m_Metadata:
-      m_Items: []
-  - m_Id: 14483218207965186
-    m_Localized: Door
-    m_Metadata:
-      m_Items: []
-  - m_Id: 14483218207965187
-    m_Localized: WateringCan
-    m_Metadata:
-      m_Items: []
-  - m_Id: 14483218207965188
-    m_Localized: Table
-    m_Metadata:
-      m_Items: []
-  - m_Id: 14483218207965189
-    m_Localized: Pot
-    m_Metadata:
-      m_Items: []
-  - m_Id: 14659057197350912
-    m_Localized: Throw
-    m_Metadata:
-      m_Items: []
-  - m_Id: 15105242613776384
-    m_Localized: Bell
-    m_Metadata:
-      m_Items: []
   - m_Id: 17607050762485760
     m_Localized: Resume
-    m_Metadata:
-      m_Items: []
-  - m_Id: 17607050817011712
-    m_Localized: Barrel
-    m_Metadata:
-      m_Items: []
-  - m_Id: 17607050817011713
-    m_Localized: Axe
     m_Metadata:
       m_Items: []
   - m_Id: 21041412942168064
@@ -172,6 +128,79 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 21041412979916800
     m_Localized: Sensitivity
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243263287296
+    m_Localized: Yes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243309424640
+    m_Localized: No
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243309424641
+    m_Localized: Rotate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243309424642
+    m_Localized: Throw
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243309424643
+    m_Localized: Door
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243309424644
+    m_Localized: WateringCan
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243309424645
+    m_Localized: Table
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243309424646
+    m_Localized: Pot
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243309424647
+    m_Localized: Box
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243309424648
+    m_Localized: Bell
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243309424649
+    m_Localized: Barrel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243309424650
+    m_Localized: Axe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243309424651
+    m_Localized: Knife
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243309424652
+    m_Localized: Pistol
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243309424653
+    m_Localized: Shotgun
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243309424654
+    m_Localized: This is a test of the dialogue system, reception-reception, how
+      do you hear? Can you hear well?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243309424655
+    m_Localized: One way or another the test is coming to an end!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243309424656
+    m_Localized: Happy testing!
     m_Metadata:
       m_Items: []
   references:

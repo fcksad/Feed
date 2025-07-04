@@ -9,7 +9,6 @@ public class GrabbableObject : InteractableObject, IGrabbable
     [SerializeField] private Vector3 _offset = Vector3.zero;
     [SerializeField] private Quaternion _quaternion = Quaternion.identity;
     [SerializeField] private float _followSpeed = 10f;
-    [SerializeField] private float _rotateSpeed = 10f;
     private Coroutine _followRoutine;
 
 

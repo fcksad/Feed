@@ -159,15 +159,11 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
     m_TableEntryReference:
-      m_KeyId: 15105242613776384
+      m_KeyId: 24917243309424648
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
-  _rigidbody: {fileID: 0}
-  _colliders: []
-  _position: {x: 0, y: 0, z: 0}
-  _rotate: {x: 0, y: 0, z: 0, w: 0}
   _soundPoint: {fileID: 8394046648791489824}
   _doorBell: {fileID: 11400000, guid: 5dfd372f9445d3142b782f692fb81887, type: 2}
   references:
@@ -569,15 +565,11 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
     m_TableEntryReference:
-      m_KeyId: 14483218207965186
+      m_KeyId: 24917243309424643
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
-  _rigidbody: {fileID: 0}
-  _colliders: []
-  _position: {x: 0, y: 0, z: 0}
-  _rotate: {x: 0, y: 0, z: 0, w: 0}
   _openAngle: 93
   _openSpeed: 1.6
   _isOpen: 0

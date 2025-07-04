@@ -17,7 +17,7 @@ MonoBehaviour:
   - m_TableReference:
       m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
     m_TableEntryReference:
-      m_KeyId: 726718578786304
+      m_KeyId: 24917243309424654
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -25,7 +25,7 @@ MonoBehaviour:
   - m_TableReference:
       m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
     m_TableEntryReference:
-      m_KeyId: 17607050817011712
+      m_KeyId: 24917243309424655
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -33,24 +33,16 @@ MonoBehaviour:
   - m_TableReference:
       m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
     m_TableEntryReference:
-      m_KeyId: 1025066762240
-      m_Key: 
-    m_FallbackState: 0
-    m_WaitForCompletion: 0
-    m_LocalVariables: []
-  - m_TableReference:
-      m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
-    m_TableEntryReference:
-      m_KeyId: 9258426793984
+      m_KeyId: 24917243309424656
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
   _debug:
-  - Are you sure you want to rebind this key?
-  - Barrel
-  - Settings
-  - Audio
+  - This is a test of the dialogue system, reception-reception, how do you hear?
+    Can you hear well?
+  - One way or another the test is coming to an end!
+  - Happy testing!
   references:
     version: 2
     RefIds: []

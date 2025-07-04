@@ -118,52 +118,8 @@ MonoBehaviour:
     m_Localized: Sei sicuro di voler riassociare questa chiave?
     m_Metadata:
       m_Items: []
-  - m_Id: 14483218166022144
-    m_Localized: "S\xCC"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 14483218207965184
-    m_Localized: NO
-    m_Metadata:
-      m_Items: []
-  - m_Id: 14483218207965185
-    m_Localized: Ruotare
-    m_Metadata:
-      m_Items: []
-  - m_Id: 14483218207965186
-    m_Localized: Porta
-    m_Metadata:
-      m_Items: []
-  - m_Id: 14483218207965187
-    m_Localized: Annaffiatoio
-    m_Metadata:
-      m_Items: []
-  - m_Id: 14483218207965188
-    m_Localized: Tavolo
-    m_Metadata:
-      m_Items: []
-  - m_Id: 14483218207965189
-    m_Localized: Pentola
-    m_Metadata:
-      m_Items: []
-  - m_Id: 14659057197350912
-    m_Localized: Gettare
-    m_Metadata:
-      m_Items: []
-  - m_Id: 15105242613776384
-    m_Localized: Campana
-    m_Metadata:
-      m_Items: []
   - m_Id: 17607050762485760
     m_Localized: Riprendi
-    m_Metadata:
-      m_Items: []
-  - m_Id: 17607050817011712
-    m_Localized: Barile
-    m_Metadata:
-      m_Items: []
-  - m_Id: 17607050817011713
-    m_Localized: Ascia
     m_Metadata:
       m_Items: []
   - m_Id: 21041412942168064
@@ -172,6 +128,79 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 21041412979916800
     m_Localized: "Sensibilit\xE0"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243263287296
+    m_Localized: "S\xCC"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243309424640
+    m_Localized: NO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243309424641
+    m_Localized: Ruotare
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243309424642
+    m_Localized: Gettare
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243309424643
+    m_Localized: Porta
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243309424644
+    m_Localized: Annaffiatoio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243309424645
+    m_Localized: Tavolo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243309424646
+    m_Localized: Pentola
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243309424647
+    m_Localized: Scatola
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243309424648
+    m_Localized: Campana
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243309424649
+    m_Localized: Barile
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243309424650
+    m_Localized: Ascia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243309424651
+    m_Localized: Coltello
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243309424652
+    m_Localized: Pistola
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243309424653
+    m_Localized: Fucile da caccia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243309424654
+    m_Localized: "Questo \xE8 un test del sistema di dialogo, ricezione-ricezione,
+      come senti? Riesci a sentire bene?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243309424655
+    m_Localized: In un modo o nell'altro il test sta per finire!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243309424656
+    m_Localized: Buon test!
     m_Metadata:
       m_Items: []
   references:

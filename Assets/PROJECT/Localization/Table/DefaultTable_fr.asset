@@ -118,52 +118,8 @@ MonoBehaviour:
     m_Localized: "\xCAtes-vous s\xFBr de vouloir associer \xE0 nouveau cette cl\xE9\_?"
     m_Metadata:
       m_Items: []
-  - m_Id: 14483218166022144
-    m_Localized: Oui
-    m_Metadata:
-      m_Items: []
-  - m_Id: 14483218207965184
-    m_Localized: Non
-    m_Metadata:
-      m_Items: []
-  - m_Id: 14483218207965185
-    m_Localized: Tourner
-    m_Metadata:
-      m_Items: []
-  - m_Id: 14483218207965186
-    m_Localized: Porte
-    m_Metadata:
-      m_Items: []
-  - m_Id: 14483218207965187
-    m_Localized: Arrosoir
-    m_Metadata:
-      m_Items: []
-  - m_Id: 14483218207965188
-    m_Localized: Tableau
-    m_Metadata:
-      m_Items: []
-  - m_Id: 14483218207965189
-    m_Localized: Pot
-    m_Metadata:
-      m_Items: []
-  - m_Id: 14659057197350912
-    m_Localized: Lancer
-    m_Metadata:
-      m_Items: []
-  - m_Id: 15105242613776384
-    m_Localized: Cloche
-    m_Metadata:
-      m_Items: []
   - m_Id: 17607050762485760
     m_Localized: Reprendre
-    m_Metadata:
-      m_Items: []
-  - m_Id: 17607050817011712
-    m_Localized: Baril
-    m_Metadata:
-      m_Items: []
-  - m_Id: 17607050817011713
-    m_Localized: Hache
     m_Metadata:
       m_Items: []
   - m_Id: 21041412942168064
@@ -172,6 +128,80 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 21041412979916800
     m_Localized: "Sensibilit\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243263287296
+    m_Localized: Oui
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243309424640
+    m_Localized: Non
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243309424641
+    m_Localized: Tourner
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243309424642
+    m_Localized: Lancer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243309424643
+    m_Localized: Porte
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243309424644
+    m_Localized: Arrosoir
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243309424645
+    m_Localized: Tableau
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243309424646
+    m_Localized: Pot
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243309424647
+    m_Localized: "Bo\xEEte"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243309424648
+    m_Localized: Cloche
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243309424649
+    m_Localized: Baril
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243309424650
+    m_Localized: Hache
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243309424651
+    m_Localized: Couteau
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243309424652
+    m_Localized: Pistolet
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243309424653
+    m_Localized: Fusil de chasse
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243309424654
+    m_Localized: "Ceci est un test du syst\xE8me de dialogue, r\xE9ception-r\xE9ception,
+      comment entendez-vous ? Entendez-vous bien ?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243309424655
+    m_Localized: "D\u2019une mani\xE8re ou d\u2019une autre, le test touche \xE0
+      sa fin !"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24917243309424656
+    m_Localized: Bon test !
     m_Metadata:
       m_Items: []
   references:
