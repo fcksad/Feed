@@ -34,7 +34,6 @@ public class Character : EntityBase
         base.Start();
 
         InteractController.Initialize(GrabController, ItemController, Camera);
-        GrabController.Initialize(Camera);
         ItemController.Initialize(Camera, HandAnimationController);
         FlashlightController.Initialize();
         CharacterInput.Initialize();
@@ -48,7 +47,6 @@ public class Character : EntityBase
         base.OnDestroy();
 
         InteractController.Dispose();
-        GrabController.Dispose();
         ItemController.Dispose();
         FlashlightController.Dispose();
         CharacterInput.Dispose();

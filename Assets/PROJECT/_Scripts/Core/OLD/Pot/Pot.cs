@@ -27,8 +27,6 @@ public class Pot : GrabbableObject
         }
     }
 
-    public override void Interact() { }
-
     private void StartWatering()
     {
         if (_materialIndex == -1) return;

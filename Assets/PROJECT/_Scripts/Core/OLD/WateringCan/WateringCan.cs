@@ -19,8 +19,9 @@ public class WateringCan : GrabbableObject
         _audioService = audioService;
     }
 
-    public override void OnGrab()
+    public override void OnGrab(Transform pointToMove)
     {
+        base.OnGrab(pointToMove);
         _monitorRoutine = StartCoroutine(MonitorTransform());
     }
 
