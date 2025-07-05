@@ -4,23 +4,28 @@ using Zenject;
 
 namespace Service
 {
-    public class HintService : IHintService
+    public class HintService : IHintService, IInitializable
     {
         private HintView _hintView;
         private PlayerInput _playerInput;
         private IInputService _inputService;
+        private ISaveService _saveService;
 
         private readonly Dictionary<string, List<string>> _cachedKeys = new();
 
         [Inject]
-        public void Construct(HintView hintView, IInputService inputService, PlayerInput playerInput)
+        public void Construct(HintView hintView, IInputService inputService, PlayerInput playerInput, ISaveService saveService)
         {
             _hintView = hintView;
             _inputService = inputService;
             _playerInput = playerInput;
+            _saveService = saveService;
         }
 
-        public void Initialize() { }
+        public void Initialize() 
+        {
+            ToggleView(_saveService.SettingsData.HintData.IsEnable);
+        }
 
         public void ShowHint(string localizationAction, List<CharacterAction> actions)
         {
@@ -52,7 +57,6 @@ namespace Service
             _hintView.HideAll();
         }
 
-
         private ControlDeviceType GetDeviceType(string controlScheme)
         {
             return controlScheme switch
@@ -62,6 +66,12 @@ namespace Service
                 _ => ControlDeviceType.Keyboard
             };
         }
+
+        public void ToggleView(bool value)
+        {
+            _hintView.Toggle(value);
+        }
+
     }
 }
    

@@ -37,7 +37,8 @@ public class Character : EntityBase
         ItemController.Initialize(Camera, HandAnimationController);
         FlashlightController.Initialize();
         CharacterInput.Initialize();
-        Controller.Initialize(_audioService, this, _saveService.SettingsData.CharacterSettingsData.Sensitivity);
+        Controller.Initialize(_audioService, this);
+        CharacterStaticData.MouseSensitivity = _saveService.SettingsData.CharacterSettingsData.Sensitivity;
 
         CharacterInput.Bind(Controller);
     }

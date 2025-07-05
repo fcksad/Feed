@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 
 namespace Service
 {
-    public interface IControlService
+    public interface IControlsService
     {
         List<InputAction> GetAllActions();
         void Rebinding(InputAction action, Guid bindingId);

@@ -7,6 +7,8 @@ namespace Service
         public void ShowHint(string localizationAction, List<CharacterAction> actions);
         void HideHint(string localizationAction);
         void HideAll();
+        void ToggleView(bool value);
+
     }
 }
   

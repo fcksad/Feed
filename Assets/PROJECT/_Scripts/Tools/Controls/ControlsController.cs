@@ -50,7 +50,7 @@ public class ControlsController : MonoBehaviour
 
     private List<BindingReference> _bindings = new List<BindingReference>();
 
-    private IControlService _controlsService;
+    private IControlsService _controlsService;
     private ILocalizationService _localizationService;
     private MessageBoxController _messageBoxController;
     private DiContainer _container;
@@ -64,7 +64,7 @@ public class ControlsController : MonoBehaviour
 };
 
     [Inject]
-    public void Construct(IControlService controlService, MessageBoxController  messageBoxController, ILocalizationService localizationService, DiContainer container)
+    public void Construct(IControlsService controlService, MessageBoxController  messageBoxController, ILocalizationService localizationService, DiContainer container)
     {
         _controlsService = controlService;
         _localizationService = localizationService;
@@ -129,7 +129,6 @@ public class ControlsController : MonoBehaviour
 
     private void StartRebind(BindingReference bindingRef)
     {
-
         var signal = new MessageBoxSignal
         {
             TYpe = MessageBoxType.YesNo,

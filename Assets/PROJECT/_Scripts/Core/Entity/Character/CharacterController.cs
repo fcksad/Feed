@@ -26,7 +26,7 @@ public class CharacterController : MonoBehaviour , IControllable
     private float _crouchHeight = 1f;
 
     [Header("Look")]
-    private float _mouseSensitivity = 0.4f;
+    private float _mouseSensitivity => CharacterStaticData.MouseSensitivity;
     private const float _maxLookAngle = 85f;
     private float _verticalVelocity;
     private float _cameraPitch = 0f;
@@ -42,11 +42,10 @@ public class CharacterController : MonoBehaviour , IControllable
 
     private IAudioService _audioService;
 
-    public void Initialize(IAudioService audioService , Character character, float mouseSensitivity)
+    public void Initialize(IAudioService audioService , Character character)
     {
         _audioService = audioService;
         _character = character;
-        _mouseSensitivity = mouseSensitivity;
 
         _commandController = new CommandController();
         _footstepPlayer = new FootstepPlayer(audioService, _footstep, _footstepMask, _character.transform);
@@ -119,8 +118,6 @@ public class CharacterController : MonoBehaviour , IControllable
             _verticalVelocity = Mathf.Sqrt(2f * 9.81f * _jumpHeight); 
         }
     }
-
-
 
     public void Look(Vector2 delta)
     {

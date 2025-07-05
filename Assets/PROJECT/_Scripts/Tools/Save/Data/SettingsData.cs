@@ -8,6 +8,7 @@ public class SettingsData
     public ControlsData ControlsData;
     public CharacterSettingsData CharacterSettingsData;
     public FPSData FPSData;
+    public HintData HintData;
 
     public SettingsData() 
     {
@@ -17,5 +18,6 @@ public class SettingsData
         ControlsData = new ControlsData();
         CharacterSettingsData = new CharacterSettingsData();
         FPSData = new FPSData();
+        HintData = new HintData();
     }
 }

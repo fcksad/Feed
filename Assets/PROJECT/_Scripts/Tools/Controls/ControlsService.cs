@@ -6,7 +6,7 @@ using Zenject;
 
 namespace Service
 {
-    public class ControlsService : IControlService, IInitializable
+    public class ControlsService : IControlsService, IInitializable
     {
         private PlayerInput _playerInput;
         private const string RebindsKey = "InputRebinds";

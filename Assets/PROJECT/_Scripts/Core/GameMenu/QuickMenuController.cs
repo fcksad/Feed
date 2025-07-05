@@ -9,8 +9,6 @@ public class QuickMenuController : IInitializable, IDisposable
     private IInputService _inputService;
     private CharacterInput _characterInput;
 
-    private bool _active = false;
-
     [Inject]
     public QuickMenuController(QuickMenuView quickMenuView, IInputService inputService, CharacterInput characterInput)
     {
@@ -21,20 +19,29 @@ public class QuickMenuController : IInitializable, IDisposable
 
     public void Initialize()
     {
-        _inputService.AddActionListener(CharacterAction.Menu, onStarted: ToggleMenu);
-        _quickMenuView.ToggleButton.Button.onClick.AddListener(ToggleMenu);
+        _inputService.AddActionListener(CharacterAction.Menu, onStarted: EnableMenu);
+        _quickMenuView.ToggleButton.Button.onClick.AddListener(DisableMenu);
     }
 
     public void Dispose()
     {
-        _inputService.RemoveActionListener(CharacterAction.Menu, onStarted: ToggleMenu);
-        _quickMenuView.ToggleButton.Button.onClick.RemoveListener(ToggleMenu);
+        _inputService.RemoveActionListener(CharacterAction.Menu, onStarted: EnableMenu);
+        _quickMenuView.ToggleButton.Button.onClick.RemoveListener(DisableMenu);
+    }
+    public void EnableMenu()
+    {
+        _inputService.RemoveActionListener(CharacterAction.Menu, onStarted: EnableMenu);
+
+        _quickMenuView.Toggle(true);
+        _characterInput.Lock(true);
     }
 
-    public void ToggleMenu()
+    public void DisableMenu()
     {
-        _active = !_active;
-        _quickMenuView.Toggle(_active);
-        _characterInput.Lock(_active);
+        _quickMenuView.Toggle(false);
+        _characterInput.Lock(false);
+
+        _inputService.AddActionListener(CharacterAction.Menu, onStarted: EnableMenu);
     }
+
 }

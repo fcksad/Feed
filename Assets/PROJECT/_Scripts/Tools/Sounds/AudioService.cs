@@ -86,35 +86,34 @@ public class AudioService : IAudioService, IInitializable
 
     public void Stop(AudioConfig audio, float fade = 0)
     {
-        foreach (var kv in _namedSources.Where(key =>
-         key.Key.Item1 == audio.Type && (string.IsNullOrEmpty(audio.AudioName) || key.Key.Item2 == audio.AudioName)).ToList())
+        foreach (var target in _namedSources.Where(key => key.Key.Item1 == audio.Type && (string.IsNullOrEmpty(audio.AudioName) || key.Key.Item2 == audio.AudioName)).ToList())
         {
-            foreach (var source in kv.Value)
+            foreach (var source in target.Value)
             {
                 if (source == null) continue;
 
                 source.DOFade(0, fade).OnComplete(() => UnityEngine.Object.Destroy(source.gameObject));
             }
 
-            _namedSources.Remove(kv.Key);
+            _namedSources.Remove(target.Key);
         }
     }
 
     public void Pause(AudioConfig audio)
     {
-        foreach (var kv in _namedSources)
+        foreach (var source in _namedSources)
         {
-            if (kv.Key.Item1 == audio.Type && (audio.AudioName == null || kv.Key.Item2 == audio.AudioName))
-                kv.Value.ForEach(s => s?.Pause());
+            if (source.Key.Item1 == audio.Type && (audio.AudioName == null || source.Key.Item2 == audio.AudioName))
+                source.Value.ForEach(s => s?.Pause());
         }
     }
 
     public void Resume(AudioConfig audio)
     {
-        foreach (var kv in _namedSources)
+        foreach (var source in _namedSources)
         {
-            if (kv.Key.Item1 == audio.Type && (audio.AudioName == null || kv.Key.Item2 == audio.AudioName))
-                kv.Value.ForEach(s => s?.UnPause());
+            if (source.Key.Item1 == audio.Type && (audio.AudioName == null || source.Key.Item2 == audio.AudioName))
+                source.Value.ForEach(s => s?.UnPause());
         }
     }
 

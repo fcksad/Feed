@@ -186,4 +186,9 @@ public class InteractController : MonoBehaviour
 
         result[localized.Name] = actions;
     }
+
+    private void OnDestroy()
+    {
+        _hintService.HideAll();
+    }
 }

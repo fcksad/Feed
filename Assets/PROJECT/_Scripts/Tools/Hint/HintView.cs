@@ -1,5 +1,7 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Zenject;
 
 namespace Service
@@ -11,6 +13,7 @@ namespace Service
         [SerializeField] private HintImage _hintImage;
         [SerializeField] private HintImage _hintText;
         [SerializeField] private Transform _hintHolder;
+        [SerializeField] private HorizontalLayoutGroup _horizontalLayoutGroup;
 
         private Dictionary<string, HintGroup> _hints = new();
 
@@ -90,6 +93,18 @@ namespace Service
                 _instantiateFactoryService.Release(hint);
             }
             _hints.Clear();
+        }
+
+        public void Toggle(bool value)
+        {
+            _hintHolder.gameObject.SetActive(value);
+            StartCoroutine(RefreshLayoutNextFrame());
+        }
+        private IEnumerator RefreshLayoutNextFrame()
+        {
+            yield return new WaitForEndOfFrame(); 
+            _horizontalLayoutGroup.enabled = false;
+            _horizontalLayoutGroup.enabled = true;
         }
     }
 }

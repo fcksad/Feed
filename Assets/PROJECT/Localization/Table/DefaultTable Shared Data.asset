@@ -59,6 +59,10 @@ MonoBehaviour:
     m_Key: setting.sensitivity
     m_Metadata:
       m_Items: []
+  - m_Id: 25364340840169472
+    m_Key: settings.controlHints
+    m_Metadata:
+      m_Items: []
   - m_Id: 1394022907904
     m_Key: settings.game
     m_Metadata:

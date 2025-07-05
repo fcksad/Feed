@@ -37,5 +37,6 @@ public class SensitivitySettingsController : MonoBehaviour
     private void OnSliderChanged(float value)
     {
         _saveService.SettingsData.CharacterSettingsData.Sensitivity = value;
+        CharacterStaticData.MouseSensitivity = value;
     }
 }
