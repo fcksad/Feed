@@ -71,7 +71,6 @@ namespace Service
             return _actionDictionary.TryGetValue(action, out var config) && config.IsPressed();
         }
 
-
         public string GetActionKey(CharacterAction action, string controlScheme)
         {
             return _actionDictionary.TryGetValue(action, out var config) ? config.GetKeyName(controlScheme) : "";

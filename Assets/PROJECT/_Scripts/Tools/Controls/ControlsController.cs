@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Localization;
 using Zenject;
+using static UnityEngine.InputSystem.InputActionRebindingExtensions;
 
 public class BindingReference
 {
@@ -50,6 +51,9 @@ public class ControlsController : MonoBehaviour
 
     private List<BindingReference> _bindings = new List<BindingReference>();
 
+    private RebindingOperation _currentRebindOperation;//
+    private const float RebindTimeout = 10f;//
+
     private IControlsService _controlsService;
     private ILocalizationService _localizationService;
     private MessageBoxController _messageBoxController;
@@ -74,7 +78,7 @@ public class ControlsController : MonoBehaviour
 
     private void Awake()
     {
-        _actionMap = _controlsService.GetFirstActionMap(); //todo
+        _actionMap = _controlsService.GetFirstActionMap(); //todo, make change for gamepad
         GenerateBindings();
     }
 
@@ -82,7 +86,6 @@ public class ControlsController : MonoBehaviour
     {
         foreach (var controlPage in _controlPages)
         {
-
             foreach (var device in controlPage.Devices)
             {
                 if (!_deviceTags.TryGetValue(device, out var deviceTag))
@@ -93,6 +96,9 @@ public class ControlsController : MonoBehaviour
 
                 foreach (var action in _actionMap.actions)
                 {
+                    if (action.type != InputActionType.Button)
+                        continue;
+
                     for (int i = 0; i < action.bindings.Count; i++)
                     {
                         var binding = action.bindings[i];
@@ -144,7 +150,8 @@ public class ControlsController : MonoBehaviour
                     UpdateBindingUI(bindingRef);
                     CheckConflicts();
                 });
-            }
+                //таймер 10 сек, если ниче не нажать то выключается
+            },
         };
 
         _messageBoxController.Signal(signal);

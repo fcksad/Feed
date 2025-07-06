@@ -6,7 +6,7 @@ namespace Service
 {
     public interface IControlsService
     {
-        List<InputAction> GetAllActions();
+       // List<InputAction> GetAllActions();
         void Rebinding(InputAction action, Guid bindingId);
         void Binding(string name, int bindingIndex, Action value);
         InputActionMap GetFirstActionMap();

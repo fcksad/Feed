@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Zenject;
@@ -9,7 +8,6 @@ namespace Service
     public class ControlsService : IControlsService, IInitializable
     {
         private PlayerInput _playerInput;
-        private const string RebindsKey = "InputRebinds";
         private ISaveService _saveService;
 
         [Inject]
@@ -72,7 +70,7 @@ namespace Service
             }
         }
 
-        public List<InputAction> GetAllActions()
+      /*  public List<InputAction> GetAllActions()
         {
             List<InputAction> allActions = new List<InputAction>();
             foreach (var map in _playerInput.actions.actionMaps)
@@ -80,7 +78,7 @@ namespace Service
                 allActions.AddRange(map.actions);
             }
             return allActions;
-        }
+        }*/
 
         public InputActionMap GetFirstActionMap()
         {

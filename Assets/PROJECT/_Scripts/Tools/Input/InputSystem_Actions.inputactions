@@ -452,17 +452,6 @@
                 },
                 {
                     "name": "",
-                    "id": "936736cf-69c8-4ed6-af14-e4d70f745393",
-                    "path": "<Keyboard>/w",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Keyboard&Mouse",
-                    "action": "MoveUp",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "63783a5c-5542-4efa-ab64-ddcdb2e87129",
                     "path": "<Keyboard>/upArrow",
                     "interactions": "",
@@ -480,17 +469,6 @@
                     "processors": "",
                     "groups": ";Gamepad",
                     "action": "MoveUp",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "27abd343-9dc3-4701-9b18-392925701792",
-                    "path": "<Keyboard>/s",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Keyboard&Mouse",
-                    "action": "MoveDown",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -518,17 +496,6 @@
                 },
                 {
                     "name": "",
-                    "id": "438165f7-f292-4dd2-9297-93ac1c87b7d3",
-                    "path": "<Keyboard>/a",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Keyboard&Mouse",
-                    "action": "MoveLeft",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "c225d768-030e-4b85-8426-8feed538bdfd",
                     "path": "<Keyboard>/leftArrow",
                     "interactions": "",
@@ -546,17 +513,6 @@
                     "processors": "",
                     "groups": ";Gamepad",
                     "action": "MoveLeft",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "316885a3-0cf2-4457-a86e-c2634a0cb18d",
-                    "path": "<Keyboard>/d",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Keyboard&Mouse",
-                    "action": "MoveRight",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
