@@ -81,7 +81,7 @@ namespace Service
 
         public void Clear()
         {
-            foreach (var hint in _hints.Values)
+/*            foreach (var hint in _hints.Values)
             {
                 var hints = hint.GetHints();
 
@@ -92,6 +92,15 @@ namespace Service
 
                 _instantiateFactoryService.Release(hint);
             }
+            _hints.Clear();*/
+
+            foreach(var group in _hints.Values)
+    {
+                foreach (var item in group.GetHints())
+                    _instantiateFactoryService.Release(item);
+
+                _instantiateFactoryService.Release(group);
+            }
             _hints.Clear();
         }
 
@@ -100,6 +109,7 @@ namespace Service
             _hintHolder.gameObject.SetActive(value);
             StartCoroutine(RefreshLayoutNextFrame());
         }
+
         private IEnumerator RefreshLayoutNextFrame()
         {
             yield return new WaitForEndOfFrame(); 

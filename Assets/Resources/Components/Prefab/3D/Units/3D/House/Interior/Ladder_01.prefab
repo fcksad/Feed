@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 353577152377718311}
   - component: {fileID: 6058484319749660728}
   - component: {fileID: 8637200792922805295}
+  - component: {fileID: 5926858584439655424}
   m_Layer: 0
   m_Name: Ladder_01_LOD1
   m_TagString: Untagged
@@ -86,6 +87,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &5926858584439655424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1903831301487317686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad334509502307048832f52f6fcbf463, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _meshRenderer: {fileID: 8637200792922805295}
 --- !u!1 &5029357006442611511
 GameObject:
   m_ObjectHideFlags: 0
@@ -97,6 +111,7 @@ GameObject:
   - component: {fileID: 8718081361712349485}
   - component: {fileID: 7739029428159027218}
   - component: {fileID: 271802524014118947}
+  - component: {fileID: 6278774020698071859}
   m_Layer: 0
   m_Name: Ladder_01_LOD0
   m_TagString: Untagged
@@ -172,6 +187,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &6278774020698071859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5029357006442611511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad334509502307048832f52f6fcbf463, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _meshRenderer: {fileID: 271802524014118947}
 --- !u!1 &5972227449572524459
 GameObject:
   m_ObjectHideFlags: 0
@@ -246,6 +274,7 @@ GameObject:
   - component: {fileID: 5325486224600509578}
   - component: {fileID: 5941382999376016870}
   - component: {fileID: 2923408879619060291}
+  - component: {fileID: 5592728891433393840}
   m_Layer: 0
   m_Name: Ladder_01_LOD2
   m_TagString: Untagged
@@ -321,6 +350,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &5592728891433393840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6819826436236613846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad334509502307048832f52f6fcbf463, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _meshRenderer: {fileID: 2923408879619060291}
 --- !u!1 &7643411615308000038
 GameObject:
   m_ObjectHideFlags: 0

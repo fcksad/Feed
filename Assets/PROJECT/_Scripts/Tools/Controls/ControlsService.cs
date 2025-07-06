@@ -5,10 +5,15 @@ using Zenject;
 
 namespace Service
 {
+    /// <summary>
+    /// USe on input version 1.11.2
+    /// </summary>
     public class ControlsService : IControlsService, IInitializable
     {
         private PlayerInput _playerInput;
         private ISaveService _saveService;
+
+        public event Action OnBindingRebindEvent;
 
         [Inject]
         public ControlsService(ISaveService saveService, PlayerInput playerInput)
@@ -20,6 +25,13 @@ namespace Service
         public void Initialize()
         {
             LoadBindings();
+#if UNITY_EDITOR
+            string inputVersion = InputSystem.version.ToString();
+            if (inputVersion != "1.11.2" && inputVersion != "1.11.2") 
+            {
+                Debug.LogError($"Input System version {inputVersion} is not supported. Use version 1.11.2 for full compatibility.");
+            }
+#endif
         }
 
         public void Binding(string actionName, int bindingIndex, Action onComplete = null)
@@ -38,6 +50,7 @@ namespace Service
                 {
                     action.Enable();
                     SaveBinding(action, bindingIndex);
+                    OnBindingRebindEvent?.Invoke();
                     onComplete?.Invoke();
                 })
                 .Start();
@@ -68,17 +81,9 @@ namespace Service
                 action.RemoveBindingOverride(bindingIndex);
                 Save();
             }
-        }
 
-      /*  public List<InputAction> GetAllActions()
-        {
-            List<InputAction> allActions = new List<InputAction>();
-            foreach (var map in _playerInput.actions.actionMaps)
-            {
-                allActions.AddRange(map.actions);
-            }
-            return allActions;
-        }*/
+            OnBindingRebindEvent.Invoke();
+        }
 
         public InputActionMap GetFirstActionMap()
         {
@@ -130,7 +135,6 @@ namespace Service
                 }
             }
         }
-
     }
 }
 

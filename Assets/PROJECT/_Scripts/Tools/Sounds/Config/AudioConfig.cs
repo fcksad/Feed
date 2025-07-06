@@ -16,9 +16,10 @@ public class AudioConfig : ScriptableObject
 #if UNITY_EDITOR
     private void OnValidate()
     {
-        if (AudioClips.Count == 0) return;
+        if (AudioClips == null || AudioClips.Count == 0 || AudioClips[0] == null)
+            return;
 
-        if (AudioName == "" || AudioName != AudioClips[0].name)
+        if (string.IsNullOrEmpty(AudioName) || AudioName != AudioClips[0].name)
         {
             AudioName = AudioClips[0].name;
         }

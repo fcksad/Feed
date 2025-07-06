@@ -74,6 +74,7 @@ GameObject:
   - component: {fileID: 7503005784088218591}
   - component: {fileID: 241007693932416226}
   - component: {fileID: 7663190977466840967}
+  - component: {fileID: 7552963117545909923}
   m_Layer: 0
   m_Name: Ladder_02_LOD1
   m_TagString: Untagged
@@ -149,6 +150,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7552963117545909923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2391452079489854851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad334509502307048832f52f6fcbf463, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _meshRenderer: {fileID: 7663190977466840967}
 --- !u!1 &3208696351921939014
 GameObject:
   m_ObjectHideFlags: 0
@@ -214,6 +228,7 @@ GameObject:
   - component: {fileID: 1189567360032220280}
   - component: {fileID: 6837190888484296273}
   - component: {fileID: 3662541424816351535}
+  - component: {fileID: 1221516418389190831}
   m_Layer: 0
   m_Name: Ladder_02_LOD0
   m_TagString: Untagged
@@ -289,6 +304,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1221516418389190831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7270789610053101214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad334509502307048832f52f6fcbf463, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _meshRenderer: {fileID: 3662541424816351535}
 --- !u!1 &7297310378662594479
 GameObject:
   m_ObjectHideFlags: 0
@@ -300,6 +328,7 @@ GameObject:
   - component: {fileID: 6135078646074971759}
   - component: {fileID: 5527233201765968247}
   - component: {fileID: 3184206437202151153}
+  - component: {fileID: 3105257036149715790}
   m_Layer: 0
   m_Name: Ladder_02_LOD2
   m_TagString: Untagged
@@ -375,3 +404,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &3105257036149715790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7297310378662594479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad334509502307048832f52f6fcbf463, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _meshRenderer: {fileID: 3184206437202151153}
