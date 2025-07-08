@@ -23,7 +23,9 @@ public class FootstepPlayer
     public void TryPlayFootstep(Vector3 soundPoint)
     {
         if (!Physics.Raycast(_rayPoint.position, Vector3.down, out RaycastHit hit, _rayLength, _mask, QueryTriggerInteraction.Ignore))
-            return;
+        {
+            /*return;*/
+        }
 
         _materialBuffer.Clear();
 

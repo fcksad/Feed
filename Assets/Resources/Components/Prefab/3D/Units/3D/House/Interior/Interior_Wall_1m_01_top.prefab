@@ -50,7 +50,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: bccb2ab1a13a76542aa9cdad334439d0, type: 3}
       propertyPath: m_CastShadows
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: bccb2ab1a13a76542aa9cdad334439d0, type: 3}
       propertyPath: m_StaticShadowCaster
@@ -76,7 +76,7 @@ PrefabInstance:
       addedObject: {fileID: -6130068406989912486}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: bccb2ab1a13a76542aa9cdad334439d0, type: 3}
       insertIndex: -1
-      addedObject: {fileID: -8866935685365759190}
+      addedObject: {fileID: -2262018649272217801}
   m_SourcePrefab: {fileID: 100100000, guid: bccb2ab1a13a76542aa9cdad334439d0, type: 3}
 --- !u!23 &4983122885792609439 stripped
 MeshRenderer:
@@ -128,7 +128,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.09999999, y: 1.5000001, z: 2}
   m_Center: {x: -0.049999993, y: 0.74999994, z: -1}
---- !u!114 &-8866935685365759190
+--- !u!114 &-2262018649272217801
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -140,4 +140,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad334509502307048832f52f6fcbf463, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _meshRenderer: {fileID: 4983122885792609439}
+  _meshRenderers:
+  - {fileID: 4983122885792609439}

@@ -121,6 +121,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5298662830048516571}
   - component: {fileID: 1140183028393651882}
+  - component: {fileID: -5104900870945621987}
   m_Layer: 0
   m_Name: Windows_4m_09
   m_TagString: Untagged
@@ -168,6 +169,18 @@ LODGroup:
     renderers:
     - renderer: {fileID: 7446160431883909941}
   m_Enabled: 1
+--- !u!114 &-5104900870945621987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4810813525484880737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad334509502307048832f52f6fcbf463, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7881466654613507201
 GameObject:
   m_ObjectHideFlags: 0

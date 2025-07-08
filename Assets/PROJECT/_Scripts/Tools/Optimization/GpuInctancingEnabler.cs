@@ -1,42 +1,70 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class GpuInctancingEnabler : MonoBehaviour
 {
-    [SerializeField] private MeshRenderer _meshRenderer;
+    [SerializeField] private List<MeshRenderer> _meshRenderers;
     private void Awake()
     {
-        MaterialPropertyBlock materialPropertyBlock = new MaterialPropertyBlock();
-        _meshRenderer.SetPropertyBlock(materialPropertyBlock);
+        foreach (var mr in _meshRenderers)
+        {
+            var mpb = new MaterialPropertyBlock();
+            mr.SetPropertyBlock(mpb);
+        }
     }
 
 #if UNITY_EDITOR
     private void OnValidate()
     {
-        if (_meshRenderer == null)
-            _meshRenderer = GetComponent<MeshRenderer>();
+        var renderers = new System.Collections.Generic.List<MeshRenderer>();
+        CollectMeshRenderers(transform, renderers, includeInactive: true);
 
-        if (_meshRenderer == null)
+        foreach (var mr in renderers)
         {
-            Debug.LogError(gameObject.name + " Mesh in not valid");
-            return;
+            var mats = mr.sharedMaterials;
+            bool anyChanged = false;
+
+            for (int i = 0; i < mats.Length; i++)
+            {
+                var mat = mats[i];
+                if (mat != null && !mat.enableInstancing)
+                {
+                    mat.enableInstancing = true;
+                    anyChanged = true;
+                }
+            }
+
+            if (anyChanged)
+                mr.sharedMaterials = mats;
         }
 
+        _meshRenderers = renderers;
+    }
 
-        var mats = _meshRenderer.sharedMaterials;
-        bool anyChanged = false;
-
-        for (int i = 0; i < mats.Length; i++)
+    /// <summary>
+    /// Recursively collects MeshRenderer components on this transform and its children.
+    /// </summary>
+    private void CollectMeshRenderers(Transform root, System.Collections.Generic.List<MeshRenderer> outList, bool includeInactive)
+    {
+        foreach (Transform child in root)
         {
-            var mat = mats[i];
-            if (mat != null && !mat.enableInstancing)
+            if (includeInactive || child.gameObject.activeInHierarchy)
             {
-                mat.enableInstancing = true;
-                anyChanged = true;
+                var mr = child.GetComponent<MeshRenderer>();
+                if (mr != null)
+                    outList.Add(mr);
+
+                CollectMeshRenderers(child, outList, includeInactive);
             }
         }
 
-        if (anyChanged)
-            _meshRenderer.sharedMaterials = mats;
+        if (root == transform)
+        {
+            var selfMr = root.GetComponent<MeshRenderer>();
+            if (selfMr != null)
+                outList.Add(selfMr);
+        }
     }
+
 #endif
 }

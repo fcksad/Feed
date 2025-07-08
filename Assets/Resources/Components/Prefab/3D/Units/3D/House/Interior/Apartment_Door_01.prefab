@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1934721267219834310}
   - component: {fileID: 6666344585545290423}
+  - component: {fileID: -4124859833293010321}
   m_Layer: 0
   m_Name: Apartment_Door_01
   m_TagString: Untagged
@@ -66,6 +67,18 @@ LODGroup:
     - renderer: {fileID: 6498163202766672761}
     - renderer: {fileID: 897920022786932072}
   m_Enabled: 1
+--- !u!114 &-4124859833293010321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1266164680002928508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad334509502307048832f52f6fcbf463, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2536139027765514529
 GameObject:
   m_ObjectHideFlags: 0
@@ -79,7 +92,6 @@ GameObject:
   - component: {fileID: 116481176063638239}
   - component: {fileID: 3630390779807382315}
   - component: {fileID: 3809174583957832051}
-  - component: {fileID: 8249812930513591139}
   m_Layer: 0
   m_Name: Door_01_LOD0
   m_TagString: Untagged
@@ -210,19 +222,6 @@ MonoBehaviour:
   references:
     version: 2
     RefIds: []
---- !u!114 &8249812930513591139
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2536139027765514529}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad334509502307048832f52f6fcbf463, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _meshRenderer: {fileID: 116481176063638239}
 --- !u!1 &2762344493518635855
 GameObject:
   m_ObjectHideFlags: 0
@@ -265,7 +264,6 @@ GameObject:
   - component: {fileID: 6887132543629747408}
   - component: {fileID: 4890424893208499474}
   - component: {fileID: 897920022786932072}
-  - component: {fileID: 2833214152620173731}
   m_Layer: 0
   m_Name: Apartment_Door_01_LOD1
   m_TagString: Untagged
@@ -343,19 +341,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &2833214152620173731
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4404006325687653715}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad334509502307048832f52f6fcbf463, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _meshRenderer: {fileID: 897920022786932072}
 --- !u!1 &5554828412568087479
 GameObject:
   m_ObjectHideFlags: 0
@@ -370,7 +355,6 @@ GameObject:
   - component: {fileID: 5291914960279400561}
   - component: {fileID: 6396565141964732129}
   - component: {fileID: 7734720469036610367}
-  - component: {fileID: 3432812710242410100}
   m_Layer: 0
   m_Name: Apartment_Door_01_LOD0
   m_TagString: Untagged
@@ -511,19 +495,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.5221537, y: 0.69552755, z: 4}
   m_Center: {x: -0.23892316, y: 2.6522362, z: -2}
---- !u!114 &3432812710242410100
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5554828412568087479}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad334509502307048832f52f6fcbf463, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _meshRenderer: {fileID: 2588990998954560501}
 --- !u!1 &6494245589282629123
 GameObject:
   m_ObjectHideFlags: 0
@@ -535,7 +506,6 @@ GameObject:
   - component: {fileID: 4568968028992828391}
   - component: {fileID: 3281320627252913019}
   - component: {fileID: 6498163202766672761}
-  - component: {fileID: 1653177342767001974}
   m_Layer: 0
   m_Name: Door_01_LOD2
   m_TagString: Untagged
@@ -611,19 +581,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1653177342767001974
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6494245589282629123}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad334509502307048832f52f6fcbf463, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _meshRenderer: {fileID: 6498163202766672761}
 --- !u!1 &6541280550431324660
 GameObject:
   m_ObjectHideFlags: 0
@@ -635,7 +592,6 @@ GameObject:
   - component: {fileID: 7332678746345008610}
   - component: {fileID: 1877924599796701030}
   - component: {fileID: 7828598741395480512}
-  - component: {fileID: 1854873239355235092}
   m_Layer: 0
   m_Name: Door_01_LOD1
   m_TagString: Untagged
@@ -711,19 +667,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1854873239355235092
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6541280550431324660}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad334509502307048832f52f6fcbf463, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _meshRenderer: {fileID: 7828598741395480512}
 --- !u!1 &7387145588152175905
 GameObject:
   m_ObjectHideFlags: 0

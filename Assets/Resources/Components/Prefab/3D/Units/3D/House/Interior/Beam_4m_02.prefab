@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6620596354453456783}
   - component: {fileID: 4564510230322999121}
   - component: {fileID: 7189121720615551483}
-  - component: {fileID: 1879950529067915172}
+  - component: {fileID: -4879328255018578513}
   m_Layer: 0
   m_Name: Beam_4m_02
   m_TagString: Untagged
@@ -129,7 +129,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.50928134, y: 0.24773082, z: 4}
   m_Center: {x: 0.37603727, y: -0.12386541, z: 2}
---- !u!114 &1879950529067915172
+--- !u!114 &-4879328255018578513
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -141,4 +141,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad334509502307048832f52f6fcbf463, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _meshRenderer: {fileID: 6620596354453456783}

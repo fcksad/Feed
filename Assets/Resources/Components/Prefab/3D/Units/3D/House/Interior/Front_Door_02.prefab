@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 6122686689851274699}
   - component: {fileID: 4397560379179530511}
   - component: {fileID: 7720570482162174184}
-  - component: {fileID: 6985287480617996565}
   m_Layer: 0
   m_Name: Front_Door_Wall_02_LOD0
   m_TagString: Untagged
@@ -89,19 +88,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &6985287480617996565
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1749027629392232490}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad334509502307048832f52f6fcbf463, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _meshRenderer: {fileID: 7720570482162174184}
 --- !u!1 &2779772569690928813
 GameObject:
   m_ObjectHideFlags: 0
@@ -115,7 +101,6 @@ GameObject:
   - component: {fileID: 2536061038668064517}
   - component: {fileID: 4153703885387195384}
   - component: {fileID: 6680091126650731923}
-  - component: {fileID: 1413230492914973787}
   m_Layer: 0
   m_Name: Front_Door_02_LOD0
   m_TagString: Untagged
@@ -245,19 +230,6 @@ MonoBehaviour:
   references:
     version: 2
     RefIds: []
---- !u!114 &1413230492914973787
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2779772569690928813}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad334509502307048832f52f6fcbf463, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _meshRenderer: {fileID: 2536061038668064517}
 --- !u!1 &3139560685957367891
 GameObject:
   m_ObjectHideFlags: 0
@@ -269,7 +241,6 @@ GameObject:
   - component: {fileID: 1513900369116679920}
   - component: {fileID: 3092969328063019131}
   - component: {fileID: 5602161895874123095}
-  - component: {fileID: 5447607912253144858}
   m_Layer: 0
   m_Name: Front_Door_02_LOD1
   m_TagString: Untagged
@@ -345,19 +316,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &5447607912253144858
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3139560685957367891}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad334509502307048832f52f6fcbf463, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _meshRenderer: {fileID: 5602161895874123095}
 --- !u!1 &5076998183631446887
 GameObject:
   m_ObjectHideFlags: 0
@@ -369,7 +327,6 @@ GameObject:
   - component: {fileID: 5984430974160616464}
   - component: {fileID: 8991161652057170414}
   - component: {fileID: 737991072068523848}
-  - component: {fileID: 4463156360108619227}
   m_Layer: 0
   m_Name: Front_Door_Wall_02_LOD1
   m_TagString: Untagged
@@ -447,19 +404,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &4463156360108619227
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5076998183631446887}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad334509502307048832f52f6fcbf463, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _meshRenderer: {fileID: 737991072068523848}
 --- !u!1 &6194661939473235462
 GameObject:
   m_ObjectHideFlags: 0
@@ -470,6 +414,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6826344991009236156}
   - component: {fileID: 1794142612736824269}
+  - component: {fileID: -1511974157242775243}
   m_Layer: 0
   m_Name: Front_Door_02
   m_TagString: Untagged
@@ -521,6 +466,18 @@ LODGroup:
     - renderer: {fileID: 5602161895874123095}
     - renderer: {fileID: 737991072068523848}
   m_Enabled: 1
+--- !u!114 &-1511974157242775243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6194661939473235462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad334509502307048832f52f6fcbf463, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8976648141740050788
 GameObject:
   m_ObjectHideFlags: 0

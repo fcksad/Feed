@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6153414127687594053}
   - component: {fileID: 8302910555742221481}
   - component: {fileID: 8855598214626480654}
-  - component: {fileID: -6185136881891416068}
+  - component: {fileID: -705435059310191252}
   m_Layer: 0
   m_Name: Interstory_Platform_4x3m
   m_TagString: Untagged
@@ -52,7 +52,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5649112606290465168}
   m_Enabled: 1
-  m_CastShadows: 2
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 1
@@ -130,7 +130,7 @@ LODGroup:
     renderers:
     - renderer: {fileID: 6153414127687594053}
   m_Enabled: 1
---- !u!114 &-6185136881891416068
+--- !u!114 &-705435059310191252
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -142,4 +142,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad334509502307048832f52f6fcbf463, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _meshRenderer: {fileID: 6153414127687594053}
+  _meshRenderers:
+  - {fileID: 6153414127687594053}

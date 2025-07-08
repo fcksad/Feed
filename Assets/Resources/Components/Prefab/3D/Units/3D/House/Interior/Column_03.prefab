@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3827306678823759637}
   - component: {fileID: 771427916428620260}
   - component: {fileID: 936283595689111700}
-  - component: {fileID: 4677913744303592441}
+  - component: {fileID: -8883623949195326273}
   m_Layer: 0
   m_Name: Column_03
   m_TagString: Untagged
@@ -129,7 +129,7 @@ LODGroup:
     renderers:
     - renderer: {fileID: 3827306678823759637}
   m_Enabled: 1
---- !u!114 &4677913744303592441
+--- !u!114 &-8883623949195326273
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -141,4 +141,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad334509502307048832f52f6fcbf463, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _meshRenderer: {fileID: 3827306678823759637}

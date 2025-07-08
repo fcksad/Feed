@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4261270750408463196}
   - component: {fileID: 7360412487258502118}
   - component: {fileID: 3103490404685521964}
-  - component: {fileID: 4980595349553129603}
+  - component: {fileID: -2690620465967619854}
   m_Layer: 0
   m_Name: 'Wall_4m_01 '
   m_TagString: Untagged
@@ -130,7 +130,7 @@ LODGroup:
     renderers:
     - renderer: {fileID: 4261270750408463196}
   m_Enabled: 1
---- !u!114 &4980595349553129603
+--- !u!114 &-2690620465967619854
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -142,4 +142,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad334509502307048832f52f6fcbf463, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _meshRenderer: {fileID: 4261270750408463196}

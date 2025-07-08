@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 8208484333110938645}
   - component: {fileID: 5716942126235482945}
   - component: {fileID: 3140446243507097169}
-  - component: {fileID: 8099109903651635560}
   m_Layer: 0
   m_Name: Railing_01_LOD0
   m_TagString: Untagged
@@ -87,19 +86,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &8099109903651635560
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 247876449942883773}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad334509502307048832f52f6fcbf463, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _meshRenderer: {fileID: 3140446243507097169}
 --- !u!1 &783920758526765599
 GameObject:
   m_ObjectHideFlags: 0
@@ -111,7 +97,6 @@ GameObject:
   - component: {fileID: 5267440040264083322}
   - component: {fileID: 5274107102512346397}
   - component: {fileID: 1939860778054357036}
-  - component: {fileID: 1785962169447176977}
   m_Layer: 0
   m_Name: Railing_01_LOD2
   m_TagString: Untagged
@@ -187,19 +172,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1785962169447176977
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 783920758526765599}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad334509502307048832f52f6fcbf463, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _meshRenderer: {fileID: 1939860778054357036}
 --- !u!1 &2109822853390368748
 GameObject:
   m_ObjectHideFlags: 0
@@ -210,6 +182,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1588724038247982422}
   - component: {fileID: 5788910789593895463}
+  - component: {fileID: 8846070121487478849}
   m_Layer: 0
   m_Name: Railing_01
   m_TagString: Untagged
@@ -263,6 +236,18 @@ LODGroup:
     renderers:
     - renderer: {fileID: 1939860778054357036}
   m_Enabled: 1
+--- !u!114 &8846070121487478849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2109822853390368748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad334509502307048832f52f6fcbf463, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3840267330228652545
 GameObject:
   m_ObjectHideFlags: 0
@@ -328,7 +313,6 @@ GameObject:
   - component: {fileID: 2882229394844296160}
   - component: {fileID: 6522420809413925964}
   - component: {fileID: 4694182167369677916}
-  - component: {fileID: 446906844581882876}
   m_Layer: 0
   m_Name: Railing_01_LOD1
   m_TagString: Untagged
@@ -404,16 +388,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &446906844581882876
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6373161038786377255}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad334509502307048832f52f6fcbf463, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _meshRenderer: {fileID: 4694182167369677916}
