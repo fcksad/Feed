@@ -2,38 +2,39 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.Localization;
 using Localization;
+using Service;
+using Zenject;
 
-[RequireComponent(typeof(TMP_Text))]
+[RequireComponent(typeof(TextMeshProUGUI))]
 public class TextButtonListener : MonoBehaviour
 {
-    [SerializeField] protected LocalizedName _localizedName;
-    [SerializeField] private TMP_Text _targetText;
+    [SerializeField] protected LocalizationConfig _localizationConfig;
+    [SerializeField] private TextMeshProUGUI _targetText;
+
+    private ILocalizationService _localizationService;
+
+    [Inject]
+    public void Construct(ILocalizationService localizationService)
+    {
+        _localizationService = localizationService;
+    }
 
     private void Awake()
     {
-        if (_localizedName != null)
+        if (_localizationConfig == null)
         {
-            _localizedName.Init(UpdateText);
+            Debug.LogWarning($"Localization config not found -  ${gameObject.name}");
+            return;
         }
-    }
 
-    private void UpdateText(string localizedText)
-    {
-        if (_targetText != null)
-            _targetText.text = localizedText;
-    }
-
-    private void OnDestroy()
-    {
-        if (_localizedName != null)
-            _localizedName.Dispose();
+        _localizationService.BindTo(_targetText, _localizationConfig, this);
     }
 
     private void OnValidate()
     {
         if (_targetText == null)
         {
-            _targetText = GetComponent<TMP_Text>();
+            _targetText = GetComponent<TextMeshProUGUI>();
         }
     }
 }

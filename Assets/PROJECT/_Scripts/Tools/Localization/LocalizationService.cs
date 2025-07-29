@@ -5,43 +5,10 @@ using Zenject;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using UnityEngine.Localization;
+using TMPro;
 
 namespace Localization
 {
-    [Serializable]
-    public class LocalizedName
-    {
-        [SerializeField] private LocalizedString _localizedString;
-        public string Name { get; private set; }
-
-        private LocalizedString.ChangeHandler _internalHandler;
-        private Action<string> _externalHandler;
-
-        public void Init(Action<string> onChanged = null)
-        {
-            _externalHandler = onChanged;
-            _internalHandler = new LocalizedString.ChangeHandler(OnLocalizedStringChanged);
-            _localizedString.StringChanged += _internalHandler;
-            _localizedString.RefreshString();
-        }
-
-        public void Dispose()
-        {
-            if (_internalHandler != null)
-            {
-                _localizedString.StringChanged -= _internalHandler;
-                _internalHandler = null;
-                _externalHandler = null;
-            }
-        }
-
-        private void OnLocalizedStringChanged(string value)
-        {
-            Name = value;
-            _externalHandler?.Invoke(value);
-        }
-    }
-
     public class LocalizationService : ILocalizationService, IInitializable, IDisposable
     {
         public event Action OnLanguageChangedEvent;
@@ -79,26 +46,7 @@ namespace Localization
             SaveLanguage(localeCode);
         }
 
-        public string GetLocalizedString(string key, string tableName = "DefaultTable") //todo
-        {
-            var table = LocalizationSettings.StringDatabase.GetTable(tableName);
-
-            if (table == null)
-            {
-                Debug.LogError($"Table {tableName} not found!");
-                return key;
-            }
-
-            var entry = table.GetEntry(key);
-
-            if (entry == null)
-            {
-                Debug.LogWarning($"Key {key} not found in table {tableName}!");
-                return key;
-            }
-
-            return entry.GetLocalizedString();
-        }
+        public string CurrentLanguageCode => LocalizationSettings.SelectedLocale.Identifier.Code;
 
         public List<string> GetAvailableLanguages()
         {
@@ -113,8 +61,50 @@ namespace Localization
             return languages;
         }
 
-        public string CurrentLanguageCode => LocalizationSettings.SelectedLocale.Identifier.Code;
         private void SaveLanguage(string localeCode) => _saveService.SettingsData.LocalizationData.Localization = localeCode;
         private async void LoadLanguage() => await SetLanguage(_saveService.SettingsData.LocalizationData.Localization);
+
+        public string GetLocalizationString(LocalizationConfig config)
+        {
+            var op = config.LocalizedString.GetLocalizedStringAsync();
+            return op.IsDone ? op.Result : string.Empty;
+        }
+
+        public void Subscribe(LocalizationConfig config, Action<string> onChanged, out Action unsubscribe)
+        {
+            var localizedString = config.LocalizedString;
+
+            var handler = new LocalizedString.ChangeHandler(onChanged);
+            localizedString.StringChanged += handler;
+            localizedString.RefreshString();
+
+            void onLangChanged() => localizedString.RefreshString();
+            OnLanguageChangedEvent += onLangChanged;
+
+            unsubscribe = () =>
+            {
+                localizedString.StringChanged -= handler;
+                OnLanguageChangedEvent -= onLangChanged;
+            };
+        }
+        public void BindTo(TextMeshProUGUI label, LocalizationConfig config, MonoBehaviour owner)
+        {
+            Subscribe(config, value => label.text = value, out var unsubscribe);
+
+            if (owner != null)
+            {
+                void Cleanup() => unsubscribe?.Invoke();
+
+                owner.StartCoroutine(WaitForDestroy(owner, Cleanup));
+            }
+        }
+
+        private System.Collections.IEnumerator WaitForDestroy(MonoBehaviour owner, Action onDestroyed)
+        {
+            while (owner != null)
+                yield return null;
+
+            onDestroyed?.Invoke();
+        }
     }
 }

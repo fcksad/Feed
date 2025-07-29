@@ -1,20 +1,22 @@
 using Localization;
+using System;
 using UnityEngine;
+using Zenject;
 
 public class InteractableObject : MonoBehaviour, IInteractable
 {
-    [SerializeField] protected LocalizedName _localizedName;
-    public string Name => _localizedName.Name;
+    [SerializeField] protected LocalizationConfig _localizationConfig;
+    public string Name { get => _localizationService.GetLocalizationString(_localizationConfig);}
 
-    protected virtual void Start()
+    private ILocalizationService _localizationService;
+
+    [Inject]
+    public void Construct(ILocalizationService localizationService)
     {
-        _localizedName.Init();
+        _localizationService = localizationService;
     }
 
     public virtual void Interact() { }
 
-    protected virtual void Destroy()
-    {
-        _localizedName.Dispose();
-    }
+
 }

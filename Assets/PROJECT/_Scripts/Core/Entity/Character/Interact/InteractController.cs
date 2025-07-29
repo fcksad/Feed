@@ -22,31 +22,29 @@ public class InteractController : MonoBehaviour
     private IInputService _inputService;
     private IHintService _hintService;
     private IAudioService _audioService;
+    private ILocalizationService _localizationService;
 
     [Header("Hint")]
     private readonly Dictionary<string, List<CharacterAction>> _activeHints = new();
     private readonly List<CharacterAction> _interactHints = new List<CharacterAction>{ CharacterAction.Interact };
-    [SerializeField] private LocalizedName _interactLocalized;
-    [SerializeField] private LocalizedName _useLocalized;
+    [SerializeField] private LocalizationConfig _interactLocalization;
+    [SerializeField] private LocalizationConfig _useLocalization;
 
     private readonly List<CharacterAction> _grabHints = new List<CharacterAction> { CharacterAction.Attack1 };
-    [SerializeField] private LocalizedName _grabLocalized;
+    [SerializeField] private LocalizationConfig _grabLocalization;
 
     [Inject]
-    public void Construct(IInputService inputService, IHintService hintService, IAudioService audioService, ScreenPointIndicator screenPointIndicator)
+    public void Construct(IInputService inputService, IHintService hintService, IAudioService audioService, ScreenPointIndicator screenPointIndicator, ILocalizationService localizationService)
     {
         _inputService = inputService;
         _hintService = hintService;
         _audioService = audioService;
         _screenPointIndicator = screenPointIndicator;
+        _localizationService = localizationService;
     }
 
     public void Initialize(GrabController grabController, ItemController itemController, Camera camera)
     {
-        _interactLocalized.Init();
-        _useLocalized.Init();
-        _grabLocalized.Init();
-
         _grabController = grabController;
         _itemController = itemController;
         _camera = camera;
@@ -63,10 +61,6 @@ public class InteractController : MonoBehaviour
         _inputService.RemoveActionListener(CharacterAction.Interact, onPerformed: OnInteract);
         _inputService.RemoveActionListener(CharacterAction.Attack1, onStarted: OnGrabStarted);
         _inputService.RemoveActionListener(CharacterAction.Attack1, onCanceled: OnGrabCanceled);
-
-        _interactLocalized.Dispose();
-        _useLocalized.Dispose();
-        _grabLocalized.Dispose();
     }
 
     private void FixedUpdate()
@@ -139,16 +133,16 @@ public class InteractController : MonoBehaviour
 
         if (interactable is IUsable)
         {
-            TryAddHint(_useLocalized, _interactHints, newHints);
+            TryAddHint(_useLocalization, _interactHints, newHints);
         }
         else
         {
-            TryAddHint(_interactLocalized, _interactHints, newHints);
+            TryAddHint(_interactLocalization, _interactHints, newHints);
         }
 
         if (interactable is IGrabbable)
         {
-            TryAddHint(_grabLocalized, _grabHints, newHints);
+            TryAddHint(_grabLocalization, _grabHints, newHints);
         }
 
 
@@ -179,12 +173,12 @@ public class InteractController : MonoBehaviour
         _activeHints.Clear();
     }
 
-    private void TryAddHint(LocalizedName localized, List<CharacterAction> actions, Dictionary<string, List<CharacterAction>> result)
+    private void TryAddHint(LocalizationConfig localization, List<CharacterAction> actions, Dictionary<string, List<CharacterAction>> result)
     {
-        if (localized == null || string.IsNullOrEmpty(localized.Name))
+        if (localization == null)
             return;
 
-        result[localized.Name] = actions;
+        result[_localizationService.GetLocalizationString(localization)] = actions;
     }
 
     private void OnDestroy()

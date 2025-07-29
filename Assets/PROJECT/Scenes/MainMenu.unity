@@ -1451,20 +1451,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09d436cd3533c2246a092c103c2886de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _localizedName:
-    _localizedString:
-      m_TableReference:
-        m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
-      m_TableEntryReference:
-        m_KeyId: 1025066762240
-        m_Key: 
-      m_FallbackState: 0
-      m_WaitForCompletion: 0
-      m_LocalVariables: []
+  _localizationConfig: {fileID: 11400000, guid: a1389c6b7b4a1434ca405f73c2d8db76, type: 2}
   _targetText: {fileID: 2379301994186575568}
-  references:
-    version: 2
-    RefIds: []
 --- !u!114 &3968614889683885047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1477,20 +1465,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09d436cd3533c2246a092c103c2886de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _localizedName:
-    _localizedString:
-      m_TableReference:
-        m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
-      m_TableEntryReference:
-        m_KeyId: 12318507008
-        m_Key: 
-      m_FallbackState: 0
-      m_WaitForCompletion: 0
-      m_LocalVariables: []
+  _localizationConfig: {fileID: 11400000, guid: 1b7a71b382c543a43b50b485eec661dc, type: 2}
   _targetText: {fileID: 2379301994809825035}
-  references:
-    version: 2
-    RefIds: []
 --- !u!114 &3968614889866030252
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1503,20 +1479,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09d436cd3533c2246a092c103c2886de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _localizedName:
-    _localizedString:
-      m_TableReference:
-        m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
-      m_TableEntryReference:
-        m_KeyId: 483833774080
-        m_Key: 
-      m_FallbackState: 0
-      m_WaitForCompletion: 0
-      m_LocalVariables: []
+  _localizationConfig: {fileID: 11400000, guid: 32015cada569cb743a566219e66585dc, type: 2}
   _targetText: {fileID: 2379301995029848144}
-  references:
-    version: 2
-    RefIds: []
 --- !u!1001 &4023004556067716057
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2031,14 +1995,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1607374442284410683, guid: 8cc7ab0d7558f7e4285666a07fe8d70a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3979195632056527010, guid: 8cc7ab0d7558f7e4285666a07fe8d70a, type: 3}
-      propertyPath: '_controlPages.Array.data[0].Devices.Array.data[0]'
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3979195632056527010, guid: 8cc7ab0d7558f7e4285666a07fe8d70a, type: 3}
-      propertyPath: '_controlPages.Array.data[0].Devices.Array.data[1]'
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7889543837193544862, guid: 8cc7ab0d7558f7e4285666a07fe8d70a, type: 3}

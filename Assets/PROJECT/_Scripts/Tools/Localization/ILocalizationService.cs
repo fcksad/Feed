@@ -1,14 +1,18 @@
+using Localization;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using UnityEngine;
 
 public interface ILocalizationService 
 {
-    string CurrentLanguageCode { get; }
-
     event Action OnLanguageChangedEvent;
 
-    List<string> GetAvailableLanguages();
-    public string GetLocalizedString(string key, string tableName = "DefaultTable");
     public Task SetLanguage(string localeCode);
+    string CurrentLanguageCode { get; }
+    List<string> GetAvailableLanguages();
+
+    string GetLocalizationString(LocalizationConfig config);
+    void Subscribe(LocalizationConfig config, Action<string> onChanged, out Action unsubscribe);
+    void BindTo(TMPro.TextMeshProUGUI label, LocalizationConfig config, MonoBehaviour owner);
 }

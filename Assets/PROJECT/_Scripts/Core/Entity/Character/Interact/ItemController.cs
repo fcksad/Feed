@@ -1,5 +1,6 @@
 using Localization;
 using Service;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
@@ -14,24 +15,24 @@ public class ItemController : MonoBehaviour
     private HandAnimationController _handAnimator;
 
     private readonly List<CharacterAction> _dropHints = new List<CharacterAction> { CharacterAction.Drop };
-    [SerializeField] private LocalizedName _dropLocalized;
+    [SerializeField] private LocalizationConfig _dropLocalization;
 
     private IUsable _usable;
 
     private IInputService _inputService;
     private IHintService _hintService;
+    private ILocalizationService _localizationService;
 
     [Inject]
-    public void Construct(IInputService inputService, IHintService hintService)
+    public void Construct(IInputService inputService, IHintService hintService, ILocalizationService localizationService)
     {
         _inputService = inputService;
         _hintService = hintService;
+        _localizationService = localizationService;
     }
 
     public void Initialize(Camera camera , HandAnimationController handAnimationController)
     {
-        _dropLocalized.Init();
-
         _camera = camera;
         _handAnimator = handAnimationController;
 
@@ -43,8 +44,6 @@ public class ItemController : MonoBehaviour
     {
         _inputService.RemoveActionListener(CharacterAction.Drop, onStarted: Drop);
         _inputService.RemoveActionListener(CharacterAction.Attack, onStarted: Use);
-
-        _dropLocalized.Dispose();
     }
 
     public void Equip(IUsable item)
@@ -56,7 +55,7 @@ public class ItemController : MonoBehaviour
         {
             usableObject.Initialize(_handAnimator, _camera);
             usableObject.OnEquip(_handPoint, _handMask);
-            _hintService.ShowHint(_dropLocalized.Name, _dropHints);
+            _hintService.ShowHint(_localizationService.GetLocalizationString(_dropLocalization), _dropHints);
         }
     }
 
@@ -74,6 +73,6 @@ public class ItemController : MonoBehaviour
 
         _usable = null;
         _handAnimator.ResetToDefault();
-        _hintService.HideHint(_dropLocalized.Name);
+        _hintService.HideHint(_localizationService.GetLocalizationString(_dropLocalization));
     }
 }

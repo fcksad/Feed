@@ -239,20 +239,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09d436cd3533c2246a092c103c2886de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _localizedName:
-    _localizedString:
-      m_TableReference:
-        m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
-      m_TableEntryReference:
-        m_KeyId: 21041412942168064
-        m_Key: 
-      m_FallbackState: 0
-      m_WaitForCompletion: 0
-      m_LocalVariables: []
+  _localizationConfig: {fileID: 11400000, guid: 2c69f12c388998c4ca50ee32192b4891, type: 2}
   _targetText: {fileID: 2870153825460034758}
-  references:
-    version: 2
-    RefIds: []
 --- !u!1 &381508613398318759
 GameObject:
   m_ObjectHideFlags: 0
@@ -899,20 +887,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09d436cd3533c2246a092c103c2886de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _localizedName:
-    _localizedString:
-      m_TableReference:
-        m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
-      m_TableEntryReference:
-        m_KeyId: 1681022353408
-        m_Key: 
-      m_FallbackState: 0
-      m_WaitForCompletion: 0
-      m_LocalVariables: []
+  _localizationConfig: {fileID: 11400000, guid: 2bcf431bcc2140d4093fe1748fa989f2, type: 2}
   _targetText: {fileID: 7602802052660560337}
-  references:
-    version: 2
-    RefIds: []
 --- !u!1 &1446471007038769640
 GameObject:
   m_ObjectHideFlags: 0
@@ -1313,20 +1289,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09d436cd3533c2246a092c103c2886de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _localizedName:
-    _localizedString:
-      m_TableReference:
-        m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
-      m_TableEntryReference:
-        m_KeyId: 1654686318592
-        m_Key: 
-      m_FallbackState: 0
-      m_WaitForCompletion: 0
-      m_LocalVariables: []
+  _localizationConfig: {fileID: 11400000, guid: 4514d65c855676c46a3f7d4a58a4593b, type: 2}
   _targetText: {fileID: 360562911861328504}
-  references:
-    version: 2
-    RefIds: []
 --- !u!1 &1724565455364346780
 GameObject:
   m_ObjectHideFlags: 0
@@ -1551,20 +1515,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09d436cd3533c2246a092c103c2886de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _localizedName:
-    _localizedString:
-      m_TableReference:
-        m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
-      m_TableEntryReference:
-        m_KeyId: 166117146198016
-        m_Key: 
-      m_FallbackState: 0
-      m_WaitForCompletion: 0
-      m_LocalVariables: []
+  _localizationConfig: {fileID: 11400000, guid: 01e21dd11bc9ff5428924d63feececc5, type: 2}
   _targetText: {fileID: 575345087045593641}
-  references:
-    version: 2
-    RefIds: []
 --- !u!1 &2188259633665382828
 GameObject:
   m_ObjectHideFlags: 0
@@ -1948,20 +1900,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09d436cd3533c2246a092c103c2886de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _localizedName:
-    _localizedString:
-      m_TableReference:
-        m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
-      m_TableEntryReference:
-        m_KeyId: 21041412979916800
-        m_Key: 
-      m_FallbackState: 0
-      m_WaitForCompletion: 0
-      m_LocalVariables: []
+  _localizationConfig: {fileID: 11400000, guid: ff45fb9f392bcf141bf29cbb5bcc9913, type: 2}
   _targetText: {fileID: 814107761943514832}
-  references:
-    version: 2
-    RefIds: []
 --- !u!1 &2452160221927914132
 GameObject:
   m_ObjectHideFlags: 0
@@ -2111,20 +2051,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09d436cd3533c2246a092c103c2886de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _localizedName:
-    _localizedString:
-      m_TableReference:
-        m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
-      m_TableEntryReference:
-        m_KeyId: 336218449346560
-        m_Key: 
-      m_FallbackState: 0
-      m_WaitForCompletion: 0
-      m_LocalVariables: []
+  _localizationConfig: {fileID: 11400000, guid: e177ad16c53c63d4cbaa48e0d3a282bd, type: 2}
   _targetText: {fileID: 487657291893800182}
-  references:
-    version: 2
-    RefIds: []
 --- !u!1 &2484210155289025907
 GameObject:
   m_ObjectHideFlags: 0
@@ -2349,20 +2277,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09d436cd3533c2246a092c103c2886de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _localizedName:
-    _localizedString:
-      m_TableReference:
-        m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
-      m_TableEntryReference:
-        m_KeyId: 1704313323520
-        m_Key: 
-      m_FallbackState: 0
-      m_WaitForCompletion: 0
-      m_LocalVariables: []
+  _localizationConfig: {fileID: 11400000, guid: c38d44b22968c494c99ebd3c337bab54, type: 2}
   _targetText: {fileID: 546391438444047395}
-  references:
-    version: 2
-    RefIds: []
 --- !u!1 &2686737022349616908
 GameObject:
   m_ObjectHideFlags: 0
@@ -2851,20 +2767,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09d436cd3533c2246a092c103c2886de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _localizedName:
-    _localizedString:
-      m_TableReference:
-        m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
-      m_TableEntryReference:
-        m_KeyId: 9258430988290
-        m_Key: 
-      m_FallbackState: 0
-      m_WaitForCompletion: 0
-      m_LocalVariables: []
+  _localizationConfig: {fileID: 11400000, guid: 44bae60aae04e6a4bba063281d4ad088, type: 2}
   _targetText: {fileID: 2839415561104311124}
-  references:
-    version: 2
-    RefIds: []
 --- !u!1 &3626313881436497347
 GameObject:
   m_ObjectHideFlags: 0
@@ -3549,20 +3453,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09d436cd3533c2246a092c103c2886de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _localizedName:
-    _localizedString:
-      m_TableReference:
-        m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
-      m_TableEntryReference:
-        m_KeyId: 1604430168064
-        m_Key: 
-      m_FallbackState: 0
-      m_WaitForCompletion: 0
-      m_LocalVariables: []
+  _localizationConfig: {fileID: 11400000, guid: 94b4087bbb87c794cac6c1050ec4c9a4, type: 2}
   _targetText: {fileID: 5142851220257750458}
-  references:
-    version: 2
-    RefIds: []
 --- !u!1 &5009589301790639396
 GameObject:
   m_ObjectHideFlags: 0
@@ -3964,20 +3856,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09d436cd3533c2246a092c103c2886de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _localizedName:
-    _localizedString:
-      m_TableReference:
-        m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
-      m_TableEntryReference:
-        m_KeyId: 25364340840169472
-        m_Key: 
-      m_FallbackState: 0
-      m_WaitForCompletion: 0
-      m_LocalVariables: []
+  _localizationConfig: {fileID: 11400000, guid: f5dced2dfb0bfaa439106a1577ca6acb, type: 2}
   _targetText: {fileID: 5040954170665105303}
-  references:
-    version: 2
-    RefIds: []
 --- !u!1 &5574520868140505508
 GameObject:
   m_ObjectHideFlags: 0
@@ -4294,20 +4174,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09d436cd3533c2246a092c103c2886de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _localizedName:
-    _localizedString:
-      m_TableReference:
-        m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
-      m_TableEntryReference:
-        m_KeyId: 9258430988289
-        m_Key: 
-      m_FallbackState: 0
-      m_WaitForCompletion: 0
-      m_LocalVariables: []
+  _localizationConfig: {fileID: 11400000, guid: d3f4c3e5840996c4ab000ba27ec53189, type: 2}
   _targetText: {fileID: 9136658195418810236}
-  references:
-    version: 2
-    RefIds: []
 --- !u!1 &6020295013513404497
 GameObject:
   m_ObjectHideFlags: 0
@@ -4493,20 +4361,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09d436cd3533c2246a092c103c2886de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _localizedName:
-    _localizedString:
-      m_TableReference:
-        m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
-      m_TableEntryReference:
-        m_KeyId: 9258430988291
-        m_Key: 
-      m_FallbackState: 0
-      m_WaitForCompletion: 0
-      m_LocalVariables: []
+  _localizationConfig: {fileID: 11400000, guid: bc769d632bc29e746be4520ef1723874, type: 2}
   _targetText: {fileID: 2202156244245372677}
-  references:
-    version: 2
-    RefIds: []
 --- !u!1 &6382855311572622368
 GameObject:
   m_ObjectHideFlags: 0
@@ -5082,20 +4938,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09d436cd3533c2246a092c103c2886de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _localizedName:
-    _localizedString:
-      m_TableReference:
-        m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
-      m_TableEntryReference:
-        m_KeyId: 9258430988288
-        m_Key: 
-      m_FallbackState: 0
-      m_WaitForCompletion: 0
-      m_LocalVariables: []
+  _localizationConfig: {fileID: 11400000, guid: dd8ff80a8c31abe4db6b9080edc3fe32, type: 2}
   _targetText: {fileID: 2137304229860524486}
-  references:
-    version: 2
-    RefIds: []
 --- !u!1 &8122167065202586911
 GameObject:
   m_ObjectHideFlags: 0
@@ -5274,6 +5118,10 @@ PrefabInstance:
       propertyPath: m_text
       value: Keyboard
       objectReference: {fileID: 0}
+    - target: {fileID: 3968614890932055884, guid: 708be1315ba5a994f9c2e3195f3dfcb9, type: 3}
+      propertyPath: _localizationConfig
+      value: 
+      objectReference: {fileID: 11400000, guid: 14115839e6763d043967dcbf5b5e710b, type: 2}
     - target: {fileID: 3968614890932055884, guid: 708be1315ba5a994f9c2e3195f3dfcb9, type: 3}
       propertyPath: _localizedString.m_TableEntryReference.m_KeyId
       value: 336218487095296
@@ -5679,6 +5527,10 @@ PrefabInstance:
       propertyPath: m_text
       value: Controller
       objectReference: {fileID: 0}
+    - target: {fileID: 3968614890932055884, guid: 708be1315ba5a994f9c2e3195f3dfcb9, type: 3}
+      propertyPath: _localizationConfig
+      value: 
+      objectReference: {fileID: 11400000, guid: a4d40285cf945024cb94dd4aa30ccb14, type: 2}
     - target: {fileID: 3968614890932055884, guid: 708be1315ba5a994f9c2e3195f3dfcb9, type: 3}
       propertyPath: _localizedString.m_TableEntryReference.m_KeyId
       value: 336218487095297
@@ -6094,6 +5946,10 @@ PrefabInstance:
       value: Controls
       objectReference: {fileID: 0}
     - target: {fileID: 3968614890932055884, guid: 708be1315ba5a994f9c2e3195f3dfcb9, type: 3}
+      propertyPath: _localizationConfig
+      value: 
+      objectReference: {fileID: 11400000, guid: a0f87aa03d93c6149afb532e82f9376f, type: 2}
+    - target: {fileID: 3968614890932055884, guid: 708be1315ba5a994f9c2e3195f3dfcb9, type: 3}
       propertyPath: _localizedString.m_TableEntryReference.m_KeyId
       value: 1497316032512
       objectReference: {fileID: 0}
@@ -6251,6 +6107,10 @@ PrefabInstance:
       propertyPath: m_text
       value: Video
       objectReference: {fileID: 0}
+    - target: {fileID: 3968614890932055884, guid: 708be1315ba5a994f9c2e3195f3dfcb9, type: 3}
+      propertyPath: _localizationConfig
+      value: 
+      objectReference: {fileID: 11400000, guid: a0bfa834ff1d5f841889ebf78ee2d85f, type: 2}
     - target: {fileID: 3968614890932055884, guid: 708be1315ba5a994f9c2e3195f3dfcb9, type: 3}
       propertyPath: _localizedString.m_TableEntryReference.m_KeyId
       value: 1462125821952
@@ -6986,6 +6846,10 @@ PrefabInstance:
       value: Game
       objectReference: {fileID: 0}
     - target: {fileID: 3968614890932055884, guid: 708be1315ba5a994f9c2e3195f3dfcb9, type: 3}
+      propertyPath: _localizationConfig
+      value: 
+      objectReference: {fileID: 11400000, guid: dbcf88b47a21a45408084ec42a503c48, type: 2}
+    - target: {fileID: 3968614890932055884, guid: 708be1315ba5a994f9c2e3195f3dfcb9, type: 3}
       propertyPath: _localizedString.m_TableEntryReference.m_KeyId
       value: 1394022907904
       objectReference: {fileID: 0}
@@ -7472,6 +7336,10 @@ PrefabInstance:
       value: HUD
       objectReference: {fileID: 0}
     - target: {fileID: 3968614890932055884, guid: 708be1315ba5a994f9c2e3195f3dfcb9, type: 3}
+      propertyPath: _localizationConfig
+      value: 
+      objectReference: {fileID: 11400000, guid: d54c55c8a40947e4f9987d32272d34b4, type: 2}
+    - target: {fileID: 3968614890932055884, guid: 708be1315ba5a994f9c2e3195f3dfcb9, type: 3}
       propertyPath: _localizedString.m_TableEntryReference.m_KeyId
       value: 1408489062400
       objectReference: {fileID: 0}
@@ -7871,6 +7739,10 @@ PrefabInstance:
       propertyPath: m_text
       value: Audio
       objectReference: {fileID: 0}
+    - target: {fileID: 3968614890932055884, guid: 708be1315ba5a994f9c2e3195f3dfcb9, type: 3}
+      propertyPath: _localizationConfig
+      value: 
+      objectReference: {fileID: 11400000, guid: f4d91f69a9691c9419a476014972d553, type: 2}
     - target: {fileID: 3968614890932055884, guid: 708be1315ba5a994f9c2e3195f3dfcb9, type: 3}
       propertyPath: _localizedString.m_TableEntryReference.m_KeyId
       value: 9258426793984
@@ -9100,6 +8972,10 @@ PrefabInstance:
       propertyPath: m_text
       value: Back
       objectReference: {fileID: 0}
+    - target: {fileID: 3968614890932055884, guid: 708be1315ba5a994f9c2e3195f3dfcb9, type: 3}
+      propertyPath: _localizationConfig
+      value: 
+      objectReference: {fileID: 11400000, guid: f309821b65f81ab44bcb64a3046b719f, type: 2}
     - target: {fileID: 3968614890932055884, guid: 708be1315ba5a994f9c2e3195f3dfcb9, type: 3}
       propertyPath: _localizedString.m_TableEntryReference.m_KeyId
       value: 518558416896
