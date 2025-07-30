@@ -155,21 +155,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15f26c68b2f88bc46827712b6f415518, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _localizedName:
-    _localizedString:
-      m_TableReference:
-        m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
-      m_TableEntryReference:
-        m_KeyId: 24917243309424648
-        m_Key: 
-      m_FallbackState: 0
-      m_WaitForCompletion: 0
-      m_LocalVariables: []
+  _localizationConfig: {fileID: 11400000, guid: bd5c262c20029584a99c85a503d4ea69, type: 2}
   _soundPoint: {fileID: 8394046648791489824}
   _doorBell: {fileID: 11400000, guid: 5dfd372f9445d3142b782f692fb81887, type: 2}
-  references:
-    version: 2
-    RefIds: []
 --- !u!1 &1621556592995394717
 GameObject:
   m_ObjectHideFlags: 0
@@ -280,6 +268,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad334509502307048832f52f6fcbf463, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _meshRenderers:
+  - {fileID: 6271794147840540511}
+  - {fileID: 3922056183384060518}
+  - {fileID: 6731842592682934270}
+  - {fileID: 7282757493266223585}
+  - {fileID: 5290960838581794779}
 --- !u!1 &3103154938781802536
 GameObject:
   m_ObjectHideFlags: 0
@@ -575,16 +569,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02ceb1bafa5c6db46a32fa976b36f622, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _localizedName:
-    _localizedString:
-      m_TableReference:
-        m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
-      m_TableEntryReference:
-        m_KeyId: 24917243309424643
-        m_Key: 
-      m_FallbackState: 0
-      m_WaitForCompletion: 0
-      m_LocalVariables: []
+  _localizationConfig: {fileID: 11400000, guid: b45bbe33885b6ae44bc043c92025d17e, type: 2}
   _openAngle: 93
   _openSpeed: 1.6
   _isOpen: 0
@@ -592,9 +577,6 @@ MonoBehaviour:
   _openedRotation: {x: 0, y: 0.72537434, z: 0, w: 0.6883546}
   _open: {fileID: 11400000, guid: 6f6db002ee016e54381dec95fff9a1d8, type: 2}
   _close: {fileID: 11400000, guid: 507b7be832c13ea43b70f03f1e6a4d62, type: 2}
-  references:
-    version: 2
-    RefIds: []
 --- !u!1 &8716059208616021094
 GameObject:
   m_ObjectHideFlags: 0

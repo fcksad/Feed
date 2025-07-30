@@ -24,14 +24,16 @@ public class FootstepPlayer
     {
         if (!Physics.Raycast(_rayPoint.position, Vector3.down, out RaycastHit hit, _rayLength, _mask, QueryTriggerInteraction.Ignore))
         {
-            /*return;*/
         }
 
         _materialBuffer.Clear();
 
-        var renderer = hit.collider.GetComponent<Renderer>();
-        if (renderer != null)
-            _materialBuffer.AddRange(renderer.sharedMaterials);
+        if (hit.collider != null)
+        {
+            var renderer = hit.collider?.GetComponent<Renderer>();
+            if (renderer != null)
+                _materialBuffer.AddRange(renderer.sharedMaterials);
+        }
 
         var config = _footstepConfig.GetConfigByMaterial(_materialBuffer);
         if (config != null)

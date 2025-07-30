@@ -1,20 +1,19 @@
 using Service;
 using System;
+using UnityEngine;
 using Zenject;
+using static UnityEngine.Rendering.DebugUI;
 
 public class QuickMenuController : IInitializable, IDisposable
 {
     private QuickMenuView _quickMenuView;
-
     private IInputService _inputService;
-    private CharacterInput _characterInput;
 
     [Inject]
-    public QuickMenuController(QuickMenuView quickMenuView, IInputService inputService, CharacterInput characterInput)
+    public QuickMenuController(QuickMenuView quickMenuView, IInputService inputService)
     {
         _quickMenuView = quickMenuView;
         _inputService = inputService;
-        _characterInput = characterInput;   
     }
 
     public void Initialize()
@@ -33,15 +32,18 @@ public class QuickMenuController : IInitializable, IDisposable
         _inputService.RemoveActionListener(CharacterAction.Menu, onStarted: EnableMenu);
 
         _quickMenuView.Toggle(true);
-        _characterInput.Lock(true);
+        _inputService.ChangeInputMap(InputMapType.UI);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     public void DisableMenu()
     {
         _quickMenuView.Toggle(false);
-        _characterInput.Lock(false);
+        _inputService.ChangeInputMap(InputMapType.Player);
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
 
         _inputService.AddActionListener(CharacterAction.Menu, onStarted: EnableMenu);
     }
-
 }

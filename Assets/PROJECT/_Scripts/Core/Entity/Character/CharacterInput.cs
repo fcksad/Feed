@@ -4,7 +4,6 @@ using Zenject;
 
 public class CharacterInput : ITickable
 {
-    private bool _isLocked = true;
     private bool _isJumpHeld = false;
     private bool _isCrouching = false;
 
@@ -23,26 +22,22 @@ public class CharacterInput : ITickable
     {
         _inputService.AddActionListener(CharacterAction.Jump,onStarted: () => _isJumpHeld = true, onCanceled: () => _isJumpHeld = false);
         _inputService.AddActionListener(CharacterAction.Crouch, onStarted: Crouch);
+
+        _inputService.ChangeInputMap(InputMapType.Player);
+
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = false;
     }
 
     public void Bind(IControllable controller)
     {
         _controller = controller;
-
-        Lock(false);
     }
 
     public void Dispose()
     {
         _inputService.AddActionListener(CharacterAction.Jump, onStarted: () => _isJumpHeld = true, onCanceled: () => _isJumpHeld = false);
         _inputService.RemoveActionListener(CharacterAction.Crouch, onStarted: Crouch);
-    }
-
-    public void Lock(bool value)
-    {
-        _isLocked = value;
-        Cursor.lockState = value ? CursorLockMode.None : CursorLockMode.Locked;
-        Cursor.visible = value;
     }
 
     private void Crouch()
@@ -57,8 +52,6 @@ public class CharacterInput : ITickable
 
     public void Tick()
     {
-        if (_isLocked) return;
-
         _controller.Look(_inputService.GetVector2(CharacterAction.Look));
 
         Vector2 input = _inputService.GetVector2(CharacterAction.Move);

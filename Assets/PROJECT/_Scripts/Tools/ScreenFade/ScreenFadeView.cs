@@ -21,11 +21,15 @@ public class ScreenFadeView : MonoBehaviour
 
         while (time < duration)
         {
+            if (this == null || _fadeImage == null) 
+                return;
+
             time += Time.unscaledDeltaTime;
             float t = time / duration;
             SetAlpha(1 - Mathf.SmoothStep(0, 1, t));
             await Task.Yield();
         }
+
         SetAlpha(0);
         _fadeImage.gameObject.SetActive(false);
     }

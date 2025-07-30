@@ -233,6 +233,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad334509502307048832f52f6fcbf463, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _meshRenderers:
+  - {fileID: 1388634959416085783}
+  - {fileID: 7501932809829631396}
+  - {fileID: 2495285453017575179}
+  - {fileID: 701132077138541304}
+  - {fileID: 6022725727435360120}
 --- !u!1 &1825643858365296449
 GameObject:
   m_ObjectHideFlags: 0
@@ -530,16 +536,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02ceb1bafa5c6db46a32fa976b36f622, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _localizedName:
-    _localizedString:
-      m_TableReference:
-        m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
-      m_TableEntryReference:
-        m_KeyId: 24917243309424643
-        m_Key: 
-      m_FallbackState: 0
-      m_WaitForCompletion: 0
-      m_LocalVariables: []
+  _localizationConfig: {fileID: 11400000, guid: b45bbe33885b6ae44bc043c92025d17e, type: 2}
   _openAngle: 93
   _openSpeed: 1.6
   _isOpen: 0
@@ -547,9 +544,6 @@ MonoBehaviour:
   _openedRotation: {x: 0, y: 0.72537434, z: 0, w: 0.6883546}
   _open: {fileID: 11400000, guid: 6f6db002ee016e54381dec95fff9a1d8, type: 2}
   _close: {fileID: 11400000, guid: 507b7be832c13ea43b70f03f1e6a4d62, type: 2}
-  references:
-    version: 2
-    RefIds: []
 --- !u!1 &7905848723139740703
 GameObject:
   m_ObjectHideFlags: 0

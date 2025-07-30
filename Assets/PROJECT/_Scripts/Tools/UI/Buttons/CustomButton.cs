@@ -4,7 +4,7 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Button))]
 public class CustomButton : MonoBehaviour
 {
-    public Button Button => _button != null ? _button : _button = GetComponent<Button>();
+    public Button Button => _button;
     private Button _button;
 
     private void OnValidate()
