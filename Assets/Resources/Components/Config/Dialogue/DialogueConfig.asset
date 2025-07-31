@@ -14,35 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <TextNameID>k__BackingField: Test
   _localizationText:
-  - m_TableReference:
-      m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
-    m_TableEntryReference:
-      m_KeyId: 24917243309424654
-      m_Key: 
-    m_FallbackState: 0
-    m_WaitForCompletion: 0
-    m_LocalVariables: []
-  - m_TableReference:
-      m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
-    m_TableEntryReference:
-      m_KeyId: 24917243309424655
-      m_Key: 
-    m_FallbackState: 0
-    m_WaitForCompletion: 0
-    m_LocalVariables: []
-  - m_TableReference:
-      m_TableCollectionName: GUID:55446f8592aeeac46acb7a278848b34a
-    m_TableEntryReference:
-      m_KeyId: 24917243309424656
-      m_Key: 
-    m_FallbackState: 0
-    m_WaitForCompletion: 0
-    m_LocalVariables: []
+  - {fileID: 11400000, guid: ee3792591a77f6b4cb8082ca08abe78b, type: 2}
+  - {fileID: 11400000, guid: fdc66b3df45452e43b19a34b45e98424, type: 2}
+  - {fileID: 11400000, guid: 862315e8e4eff2d45b4fc31de7e668c1, type: 2}
   _debug:
   - This is a test of the dialogue system, reception-reception, how do you hear?
     Can you hear well?
   - One way or another the test is coming to an end!
   - Happy testing!
-  references:
-    version: 2
-    RefIds: []

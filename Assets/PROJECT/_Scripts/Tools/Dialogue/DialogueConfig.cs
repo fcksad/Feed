@@ -1,15 +1,15 @@
+using Localization;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.Localization;
 using UnityEngine.Localization.Settings;
 
 [CreateAssetMenu(fileName = "DialogueConfig", menuName = "Configs/Service/Dialogue/Dialogue Text")]
 public class DialogueConfig : ScriptableObject
 {
     [field: SerializeField] public string TextNameID {  get; private set; }
-    [SerializeField] private List<LocalizedString> _localizationText = new List<LocalizedString>();
+    [SerializeField] private List<LocalizationConfig> _localizationText = new List<LocalizationConfig>();
 
     [SerializeField] private List<string> _debug = new List<string>(); 
 
@@ -21,7 +21,7 @@ public class DialogueConfig : ScriptableObject
         {
             if (locStr != null)
             {
-                var handle = locStr.GetLocalizedStringAsync();
+                var handle = locStr.LocalizedString.GetLocalizedStringAsync();
                 await handle.Task;
                 result.Add(handle.Result);
             }
@@ -58,7 +58,7 @@ public class DialogueConfig : ScriptableObject
                 continue;
             }
 
-            var handle = locStr.GetLocalizedStringAsync();
+            var handle = locStr.LocalizedString.GetLocalizedStringAsync();
             await handle.Task;
             _debug.Add(handle.Result);
         }

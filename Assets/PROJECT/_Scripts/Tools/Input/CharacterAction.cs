@@ -15,5 +15,6 @@ public enum CharacterAction
     Flashlight = 12,
     Crouch = 13,
     Drop = 14,
+    Any = 15,
 
 }

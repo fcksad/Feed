@@ -1081,12 +1081,12 @@ GameObject:
   - component: {fileID: 1669863773}
   - component: {fileID: 1669863772}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Test dialogue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1669863772
 MonoBehaviour:
   m_ObjectHideFlags: 0

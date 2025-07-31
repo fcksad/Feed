@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 namespace Service
 {
     public class DialogueService : IDialogueService
@@ -19,19 +18,24 @@ namespace Service
             _inputService = inputService;
         }
 
-        public async Task Show(DialogueConfig config, Action onCompleted)
+        public async void Show(DialogueConfig config, Action onCompleted)
         {
             _currentConfig = config;
             _currentIndex = 0;
             _onComplete = onCompleted;
 
+
             _dialogueView.OnLineFullyShownEvent += HandleAutoContinue;
-            _inputService.AddActionListener(CharacterAction.Attack, HandleSkip);
+            _inputService.ChangeInputMap(InputMapType.UI);
+            _inputService.AddActionListener(CharacterAction.Any, HandleSkip);
 
             _dialogueView.ShowView();
 
             _localizedLines = await _currentConfig.GetLocalizedLinesAsync();
+
+
             ShowNext();
+
         }
         private void ShowNext()
         {
@@ -62,17 +66,21 @@ namespace Service
 
         private void EndDialogue()
         {
-            _inputService.RemoveActionListener(CharacterAction.Attack, HandleSkip);
+            _inputService.RemoveActionListener(CharacterAction.Any, HandleSkip);
             _dialogueView.OnLineFullyShownEvent -= HandleAutoContinue;
             _dialogueView.HideView();
             _onComplete?.Invoke();
+
+            _inputService.ChangeInputMap(InputMapType.Player);
         }
 
         public void Stop()
         {
             _dialogueView.OnLineFullyShownEvent -= HandleAutoContinue;
-            _inputService.RemoveActionListener(CharacterAction.Attack, HandleSkip);
+            _inputService.RemoveActionListener(CharacterAction.Any, HandleSkip);
             _dialogueView.HideView();
+
+            _inputService.ChangeInputMap(InputMapType.Player);
         }
     }
 
