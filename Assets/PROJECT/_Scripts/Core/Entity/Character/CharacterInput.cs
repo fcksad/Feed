@@ -25,7 +25,7 @@ public class CharacterInput : ITickable
 
         _inputService.ChangeInputMap(InputMapType.Player);
 
-        Cursor.lockState = CursorLockMode.None;
+        Cursor.lockState = CursorLockMode.None; //todo
         Cursor.visible = false;
     }
 

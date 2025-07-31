@@ -1,3 +1,5 @@
+using DG.Tweening;
+using Localization;
 using Service;
 using System;
 using System.Collections.Generic;
@@ -43,16 +45,20 @@ public class ControlsController : MonoBehaviour
 {
     [SerializeField] private Control _bindingPrefab;
     [SerializeField] private GameObject _waitingForInputScreen;
+    [SerializeField] private TextMeshProUGUI _waitingForInputScreenText;
     [SerializeField] private List<ControlPage> _controlPages = new List<ControlPage>();
-    [SerializeField] private LocalizedString _localizedResetKey;
-    [SerializeField] private LocalizedString _localizedBindKey;
+    [SerializeField] private LocalizationConfig _localizedResetKey;
+    [SerializeField] private LocalizationConfig _localizedBindKey;
+
+    private BindingReference _activeRebindRef;
+    private Tween _rebindTimeoutTween;
+
+    private float _rebindCountdownRemaining;
+    private Tween _countdownTween;
 
     private InputActionMap _actionMap;
 
     private List<BindingReference> _bindings = new List<BindingReference>();
-
-    private RebindingOperation _currentRebindOperation;//
-    private const float RebindTimeout = 10f;//
 
     private IControlsService _controlsService;
     private ILocalizationService _localizationService;
@@ -135,43 +141,62 @@ public class ControlsController : MonoBehaviour
 
     private void StartRebind(BindingReference bindingRef)
     {
-        var signal = new MessageBoxSignal
-        {
-            TYpe = MessageBoxType.YesNo,
-            Message = _localizedBindKey.GetLocalizedString(),
-            OnAccept = (callback) =>
-            {
-                _waitingForInputScreen.SetActive(true);
-                bindingRef.Control.KeyAction.text = "Press any key...";
+        _messageBoxController.ShowYesNo(_localizationService.GetLocalizationString(_localizedBindKey),
+                  onYes: () =>
+                  {
+                      _activeRebindRef = bindingRef;
 
-                _controlsService.Binding(bindingRef.Action.name, bindingRef.BindingIndex, () =>
-                {
-                    _waitingForInputScreen.SetActive(false);
-                    UpdateBindingUI(bindingRef);
-                    CheckConflicts();
-                });
-                //таймер 10 сек, если ниче не нажать то выключается
-            },
-        };
+                      _waitingForInputScreen.SetActive(true);
+                      _rebindCountdownRemaining = 20f;
 
-        _messageBoxController.Signal(signal);
+                      bindingRef.Control.KeyAction.text = "Press any key...";
+                      UpdateCountdownText();
+
+                      _rebindTimeoutTween?.Kill();
+                      _rebindTimeoutTween = DOVirtual.DelayedCall(20f, CancelRebind);
+
+                      _countdownTween?.Kill();
+                      _countdownTween = DOVirtual.DelayedCall(1f, CountdownTick).SetLoops(20);
+
+                      _controlsService.Binding(bindingRef.Action.name, bindingRef.BindingIndex, () =>
+                      {
+                          _rebindTimeoutTween?.Kill();
+                          _countdownTween?.Kill();
+                          _waitingForInputScreen.SetActive(false);
+                          _waitingForInputScreenText.text = "";
+                          UpdateBindingUI(bindingRef);
+                          CheckConflicts();
+                      });
+                  },
+                  autoCloseDelay: 20f
+        );
+    }
+
+    private void CancelRebind()
+    {
+        _waitingForInputScreen.SetActive(false);
+        _rebindTimeoutTween?.Kill();
+        _countdownTween?.Kill();
+        _waitingForInputScreenText.text = "";
+
+        if (_activeRebindRef != null)
+            _activeRebindRef.Control.KeyAction.text = _activeRebindRef.Action.name;
+
+        _activeRebindRef = null;
     }
 
     private void ResetBinding(BindingReference bindingRef)
     {
-        var signal = new MessageBoxSignal
-        {
-            TYpe = MessageBoxType.YesNo,
-            Message = _localizedResetKey.GetLocalizedString(),
-            OnAccept = (callback) =>
-            {
-                _controlsService.Rebinding(bindingRef.Action, bindingRef.BindingId);
-                UpdateBindingUI(bindingRef);
-                CheckConflicts();
-            }
-        };
-
-        _messageBoxController.Signal(signal);
+        _messageBoxController.ShowYesNo(_localizationService.GetLocalizationString(_localizedResetKey),
+                 onYes: () =>
+                 {
+                     _controlsService.Rebinding(bindingRef.Action, bindingRef.BindingId);
+                     UpdateBindingUI(bindingRef);
+                     CheckConflicts();
+                 }
+                 ,
+                  autoCloseDelay: 20f
+       );
     }
 
     private void UpdateBindingUI(BindingReference bindingRef)
@@ -206,5 +231,17 @@ public class ControlsController : MonoBehaviour
             color.a = hasConflict ? 1f : 0f; 
             bindingRef.Control.Background.color = color;
         }
+    }
+
+    private void CountdownTick()
+    {
+        _rebindCountdownRemaining--;
+        UpdateCountdownText();
+    }
+
+    private void UpdateCountdownText()
+    {
+        if (_waitingForInputScreenText != null)
+            _waitingForInputScreenText.text = Mathf.CeilToInt(_rebindCountdownRemaining).ToString();
     }
 }

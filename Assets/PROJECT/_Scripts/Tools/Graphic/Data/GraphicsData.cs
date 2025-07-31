@@ -11,11 +11,11 @@ public class GraphicsData
 
     public GraphicsData()
     {
-        QualityLevel = 2;      
-        VSync = 1;    
-        ScreenMode = 2;           
+        QualityLevel = 0;      
+        VSync = 0;    
+        ScreenMode = 0;           
         Resolution = new ResolutionData(1920, 1080, 60);
-        FPS = 60;
+        FPS = 120;
     }
 }
 

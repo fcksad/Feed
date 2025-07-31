@@ -31,14 +31,13 @@ namespace Service
 
         private void Load()
         {
+            SetResolution(GetResolution());
             foreach (GraphicType type in Enum.GetValues(typeof(GraphicType)))
             {
                 if (type != GraphicType.Resolution)
                     Set(type, Get(type));
             }
 
-            var resolution = _saveService.SettingsData.GraphicsData.Resolution;
-            Screen.SetResolution(resolution.Width, resolution.Height, Screen.fullScreenMode/*, new RefreshRate { numerator = (uint)Mathf.Max(1, resolution.RefreshRate), denominator = 1 }*/);
         }
 
         public void Set(GraphicType type, int value)
@@ -72,6 +71,18 @@ namespace Service
             }
         }
 
+        public void SetResolution(ResolutionData resolution)
+        {
+            _saveService.SettingsData.GraphicsData.Resolution = resolution;
+
+            var refreshRate = new RefreshRate
+            {
+                numerator = (uint)resolution.RefreshRate,
+                denominator = 1u
+            };
+
+            Screen.SetResolution(resolution.Width, resolution.Height, Screen.fullScreenMode, refreshRate);
+        }
         public int Get(GraphicType type)
         {
             return type switch
@@ -82,12 +93,6 @@ namespace Service
                 GraphicType.FPS => _saveService.SettingsData.GraphicsData.FPS,
                 _ => 0
             };
-        }
-
-        public void SetResolution(ResolutionData resolution)
-        {
-            _saveService.SettingsData.GraphicsData.Resolution = resolution;
-            Screen.SetResolution(resolution.Width, resolution.Height, Screen.fullScreenMode/*, new RefreshRate { numerator = (uint)Mathf.Max(1, resolution.RefreshRate), denominator = 1 }*/);
         }
 
         public ResolutionData GetResolution()

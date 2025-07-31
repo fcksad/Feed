@@ -131,6 +131,10 @@ MonoBehaviour:
     m_Key: settings.rebindconfirmation
     m_Metadata:
       m_Items: []
+  - m_Id: 34714563836215296
+    m_Key: settings.reset
+    m_Metadata:
+      m_Items: []
   - m_Id: 24917243263287296
     m_Key: message.yes
     m_Metadata:

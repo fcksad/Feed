@@ -220,6 +220,10 @@ MonoBehaviour:
     m_Localized: "Conseils de contr\xF4le"
     m_Metadata:
       m_Items: []
+  - m_Id: 34714563836215296
+    m_Localized: "R\xE9initialiser"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

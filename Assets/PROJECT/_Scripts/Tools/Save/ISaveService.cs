@@ -7,4 +7,5 @@ public interface ISaveService
 
     void LoadGame();
     void SaveGame();
+    void SaveSettings();
 }

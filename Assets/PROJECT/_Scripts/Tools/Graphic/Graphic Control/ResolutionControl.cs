@@ -21,7 +21,7 @@ namespace Settings
             _graphicsService = graphicsService;
         }
 
-        private void Awake()
+        private void OnEnable()
         {
             _filteredResolutions = new List<Resolution>();
 
@@ -37,7 +37,6 @@ namespace Settings
                 {
                     _filteredResolutions.Add(res);
                 }
-
             }
 
             _filteredResolutions = _filteredResolutions
@@ -80,9 +79,23 @@ namespace Settings
             _resolutionDropdown.RefreshShownValue();
 
             if (currentIndex >= 0)
-                ApplyResolution(currentIndex);
+            {
+                var currentScreen = Screen.currentResolution;
+                int currentRefresh = Mathf.RoundToInt((float)currentScreen.refreshRateRatio.numerator / currentScreen.refreshRateRatio.denominator);
+                if (currentScreen.width != savedResolution.Width ||
+                    currentScreen.height != savedResolution.Height ||
+                    currentRefresh != savedResolution.RefreshRate)
+                {
+                    ApplyResolution(currentIndex);
+                }
+            }
 
             _resolutionDropdown.onValueChanged.AddListener(ApplyResolution);
+        }
+
+        private void OnDisable()
+        {
+            _resolutionDropdown.onValueChanged.RemoveListener(ApplyResolution);
         }
 
         private void ApplyResolution(int index)

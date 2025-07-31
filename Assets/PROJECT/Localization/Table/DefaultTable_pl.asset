@@ -219,6 +219,10 @@ MonoBehaviour:
     m_Localized: "Wskaz\xF3wki dotycz\u0105ce sterowania"
     m_Metadata:
       m_Items: []
+  - m_Id: 34714563836215296
+    m_Localized: "Nastawi\u0107"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -2,6 +2,7 @@
 {
     Properties
     {
+        _MainTex ("Texture", 2D) = "white" {}
         _Color ("Color", Color) = (1,1,1,1)
         _Thickness ("Thickness", Range(0,1)) = 0.15
         _Speed ("Rotation Speed", Float) = 1.0
