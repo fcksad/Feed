@@ -1,3 +1,4 @@
+using Service;
 using UnityEngine;
 using Zenject;
 
@@ -22,11 +23,12 @@ public class Character : EntityBase
     private ISaveService _saveService;
 
     [Inject]
-    public void Construct(CharacterInput characterInput, IAudioService audioService, ISaveService saveService)
+    public void Construct(CharacterInput characterInput, IAudioService audioService, ISaveService saveService, ISurfaceAudioService surfaceAudioService)
     {
         CharacterInput = characterInput;
         _audioService = audioService;
         _saveService = saveService;
+        _surfaceAudioService = surfaceAudioService;
     }
 
     protected override void Start()
@@ -37,7 +39,7 @@ public class Character : EntityBase
         ItemController.Initialize(Camera, HandAnimationController);
         FlashlightController.Initialize();
         CharacterInput.Initialize();
-        Controller.Initialize(_audioService, this);
+        Controller.Initialize(_audioService, _surfaceAudioService ,this);
         CharacterStaticData.MouseSensitivity = _saveService.SettingsData.CharacterSettingsData.Sensitivity;
 
         CharacterInput.Bind(Controller);

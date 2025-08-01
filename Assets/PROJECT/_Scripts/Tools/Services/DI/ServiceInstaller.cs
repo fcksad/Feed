@@ -20,5 +20,6 @@ public class ServiceInstaller : MonoInstaller
         Container.BindInterfacesAndSelfTo<PoolService>().AsSingle();
         Container.BindInterfacesAndSelfTo<HintService>().AsSingle();
         Container.BindInterfacesAndSelfTo<DialogueService>().AsSingle();
+        Container.BindInterfacesAndSelfTo<SurfaceAudioService>().AsSingle();
     }
 }

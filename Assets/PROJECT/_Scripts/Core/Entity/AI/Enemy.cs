@@ -1,3 +1,4 @@
+using Service;
 using UnityEngine;
 using Zenject;
 
@@ -9,7 +10,7 @@ public class Enemy : EntityBase
 
 
     [Inject]
-    public void Construct(IAudioService audioService)
+    public void Construct(IAudioService audioService, ISurfaceAudioService surfaceAudioService)
     {
         _audioService = audioService;
     }
@@ -18,7 +19,7 @@ public class Enemy : EntityBase
     {
         base.Start();
 
-        Controller.Initialize(_audioService);
+        Controller.Initialize(_audioService, _surfaceAudioService);
     }
 
 }

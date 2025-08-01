@@ -985,6 +985,14 @@ PrefabInstance:
       propertyPath: _interactLocalized._localizedString.m_TableReference.m_TableCollectionName
       value: GUID:55446f8592aeeac46acb7a278848b34a
       objectReference: {fileID: 0}
+    - target: {fileID: 7021644423335189508, guid: 7432bcee279e61746a7906988505f6fc, type: 3}
+      propertyPath: _surfaceConfig
+      value: 
+      objectReference: {fileID: 11400000, guid: bb8aab8d990cd0a46b034e1b824a05ba, type: 2}
+    - target: {fileID: 7021644423335189508, guid: 7432bcee279e61746a7906988505f6fc, type: 3}
+      propertyPath: _surfaceMask.m_Bits
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

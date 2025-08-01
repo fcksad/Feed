@@ -1,40 +1,30 @@
+using Service;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 
 public class EntityMoveController : MonoBehaviour
 {
     [SerializeField] private Transform _model;
     [field: SerializeField] public Transform Head { get; private set; }
-    [SerializeField] private NavMeshAgent _agent;
 
     [Header("Footstep")]
-    [SerializeField] private FootstepConfig _footstep;
+    [SerializeField] private SourceType _footstep = SourceType.Footstep;
     [SerializeField] private LayerMask _footstepMask;
     [SerializeField] private List<Transform> _footstepPositions;
 
-    private FootstepPlayer _footstepPlayer;
+    private ISurfaceAudioService _surfaceAudioService;
     private IAudioService _audioService;
+    protected FootstepPlayer _footstepPlayer;
     private int _currentFootstepIndex;
     private float _lastStepTime;
 
     private const float STEP_COOLDOWN = 0.4f;
 
-    public void Initialize(IAudioService audioService)
+    public void Initialize(IAudioService audioService, ISurfaceAudioService surfaceAudioService)
     {
         _audioService = audioService;
-        _footstepPlayer = new FootstepPlayer(audioService, _footstep, _footstepMask, transform);
-    }
-
-    public void MoveTo(Vector3 point)
-    {
-        if (_agent.isOnNavMesh)
-            _agent.SetDestination(point);
-    }
-
-    public bool ReachedPoint(float tolerance = 1f)
-    {
-        return !_agent.pathPending && _agent.remainingDistance <= tolerance && _agent.velocity.sqrMagnitude < 0.1f;
+        _surfaceAudioService = surfaceAudioService;
+        _footstepPlayer = new FootstepPlayer(audioService, _surfaceAudioService, _footstepMask, transform);
     }
 
     public void Look(Vector3 targetPos)
@@ -53,7 +43,7 @@ public class EntityMoveController : MonoBehaviour
 
     private void TryPlayFootstep()
     {
-        if (_agent.velocity.sqrMagnitude > 0.01f)
+       /* if (_agent.velocity.sqrMagnitude > 0.01f)
         {
             if (Time.time - _lastStepTime >= STEP_COOLDOWN)
             {
@@ -66,6 +56,6 @@ public class EntityMoveController : MonoBehaviour
 
                 _lastStepTime = Time.time;
             }
-        }
+        }*/
     }
 }

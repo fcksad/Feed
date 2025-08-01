@@ -1,3 +1,4 @@
+using Service;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -33,22 +34,23 @@ public class CharacterController : MonoBehaviour , IControllable
 
     [Header("Footstep")]
     private FootstepPlayer _footstepPlayer;
-    [SerializeField] private FootstepConfig _footstep;
-    [SerializeField] private LayerMask _footstepMask;
+    [SerializeField] private LayerMask _surfaceMask;
     [SerializeField] private List<Transform> _footstepPositions;
 
     private ICommandController _commandController;
     private Character _character;
 
     private IAudioService _audioService;
+    private ISurfaceAudioService _surfaceAudioService;
 
-    public void Initialize(IAudioService audioService , Character character)
+    public void Initialize(IAudioService audioService, ISurfaceAudioService surfaceAudioService , Character character)
     {
         _audioService = audioService;
+        _surfaceAudioService = surfaceAudioService;
         _character = character;
 
         _commandController = new CommandController();
-        _footstepPlayer = new FootstepPlayer(audioService, _footstep, _footstepMask, _character.transform);
+        _footstepPlayer = new FootstepPlayer(audioService, _surfaceAudioService, _surfaceMask, _character.transform);
     }
 
     public void Move(Vector2 input, bool isRunning, bool jumpRequested, bool isCrouching)

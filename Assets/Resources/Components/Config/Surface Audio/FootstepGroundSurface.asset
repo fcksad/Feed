@@ -9,9 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25b004203544d9e4cadf18437f481a57, type: 3}
-  m_Name: FootstepConfig
+  m_Script: {fileID: 11500000, guid: b9ab10daacba22a45abe0be5ed2de428, type: 3}
+  m_Name: FootstepGroundSurface
   m_EditorClassIdentifier: 
+  <SourceType>k__BackingField: 0
   <Surfaces>k__BackingField:
   - <Type>k__BackingField: 0
     <Materials>k__BackingField:

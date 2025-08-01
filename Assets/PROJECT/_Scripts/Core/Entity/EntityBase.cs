@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+using Service;
 using UnityEngine;
 
 public abstract class EntityBase : MonoBehaviour, IDamageable
@@ -12,6 +12,7 @@ public abstract class EntityBase : MonoBehaviour, IDamageable
 
 
     protected IAudioService _audioService;
+    protected ISurfaceAudioService _surfaceAudioService;
 
     protected virtual void Awake()
     {
