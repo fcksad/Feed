@@ -1,8 +1,9 @@
 using Service;
 using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
 
-public class EntityMoveController : MonoBehaviour
+public class EntityMoveController : MonoBehaviour, IInitializable
 {
     [SerializeField] private Transform _model;
     [field: SerializeField] public Transform Head { get; private set; }
@@ -26,11 +27,21 @@ public class EntityMoveController : MonoBehaviour
     [SerializeField] private UnityEngine.CharacterController _characterController;
     private float _verticalVel;
 
-    public void Initialize(IAudioService audioService, ISurfaceAudioService surfaceAudioService)
+
+
+    [Inject]
+    public void Construct(IAudioService audioService, ISurfaceAudioService surfaceAudioService)
     {
         _audioService = audioService;
         _surfaceAudioService = surfaceAudioService;
-        _footstepPlayer = new FootstepPlayer(audioService, _surfaceAudioService, _footstepMask, transform);
+        Debug.LogError("1");
+        _footstepPlayer = new FootstepPlayer(_audioService, _surfaceAudioService, _footstepMask, transform);
+    }
+
+    public void Initialize()
+    {
+        _footstepPlayer = new FootstepPlayer(_audioService, _surfaceAudioService, _footstepMask, transform);
+        Debug.LogError("2");
     }
 
     public void MoveTowards(Vector3 worldPoint, float speed)
@@ -54,25 +65,14 @@ public class EntityMoveController : MonoBehaviour
 
         Vector3 velocity = dir * speed + Vector3.up * _verticalVel;
         _characterController.Move(velocity * Time.deltaTime);
-    }
 
-    public void Look(Vector3 targetPos)
-    {
-       /* Vector3 direction = (targetPos - _model.position).normalized;
-        direction.y = 0f;
-
-        if (direction != Vector3.zero)
-            _model.rotation = Quaternion.LookRotation(direction);*/
-    }
-
-    private void Update()
-    {
         TryPlayFootstep();
     }
 
     private void TryPlayFootstep()
     {
-       /* if (_agent.velocity.sqrMagnitude > 0.01f)
+
+        if (_characterController.velocity.sqrMagnitude > 0.01f)
         {
             if (Time.time - _lastStepTime >= STEP_COOLDOWN)
             {
@@ -85,6 +85,6 @@ public class EntityMoveController : MonoBehaviour
 
                 _lastStepTime = Time.time;
             }
-        }*/
+        }
     }
 }

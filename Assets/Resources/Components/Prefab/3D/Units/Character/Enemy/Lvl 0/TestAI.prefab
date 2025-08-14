@@ -235,7 +235,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5682640054d5fc4583766bb765ea1b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveController: {fileID: 0}
+  _moveController: {fileID: 193388026455918490}
   <Player>k__BackingField: {fileID: 0}
   <MoveSpeed>k__BackingField: 3
   _obstacleMask:

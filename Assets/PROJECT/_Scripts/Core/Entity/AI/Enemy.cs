@@ -19,7 +19,7 @@ public class Enemy : EntityBase
     {
         base.Start();
 
-        Controller.Initialize(_audioService, _surfaceAudioService);
+        //Controller.Initialize(_audioService, _surfaceAudioService);
     }
 
 }
