@@ -5,6 +5,6 @@ namespace Service
 {
     public interface ISurfaceAudioService
     {
-        public AudioConfig GetConfigByMaterial(List<Material> materials, SourceType sourceType);
+        public AudioConfig GetConfigByMaterial(Renderer renderer, SourceType sourceType);
     }
 }

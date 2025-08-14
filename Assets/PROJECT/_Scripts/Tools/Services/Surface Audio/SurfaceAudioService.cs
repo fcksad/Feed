@@ -51,28 +51,36 @@ namespace Service
             }
         }
 
-        public AudioConfig GetConfigByMaterial(List<Material> materials, SourceType sourceType)
+        public AudioConfig GetConfigByMaterial(Renderer renderer, SourceType sourceType)
         {
+            if (renderer == null)
+                return GetDefault(sourceType);
+
+            var materials = renderer.sharedMaterials;
+
             if (_surfaceMaterials == null)
                 Setup();
 
             if (_surfaceMaterials.TryGetValue(sourceType, out var materialMap))
             {
-                foreach (var material in materials)
+                foreach (var mat in materials)
                 {
-                    if (material != null && materialMap.TryGetValue(material, out var audio))
+                    if (mat != null && materialMap.TryGetValue(mat, out var audio))
                     {
                         return audio;
                     }
                 }
             }
 
-            if (_defaultConfigs.TryGetValue(sourceType, out var defaultAudio))
-            {
-                return defaultAudio;
-            }
+            return GetDefault(sourceType);
+        }
 
-            Debug.LogWarning($"[SurfaceAudioService] No AudioConfig found for SourceType {sourceType} (materials: [{string.Join(", ", materials.Where(m => m != null).Select(m => m.name))}])");
+        private AudioConfig GetDefault(SourceType sourceType)
+        {
+            if (_defaultConfigs.TryGetValue(sourceType, out var defaultAudio))
+                return defaultAudio;
+
+            Debug.LogWarning($"[SurfaceAudioService] No default AudioConfig found for SourceType {sourceType}");
             return null;
         }
     }

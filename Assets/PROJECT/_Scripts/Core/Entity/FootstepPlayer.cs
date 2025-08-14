@@ -26,18 +26,12 @@ public class FootstepPlayer
     {
         if (!Physics.Raycast(_rayPoint.position, Vector3.down, out RaycastHit hit, _rayLength, _mask, QueryTriggerInteraction.Ignore))
         {
+
         }
 
-        _materialBuffer.Clear();
+        var renderer = hit.collider?.GetComponent<Renderer>();
+        var config = _surfaceAudioService.GetConfigByMaterial(renderer, _sourceType);
 
-        if (hit.collider != null)
-        {
-            var renderer = hit.collider?.GetComponent<Renderer>();
-            if (renderer != null)
-                _materialBuffer.AddRange(renderer.sharedMaterials);
-        }
-
-        var config = _surfaceAudioService.GetConfigByMaterial(_materialBuffer, _sourceType);
         if (config != null)
             _audioService.Play(config, position: soundPoint);
     }
