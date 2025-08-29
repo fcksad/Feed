@@ -39,7 +39,7 @@ public class AudioService : IAudioService, IInitializable
         }
     }
 
-    public AudioSource Play(AudioConfig audio, bool loop = false, int clipIndex = -1, Transform parent = null, Vector3? position = null, float fadeDuration = 0)
+    public AudioSource Play(AudioConfig audio, bool loop = false, int clipIndex = -1, Transform parent = null, Vector3? position = null, float fadeDuration = 0, float minSoundDistance = 1, float maxSoundDistance = 100)
     {
         if (audio.OneShoot == true)
         {
@@ -64,7 +64,7 @@ public class AudioService : IAudioService, IInitializable
         }
 
         var src = go.AddComponent<AudioSource>();
-        SetupSource(src, audio, loop, clipIndex);
+        SetupSource(src, audio, loop, clipIndex, minSoundDistance, maxSoundDistance);
         src.Play();
         src.DOFade(_volumes[audio.Type], fadeDuration);
 
@@ -139,12 +139,14 @@ public class AudioService : IAudioService, IInitializable
 
     public float GetVolume(AudioType type) => _volumes.TryGetValue(type, out float volume) ? volume : 0.5f;
 
-    private void SetupSource(AudioSource src, AudioConfig audio, bool loop, int clipIndex = -1)
+    private void SetupSource(AudioSource src, AudioConfig audio, bool loop, int clipIndex = -1, float minSoundDistance = 1, float maxSoundDistance = 100)
     {
         src.loop = loop;
         src.playOnAwake = false;
         src.spatialBlend = audio.SpatialBlend;
         src.pitch = UnityEngine.Random.Range(audio.MinPitch, audio.MaxPitch);
+        src.minDistance = minSoundDistance;
+        src.maxDistance = maxSoundDistance;
         src.clip = clipIndex >= 0 ? audio.AudioClips[clipIndex] : GetRandomClip(audio.AudioClips);
         src.volume = _volumes[audio.Type];
     }

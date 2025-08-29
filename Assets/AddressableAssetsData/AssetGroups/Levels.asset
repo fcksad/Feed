@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Levels
+  m_EditorClassIdentifier: 
+  m_GroupName: Levels
+  m_GUID: 848e8a267bc94fa47a1d472e700b7a4d
+  m_SerializeEntries:
+  - m_GUID: 473f0b11402a1b648899f4db47065fc9
+    m_Address: Components/Prefab/3D/Level/[Community] - Level/[Factory] - Leve 1
+      Type A
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6e8461a8d83ed9c438adfb0198ae9973
+    m_Address: Components/Prefab/3D/Level/[Community] - Level/[Community] - Level
+      0 Type B
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a284bd584533e1a4db75130a73a19955
+    m_Address: Components/Prefab/3D/Level/[Community] - Level/[Community] - Level
+      0 Type A
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 065d8e5ad14dc3447bb2efcf031a6d36, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 5858cf11a6e14d440ab21edd8c2a821d, type: 2}
+    - {fileID: 11400000, guid: 77dd041c6605b2442b50336536766095, type: 2}

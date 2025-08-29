@@ -33,6 +33,6 @@ public class FootstepPlayer
         var config = _surfaceAudioService.GetConfigByMaterial(renderer, _sourceType);
 
         if (config != null)
-            _audioService.Play(config, position: soundPoint);
+            _audioService.Play(config, position: soundPoint, minSoundDistance: 0.5f , maxSoundDistance: 15);
     }
 }
