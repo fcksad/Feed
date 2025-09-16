@@ -43,25 +43,15 @@ public class AudioService : IAudioService, IInitializable
     {
         if (audio.OneShoot == true)
         {
-            _oneShootSources[audio.Type].pitch = UnityEngine.Random.Range(audio.MinPitch, audio.MaxPitch);
-            _oneShootSources[audio.Type].PlayOneShot(GetRandomClip(audio.AudioClips));
-            return _oneShootSources[audio.Type];
+            var source = _oneShootSources[audio.Type];
+            source.pitch = UnityEngine.Random.Range(audio.MinPitch, audio.MaxPitch);
+            source.PlayOneShot(GetRandomClip(audio.AudioClips));
+            return source;
         }
 
         var go = new GameObject($"{audio.Type}_{audio.AudioName}");
-        if (parent != null)
-        {
-            go.transform.SetParent(parent, worldPositionStays: false);
-        }
-        else
-        {
-            go.transform.SetParent(_audioRoot.transform);
-        }
-
-        if (position.HasValue)
-        {
-            go.transform.position = position.Value;
-        }
+        go.transform.SetParent(parent ? parent : _audioRoot.transform, worldPositionStays: false);
+        if (position.HasValue) go.transform.position = position.Value;
 
         var src = go.AddComponent<AudioSource>();
         SetupSource(src, audio, loop, clipIndex, minSoundDistance, maxSoundDistance);
@@ -69,14 +59,13 @@ public class AudioService : IAudioService, IInitializable
         src.DOFade(_volumes[audio.Type], fadeDuration);
 
         var key = (audio.Type, audio.AudioName);
-
         if (!_namedSources.ContainsKey(key)) _namedSources[key] = new List<AudioSource>();
         _namedSources[key].Add(src);
 
-        var playTime = src.clip.length + 0.5f;
-
         if (loop == false)
         {
+
+            var playTime = src.clip.length + 0.5f;
             TimerRemove(src, key, playTime);
             UnityEngine.Object.Destroy(go, playTime);
         }

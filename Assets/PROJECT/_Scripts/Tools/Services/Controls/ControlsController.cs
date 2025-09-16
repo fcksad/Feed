@@ -6,9 +6,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Localization;
 using Zenject;
-using static UnityEngine.InputSystem.InputActionRebindingExtensions;
 
 public class BindingReference
 {
@@ -30,8 +28,10 @@ public enum ControlDeviceType
 {
     Keyboard,
     Mouse,
-    Gamepad,
-    Touchscreen,
+    GamepadGeneric,
+    PlayStation,
+    Xbox,
+    NintendoSwitch,
 }
 
 [Serializable]
@@ -69,8 +69,10 @@ public class ControlsController : MonoBehaviour
 {
     { ControlDeviceType.Keyboard, "<Keyboard>" },
     { ControlDeviceType.Mouse, "<Mouse>" },
-    { ControlDeviceType.Gamepad, "<Gamepad>" },
-    { ControlDeviceType.Touchscreen, "<Touchscreen>" }
+    { ControlDeviceType.GamepadGeneric, "<GamepadGeneric>" },
+    { ControlDeviceType.PlayStation, "<PlayStation>" },
+    { ControlDeviceType.Xbox, "<Xbox>" },
+    { ControlDeviceType.NintendoSwitch, "<NintendoSwitch>" }
 };
 
     [Inject]

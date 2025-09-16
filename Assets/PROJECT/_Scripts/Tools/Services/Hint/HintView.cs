@@ -76,24 +76,10 @@ namespace Service
             {
                 hint.gameObject.SetActive(false);
             }
-            _hints.Clear();
         }
 
         public void Clear()
         {
-/*            foreach (var hint in _hints.Values)
-            {
-                var hints = hint.GetHints();
-
-                foreach (var item in hints)
-                {
-                    _instantiateFactoryService.Release(item);
-                }
-
-                _instantiateFactoryService.Release(hint);
-            }
-            _hints.Clear();*/
-
             foreach(var group in _hints.Values)
     {
                 foreach (var item in group.GetHints())
@@ -107,15 +93,15 @@ namespace Service
         public void Toggle(bool value)
         {
             _hintHolder.gameObject.SetActive(value);
-            StartCoroutine(RefreshLayoutNextFrame());
+            //StartCoroutine(RefreshLayoutNextFrame());
         }
 
-        private IEnumerator RefreshLayoutNextFrame()
+/*        private IEnumerator RefreshLayoutNextFrame()
         {
             yield return new WaitForEndOfFrame(); 
             _horizontalLayoutGroup.enabled = false;
             _horizontalLayoutGroup.enabled = true;
-        }
+        }*/
     }
 }
     

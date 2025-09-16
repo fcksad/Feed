@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
-using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.DualShock;
+using UnityEngine.InputSystem.Switch;
+using UnityEngine.InputSystem.XInput;
 using Zenject;
 
 namespace Service
@@ -68,14 +70,57 @@ namespace Service
             _hintView.HideAll();
         }
 
+        private ControlDeviceType DetectGamepadType()
+        {
+            var pad = Gamepad.current;
+            if (pad == null) return ControlDeviceType.Keyboard;
+
+            if (pad is DualSenseGamepadHID || pad is DualShockGamepad) return ControlDeviceType.PlayStation;
+            if (pad is XInputController) return ControlDeviceType.Xbox;
+            if (pad is SwitchProControllerHID) return ControlDeviceType.NintendoSwitch;
+
+            var d = pad.description;
+            string m = (d.manufacturer ?? "").ToLowerInvariant();
+            string p = (d.product ?? "").ToLowerInvariant();
+            string caps = d.capabilities ?? "";
+
+            if (m.Contains("sony") || p.Contains("dualsense") || p.Contains("dualshock") || caps.Contains("\"vendorId\":1356"))
+                return ControlDeviceType.PlayStation;
+            if (m.Contains("microsoft") || p.Contains("xbox") || caps.Contains("\"vendorId\":1118"))
+                return ControlDeviceType.Xbox;
+            if (m.Contains("nintendo") || p.Contains("switch") || p.Contains("joy-con") || p.Contains("pro controller") || caps.Contains("\"vendorId\":1406"))
+                return ControlDeviceType.NintendoSwitch;
+
+            return ControlDeviceType.GamepadGeneric;
+        }
+
         private ControlDeviceType GetDeviceType(string controlScheme)
         {
-            return controlScheme switch
+            switch (controlScheme)
             {
-                "Keyboard&Mouse" => ControlDeviceType.Keyboard,
-                "Gamepad" => ControlDeviceType.Gamepad,
-                _ => ControlDeviceType.Keyboard
-            };
+                case "Keyboard&Mouse":
+                case "Keyboard&MouseScheme":
+                case "KeyboardMouse":
+                    return ControlDeviceType.Keyboard;
+
+                case "PlayStation":
+                case "PS4":
+                case "PS5":
+                    return ControlDeviceType.PlayStation;
+
+                case "Xbox":
+                case "XInput":
+                    return ControlDeviceType.Xbox;
+
+                case "Switch":
+                case "Nintendo":
+                    return ControlDeviceType.NintendoSwitch;
+
+                case "Gamepad":
+                case "GamepadScheme":
+                default:
+                    return DetectGamepadType();
+            }
         }
 
         public void ToggleView(bool value)

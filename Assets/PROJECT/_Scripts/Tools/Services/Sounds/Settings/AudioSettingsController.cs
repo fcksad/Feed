@@ -17,10 +17,10 @@ namespace Settings
     {
         [SerializeField] private List<AudioSettings> _audioSettings;
 
-        private AudioService _audioService;
+        private IAudioService _audioService;
 
         [Inject]
-        public void Construct(AudioService audioService)
+        public void Construct(IAudioService audioService)
         {
             _audioService = audioService;
         }
