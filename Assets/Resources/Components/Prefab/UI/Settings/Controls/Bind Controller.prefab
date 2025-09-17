@@ -471,6 +471,22 @@ PrefabInstance:
       propertyPath: m_text
       value: Reset
       objectReference: {fileID: 0}
+    - target: {fileID: 2379301993966412720, guid: 708be1315ba5a994f9c2e3195f3dfcb9, type: 3}
+      propertyPath: m_fontSize
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 2379301993966412720, guid: 708be1315ba5a994f9c2e3195f3dfcb9, type: 3}
+      propertyPath: m_fontSizeMax
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 2379301993966412720, guid: 708be1315ba5a994f9c2e3195f3dfcb9, type: 3}
+      propertyPath: m_fontSizeMin
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2379301993966412720, guid: 708be1315ba5a994f9c2e3195f3dfcb9, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3968614890932055884, guid: 708be1315ba5a994f9c2e3195f3dfcb9, type: 3}
       propertyPath: _localizationConfig
       value: 
@@ -603,6 +619,10 @@ PrefabInstance:
     - target: {fileID: 2379301993966412720, guid: 708be1315ba5a994f9c2e3195f3dfcb9, type: 3}
       propertyPath: m_fontSizeMax
       value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 2379301993966412720, guid: 708be1315ba5a994f9c2e3195f3dfcb9, type: 3}
+      propertyPath: m_fontSizeMin
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2379301993966412720, guid: 708be1315ba5a994f9c2e3195f3dfcb9, type: 3}
       propertyPath: m_TextWrappingMode

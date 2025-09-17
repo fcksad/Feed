@@ -8,6 +8,7 @@ namespace Service.Locator
     public class ServiceLocator : MonoBehaviour
     {
         private static readonly Dictionary<Type, object> _services = new();
+        private static readonly HashSet<Type> _initialized = new();
         private static readonly object _lock = new();
         private static ServiceLocator _instance;
 
@@ -34,6 +35,7 @@ namespace Service.Locator
                     return false;
                 }
                 _services[key] = service;
+                _initialized.Remove(key);
                 return true;
             }
         }
@@ -43,6 +45,7 @@ namespace Service.Locator
             if (TryGet<T>(out var s)) return s;
             throw new InvalidOperationException($"[ServiceLocator] {typeof(T).Name} not found");
         }
+
 
         public static bool TryGet<T>(out T service) where T : class
         {
@@ -66,10 +69,74 @@ namespace Service.Locator
             return created;
         }
 
-        public static bool Unregister<T>() where T : class
-            => _services.Remove(typeof(T));
+        public static void InitializeAll()
+        {
+            lock (_lock)
+            {
+                foreach (var (type, obj) in _services)
+                {
+                    if (_initialized.Contains(type)) continue;
+                    if (obj is IInitializable init)
+                    {
+                        try { init.Initialize(); _initialized.Add(type); }
+                        catch (Exception e) { Debug.LogError($"[ServiceLocator] Initialize failed for {type.Name}: {e}"); }
+                    }
+                    else
+                    {
+                        _initialized.Add(type); 
+                    }
+                }
+            }
+        }
 
-        public static void Clear() => _services.Clear();
+
+        public static void DisposeAll()
+        {
+            lock (_lock)
+            {
+                var types = new List<Type>(_services.Keys);
+                types.Reverse();
+                foreach (var t in types)
+                {
+                    if (_services.TryGetValue(t, out var obj) && obj is IDisposable d)
+                    {
+                        try { d.Dispose(); }
+                        catch (Exception e) { Debug.LogError($"[ServiceLocator] Dispose failed for {t.Name}: {e}"); }
+                    }
+                }
+                _initialized.Clear();
+            }
+        }
+
+
+        public static bool Unregister<T>(bool dispose = false) where T : class
+        {
+            lock (_lock)
+            {
+                var key = typeof(T);
+                if (_services.TryGetValue(key, out var obj))
+                {
+                    if (dispose && obj is IDisposable d)
+                    {
+                        try { d.Dispose(); } catch (Exception e) { Debug.LogError($"[ServiceLocator] Dispose failed for {key.Name}: {e}"); }
+                    }
+                    _services.Remove(key);
+                    _initialized.Remove(key);
+                    return true;
+                }
+                return false;
+            }
+        }
+
+        public static void Clear(bool dispose = false)
+        {
+            if (dispose) DisposeAll();
+            lock (_lock)
+            {
+                _services.Clear();
+                _initialized.Clear();
+            }
+        }
 
         public static T RegisterComponent<T>() where T : Component
         {
@@ -82,7 +149,15 @@ namespace Service.Locator
 
         private void OnDestroy()
         {
-            if (_instance == this) { _services.Clear(); _instance = null; }
+            if (_instance == this)
+            {
+                try { DisposeAll(); } finally { Clear(dispose: false); _instance = null; }
+            }
+        }
+
+        private static IEnumerable<(Type, object)> _servicesEnumerable
+        {
+            get { foreach (var kv in _services) yield return (kv.Key, kv.Value); }
         }
     }
 

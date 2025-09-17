@@ -1,4 +1,4 @@
-using DG.Tweening;
+using Service.Tweener;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -56,7 +56,13 @@ public class AudioService : IAudioService, IInitializable
         var src = go.AddComponent<AudioSource>();
         SetupSource(src, audio, loop, clipIndex, minSoundDistance, maxSoundDistance);
         src.Play();
-        src.DOFade(_volumes[audio.Type], fadeDuration);
+        if (fadeDuration > 0f)
+        {
+            float target = _volumes[audio.Type];
+            src.volume = 0f;
+            TW.To(() => src.volume, v => src.volume = v, target, fadeDuration)
+              .SetEase(Ease.InOutQuad);
+        }
 
         var key = (audio.Type, audio.AudioName);
         if (!_namedSources.ContainsKey(key)) _namedSources[key] = new List<AudioSource>();
@@ -81,7 +87,16 @@ public class AudioService : IAudioService, IInitializable
             {
                 if (source == null) continue;
 
-                source.DOFade(0, fade).OnComplete(() => UnityEngine.Object.Destroy(source.gameObject));
+                if (fade > 0f)
+                {
+                    TW.To(() => source.volume, v => source.volume = v, 0f, fade)
+                      .SetEase(Ease.InOutQuad)
+                      .OnComplete(() => { if (source) UnityEngine.Object.Destroy(source.gameObject); });
+                }
+                else
+                {
+                    UnityEngine.Object.Destroy(source.gameObject);
+                }
             }
 
             _namedSources.Remove(target.Key);

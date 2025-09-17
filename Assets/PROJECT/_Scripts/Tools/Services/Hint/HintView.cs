@@ -74,7 +74,7 @@ namespace Service
         {
             foreach (var hint in _hints.Values)
             {
-                hint.gameObject.SetActive(false);
+                hint?.gameObject?.SetActive(false);
             }
         }
 

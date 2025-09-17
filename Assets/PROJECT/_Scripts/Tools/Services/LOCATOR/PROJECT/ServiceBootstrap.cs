@@ -7,16 +7,17 @@ namespace Service.Bootstrap
     [DefaultExecutionOrder(-1000)]
     public class ServiceBootstrap : MonoBehaviour
     {
- 
-        [SerializeField] private HintView _hintView;
-
         private void Awake()
         {
+            //ServiceLocator.Register<IMyService>(new MyService());
+
+            ServiceLocator.InitializeAll();
+            // if (SceneServiceLocator.Current) SceneServiceLocator.Current.InitializeAll();
         }
 
         private void OnApplicationQuit()
         {
-            ServiceLocator.Clear();
+            ServiceLocator.Clear(dispose: true);
         }
     }
 
