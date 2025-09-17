@@ -17,7 +17,7 @@ MonoBehaviour:
     <HintInputViews>k__BackingField:
     - <ControlName>k__BackingField: Q
       <ControlButton>k__BackingField: q
-      <Icon>k__BackingField: {fileID: 0}
+      <Icon>k__BackingField: {fileID: 21300000, guid: 048a3722d94b3304cbceea86fb1004d0, type: 3}
       <Aliases>k__BackingField: []
     - <ControlName>k__BackingField: W
       <ControlButton>k__BackingField: w
