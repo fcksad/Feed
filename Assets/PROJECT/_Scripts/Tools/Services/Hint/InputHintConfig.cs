@@ -18,7 +18,7 @@ public class InputHintConfig : ScriptableObject
         {
             [field: SerializeField] public string ControlName { get; set; }
             [field: SerializeField] public string ControlButton { get; set; }
-            [field: SerializeField] public Sprite Icon { get; set; }
+            [field: SerializeField, SpritePreview] public Sprite Icon { get; set; }
             [field: SerializeField] public List<string> Aliases { get; set; } = new();
         }
     }

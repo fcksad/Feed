@@ -709,6 +709,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4acf45f6eb8b0c4287c7056687a8a7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _button: {fileID: 4152649260180248597}
 --- !u!114 &1438364862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -721,6 +722,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1648e8afe2d4d042893c309e49392c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _button: {fileID: 4152649259829718862}
   _sceneToLoad: {fileID: 11400000, guid: f7bedfa939e85fd478fc53a8cfe4f56f, type: 2}
 --- !u!1 &1747541567
 GameObject:
@@ -889,6 +891,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 067bb106cd73ea14cababddb46436a0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _button: {fileID: 4152649260454278805}
   _windows:
   - {fileID: 1937212198}
   - {fileID: 479960362}
@@ -1188,6 +1191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cbb1752b21f25542b515dc57ace89e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _button: {fileID: 4152649260454278805}
   _soundConfig: {fileID: 11400000, guid: 2e3cc9ca4d84a0a47b5498313f82acf8, type: 2}
 --- !u!114 &2160695956877700472
 MonoBehaviour:
@@ -1201,6 +1205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cbb1752b21f25542b515dc57ace89e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _button: {fileID: 4152649260180248597}
   _soundConfig: {fileID: 11400000, guid: 2e3cc9ca4d84a0a47b5498313f82acf8, type: 2}
 --- !u!114 &2160695957198740003
 MonoBehaviour:
@@ -1214,6 +1219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cbb1752b21f25542b515dc57ace89e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _button: {fileID: 4152649259829718862}
   _soundConfig: {fileID: 11400000, guid: 2e3cc9ca4d84a0a47b5498313f82acf8, type: 2}
 --- !u!114 &2379301994186575568
 MonoBehaviour:
